@@ -15,6 +15,9 @@ $(document).ready(function(){
             if ($('.dropdown').hasClass('open')) {
               $('.dropdown').removeClass('open');
             }
+            if ($(e.target).closest(".mini-cart-header").length === 0) {
+                $(".mini-cart-dropdown").removeClass('active')
+            }
           });
 
           $('.nav-btn').on('click', function() {
@@ -307,6 +310,25 @@ $(document).ready(function(){
     }
     //start slider sidebar-----------------------------
     
+    
+    $('.header-basket-list-item-remove').click(function(e) {
+        e.preventDefault();
+       $(this).parents('.js-mini-cart-item').remove()
+    })
+
+    $('.mini-cart-header-btn').click(function(e) {
+        e.preventDefault();
+       $(this).siblings('.mini-cart-dropdown').addClass('active')
+    })
+    $('.header-cart-info-close').click(function(e) {
+        e.preventDefault();
+       $(this).parents('.mini-cart-dropdown').removeClass('active')
+    })
+
+    $('.js-example-basic-single').select2({
+        width: 'resolve',
+        dir: "rtl"
+    });
     
 });
     
