@@ -15,21 +15,127 @@
   <style></style>
 
   <body>
+    <!-- start::login-modal -->
+    <div class="remodal-overlay login-modal" id="modal">
+      <div class="col-lg-4 col-md-8 col-xs-12 mx-auto">
+        <div class="remodal">
+          <a
+            href="#"
+            class="close-btn"
+            
+          >
+            <svg
+              xmlns="http://www.w3.org/2000/svg"
+              width="28"
+              height="28"
+              viewBox="0 0 24 24"
+            >
+              <path
+                fill="currentColor"
+                d="M19 6.41L17.59 5L12 10.59L6.41 5L5 6.41L10.59 12L5 17.59L6.41 19L12 13.41L17.59 19L19 17.59L13.41 12z"
+              />
+            </svg>
+          </a>
+          <div class="middle-container">
+            <form action="#" class="form-checkout">
+              <div class="account-box">
+                <a href="index.html" class="logo-account"
+                  ><img src="assets/images/logo.webp"
+                /></a>
+                <p class="account-head-line">ورود | ثبت نام</p>
+                <div class="">
+                  <div class="">
+                    <label for="email-phone"
+                      >شماره همراه خود را وارد کنید</label
+                    >
+                    <input
+                      type="text"
+                      id="email-phone"
+                      class="input-email-account"
+                      placeholder=""
+                    />
+                  </div>
+                  <div class="mt-2">
+                    <label for="email-phone">کد امنیتی</label>
+                    <input
+                      dir="ltr"
+                      type="text"
+                      autocomplete="off"
+                      class="text-center"
+                      id="MyCap"
+                      inputmode="numeric"
+                      pattern="[0-9]*"
+                      title="Non-negative integral number"
+                      data-val="true"
+                      data-val-length="کدامنیتی باید دقیقا 4 کاراکتر باشد"
+                      data-val-length-max="4"
+                      data-val-required="لطفا کدامنیتی را وارد کنید"
+                      maxlength="4"
+                      name="Captcha"
+                      value=""
+                    />
+                  </div>
+                  <div class="my-3">captcha code here</div>
+
+                  <div class="mt-2">
+                    <input
+                      type="submit"
+                      id="btn"
+                      value="دریافت کد ورود پارادایس"
+                      class="btn btn-danger"
+                    />
+                  </div>
+                  <div class="google-btn-wapepr content-account" id="GetGoogle">
+                    <a
+                      class="google-btn btn btn-outline-primary"
+                      href="/Provider/Google"
+                    >
+                      <img
+                        class="google-icon"
+                        src="assets/images/Google__G__Logo.svg"
+                      />
+                      <span>ورود با گوگل</span>
+                    </a>
+                  </div>
+                </div>
+              </div>
+            </form>
+            <div class="col-lg-12 col-sm-12 col-md-12 col-12">
+              <div class="login-footer">
+                با ورود و یا ثبت نام در پارادایس شما
+                <a href="#"> شرایط و قوانین </a>
+                استفاده از سرویس های سایت پارادایس و
+
+                <a href="#"> قوانین حریم خصوصی </a>
+
+                آن را می‌پذیرید.
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+
+    <!-- end::login-modal -->
+
     <!-- start::header -->
     <header>
-      <div class=" container-fluid px-4">
+      <div class="container-fluid px-4">
         <div class="row py-4">
           <div class="col-12 col-md-8 col-xl-9">
-            <div class="header-right ">
+            <div class="header-right">
               <div class="row justify-content-between">
                 <div class="col-lg-2 col-md-4 col-12 pull-righ">
                   <div class="logo-wrapper">
-                    <a href="#" class="logo"> 
-                      <img src="assets/images/logo.webp" alt=""> </a>
+                    <a href="#" class="logo">
+                      <img src="assets/images/logo.webp" alt="" />
+                    </a>
                   </div>
                 </div>
-  
-                <div class="col-lg-8 col-md-8 col-12 pull-righ px-md-0 px-md-auto">
+
+                <div
+                  class="col-lg-8 col-md-8 col-12 pull-righ px-md-0 px-md-auto"
+                >
                   <div class="search-header">
                     <form action="#" class="d-flex">
                       <input
@@ -37,12 +143,12 @@
                         class="header-search-input"
                         placeholder="جستجو ..."
                       />
-  
+
                       <select
                         name=""
                         id=""
                         class="js-example-basic-single"
-                        style="height: 45px;"
+                        style="height: 45px"
                       >
                         <option value="1">کالای دیجیتال</option>
                         <option value="1">آرایشی بهداشتی و سلامت</option>
@@ -59,7 +165,7 @@
                         <option value="1">کالای دیجیتال</option>
                         <option value="1">آرایشی بهداشتی و سلامت</option>
                       </select>
-  
+
                       <button type="submit" class="btn-search">
                         <svg
                           xmlns="http://www.w3.org/2000/svg"
@@ -83,12 +189,18 @@
             <div class="header-left">
               <div class="d-flex flex-row-reverse mt-md-1">
                 <div class="mini-cart-header">
-                  <a
-                    href="cart.html"
-                    
-                    class="mini-cart-header-btn"
-                  >
-                  <svg xmlns="http://www.w3.org/2000/svg" width="30" height="30" viewBox="0 0 24 24"><path fill="currentColor" d="M18 6h-2c0-2.21-1.79-4-4-4S8 3.79 8 6H6c-1.1 0-2 .9-2 2v12c0 1.1.9 2 2 2h12c1.1 0 2-.9 2-2V8c0-1.1-.9-2-2-2zm-6-2c1.1 0 2 .9 2 2h-4c0-1.1.9-2 2-2zm6 16H6V8h2v2c0 .55.45 1 1 1s1-.45 1-1V8h4v2c0 .55.45 1 1 1s1-.45 1-1V8h2v12z"/></svg>
+                  <a href="cart.html" class="mini-cart-header-btn">
+                    <svg
+                      xmlns="http://www.w3.org/2000/svg"
+                      width="30"
+                      height="30"
+                      viewBox="0 0 24 24"
+                    >
+                      <path
+                        fill="currentColor"
+                        d="M18 6h-2c0-2.21-1.79-4-4-4S8 3.79 8 6H6c-1.1 0-2 .9-2 2v12c0 1.1.9 2 2 2h12c1.1 0 2-.9 2-2V8c0-1.1-.9-2-2-2zm-6-2c1.1 0 2 .9 2 2h-4c0-1.1.9-2 2-2zm6 16H6V8h2v2c0 .55.45 1 1 1s1-.45 1-1V8h4v2c0 .55.45 1 1 1s1-.45 1-1V8h2v12z"
+                      />
+                    </svg>
                     <span class="cart-count">2</span>
                   </a>
                   <div class="mini-cart-dropdown">
@@ -521,22 +633,112 @@
                 </div>
 
                 <div class="mini-cart-header">
-                  <a href="favorite.html" >
-                    <svg xmlns="http://www.w3.org/2000/svg" width="32" height="32" viewBox="0 0 24 24"><path fill="currentColor" d="M16.5 3c-1.74 0-3.41.81-4.5 2.09C10.91 3.81 9.24 3 7.5 3C4.42 3 2 5.42 2 8.5c0 3.78 3.4 6.86 8.55 11.54L12 21.35l1.45-1.32C18.6 15.36 22 12.28 22 8.5C22 5.42 19.58 3 16.5 3zm-4.4 15.55l-.1.1l-.1-.1C7.14 14.24 4 11.39 4 8.5C4 6.5 5.5 5 7.5 5c1.54 0 3.04.99 3.57 2.36h1.87C13.46 5.99 14.96 5 16.5 5c2 0 3.5 1.5 3.5 3.5c0 2.89-3.14 5.74-7.9 10.05z"/></svg>
+                  <a href="favorite.html">
+                    <svg
+                      xmlns="http://www.w3.org/2000/svg"
+                      width="32"
+                      height="32"
+                      viewBox="0 0 24 24"
+                    >
+                      <path
+                        fill="currentColor"
+                        d="M16.5 3c-1.74 0-3.41.81-4.5 2.09C10.91 3.81 9.24 3 7.5 3C4.42 3 2 5.42 2 8.5c0 3.78 3.4 6.86 8.55 11.54L12 21.35l1.45-1.32C18.6 15.36 22 12.28 22 8.5C22 5.42 19.58 3 16.5 3zm-4.4 15.55l-.1.1l-.1-.1C7.14 14.24 4 11.39 4 8.5C4 6.5 5.5 5 7.5 5c1.54 0 3.04.99 3.57 2.36h1.87C13.46 5.99 14.96 5 16.5 5c2 0 3.5 1.5 3.5 3.5c0 2.89-3.14 5.74-7.9 10.05z"
+                      />
+                    </svg>
                     <span class="cart-count">2</span>
                   </a>
                 </div>
               </div>
 
-              <a href="login.html" class="login-link">
+              <a
+                href="#"
+                class="login-link"
+              >
                 <div class="btn-login text-elipsis">
-                  <span style="transform: rotate(180deg);display: inline-block;">
-                  <svg xmlns="http://www.w3.org/2000/svg" width="22" height="22" viewBox="0 0 24 24"><path fill="currentColor" d="M9 2h9c1.1 0 2 .9 2 2v16c0 1.1-.9 2-2 2H9c-1.1 0-2-.9-2-2v-2h2v2h9V4H9v2H7V4c0-1.1.9-2 2-2z"/><path fill="currentColor" d="M10.09 15.59L11.5 17l5-5l-5-5l-1.41 1.41L12.67 11H3v2h9.67z"/></svg>
-
+                  <span style="display: inline-block">
+                    <svg
+                      xmlns="http://www.w3.org/2000/svg"
+                      width="30"
+                      height="30"
+                      viewBox="0 0 24 24"
+                    >
+                      <path
+                        fill="currentColor"
+                        d="M12 5.9a2.1 2.1 0 1 1 0 4.2a2.1 2.1 0 0 1 0-4.2m0 9c2.97 0 6.1 1.46 6.1 2.1v1.1H5.9V17c0-.64 3.13-2.1 6.1-2.1M12 4C9.79 4 8 5.79 8 8s1.79 4 4 4s4-1.79 4-4s-1.79-4-4-4zm0 9c-2.67 0-8 1.34-8 4v3h16v-3c0-2.66-5.33-4-8-4z"
+                      />
+                    </svg>
                   </span>
                   <span class="">ورود | ثبت‌نام</span>
                 </div>
               </a>
+              <!-- <div class="dropdown">
+                <a class=" dropdown-toggle auth-link" href="#" role="button" id="dropdownMenuLink" data-bs-toggle="dropdown" aria-expanded="false">
+                  <span>
+                    <svg
+                        xmlns="http://www.w3.org/2000/svg"
+                        width="36"
+                        height="36"
+                        viewBox="0 0 24 24"
+                      >
+                        <path
+                          fill="currentColor"
+                          d="M12 5.9a2.1 2.1 0 1 1 0 4.2a2.1 2.1 0 0 1 0-4.2m0 9c2.97 0 6.1 1.46 6.1 2.1v1.1H5.9V17c0-.64 3.13-2.1 6.1-2.1M12 4C9.79 4 8 5.79 8 8s1.79 4 4 4s4-1.79 4-4s-1.79-4-4-4zm0 9c-2.67 0-8 1.34-8 4v3h16v-3c0-2.66-5.33-4-8-4z"
+                        />
+                      </svg>
+                  </span>
+                  
+                </a>
+              
+                <div class="dropdown-menu" aria-labelledby="dropdownMenuLink">
+                  <div class="dropdown-content">
+                    <a class="d-block dropdown--item">
+                      <div class="dropdown--item__content">
+                        <span>شهرام پیوندی</span>
+                      <span>
+                        <svg xmlns="http://www.w3.org/2000/svg" width="18" height="18" viewBox="0 0 24 24"><path fill="currentColor" d="M11.67 3.87L9.9 2.1L0 12l9.9 9.9l1.77-1.77L3.54 12z"/></svg>
+                      </span>
+                      </div>
+                    </a>
+                    <a class="dropdown--item">
+                     <div class="dropdown--item__content">
+                      <span class="d-inline-block">
+                        <svg xmlns="http://www.w3.org/2000/svg" width="20" height="20" viewBox="0 0 24 24"><path fill="currentColor" d="M18 6h-2c0-2.21-1.79-4-4-4S8 3.79 8 6H6c-1.1 0-2 .9-2 2v12c0 1.1.9 2 2 2h12c1.1 0 2-.9 2-2V8c0-1.1-.9-2-2-2zm-6-2c1.1 0 2 .9 2 2h-4c0-1.1.9-2 2-2zm6 16H6V8h2v2c0 .55.45 1 1 1s1-.45 1-1V8h4v2c0 .55.45 1 1 1s1-.45 1-1V8h2v12z"/></svg>
+                      </span>
+                      <span class="">  لیست سفارشات</span>
+                     </div>
+                      
+                    </a>
+                    <a class="dropdown--item">
+                     <div class="dropdown--item__content"> 
+                      <span>
+                        <svg xmlns="http://www.w3.org/2000/svg" width="20" height="20" viewBox="0 0 24 24"><path fill="currentColor" d="M16.5 3c-1.74 0-3.41.81-4.5 2.09C10.91 3.81 9.24 3 7.5 3C4.42 3 2 5.42 2 8.5c0 3.78 3.4 6.86 8.55 11.54L12 21.35l1.45-1.32C18.6 15.36 22 12.28 22 8.5C22 5.42 19.58 3 16.5 3zm-4.4 15.55l-.1.1l-.1-.1C7.14 14.24 4 11.39 4 8.5C4 6.5 5.5 5 7.5 5c1.54 0 3.04.99 3.57 2.36h1.87C13.46 5.99 14.96 5 16.5 5c2 0 3.5 1.5 3.5 3.5c0 2.89-3.14 5.74-7.9 10.05z"/></svg>
+                      </span>
+                      <span>لیست علاقه مندی</span>
+                     </div>
+                     
+                    </a>
+                    <a class="dropdown--item">
+                      <div class="dropdown--item__content"> 
+                       <span>
+                        <svg xmlns="http://www.w3.org/2000/svg" width="20" height="20" viewBox="0 0 24 24"><path fill="currentColor" d="M20 4H4c-1.11 0-1.99.89-1.99 2L2 18c0 1.11.89 2 2 2h16c1.11 0 2-.89 2-2V6c0-1.11-.89-2-2-2zm0 14H4v-6h16v6zm0-10H4V6h16v2z"/></svg>
+                       </span>
+                       <span>پرداخت ها</span>
+                      </div>
+                      
+                     </a>
+                     <a class="dropdown--item">
+                      <div class="dropdown--item__content"> 
+                       <span>
+                        <svg xmlns="http://www.w3.org/2000/svg" width="20" height="20" viewBox="0 0 24 24"><path fill="currentColor" d="m17 7l-1.41 1.41L18.17 11H8v2h10.17l-2.58 2.58L17 17l5-5zM4 5h8V3H4c-1.1 0-2 .9-2 2v14c0 1.1.9 2 2 2h8v-2H4V5z"/></svg>
+                       </span>
+                       <span>خروج</span>
+                      </div>
+                      
+                     </a>
+                  </div>
+                </div>
+              </div> -->
+             
               <!-- Example single danger button -->
             </div>
           </div>
@@ -547,7 +749,10 @@
           <div class="col-12">
             <nav class="main-menu">
               <ul class="new-list-menu">
-                <li class="item-list-menu megamenu-1 category" style="margin-right: 7px;">
+                <li
+                  class="item-list-menu megamenu-1 category"
+                  style="margin-right: 7px"
+                >
                   <a
                     href="#"
                     class="list-category first after"
@@ -2984,6 +3189,7 @@
   </body>
   <script src="./assets/js/jquery-3.2.1.min.js"></script>
   <script src="./assets/js/select2.min.js"></script>
+  <script src="./assets/bootstrap/js/bootstrap.bundle.min.js"></script>
   <script src="./assets/js/main.js"></script>
   <script src="assets/js/owl.carousel.min.js"></script>
 

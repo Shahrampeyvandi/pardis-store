@@ -4,10 +4,15 @@
     --text-color: #616161;
     --border-gray: #b3b3b3;
     --border-gray-light: #e2e2e2;
-    --button-black-color:#0c0c0c;
+    --button-black-color: #0c0c0c;
+    --color-natural-100: #f0f0f1;
     --color-natural-200: #e0e0e2;
+    --color-natural-300: #c0c2c5;
+    --color-natural-400: #a1a3a8;
+    --color-natural-500: #81858b;
+    --color-natural-600: #62666d;
     --color-natural-700: #3f4064;
-    --natural-icon:#424750;
+    --natural-icon: #424750;
 }
 
 * {
@@ -15,6 +20,7 @@
     padding: 0;
     border: 0;
     font-weight: normal;
+    box-sizing: border-box;
 }
 
 body {
@@ -158,9 +164,11 @@ q:after {
 a {
     display: inline-block;
 }
+
 svg {
-    color: var(--natural-icon);
+    color: var(--color-natural-600);
 }
+
 table {
     border-collapse: collapse;
     border-spacing: 0;
@@ -217,6 +225,26 @@ a {
 
 a:hover {
     text-decoration: none;
+}
+
+input {
+    width: 100%;
+    background: #fff;
+    outline: none;
+    color: var(--color-natural-700);
+    text-align: right;
+    border: 1px solid #ddd;
+    border-radius: 5px;
+    padding: 0.4em 0.6em;
+}
+
+label {
+    display: block;
+    text-align: right;
+    padding-top: 10px;
+    color: var(--color-natural-500);
+    margin-bottom: 0.5em;
+    font-size: 0.8rem;
 }
 
 @font-face {
@@ -302,7 +330,7 @@ header {
 }
 
 .header-right .logo-wrapper {
-    text-align: right   ;
+    text-align: right;
     height: 100%;
 }
 
@@ -335,6 +363,7 @@ header {
     height: 45px;
     outline: none;
     background: var(--input-bg-color);
+    border:none;
     color: #474747;
     padding-left: 15px;
     padding-right: 10px;
@@ -358,8 +387,9 @@ header {
 .header-right .search-header .btn-search i {
     font-size: 22px;
 }
+
 .header-right .search-header .btn-search svg {
-    color:#e6e6e6;
+    color: #e6e6e6;
 }
 
 .header-left {
@@ -387,6 +417,33 @@ header {
 
 .header-left .login-link {
     color: var(--button-black-color);
+}
+
+.header-left .auth-link {
+    height: 40px;
+    position: relative;
+    margin-left: 25px;
+    color: var(--color-natural-600);
+}
+.header-left .auth-link:focus {
+    background: #ffeeee;
+    border-radius: 5px;
+}
+
+.header-left .auth-link::before {
+    content: "";
+    height: 28px;
+    background: var(--color-natural-200);
+    position: absolute;
+    left: -28px;
+    width: 1px;
+    top: 6px;
+}
+
+.header-left .auth-link .arrow {
+    position: absolute;
+    top: 0;
+    left: -12px;
 }
 
 .header-left .btn-login i {
@@ -1637,7 +1694,6 @@ input[type="checkbox"]:checked~.switch {
     cursor: pointer;
 }
 
-
 /* header slider --------------- */
 .bg-img {
     background-position: center center;
@@ -1645,91 +1701,90 @@ input[type="checkbox"]:checked~.switch {
     position: relative;
     z-index: 1;
     background-color: #bebebe;
-  }
+}
 
-  .slider {
+.slider {
     height: 500px;
-  }
+}
 
-
-
-  .owl-carousel .item {
+.owl-carousel .item {
     /* background: #4DC7A0; */
-  }
+}
 
-  /* Feel free to change duration  */
-  .animated {
+/* Feel free to change duration  */
+.animated {
     -webkit-animation-duration: 1000 ms;
     animation-duration: 1000 ms;
     -webkit-animation-fill-mode: both;
     animation-fill-mode: both;
-  }
+}
 
-  /* .owl-animated-out - only for current item */
-  /* This is very important class. Use z-index if you want move Out item above In item */
-  .owl-animated-out {
+/* .owl-animated-out - only for current item */
+/* This is very important class. Use z-index if you want move Out item above In item */
+.owl-animated-out {
     z-index: 1;
-  }
+}
 
-  /* .owl-animated-in - only for upcoming item
+/* .owl-animated-in - only for upcoming item
 /* This is very important class. Use z-index if you want move In item above Out item */
-  .owl-animated-in {
+.owl-animated-in {
     z-index: 0;
-  }
+}
 
-  @keyframes fadeInUp {
+@keyframes fadeInUp {
     0% {
-      opacity: 0;
-      transform: translate3d(0, 100px, 0);
+        opacity: 0;
+        transform: translate3d(0, 100px, 0);
     }
 
     100% {
-      opacity: 1;
-      transform: none;
+        opacity: 1;
+        transform: none;
     }
-  }
+}
 
-  /* .fadeOut is style taken from Animation.css and this is how it looks in owl.carousel.css:  */
-  .fadeOut {
+/* .fadeOut is style taken from Animation.css and this is how it looks in owl.carousel.css:  */
+.fadeOut {
     -webkit-animation-name: fadeOut;
     animation-name: fadeOut;
-  }
+}
 
-  @-webkit-keyframes fadeOut {
+@-webkit-keyframes fadeOut {
     0% {
-      opacity: 1;
+        opacity: 1;
     }
 
     100% {
-      opacity: 0;
+        opacity: 0;
     }
-  }
+}
 
-  @keyframes fadeOut {
+@keyframes fadeOut {
     0% {
-      opacity: 1;
+        opacity: 1;
     }
 
     100% {
-      opacity: 0;
+        opacity: 0;
     }
-  }
+}
 
-  .slider-content-title {
+.slider-content-title {
     font-size: 2rem;
     margin-bottom: 1.5rem;
-  }
+}
 
-  .slider-content-subtitle {
+.slider-content-subtitle {
     font-size: 1.2rem;
     margin-bottom: 1.3rem;
     line-height: 30px;
-  }
-  .owl-dots .owl-dot.active {
-    background: #4fb68d none repeat scroll right 0;
-  }
+}
 
-  .owl-dots .owl-dot {
+.owl-dots .owl-dot.active {
+    background: #4fb68d none repeat scroll right 0;
+}
+
+.owl-dots .owl-dot {
     background: #fff none repeat scroll right 0;
     border-radius: 100%;
     display: inline-block;
@@ -1737,39 +1792,194 @@ input[type="checkbox"]:checked~.switch {
     margin: 0 5px;
     width: 14px;
     transition: 0.3s;
-  }
-  .owl-dots {
+}
+
+.owl-dots {
     bottom: 26px;
     right: 0;
     position: absolute;
     left: 0;
     text-align: center;
-  }
-  .owl-item.active.animated .slider-animated-1 .slider-content-btn {
+}
+
+.owl-item.active.animated .slider-animated-1 .slider-content-btn {
     -webkit-animation-delay: 800ms;
     animation-delay: 800ms;
     -webkit-animation-name: fadeInUp;
     animation-name: fadeInUp;
-  }
+}
 
-  .owl-item.active.animated .slider-animated-1 p {
+.owl-item.active.animated .slider-animated-1 p {
     -webkit-animation-delay: 1s;
     animation-delay: 1s;
     -webkit-animation-name: fadeInUp;
     animation-name: fadeInUp;
-  }
+}
 
-  .owl-item.active.animated .slider-animated-1 h1 {
+.owl-item.active.animated .slider-animated-1 h1 {
     -webkit-animation-delay: 1.3s;
     animation-delay: 1.3s;
     -webkit-animation-name: fadeInUp;
     animation-name: fadeInUp;
-  }
+}
+
 /* end header slider ------------ */
 
-.select2{
+.select2 {
     width: 200px !important;
 }
+
+/* modal------------------ */
+.remodal-overlay {
+    width: 100%;
+    height: 100%;
+    background: hsla(0, 0%, 52.9%, 0.5);
+    top: 0;
+    z-index: 9999;
+    position: fixed;
+    text-align: center;
+    display: none;
+}
+.remodal-overlay.show {
+    display: block;
+    opacity: 1;
+}
+
+.remodal-overlay .remodal {
+    width: 100%;
+    overflow: auto;
+    max-height: 94vh;
+    background: #fff;
+    margin-top: 15px;
+}
+
+.account-head-line {
+    font: 1.3rem iranyekan;
+    width: 100%;
+    text-align: center;
+    color: var(--button-black-color);
+    font-weight: 700;
+}
+
+.remodal-overlay.login-modal .remodal .middle-container {
+    min-width: unset;
+    width: 100%;
+    padding: 2rem 4rem;
+}
+
+.remodal-overlay .close-btn {
+    float: left;
+    margin: 1rem 0.5rem;
+    color: var(--color-natural-400);
+}
+
+.remodal-overlay .close-btn svg {
+    color: var(--color-natural-400);
+}
+
+.account-box>* {
+    margin-bottom: 1rem;
+}
+
+.google-btn-wapepr {
+    margin-top: 20px;
+}
+
+.google-btn {
+    width: 100%;
+    position: relative;
+}
+
+/* .google-btn a {
+    color: var(--color-natural-200);
+
+} */
+.google-icon {
+    position: absolute;
+    right: 2px;
+    background: white;
+    padding: 6px;
+    border-radius: 4px;
+    top: 2px;
+    width: 32px;
+}
+
+.login-footer {
+    font-size: 0.8rem;
+    line-height: 1.5;
+    margin-top: 1rem;
+}
+
+/* end modal--------------- */
+
+/* dropdown login---- */
+.dropdown-menu {
+    padding: 0;
+}
+
+.dropdown-content {
+    min-width: 200px;
+    max-width: 300px;
+}
+
+.dropdown--item {
+    font-size: 0.9rem;
+    display: flex;
+    align-items: center;
+    color: var(--color-natural-600);
+    cursor: pointer;
+    transition: background 0.2s linear;
+}
+.dropdown--item__content{
+    width: 100%;
+    height: 100%;
+    display: flex;
+    align-items: center;
+}
+/* .dropdown--item__content span{
+    padding: 1em;
+} */
+.dropdown--item:not(:first-child) .dropdown--item__content span{
+    padding: .85em;
+    font-size: .85rem;
+}
+.dropdown--item:first-child .dropdown--item__content {
+    justify-content: space-between;
+    padding: 1rem 0;
+    border-bottom: 1px solid var(--color-natural-200);
+    margin: 0 15px;
+    width: auto;
+   
+
+}
+.dropdown--item:first-child .dropdown--item__content span {
+font-weight: 600;   
+
+}
+
+.border-after {
+    position: relative;
+}
+/* 
+.border-after::after {
+    content: "";
+    height: 1px;
+    width: 80%;
+    text-align: center;
+    position: absolute;
+    background-color: var(--color-natural-300);
+    bottom: 0;
+    left: 0;
+    margin: auto;
+    right: 0;
+} */
+
+.dropdown--item:hover {
+    background-color: var(--color-natural-100);
+    color: currentColor;
+}
+
+/* dropdown login---- */
 
 /*responsive---------------------*/
 
@@ -1777,8 +1987,6 @@ input[type="checkbox"]:checked~.switch {
     .header-left .login-link {
         float: right;
     }
-
- 
 
     .header-right {
         margin-right: 0;
@@ -1832,7 +2040,7 @@ input[type="checkbox"]:checked~.switch {
         margin-top: 0;
         width: 150px;
         display: block;
-        margin:auto;
+        margin: auto;
         margin-top: 0px;
     }
 
@@ -1934,18 +2142,19 @@ input[type="checkbox"]:checked~.switch {
 }
 
 @media (max-width: 1023px) {
-    .header-left .btn-login {
-    }
+    .header-left .btn-login {}
 }
 
 @media (max-width: 767px) {
     html {
         font-size: 12px;
     }
+
     .slider {
         height: 300px;
-      }
-    .select2{
+    }
+
+    .select2 {
         width: 130px !important;
     }
 
@@ -2028,19 +2237,7 @@ input[type="checkbox"]:checked~.switch {
         top: -46px !important;
     }
 }
-@media (max-width: 374px) {
-    .select2{
-        width: 105px !important;
-    }
 
-    
-
-    .header-right .search-header input {
-        background: #fff;
-        height: 40px;
-        width: 130px;
-    }
-}
 @media (max-width: 490px) {
     footer .footer-address .address-images {
         width: 100%;
@@ -2167,6 +2364,33 @@ input[type="checkbox"]:checked~.switch {
         padding: 35px 10px 35px 10px;
     }
 }
+
+@media (max-width: 376px) {
+    .select2 {
+        width: 105px !important;
+    }
+
+    .header-right .search-header input {
+        background: #fff;
+        height: 40px;
+        width: 150px;
+    }
+}
+
+@media (max-width: 376px) {
+    .select2 {
+        width: 105px !important;
+    }
+
+    .header-right .search-header input {
+        background: #fff;
+        height: 40px;
+        width: 150px;
+    }
+}
+
+
+
 
 /* select 2 customizition */
 .select2-selection__rendered {

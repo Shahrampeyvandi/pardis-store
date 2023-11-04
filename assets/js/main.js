@@ -10,7 +10,7 @@ $(document).ready(function () {
     if ($('.dropdown').hasClass('open')) {
       $('.dropdown').removeClass('open');
     }
-    if ($(e.target).closest(".mini-cart-header").length === 0) {
+    if ($(e.target).closest(".header-basket-list-item-content").length === 0 && $(e.target).closest(".mini-cart-header").length === 0) {
         $(".mini-cart-dropdown").removeClass('active')
     }
   });
@@ -68,4 +68,14 @@ $(document).ready(function () {
     width: "resolve",
     dir: "rtl",
   });
+
+
+  $('.login-link').click(function(e) {
+    e.preventDefault()
+    $('.login-modal').fadeIn(100)
+  })
+  $('.login-modal .close-btn').click(function(e) {
+    e.preventDefault()
+    $('.login-modal').fadeOut(100)
+  })
 });
