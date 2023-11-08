@@ -17,7 +17,7 @@
   <body>
     <!-- start::login-modal -->
     <div class="remodal-overlay login-modal" id="modal">
-      <div class="col-lg-4 col-md-8 col-xs-12 mx-auto">
+      <div class=" col-md-8 col-xs-12 mx-auto">
         <div class="remodal">
           <a href="#" class="close-btn">
             <svg
@@ -33,78 +33,107 @@
             </svg>
           </a>
           <div class="middle-container">
-            <form action="#" class="form-checkout">
-              <div class="account-box">
-                <a href="index.html" class="logo-account"
-                  ><img src="assets/images/logo.webp"
-                /></a>
-                <p class="account-head-line">ورود | ثبت نام</p>
-                <div class="">
-                  <div class="">
-                    <label for="email-phone"
-                      >شماره همراه خود را وارد کنید</label
-                    >
-                    <input
-                      type="text"
-                      id="email-phone"
-                      class="input-email-account"
-                      placeholder=""
-                    />
-                  </div>
-                  <div class="mt-2">
-                    <label for="email-phone">کد امنیتی</label>
-                    <input
-                      dir="ltr"
-                      type="text"
-                      autocomplete="off"
-                      class="text-center"
-                      id="MyCap"
-                      inputmode="numeric"
-                      pattern="[0-9]*"
-                      title="Non-negative integral number"
-                      data-val="true"
-                      data-val-length="کدامنیتی باید دقیقا 4 کاراکتر باشد"
-                      data-val-length-max="4"
-                      data-val-required="لطفا کدامنیتی را وارد کنید"
-                      maxlength="4"
-                      name="Captcha"
-                      value=""
-                    />
-                  </div>
-                  <div class="my-3">captcha code here</div>
-
-                  <div class="mt-2">
-                    <input
-                      type="submit"
-                      id="btn"
-                      value="دریافت کد ورود پارادایس"
-                      class="btn btn-danger"
-                    />
-                  </div>
-                  <div class="google-btn-wapepr content-account" id="GetGoogle">
-                    <a
-                      class="google-btn btn btn-outline-primary"
-                      href="/Provider/Google"
-                    >
-                      <img
-                        class="google-icon"
-                        src="assets/images/Google__G__Logo.svg"
-                      />
-                      <span>ورود با گوگل</span>
-                    </a>
+            <div class="login-form">
+              <div class="row w-100 m-auto">
+                <div class="col-lg-6 d-none d-lg-block">
+                  <div class="login-form__right">
+                    <h2 class="login-form__right-title">سلام!<br>به سایت ما خوش آمدید.</h2>
+                    <div>
+                      <img class="login-form__right-img" src="assets/images/Mobile login-bro.png" width="344" alt="Illustartion">
+                    </div>
                   </div>
                 </div>
-              </div>
-            </form>
-            <div class="col-lg-12 col-sm-12 col-md-12 col-12">
-              <div class="login-footer">
-                با ورود و یا ثبت نام در پارادایس شما
-                <a href="#"> شرایط و قوانین </a>
-                استفاده از سرویس های سایت پارادایس و
-
-                <a href="#"> قوانین حریم خصوصی </a>
-
-                آن را می‌پذیرید.
+                <div class="col-12 col-lg-6">
+                  <form method="post" action="#" class="form-checkout">
+                    <div class="account-box">
+                     
+                      <p class="account-head-line">ورود | ثبت نام</p>
+                      <div class="">
+                        <div class="">
+                          <label for="email-phone"
+                            >شماره همراه خود را وارد کنید</label
+                          >
+                          <input
+                            type="text"
+                            id="email-phone"
+                            class="input-email-account"
+                            placeholder="شماره همراه"
+                          />
+                        </div>
+                        <div class="login-modal__security-code">
+                          <div class=" login-modal__input" style="position: relative;flex: 1;
+                          margin-left: 1rem;">
+                            <label for="email-phone">کد امنیتی</label>
+                            <div  class="login-modal__password">
+                              <span class="login-modal__show" style="display: none;">
+                                <svg xmlns="http://www.w3.org/2000/svg" width="22" height="22" viewBox="0 0 24 24"><path fill="currentColor" d="M12 16q1.875 0 3.188-1.313T16.5 11.5q0-1.875-1.313-3.188T12 7q-1.875 0-3.188 1.313T7.5 11.5q0 1.875 1.313 3.188T12 16Zm0-1.8q-1.125 0-1.913-.788T9.3 11.5q0-1.125.788-1.913T12 8.8q1.125 0 1.913.788T14.7 11.5q0 1.125-.787 1.913T12 14.2Zm0 4.8q-3.475 0-6.35-1.838T1.3 12.2q-.075-.125-.1-.312t-.025-.388q0-.2.025-.388t.1-.312q1.475-3.125 4.35-4.963T12 4q3.475 0 6.35 1.838T22.7 10.8q.075.125.1.313t.025.387q0 .2-.025.388t-.1.312q-1.475 3.125-4.35 4.963T12 19Z"/></svg>
+                              </span>
+                              <span class="login-modal__hide">
+                                <svg xmlns="http://www.w3.org/2000/svg" width="22" height="22" viewBox="0 0 24 24"><path fill="currentColor" d="m19.3 16.5l-3.2-3.2q.2-.425.3-.863t.1-.937q0-1.875-1.312-3.188T12 7q-.5 0-.938.1t-.862.3L7.65 4.85q1.025-.425 2.1-.637T12 4q3.575 0 6.425 1.888T22.7 10.8q.075.125.1.313t.025.387q0 .2-.037.388t-.088.312q-.575 1.275-1.437 2.375T19.3 16.5Zm-.2 5.4l-3.5-3.45q-.875.275-1.762.413T12 19q-3.575 0-6.425-1.888T1.3 12.2q-.075-.125-.1-.312t-.025-.388q0-.2.025-.375t.1-.3Q1.825 9.7 2.55 8.75T4.15 7L2.075 4.9Q1.8 4.625 1.8 4.212t.3-.712q.275-.275.7-.275t.7.275l17 17q.275.275.288.688t-.288.712q-.275.275-.7.275t-.7-.275ZM12 16q.275 0 .513-.025t.512-.1l-5.4-5.4q-.075.275-.1.513T7.5 11.5q0 1.875 1.313 3.188T12 16Zm2.65-4.15l-3-3q1.425-.225 2.325.8t.675 2.2Z"/></svg>
+                              </span>
+                            </div>
+                            <input
+                              dir="ltr"
+                              type="password"
+                              autocomplete="off"
+                              class="login-modal__password-input"
+                              id="MyCap"
+                              inputmode="numeric"
+                              pattern="[0-9]*"
+                              title="Non-negative integral number"
+                              data-val="true"
+                              data-val-length="کدامنیتی باید دقیقا 4 کاراکتر باشد"
+                              data-val-length-max="4"
+                              data-val-required="لطفا کدامنیتی را وارد کنید"
+                              maxlength="4"
+                              name="Captcha"
+                              placeholder="کد امنیتی"
+                              value=""
+                            />
+                          </div>
+                          <div class="login-modal__code" style="">
+                            <span>1234</span>
+                          </div>
+                        </div>
+      
+                       
+      
+                        <div class="mt-4">
+                          <button
+                            type="submit"
+                            class="login-btn"
+                          >ورود به حساب کاربری</button>
+                        </div>
+      
+                        <div class="login-modal__seprator">
+                          یا
+                        </div>
+      
+                        <div class="google-btn-wapepr content-account">
+                          <a
+                            class="google-btn"
+                            href="#"
+                          >
+                            <svg xmlns="http://www.w3.org/2000/svg" width="20" height="20" viewBox="0 0 512 512"><path fill="currentColor" d="m473.16 221.48l-2.26-9.59H262.46v88.22H387c-12.93 61.4-72.93 93.72-121.94 93.72c-35.66 0-73.25-15-98.13-39.11a140.08 140.08 0 0 1-41.8-98.88c0-37.16 16.7-74.33 41-98.78s61-38.13 97.49-38.13c41.79 0 71.74 22.19 82.94 32.31l62.69-62.36C390.86 72.72 340.34 32 261.6 32c-60.75 0-119 23.27-161.58 65.71C58 139.5 36.25 199.93 36.25 256s20.58 113.48 61.3 155.6c43.51 44.92 105.13 68.4 168.58 68.4c57.73 0 112.45-22.62 151.45-63.66c38.34-40.4 58.17-96.3 58.17-154.9c0-24.67-2.48-39.32-2.59-39.96Z"/></svg>
+                            <span>ورود با اکانت گوگل</span>
+                          </a>
+                        </div>
+                      </div>
+                    </div>
+                  </form>
+                  <div class="col-lg-12 col-sm-12 col-md-12 col-12">
+                    <div class="login-footer">
+                      با ورود و یا ثبت نام در پارادایس شما
+                      <a href="#"> شرایط و قوانین </a>
+                      استفاده از سرویس های سایت پارادایس و
+      
+                      <a href="#"> قوانین حریم خصوصی </a>
+      
+                      آن را می‌پذیرید.
+                    </div>
+                  </div>
+                </div>
+  
               </div>
             </div>
           </div>
@@ -192,20 +221,10 @@
           <div class="col-12 col-md-4 col-xl-3">
             <div class="header-left">
               <div class="d-flex flex-row-reverse mt-md-1">
-                <div class="mini-cart-header">
-                  <a href="cart.html" class="mini-cart-header-btn">
-                    <svg
-                      xmlns="http://www.w3.org/2000/svg"
-                      width="30"
-                      height="30"
-                      viewBox="0 0 24 24"
-                    >
-                      <path
-                        fill="currentColor"
-                        d="M18 6h-2c0-2.21-1.79-4-4-4S8 3.79 8 6H6c-1.1 0-2 .9-2 2v12c0 1.1.9 2 2 2h12c1.1 0 2-.9 2-2V8c0-1.1-.9-2-2-2zm-6-2c1.1 0 2 .9 2 2h-4c0-1.1.9-2 2-2zm6 16H6V8h2v2c0 .55.45 1 1 1s1-.45 1-1V8h4v2c0 .55.45 1 1 1s1-.45 1-1V8h2v12z"
-                      />
-                    </svg>
-                    <span class="cart-count">2</span>
+                <div class="header-left-icons">
+                  <a href="cart.html" class="header-basket-icon is-empty">
+                    <svg xmlns="http://www.w3.org/2000/svg" width="28" height="28" viewBox="0 0 16 16"><path fill="currentColor" d="M0 2.5A.5.5 0 0 1 .5 2H2a.5.5 0 0 1 .485.379L2.89 4H14.5a.5.5 0 0 1 .485.621l-1.5 6A.5.5 0 0 1 13 11H4a.5.5 0 0 1-.485-.379L1.61 3H.5a.5.5 0 0 1-.5-.5zM3.14 5l1.25 5h8.22l1.25-5H3.14zM5 13a1 1 0 1 0 0 2a1 1 0 0 0 0-2zm-2 1a2 2 0 1 1 4 0a2 2 0 0 1-4 0zm9-1a1 1 0 1 0 0 2a1 1 0 0 0 0-2zm-2 1a2 2 0 1 1 4 0a2 2 0 0 1-4 0z"/></svg>
+                    <span class="cart-count" style="display: none;">0</span>
                   </a>
                   <div class="mini-cart-dropdown">
                     <form action="#" method="post">
@@ -226,352 +245,71 @@
                         </button>
                       </div>
                       <ul class="header-basket-list">
-                        <li class="js-mini-cart-item">
-                          <div class="header-basket-list-item">
-                            <a href="#" class="header-basket-list-item-image">
-                              <img
-                                class="img-fluid"
-                                src="assets/images/0589ee66d13b4677adb6e978ec162be1.webp"
-                              />
-                            </a>
-                            <div class="header-basket-list-item-content">
-                              <div class="flex-grow-1">
-                                <a
-                                  href="#"
-                                  class="header-basket-list-item-title"
-                                  >توپی دوسر فابیو مدل..</a
-                                >
-
-                                <div class="header-basket-list-item-footer">
-                                  <input
-                                    type="number"
-                                    name="product_1"
-                                    class="form-control header-basket-list-item-count"
-                                    value="1"
-                                  />
-                                  <span style="font-size: 0.8rem">x</span>
-                                  <span class="header-basket-list-item-price"
-                                    >200000 تومان</span
-                                  >
-                                </div>
-                              </div>
-                              <button
-                                class="text-danger header-basket-list-item-remove"
-                              >
-                                <svg
-                                  xmlns="http://www.w3.org/2000/svg"
-                                  width="20"
-                                  height="20"
-                                  viewBox="0 0 24 24"
-                                >
-                                  <path
-                                    fill="currentColor"
-                                    d="M6.4 19L5 17.6l5.6-5.6L5 6.4L6.4 5l5.6 5.6L17.6 5L19 6.4L13.4 12l5.6 5.6l-1.4 1.4l-5.6-5.6L6.4 19Z"
-                                  />
-                                </svg>
-                              </button>
-                            </div>
-                          </div>
-                        </li>
-                        <li class="js-mini-cart-item">
-                          <div class="header-basket-list-item">
-                            <a href="#" class="header-basket-list-item-image">
-                              <img
-                                class="img-fluid"
-                                src="assets/images/0589ee66d13b4677adb6e978ec162be1.webp"
-                              />
-                            </a>
-                            <div class="header-basket-list-item-content">
-                              <div class="flex-grow-1">
-                                <a
-                                  href="#"
-                                  class="header-basket-list-item-title"
-                                  >توپی دوسر فابیو مدل..</a
-                                >
-
-                                <div class="header-basket-list-item-footer">
-                                  <input
-                                    type="number"
-                                    name="product_1"
-                                    class="form-control header-basket-list-item-count"
-                                    value="1"
-                                  />
-                                  <span style="font-size: 0.8rem">x</span>
-                                  <span class="header-basket-list-item-price"
-                                    >200000 تومان</span
-                                  >
-                                </div>
-                              </div>
-                              <button
-                                class="text-danger header-basket-list-item-remove"
-                              >
-                                <svg
-                                  xmlns="http://www.w3.org/2000/svg"
-                                  width="20"
-                                  height="20"
-                                  viewBox="0 0 24 24"
-                                >
-                                  <path
-                                    fill="currentColor"
-                                    d="M6.4 19L5 17.6l5.6-5.6L5 6.4L6.4 5l5.6 5.6L17.6 5L19 6.4L13.4 12l5.6 5.6l-1.4 1.4l-5.6-5.6L6.4 19Z"
-                                  />
-                                </svg>
-                              </button>
-                            </div>
-                          </div>
-                        </li>
-                        <li class="js-mini-cart-item">
-                          <div class="header-basket-list-item">
-                            <a href="#" class="header-basket-list-item-image">
-                              <img
-                                class="img-fluid"
-                                src="assets/images/0589ee66d13b4677adb6e978ec162be1.webp"
-                              />
-                            </a>
-                            <div class="header-basket-list-item-content">
-                              <div class="flex-grow-1">
-                                <a
-                                  href="#"
-                                  class="header-basket-list-item-title"
-                                  >توپی دوسر فابیو مدل..</a
-                                >
-
-                                <div class="header-basket-list-item-footer">
-                                  <input
-                                    type="number"
-                                    name="product_1"
-                                    class="form-control header-basket-list-item-count"
-                                    value="1"
-                                  />
-                                  <span style="font-size: 0.8rem">x</span>
-                                  <span class="header-basket-list-item-price"
-                                    >200000 تومان</span
-                                  >
-                                </div>
-                              </div>
-                              <button
-                                class="text-danger header-basket-list-item-remove"
-                              >
-                                <svg
-                                  xmlns="http://www.w3.org/2000/svg"
-                                  width="20"
-                                  height="20"
-                                  viewBox="0 0 24 24"
-                                >
-                                  <path
-                                    fill="currentColor"
-                                    d="M6.4 19L5 17.6l5.6-5.6L5 6.4L6.4 5l5.6 5.6L17.6 5L19 6.4L13.4 12l5.6 5.6l-1.4 1.4l-5.6-5.6L6.4 19Z"
-                                  />
-                                </svg>
-                              </button>
-                            </div>
-                          </div>
-                        </li>
-                        <li class="js-mini-cart-item">
-                          <div class="header-basket-list-item">
-                            <a href="#" class="header-basket-list-item-image">
-                              <img
-                                class="img-fluid"
-                                src="assets/images/0589ee66d13b4677adb6e978ec162be1.webp"
-                              />
-                            </a>
-                            <div class="header-basket-list-item-content">
-                              <div class="flex-grow-1">
-                                <a
-                                  href="#"
-                                  class="header-basket-list-item-title"
-                                  >توپی دوسر فابیو مدل..</a
-                                >
-
-                                <div class="header-basket-list-item-footer">
-                                  <input
-                                    type="number"
-                                    name="product_1"
-                                    class="form-control header-basket-list-item-count"
-                                    value="1"
-                                  />
-                                  <span style="font-size: 0.8rem">x</span>
-                                  <span class="header-basket-list-item-price"
-                                    >200000 تومان</span
-                                  >
-                                </div>
-                              </div>
-                              <button
-                                class="text-danger header-basket-list-item-remove"
-                              >
-                                <svg
-                                  xmlns="http://www.w3.org/2000/svg"
-                                  width="20"
-                                  height="20"
-                                  viewBox="0 0 24 24"
-                                >
-                                  <path
-                                    fill="currentColor"
-                                    d="M6.4 19L5 17.6l5.6-5.6L5 6.4L6.4 5l5.6 5.6L17.6 5L19 6.4L13.4 12l5.6 5.6l-1.4 1.4l-5.6-5.6L6.4 19Z"
-                                  />
-                                </svg>
-                              </button>
-                            </div>
-                          </div>
-                        </li>
-                        <li class="js-mini-cart-item">
-                          <div class="header-basket-list-item">
-                            <a href="#" class="header-basket-list-item-image">
-                              <img
-                                class="img-fluid"
-                                src="assets/images/0589ee66d13b4677adb6e978ec162be1.webp"
-                              />
-                            </a>
-                            <div class="header-basket-list-item-content">
-                              <div class="flex-grow-1">
-                                <a
-                                  href="#"
-                                  class="header-basket-list-item-title"
-                                  >توپی دوسر فابیو مدل..</a
-                                >
-
-                                <div class="header-basket-list-item-footer">
-                                  <input
-                                    type="number"
-                                    name="product_1"
-                                    class="form-control header-basket-list-item-count"
-                                    value="1"
-                                  />
-                                  <span style="font-size: 0.8rem">x</span>
-                                  <span class="header-basket-list-item-price"
-                                    >200000 تومان</span
-                                  >
-                                </div>
-                              </div>
-                              <button
-                                class="text-danger header-basket-list-item-remove"
-                              >
-                                <svg
-                                  xmlns="http://www.w3.org/2000/svg"
-                                  width="20"
-                                  height="20"
-                                  viewBox="0 0 24 24"
-                                >
-                                  <path
-                                    fill="currentColor"
-                                    d="M6.4 19L5 17.6l5.6-5.6L5 6.4L6.4 5l5.6 5.6L17.6 5L19 6.4L13.4 12l5.6 5.6l-1.4 1.4l-5.6-5.6L6.4 19Z"
-                                  />
-                                </svg>
-                              </button>
-                            </div>
-                          </div>
-                        </li>
-                        <li class="js-mini-cart-item">
-                          <div class="header-basket-list-item">
-                            <a href="#" class="header-basket-list-item-image">
-                              <img
-                                class="img-fluid"
-                                src="assets/images/0589ee66d13b4677adb6e978ec162be1.webp"
-                              />
-                            </a>
-                            <div class="header-basket-list-item-content">
-                              <div class="flex-grow-1">
-                                <a
-                                  href="#"
-                                  class="header-basket-list-item-title"
-                                  >توپی دوسر فابیو مدل..</a
-                                >
-
-                                <div class="header-basket-list-item-footer">
-                                  <input
-                                    type="number"
-                                    name="product_1"
-                                    class="form-control header-basket-list-item-count"
-                                    value="1"
-                                  />
-                                  <span style="font-size: 0.8rem">x</span>
-                                  <span class="header-basket-list-item-price"
-                                    >200000 تومان</span
-                                  >
-                                </div>
-                              </div>
-                              <button
-                                class="text-danger header-basket-list-item-remove"
-                              >
-                                <svg
-                                  xmlns="http://www.w3.org/2000/svg"
-                                  width="20"
-                                  height="20"
-                                  viewBox="0 0 24 24"
-                                >
-                                  <path
-                                    fill="currentColor"
-                                    d="M6.4 19L5 17.6l5.6-5.6L5 6.4L6.4 5l5.6 5.6L17.6 5L19 6.4L13.4 12l5.6 5.6l-1.4 1.4l-5.6-5.6L6.4 19Z"
-                                  />
-                                </svg>
-                              </button>
-                            </div>
-                          </div>
-                        </li>
+                        
+                       
                       </ul>
-                      <div class="header-cart-info-footer">
-                        <div class="header-cart-info-total">
-                          <span class="header-cart-info-total-text"
-                            >مبلغ قابل پرداخت</span
-                          >
-                          <span class="header-cart-info-total-amount">
-                            <span class="header-cart-info-total-amount-number">
-                              6,200,000</span
-                            >
-                            <span> تومان</span>
-                          </span>
+                      <div class="checkout-empty ">
+                        <div class="checkout-empty-empty-cart-icon">
+                          <img src="assets/images/cart/cart-empty.png" style="width: 200px;" alt="">
                         </div>
-                        <div>
-                          <button
-                            type="submit"
-                            class="header-cart-info-submit btn btn-success"
-                          >
-                            ادامه خرید
+                        <div class="checkout-empty-title">سبد خرید شما خالی است!</div>
+                       
+                    </div>
+                      
+                      <div class="header-cart-info-footer">
+                       <div class="header-cart-info__empty">
+                        <div class="d-grid">
+                          <button class="btn btn-danger mb-3">
+                            ثبت سفارش
                           </button>
-                          <button
-                            type="button"
-                            class="header-cart-info-submit btn btn-outline-success"
-                          >
-                            مشاهده سبد خرید
-                          </button>
+                        </div>
+                       </div>
+                        <div class="header-cart-footer__details" style="display: none;">
+                          <div class="header-cart-info-total">
+                            <span class="header-cart-info-total-text"
+                              >مبلغ قابل پرداخت</span
+                            >
+                            <span class="header-cart-info-total-amount">
+                              <span class="header-cart-info-total-amount-number">
+                                6,200,000</span
+                              >
+                              <span> تومان</span>
+                            </span>
+                          </div>
+                          <div>
+                            <button
+                              type="submit"
+                              class="header-cart-info-submit btn btn-success"
+                            >
+                              ادامه خرید
+                            </button>
+                            <button
+                              type="button"
+                              class="header-cart-info-submit btn btn-outline-success"
+                            >
+                              مشاهده سبد خرید
+                            </button>
+                          </div>
                         </div>
                       </div>
                     </form>
                   </div>
                 </div>
 
-                <div class="mini-cart-header">
+                <div class="header-left-icons me-4">
                   <a href="favorite.html">
-                    <svg
-                      xmlns="http://www.w3.org/2000/svg"
-                      width="32"
-                      height="32"
-                      viewBox="0 0 24 24"
-                    >
-                      <path
-                        fill="currentColor"
-                        d="M16.5 3c-1.74 0-3.41.81-4.5 2.09C10.91 3.81 9.24 3 7.5 3C4.42 3 2 5.42 2 8.5c0 3.78 3.4 6.86 8.55 11.54L12 21.35l1.45-1.32C18.6 15.36 22 12.28 22 8.5C22 5.42 19.58 3 16.5 3zm-4.4 15.55l-.1.1l-.1-.1C7.14 14.24 4 11.39 4 8.5C4 6.5 5.5 5 7.5 5c1.54 0 3.04.99 3.57 2.36h1.87C13.46 5.99 14.96 5 16.5 5c2 0 3.5 1.5 3.5 3.5c0 2.89-3.14 5.74-7.9 10.05z"
-                      />
-                    </svg>
+                    <svg xmlns="http://www.w3.org/2000/svg" width="28" height="28" viewBox="0 0 512 512"><path fill="currentColor" d="M453.122 79.012a128 128 0 0 0-181.087.068l-15.511 15.7l-15.382-15.666l-.1-.1a128 128 0 0 0-181.02 0l-6.91 6.91a128 128 0 0 0 0 181.019l182.373 182.371l20.595 21.578l.491-.492l.533.533l19.296-20.359L460.032 266.94a128.147 128.147 0 0 0 0-181.019ZM437.4 244.313L256.571 425.146L75.738 244.313a96 96 0 0 1 0-135.764l6.911-6.91a96 96 0 0 1 135.713-.051l38.093 38.787l38.274-38.736a96 96 0 0 1 135.765 0l6.91 6.909a96.11 96.11 0 0 1-.004 135.765Z"/></svg>
                     <span class="cart-count">2</span>
                   </a>
                 </div>
               </div>
 
+              <span class="header-left-icons__seprator"></span>
+
               <a href="#" class="login-link">
                 <div class="btn-login text-elipsis">
                   <span style="display: inline-block">
-                    <svg
-                      xmlns="http://www.w3.org/2000/svg"
-                      width="30"
-                      height="30"
-                      viewBox="0 0 24 24"
-                    >
-                      <path
-                        fill="currentColor"
-                        d="M12 5.9a2.1 2.1 0 1 1 0 4.2a2.1 2.1 0 0 1 0-4.2m0 9c2.97 0 6.1 1.46 6.1 2.1v1.1H5.9V17c0-.64 3.13-2.1 6.1-2.1M12 4C9.79 4 8 5.79 8 8s1.79 4 4 4s4-1.79 4-4s-1.79-4-4-4zm0 9c-2.67 0-8 1.34-8 4v3h16v-3c0-2.66-5.33-4-8-4z"
-                      />
-                    </svg>
+                    <svg xmlns="http://www.w3.org/2000/svg" width="22" height="22" viewBox="0 0 24 24"><g fill="none" fill-rule="evenodd"><path d="M24 0v24H0V0h24ZM12.593 23.258l-.011.002l-.071.035l-.02.004l-.014-.004l-.071-.035c-.01-.004-.019-.001-.024.005l-.004.01l-.017.428l.005.02l.01.013l.104.074l.015.004l.012-.004l.104-.074l.012-.016l.004-.017l-.017-.427c-.002-.01-.009-.017-.017-.018Zm.265-.113l-.013.002l-.185.093l-.01.01l-.003.011l.018.43l.005.012l.008.007l.201.093c.012.004.023 0 .029-.008l.004-.014l-.034-.614c-.003-.012-.01-.02-.02-.022Zm-.715.002a.023.023 0 0 0-.027.006l-.006.014l-.034.614c0 .012.007.02.017.024l.015-.002l.201-.093l.01-.008l.004-.011l.017-.43l-.003-.012l-.01-.01l-.184-.092Z"/><path fill="currentColor" d="M16 14a5 5 0 0 1 4.995 4.783L21 19v1a2 2 0 0 1-1.85 1.995L19 22H5a2 2 0 0 1-1.995-1.85L3 20v-1a5 5 0 0 1 4.783-4.995L8 14h8Zm0 2H8a3 3 0 0 0-2.995 2.824L5 19v1h14v-1a3 3 0 0 0-2.824-2.995L16 16ZM12 2a5 5 0 1 1 0 10a5 5 0 0 1 0-10Zm0 2a3 3 0 1 0 0 6a3 3 0 0 0 0-6Z"/></g></svg>
                   </span>
                   <span class="">ورود | ثبت‌نام</span>
                 </div>
@@ -3163,7 +2901,7 @@
 
     <!-- start::discount slider -->
     <section class="my-5">
-    <div class="container-fluid">
+    <div class="container">
       <div class="row">
         <div class="col-lg-3">
           <div class="w-100 h-100 bg-white">
@@ -3257,7 +2995,7 @@
                               <div class="old">1000,000</div>
                               <div class="new"><span>900,000</span> <span>تومان</span></div>
                             </div>
-                            <button class="btn btn-danger">افزودن به سبد خرید</button>
+                            <button class="btn btn-danger">مشاهده</button>
                           </div>
                         </div>
                        
@@ -3311,7 +3049,7 @@
                               <div class="old">980,000</div>
                               <div class="new"><span>700,000</span> <span>تومان</span></div>
                             </div>
-                            <button class="btn btn-danger">افزودن به سبد خرید</button>
+                            <button class="btn btn-danger">مشاهده</button>
                           </div>
                         </div>
                        
@@ -3364,7 +3102,7 @@
                               <div class="old">980,000</div>
                               <div class="new"><span>700,000</span> <span>تومان</span></div>
                             </div>
-                            <button class="btn btn-danger">افزودن به سبد خرید</button>
+                            <button class="btn btn-danger">مشاهده</button>
                           </div>
                         </div>
                        
@@ -3417,7 +3155,7 @@
                               <div class="old">980,000</div>
                               <div class="new"><span>700,000</span> <span>تومان</span></div>
                             </div>
-                            <button class="btn btn-danger">افزودن به سبد خرید</button>
+                            <button class="btn btn-danger">مشاهده</button>
                           </div>
                         </div>
                        
@@ -3470,7 +3208,7 @@
                               <div class="old">980,000</div>
                               <div class="new"><span>700,000</span> <span>تومان</span></div>
                             </div>
-                            <button class="btn btn-danger">افزودن به سبد خرید</button>
+                            <button class="btn btn-danger">مشاهده</button>
                           </div>
                         </div>
                        
@@ -3523,7 +3261,7 @@
                               <div class="old">980,000</div>
                               <div class="new"><span>700,000</span> <span>تومان</span></div>
                             </div>
-                            <button class="btn btn-danger">افزودن به سبد خرید</button>
+                            <button class="btn btn-danger">مشاهده</button>
                           </div>
                         </div>
                        
@@ -3576,7 +3314,7 @@
                               <div class="old">980,000</div>
                               <div class="new"><span>700,000</span> <span>تومان</span></div>
                             </div>
-                            <button class="btn btn-danger">افزودن به سبد خرید</button>
+                            <button class="btn btn-danger">مشاهده</button>
                           </div>
                         </div>
                        
@@ -3603,150 +3341,1016 @@
     <!-- end::discount slider -->
 
 
-    <!-- start::footer -->
-    <footer>
+    <!-- start::products section -->
+    <div class="container">
+    <div class="block-products-carousel ">
+      <div class="block-header">
+        <h3 class="block-header__title">محصولات ویژه</h3>
+        <div class="block-header__divider"></div>
+        
+       
+        
+      </div>
+					<div class="block-products-carousel__slider">
+            <div class="block-products-carousel__preloader"></div>
+            <div class="product-slider owl-carousel">
+              <div class="item">
+                <div class="block-products-carousel__column">
+                  <div class="block-products-carousel__cell">
+                    <div class="product-card" data-id="1232">
+                      <button class="product-card__quickview" type="button">
+                        <svg xmlns="http://www.w3.org/2000/svg" width="20" height="20" viewBox="0 0 24 24"><path fill="currentColor" d="M6 14c-.55 0-1 .45-1 1v3c0 .55.45 1 1 1h3c.55 0 1-.45 1-1s-.45-1-1-1H7v-2c0-.55-.45-1-1-1zm0-4c.55 0 1-.45 1-1V7h2c.55 0 1-.45 1-1s-.45-1-1-1H6c-.55 0-1 .45-1 1v3c0 .55.45 1 1 1zm11 7h-2c-.55 0-1 .45-1 1s.45 1 1 1h3c.55 0 1-.45 1-1v-3c0-.55-.45-1-1-1s-1 .45-1 1v2zM14 6c0 .55.45 1 1 1h2v2c0 .55.45 1 1 1s1-.45 1-1V6c0-.55-.45-1-1-1h-3c-.55 0-1 .45-1 1z"/></svg>  
+                      </button>
+                      <div class="product-card__badges-list">
+                        <div class="product-card__badge product-card__badge--new">جدید</div>
+                      </div>
+                      <div class="product-card__image">
+                        <a href="product.html"><img src="assets/images/chocolate.webp"></a>
+                      </div>
+                      <div class="product-card__info">
+                        <div class="product-card__name"><a href="product.html">
+                    شکلات اسلب تلخ 250 گرمی سوربن</a></div>
+                        <div class="product-card__rating">
+                          <div class="rating">
+                            <span class="rating-star star-fill">
+                              <svg xmlns="http://www.w3.org/2000/svg" width="18" height="18" viewBox="0 0 24 24"><path fill="currentColor" d="m12 18.275l-4.15 2.5q-.275.175-.575.15t-.525-.2q-.225-.175-.35-.438t-.05-.587l1.1-4.725L3.775 11.8q-.25-.225-.312-.513t.037-.562q.1-.275.3-.45t.55-.225l4.85-.425l1.875-4.45q.125-.3.388-.45t.537-.15q.275 0 .537.15t.388.45l1.875 4.45l4.85.425q.35.05.55.225t.3.45q.1.275.038.563t-.313.512l-3.675 3.175l1.1 4.725q.075.325-.05.588t-.35.437q-.225.175-.525.2t-.575-.15l-4.15-2.5Z"/></svg>
+                            </span>
+                            <span class="rating-star star-fill">
+                              <svg xmlns="http://www.w3.org/2000/svg" width="18" height="18" viewBox="0 0 24 24"><path fill="currentColor" d="m12 18.275l-4.15 2.5q-.275.175-.575.15t-.525-.2q-.225-.175-.35-.438t-.05-.587l1.1-4.725L3.775 11.8q-.25-.225-.312-.513t.037-.562q.1-.275.3-.45t.55-.225l4.85-.425l1.875-4.45q.125-.3.388-.45t.537-.15q.275 0 .537.15t.388.45l1.875 4.45l4.85.425q.35.05.55.225t.3.45q.1.275.038.563t-.313.512l-3.675 3.175l1.1 4.725q.075.325-.05.588t-.35.437q-.225.175-.525.2t-.575-.15l-4.15-2.5Z"/></svg>
+                            </span>
+                              <span class="rating-star star-fill">
+                              <svg xmlns="http://www.w3.org/2000/svg" width="18" height="18" viewBox="0 0 24 24"><path fill="currentColor" d="m12 18.275l-4.15 2.5q-.275.175-.575.15t-.525-.2q-.225-.175-.35-.438t-.05-.587l1.1-4.725L3.775 11.8q-.25-.225-.312-.513t.037-.562q.1-.275.3-.45t.55-.225l4.85-.425l1.875-4.45q.125-.3.388-.45t.537-.15q.275 0 .537.15t.388.45l1.875 4.45l4.85.425q.35.05.55.225t.3.45q.1.275.038.563t-.313.512l-3.675 3.175l1.1 4.725q.075.325-.05.588t-.35.437q-.225.175-.525.2t-.575-.15l-4.15-2.5Z"/></svg>
+                            </span>
+                              <span class="rating-star">
+                              <svg xmlns="http://www.w3.org/2000/svg" width="18" height="18" viewBox="0 0 24 24"><path fill="currentColor" d="m12 18.275l-4.15 2.5q-.275.175-.575.15t-.525-.2q-.225-.175-.35-.438t-.05-.587l1.1-4.725L3.775 11.8q-.25-.225-.312-.513t.037-.562q.1-.275.3-.45t.55-.225l4.85-.425l1.875-4.45q.125-.3.388-.45t.537-.15q.275 0 .537.15t.388.45l1.875 4.45l4.85.425q.35.05.55.225t.3.45q.1.275.038.563t-.313.512l-3.675 3.175l1.1 4.725q.075.325-.05.588t-.35.437q-.225.175-.525.2t-.575-.15l-4.15-2.5Z"/></svg>
+                            </span>
+                            <span class="rating-star">
+                              <svg xmlns="http://www.w3.org/2000/svg" width="18" height="18" viewBox="0 0 24 24"><path fill="currentColor" d="m12 18.275l-4.15 2.5q-.275.175-.575.15t-.525-.2q-.225-.175-.35-.438t-.05-.587l1.1-4.725L3.775 11.8q-.25-.225-.312-.513t.037-.562q.1-.275.3-.45t.55-.225l4.85-.425l1.875-4.45q.125-.3.388-.45t.537-.15q.275 0 .537.15t.388.45l1.875 4.45l4.85.425q.35.05.55.225t.3.45q.1.275.038.563t-.313.512l-3.675 3.175l1.1 4.725q.075.325-.05.588t-.35.437q-.225.175-.525.2t-.575-.15l-4.15-2.5Z"/></svg>
+                            </span>
+                          </div>
+                          <div class="product-card__rating-legend">9 نقد و بررسی</div>
+                        </div>
+                        
+                      </div>
+                      <div class="product-card__actions">
+                        <div class="product-card__prices"><span class="product-card__new-price">9,000 تومان</span> <span class="product-card__old-price">1,189,000 تومان</span></div>
+
+                        <div class="product-card__buttons">
+                        <div >
+                          <button class="btn btn-success product-card__addtocart" style="width: 100%;min-width: 110px;" data-id="1" type="button">افزودن به سبد</button>
+                        <div  class="product-card__added-btn"  style="width: 100%;">
+                          <div style="width: 100px;height: 35px;" >
+                          <button class="product-card__plus-btn">
+                            <svg xmlns="http://www.w3.org/2000/svg" width="20" height="20" viewBox="0 0 24 24"><path fill="currentColor" d="M19 13h-6v6h-2v-6H5v-2h6V5h2v6h6v2z"/></svg>
+                          </button>
+                          
+                          <div class="product-card__add-counter">1</div>
+                          <button class="product-card__trash-btn">
+                            <svg xmlns="http://www.w3.org/2000/svg" width="20" height="20" viewBox="0 0 24 24"><path fill="#f25f5f" d="M7 21q-.825 0-1.413-.588T5 19V6H4V4h5V3h6v1h5v2h-1v13q0 .825-.588 1.413T17 21H7ZM17 6H7v13h10V6ZM9 17h2V8H9v9Zm4 0h2V8h-2v9ZM7 6v13V6Z"/></svg>
+                          </button>
+                          <button class="product-card__minus-btn" style="display: none;">
+                            <svg xmlns="http://www.w3.org/2000/svg" width="20" height="20" viewBox="0 0 24 24"><path fill="currentColor" d="M19 12.998H5v-2h14z"/></svg>
+                          </button>
+                        </div>
+                        </div>
+                        </div>
+                          
+                          <button class="btn btn-light product-card__wishlist" type="button">
+                            <svg xmlns="http://www.w3.org/2000/svg" width="18" height="18" viewBox="0 0 24 24"><path fill="currentColor" d="m12 21l-1.45-1.3q-2.525-2.275-4.175-3.925T3.75 12.812Q2.775 11.5 2.388 10.4T2 8.15Q2 5.8 3.575 4.225T7.5 2.65q1.3 0 2.475.55T12 4.75q.85-1 2.025-1.55t2.475-.55q2.35 0 3.925 1.575T22 8.15q0 1.15-.388 2.25t-1.362 2.412q-.975 1.313-2.625 2.963T13.45 19.7L12 21Z"/></svg>
+                          </button>
+                          <button class="btn btn-light product-card__compare" type="button">
+                            <svg xmlns="http://www.w3.org/2000/svg" width="18" height="18" viewBox="0 0 24 24"><path fill="currentColor" d="M4 20V9h4v11H4Zm6 0V4h4v16h-4Zm6 0v-7h4v7h-4Z"/></svg>  
+                          </button>
+                        </div>
+                      </div>
+                    </div>
+                  </div>
+                </div>
+              </div>
+              <div class="item">
+                <div class="block-products-carousel__column">
+                  <div class="block-products-carousel__cell">
+                    <div class="product-card" data-id="123">
+                      <button class="product-card__quickview" type="button">
+                        <svg xmlns="http://www.w3.org/2000/svg" width="20" height="20" viewBox="0 0 24 24"><path fill="currentColor" d="M6 14c-.55 0-1 .45-1 1v3c0 .55.45 1 1 1h3c.55 0 1-.45 1-1s-.45-1-1-1H7v-2c0-.55-.45-1-1-1zm0-4c.55 0 1-.45 1-1V7h2c.55 0 1-.45 1-1s-.45-1-1-1H6c-.55 0-1 .45-1 1v3c0 .55.45 1 1 1zm11 7h-2c-.55 0-1 .45-1 1s.45 1 1 1h3c.55 0 1-.45 1-1v-3c0-.55-.45-1-1-1s-1 .45-1 1v2zM14 6c0 .55.45 1 1 1h2v2c0 .55.45 1 1 1s1-.45 1-1V6c0-.55-.45-1-1-1h-3c-.55 0-1 .45-1 1z"/></svg>  
+                      </button>
+                      <div class="product-card__badges-list">
+                        <div class="product-card__badge product-card__badge--new">جدید</div>
+                      </div>
+                      <div class="product-card__image">
+                        <a href="product.html"><img src="assets/images/chocolate.webp"></a>
+                      </div>
+                      <div class="product-card__info">
+                        <div class="product-card__name"><a href="product.html">
+                    شکلات اسلب تلخ 250 گرمی سوربن</a></div>
+                        <div class="product-card__rating">
+                          <div class="rating">
+                            <span class="rating-star star-fill">
+                              <svg xmlns="http://www.w3.org/2000/svg" width="18" height="18" viewBox="0 0 24 24"><path fill="currentColor" d="m12 18.275l-4.15 2.5q-.275.175-.575.15t-.525-.2q-.225-.175-.35-.438t-.05-.587l1.1-4.725L3.775 11.8q-.25-.225-.312-.513t.037-.562q.1-.275.3-.45t.55-.225l4.85-.425l1.875-4.45q.125-.3.388-.45t.537-.15q.275 0 .537.15t.388.45l1.875 4.45l4.85.425q.35.05.55.225t.3.45q.1.275.038.563t-.313.512l-3.675 3.175l1.1 4.725q.075.325-.05.588t-.35.437q-.225.175-.525.2t-.575-.15l-4.15-2.5Z"/></svg>
+                            </span>
+                            <span class="rating-star star-fill">
+                              <svg xmlns="http://www.w3.org/2000/svg" width="18" height="18" viewBox="0 0 24 24"><path fill="currentColor" d="m12 18.275l-4.15 2.5q-.275.175-.575.15t-.525-.2q-.225-.175-.35-.438t-.05-.587l1.1-4.725L3.775 11.8q-.25-.225-.312-.513t.037-.562q.1-.275.3-.45t.55-.225l4.85-.425l1.875-4.45q.125-.3.388-.45t.537-.15q.275 0 .537.15t.388.45l1.875 4.45l4.85.425q.35.05.55.225t.3.45q.1.275.038.563t-.313.512l-3.675 3.175l1.1 4.725q.075.325-.05.588t-.35.437q-.225.175-.525.2t-.575-.15l-4.15-2.5Z"/></svg>
+                            </span>
+                              <span class="rating-star star-fill">
+                              <svg xmlns="http://www.w3.org/2000/svg" width="18" height="18" viewBox="0 0 24 24"><path fill="currentColor" d="m12 18.275l-4.15 2.5q-.275.175-.575.15t-.525-.2q-.225-.175-.35-.438t-.05-.587l1.1-4.725L3.775 11.8q-.25-.225-.312-.513t.037-.562q.1-.275.3-.45t.55-.225l4.85-.425l1.875-4.45q.125-.3.388-.45t.537-.15q.275 0 .537.15t.388.45l1.875 4.45l4.85.425q.35.05.55.225t.3.45q.1.275.038.563t-.313.512l-3.675 3.175l1.1 4.725q.075.325-.05.588t-.35.437q-.225.175-.525.2t-.575-.15l-4.15-2.5Z"/></svg>
+                            </span>
+                              <span class="rating-star">
+                              <svg xmlns="http://www.w3.org/2000/svg" width="18" height="18" viewBox="0 0 24 24"><path fill="currentColor" d="m12 18.275l-4.15 2.5q-.275.175-.575.15t-.525-.2q-.225-.175-.35-.438t-.05-.587l1.1-4.725L3.775 11.8q-.25-.225-.312-.513t.037-.562q.1-.275.3-.45t.55-.225l4.85-.425l1.875-4.45q.125-.3.388-.45t.537-.15q.275 0 .537.15t.388.45l1.875 4.45l4.85.425q.35.05.55.225t.3.45q.1.275.038.563t-.313.512l-3.675 3.175l1.1 4.725q.075.325-.05.588t-.35.437q-.225.175-.525.2t-.575-.15l-4.15-2.5Z"/></svg>
+                            </span>
+                            <span class="rating-star">
+                              <svg xmlns="http://www.w3.org/2000/svg" width="18" height="18" viewBox="0 0 24 24"><path fill="currentColor" d="m12 18.275l-4.15 2.5q-.275.175-.575.15t-.525-.2q-.225-.175-.35-.438t-.05-.587l1.1-4.725L3.775 11.8q-.25-.225-.312-.513t.037-.562q.1-.275.3-.45t.55-.225l4.85-.425l1.875-4.45q.125-.3.388-.45t.537-.15q.275 0 .537.15t.388.45l1.875 4.45l4.85.425q.35.05.55.225t.3.45q.1.275.038.563t-.313.512l-3.675 3.175l1.1 4.725q.075.325-.05.588t-.35.437q-.225.175-.525.2t-.575-.15l-4.15-2.5Z"/></svg>
+                            </span>
+                          </div>
+                          <div class="product-card__rating-legend">9 نقد و بررسی</div>
+                        </div>
+                        
+                      </div>
+                      <div class="product-card__actions">
+                        <div class="product-card__prices"><span class="product-card__new-price">9,000 تومان</span> <span class="product-card__old-price">1,189,000 تومان</span></div>
+
+                        <div class="product-card__buttons">
+                        <div >
+                          <button class="btn btn-success product-card__addtocart" style="width: 100%;min-width: 110px;" data-id="1" type="button">افزودن به سبد</button>
+                        <div  class="product-card__added-btn"  style="width: 100%;">
+                          <div style="width: 100px;height: 35px;" >
+                          <button class="product-card__plus-btn">
+                            <svg xmlns="http://www.w3.org/2000/svg" width="20" height="20" viewBox="0 0 24 24"><path fill="currentColor" d="M19 13h-6v6h-2v-6H5v-2h6V5h2v6h6v2z"/></svg>
+                          </button>
+                          
+                          <div class="product-card__add-counter">1</div>
+                          <button class="product-card__trash-btn">
+                            <svg xmlns="http://www.w3.org/2000/svg" width="20" height="20" viewBox="0 0 24 24"><path fill="#f25f5f" d="M7 21q-.825 0-1.413-.588T5 19V6H4V4h5V3h6v1h5v2h-1v13q0 .825-.588 1.413T17 21H7ZM17 6H7v13h10V6ZM9 17h2V8H9v9Zm4 0h2V8h-2v9ZM7 6v13V6Z"/></svg>
+                          </button>
+                          <button class="product-card__minus-btn" style="display: none;">
+                            <svg xmlns="http://www.w3.org/2000/svg" width="20" height="20" viewBox="0 0 24 24"><path fill="currentColor" d="M19 12.998H5v-2h14z"/></svg>
+                          </button>
+                        </div>
+                        </div>
+                        </div>
+                          
+                          <button class="btn btn-light product-card__wishlist" type="button">
+                            <svg xmlns="http://www.w3.org/2000/svg" width="18" height="18" viewBox="0 0 24 24"><path fill="currentColor" d="m12 21l-1.45-1.3q-2.525-2.275-4.175-3.925T3.75 12.812Q2.775 11.5 2.388 10.4T2 8.15Q2 5.8 3.575 4.225T7.5 2.65q1.3 0 2.475.55T12 4.75q.85-1 2.025-1.55t2.475-.55q2.35 0 3.925 1.575T22 8.15q0 1.15-.388 2.25t-1.362 2.412q-.975 1.313-2.625 2.963T13.45 19.7L12 21Z"/></svg>
+                          </button>
+                          <button class="btn btn-light product-card__compare" type="button">
+                            <svg xmlns="http://www.w3.org/2000/svg" width="18" height="18" viewBox="0 0 24 24"><path fill="currentColor" d="M4 20V9h4v11H4Zm6 0V4h4v16h-4Zm6 0v-7h4v7h-4Z"/></svg>  
+                          </button>
+                        </div>
+                      </div>
+                    </div>
+                  </div>
+                </div>
+              </div>
+              <div class="item">
+                <div class="block-products-carousel__column">
+                  <div class="block-products-carousel__cell">
+                    <div class="product-card" data-id="123">
+                      <button class="product-card__quickview" type="button">
+                        <svg xmlns="http://www.w3.org/2000/svg" width="20" height="20" viewBox="0 0 24 24"><path fill="currentColor" d="M6 14c-.55 0-1 .45-1 1v3c0 .55.45 1 1 1h3c.55 0 1-.45 1-1s-.45-1-1-1H7v-2c0-.55-.45-1-1-1zm0-4c.55 0 1-.45 1-1V7h2c.55 0 1-.45 1-1s-.45-1-1-1H6c-.55 0-1 .45-1 1v3c0 .55.45 1 1 1zm11 7h-2c-.55 0-1 .45-1 1s.45 1 1 1h3c.55 0 1-.45 1-1v-3c0-.55-.45-1-1-1s-1 .45-1 1v2zM14 6c0 .55.45 1 1 1h2v2c0 .55.45 1 1 1s1-.45 1-1V6c0-.55-.45-1-1-1h-3c-.55 0-1 .45-1 1z"/></svg>  
+                      </button>
+                      <div class="product-card__badges-list">
+                        <div class="product-card__badge product-card__badge--new">جدید</div>
+                      </div>
+                      <div class="product-card__image">
+                        <a href="product.html"><img src="assets/images/chocolate.webp"></a>
+                      </div>
+                      <div class="product-card__info">
+                        <div class="product-card__name"><a href="product.html">
+                    شکلات اسلب تلخ 250 گرمی سوربن</a></div>
+                        <div class="product-card__rating">
+                          <div class="rating">
+                            <span class="rating-star star-fill">
+                              <svg xmlns="http://www.w3.org/2000/svg" width="18" height="18" viewBox="0 0 24 24"><path fill="currentColor" d="m12 18.275l-4.15 2.5q-.275.175-.575.15t-.525-.2q-.225-.175-.35-.438t-.05-.587l1.1-4.725L3.775 11.8q-.25-.225-.312-.513t.037-.562q.1-.275.3-.45t.55-.225l4.85-.425l1.875-4.45q.125-.3.388-.45t.537-.15q.275 0 .537.15t.388.45l1.875 4.45l4.85.425q.35.05.55.225t.3.45q.1.275.038.563t-.313.512l-3.675 3.175l1.1 4.725q.075.325-.05.588t-.35.437q-.225.175-.525.2t-.575-.15l-4.15-2.5Z"/></svg>
+                            </span>
+                            <span class="rating-star star-fill">
+                              <svg xmlns="http://www.w3.org/2000/svg" width="18" height="18" viewBox="0 0 24 24"><path fill="currentColor" d="m12 18.275l-4.15 2.5q-.275.175-.575.15t-.525-.2q-.225-.175-.35-.438t-.05-.587l1.1-4.725L3.775 11.8q-.25-.225-.312-.513t.037-.562q.1-.275.3-.45t.55-.225l4.85-.425l1.875-4.45q.125-.3.388-.45t.537-.15q.275 0 .537.15t.388.45l1.875 4.45l4.85.425q.35.05.55.225t.3.45q.1.275.038.563t-.313.512l-3.675 3.175l1.1 4.725q.075.325-.05.588t-.35.437q-.225.175-.525.2t-.575-.15l-4.15-2.5Z"/></svg>
+                            </span>
+                              <span class="rating-star star-fill">
+                              <svg xmlns="http://www.w3.org/2000/svg" width="18" height="18" viewBox="0 0 24 24"><path fill="currentColor" d="m12 18.275l-4.15 2.5q-.275.175-.575.15t-.525-.2q-.225-.175-.35-.438t-.05-.587l1.1-4.725L3.775 11.8q-.25-.225-.312-.513t.037-.562q.1-.275.3-.45t.55-.225l4.85-.425l1.875-4.45q.125-.3.388-.45t.537-.15q.275 0 .537.15t.388.45l1.875 4.45l4.85.425q.35.05.55.225t.3.45q.1.275.038.563t-.313.512l-3.675 3.175l1.1 4.725q.075.325-.05.588t-.35.437q-.225.175-.525.2t-.575-.15l-4.15-2.5Z"/></svg>
+                            </span>
+                              <span class="rating-star">
+                              <svg xmlns="http://www.w3.org/2000/svg" width="18" height="18" viewBox="0 0 24 24"><path fill="currentColor" d="m12 18.275l-4.15 2.5q-.275.175-.575.15t-.525-.2q-.225-.175-.35-.438t-.05-.587l1.1-4.725L3.775 11.8q-.25-.225-.312-.513t.037-.562q.1-.275.3-.45t.55-.225l4.85-.425l1.875-4.45q.125-.3.388-.45t.537-.15q.275 0 .537.15t.388.45l1.875 4.45l4.85.425q.35.05.55.225t.3.45q.1.275.038.563t-.313.512l-3.675 3.175l1.1 4.725q.075.325-.05.588t-.35.437q-.225.175-.525.2t-.575-.15l-4.15-2.5Z"/></svg>
+                            </span>
+                            <span class="rating-star">
+                              <svg xmlns="http://www.w3.org/2000/svg" width="18" height="18" viewBox="0 0 24 24"><path fill="currentColor" d="m12 18.275l-4.15 2.5q-.275.175-.575.15t-.525-.2q-.225-.175-.35-.438t-.05-.587l1.1-4.725L3.775 11.8q-.25-.225-.312-.513t.037-.562q.1-.275.3-.45t.55-.225l4.85-.425l1.875-4.45q.125-.3.388-.45t.537-.15q.275 0 .537.15t.388.45l1.875 4.45l4.85.425q.35.05.55.225t.3.45q.1.275.038.563t-.313.512l-3.675 3.175l1.1 4.725q.075.325-.05.588t-.35.437q-.225.175-.525.2t-.575-.15l-4.15-2.5Z"/></svg>
+                            </span>
+                          </div>
+                          <div class="product-card__rating-legend">9 نقد و بررسی</div>
+                        </div>
+                        
+                      </div>
+                      <div class="product-card__actions">
+                        <div class="product-card__prices"><span class="product-card__new-price">9,000 تومان</span> <span class="product-card__old-price">1,189,000 تومان</span></div>
+
+                        <div class="product-card__buttons">
+                        <div >
+                          <button class="btn btn-success product-card__addtocart" style="width: 100%;min-width: 110px;" data-id="1" type="button">افزودن به سبد</button>
+                        <div  class="product-card__added-btn"  style="width: 100%;">
+                          <div style="width: 100px;height: 35px;" >
+                          <button class="product-card__plus-btn">
+                            <svg xmlns="http://www.w3.org/2000/svg" width="20" height="20" viewBox="0 0 24 24"><path fill="currentColor" d="M19 13h-6v6h-2v-6H5v-2h6V5h2v6h6v2z"/></svg>
+                          </button>
+                          
+                          <div class="product-card__add-counter">1</div>
+                          <button class="product-card__trash-btn">
+                            <svg xmlns="http://www.w3.org/2000/svg" width="20" height="20" viewBox="0 0 24 24"><path fill="#f25f5f" d="M7 21q-.825 0-1.413-.588T5 19V6H4V4h5V3h6v1h5v2h-1v13q0 .825-.588 1.413T17 21H7ZM17 6H7v13h10V6ZM9 17h2V8H9v9Zm4 0h2V8h-2v9ZM7 6v13V6Z"/></svg>
+                          </button>
+                          <button class="product-card__minus-btn" style="display: none;">
+                            <svg xmlns="http://www.w3.org/2000/svg" width="20" height="20" viewBox="0 0 24 24"><path fill="currentColor" d="M19 12.998H5v-2h14z"/></svg>
+                          </button>
+                        </div>
+                        </div>
+                        </div>
+                          
+                          <button class="btn btn-light product-card__wishlist" type="button">
+                            <svg xmlns="http://www.w3.org/2000/svg" width="18" height="18" viewBox="0 0 24 24"><path fill="currentColor" d="m12 21l-1.45-1.3q-2.525-2.275-4.175-3.925T3.75 12.812Q2.775 11.5 2.388 10.4T2 8.15Q2 5.8 3.575 4.225T7.5 2.65q1.3 0 2.475.55T12 4.75q.85-1 2.025-1.55t2.475-.55q2.35 0 3.925 1.575T22 8.15q0 1.15-.388 2.25t-1.362 2.412q-.975 1.313-2.625 2.963T13.45 19.7L12 21Z"/></svg>
+                          </button>
+                          <button class="btn btn-light product-card__compare" type="button">
+                            <svg xmlns="http://www.w3.org/2000/svg" width="18" height="18" viewBox="0 0 24 24"><path fill="currentColor" d="M4 20V9h4v11H4Zm6 0V4h4v16h-4Zm6 0v-7h4v7h-4Z"/></svg>  
+                          </button>
+                        </div>
+                      </div>
+                    </div>
+                  </div>
+                </div>
+              </div>
+              <div class="item">
+                <div class="block-products-carousel__column">
+                  <div class="block-products-carousel__cell">
+                    <div class="product-card" data-id="123">
+                      <button class="product-card__quickview" type="button">
+                        <svg xmlns="http://www.w3.org/2000/svg" width="20" height="20" viewBox="0 0 24 24"><path fill="currentColor" d="M6 14c-.55 0-1 .45-1 1v3c0 .55.45 1 1 1h3c.55 0 1-.45 1-1s-.45-1-1-1H7v-2c0-.55-.45-1-1-1zm0-4c.55 0 1-.45 1-1V7h2c.55 0 1-.45 1-1s-.45-1-1-1H6c-.55 0-1 .45-1 1v3c0 .55.45 1 1 1zm11 7h-2c-.55 0-1 .45-1 1s.45 1 1 1h3c.55 0 1-.45 1-1v-3c0-.55-.45-1-1-1s-1 .45-1 1v2zM14 6c0 .55.45 1 1 1h2v2c0 .55.45 1 1 1s1-.45 1-1V6c0-.55-.45-1-1-1h-3c-.55 0-1 .45-1 1z"/></svg>  
+                      </button>
+                      <div class="product-card__badges-list">
+                        <div class="product-card__badge product-card__badge--new">جدید</div>
+                      </div>
+                      <div class="product-card__image">
+                        <a href="product.html"><img src="assets/images/chocolate.webp"></a>
+                      </div>
+                      <div class="product-card__info">
+                        <div class="product-card__name"><a href="product.html">
+                    شکلات اسلب تلخ 250 گرمی سوربن</a></div>
+                        <div class="product-card__rating">
+                          <div class="rating">
+                            <span class="rating-star star-fill">
+                              <svg xmlns="http://www.w3.org/2000/svg" width="18" height="18" viewBox="0 0 24 24"><path fill="currentColor" d="m12 18.275l-4.15 2.5q-.275.175-.575.15t-.525-.2q-.225-.175-.35-.438t-.05-.587l1.1-4.725L3.775 11.8q-.25-.225-.312-.513t.037-.562q.1-.275.3-.45t.55-.225l4.85-.425l1.875-4.45q.125-.3.388-.45t.537-.15q.275 0 .537.15t.388.45l1.875 4.45l4.85.425q.35.05.55.225t.3.45q.1.275.038.563t-.313.512l-3.675 3.175l1.1 4.725q.075.325-.05.588t-.35.437q-.225.175-.525.2t-.575-.15l-4.15-2.5Z"/></svg>
+                            </span>
+                            <span class="rating-star star-fill">
+                              <svg xmlns="http://www.w3.org/2000/svg" width="18" height="18" viewBox="0 0 24 24"><path fill="currentColor" d="m12 18.275l-4.15 2.5q-.275.175-.575.15t-.525-.2q-.225-.175-.35-.438t-.05-.587l1.1-4.725L3.775 11.8q-.25-.225-.312-.513t.037-.562q.1-.275.3-.45t.55-.225l4.85-.425l1.875-4.45q.125-.3.388-.45t.537-.15q.275 0 .537.15t.388.45l1.875 4.45l4.85.425q.35.05.55.225t.3.45q.1.275.038.563t-.313.512l-3.675 3.175l1.1 4.725q.075.325-.05.588t-.35.437q-.225.175-.525.2t-.575-.15l-4.15-2.5Z"/></svg>
+                            </span>
+                              <span class="rating-star star-fill">
+                              <svg xmlns="http://www.w3.org/2000/svg" width="18" height="18" viewBox="0 0 24 24"><path fill="currentColor" d="m12 18.275l-4.15 2.5q-.275.175-.575.15t-.525-.2q-.225-.175-.35-.438t-.05-.587l1.1-4.725L3.775 11.8q-.25-.225-.312-.513t.037-.562q.1-.275.3-.45t.55-.225l4.85-.425l1.875-4.45q.125-.3.388-.45t.537-.15q.275 0 .537.15t.388.45l1.875 4.45l4.85.425q.35.05.55.225t.3.45q.1.275.038.563t-.313.512l-3.675 3.175l1.1 4.725q.075.325-.05.588t-.35.437q-.225.175-.525.2t-.575-.15l-4.15-2.5Z"/></svg>
+                            </span>
+                              <span class="rating-star">
+                              <svg xmlns="http://www.w3.org/2000/svg" width="18" height="18" viewBox="0 0 24 24"><path fill="currentColor" d="m12 18.275l-4.15 2.5q-.275.175-.575.15t-.525-.2q-.225-.175-.35-.438t-.05-.587l1.1-4.725L3.775 11.8q-.25-.225-.312-.513t.037-.562q.1-.275.3-.45t.55-.225l4.85-.425l1.875-4.45q.125-.3.388-.45t.537-.15q.275 0 .537.15t.388.45l1.875 4.45l4.85.425q.35.05.55.225t.3.45q.1.275.038.563t-.313.512l-3.675 3.175l1.1 4.725q.075.325-.05.588t-.35.437q-.225.175-.525.2t-.575-.15l-4.15-2.5Z"/></svg>
+                            </span>
+                            <span class="rating-star">
+                              <svg xmlns="http://www.w3.org/2000/svg" width="18" height="18" viewBox="0 0 24 24"><path fill="currentColor" d="m12 18.275l-4.15 2.5q-.275.175-.575.15t-.525-.2q-.225-.175-.35-.438t-.05-.587l1.1-4.725L3.775 11.8q-.25-.225-.312-.513t.037-.562q.1-.275.3-.45t.55-.225l4.85-.425l1.875-4.45q.125-.3.388-.45t.537-.15q.275 0 .537.15t.388.45l1.875 4.45l4.85.425q.35.05.55.225t.3.45q.1.275.038.563t-.313.512l-3.675 3.175l1.1 4.725q.075.325-.05.588t-.35.437q-.225.175-.525.2t-.575-.15l-4.15-2.5Z"/></svg>
+                            </span>
+                          </div>
+                          <div class="product-card__rating-legend">9 نقد و بررسی</div>
+                        </div>
+                        
+                      </div>
+                      <div class="product-card__actions">
+                        <div class="product-card__prices"><span class="product-card__new-price">9,000 تومان</span> <span class="product-card__old-price">1,189,000 تومان</span></div>
+
+                        <div class="product-card__buttons">
+                        <div >
+                          <button class="btn btn-success product-card__addtocart" style="width: 100%;min-width: 110px;" data-id="1" type="button">افزودن به سبد</button>
+                        <div  class="product-card__added-btn"  style="width: 100%;">
+                          <div style="width: 100px;height: 35px;" >
+                          <button class="product-card__plus-btn">
+                            <svg xmlns="http://www.w3.org/2000/svg" width="20" height="20" viewBox="0 0 24 24"><path fill="currentColor" d="M19 13h-6v6h-2v-6H5v-2h6V5h2v6h6v2z"/></svg>
+                          </button>
+                          
+                          <div class="product-card__add-counter">1</div>
+                          <button class="product-card__trash-btn">
+                            <svg xmlns="http://www.w3.org/2000/svg" width="20" height="20" viewBox="0 0 24 24"><path fill="#f25f5f" d="M7 21q-.825 0-1.413-.588T5 19V6H4V4h5V3h6v1h5v2h-1v13q0 .825-.588 1.413T17 21H7ZM17 6H7v13h10V6ZM9 17h2V8H9v9Zm4 0h2V8h-2v9ZM7 6v13V6Z"/></svg>
+                          </button>
+                          <button class="product-card__minus-btn" style="display: none;">
+                            <svg xmlns="http://www.w3.org/2000/svg" width="20" height="20" viewBox="0 0 24 24"><path fill="currentColor" d="M19 12.998H5v-2h14z"/></svg>
+                          </button>
+                        </div>
+                        </div>
+                        </div>
+                          
+                          <button class="btn btn-light product-card__wishlist" type="button">
+                            <svg xmlns="http://www.w3.org/2000/svg" width="18" height="18" viewBox="0 0 24 24"><path fill="currentColor" d="m12 21l-1.45-1.3q-2.525-2.275-4.175-3.925T3.75 12.812Q2.775 11.5 2.388 10.4T2 8.15Q2 5.8 3.575 4.225T7.5 2.65q1.3 0 2.475.55T12 4.75q.85-1 2.025-1.55t2.475-.55q2.35 0 3.925 1.575T22 8.15q0 1.15-.388 2.25t-1.362 2.412q-.975 1.313-2.625 2.963T13.45 19.7L12 21Z"/></svg>
+                          </button>
+                          <button class="btn btn-light product-card__compare" type="button">
+                            <svg xmlns="http://www.w3.org/2000/svg" width="18" height="18" viewBox="0 0 24 24"><path fill="currentColor" d="M4 20V9h4v11H4Zm6 0V4h4v16h-4Zm6 0v-7h4v7h-4Z"/></svg>  
+                          </button>
+                        </div>
+                      </div>
+                    </div>
+                  </div>
+                </div>
+              </div>
+              <div class="item">
+                <div class="block-products-carousel__column">
+                  <div class="block-products-carousel__cell">
+                    <div class="product-card" data-id="123">
+                      <button class="product-card__quickview" type="button">
+                        <svg xmlns="http://www.w3.org/2000/svg" width="20" height="20" viewBox="0 0 24 24"><path fill="currentColor" d="M6 14c-.55 0-1 .45-1 1v3c0 .55.45 1 1 1h3c.55 0 1-.45 1-1s-.45-1-1-1H7v-2c0-.55-.45-1-1-1zm0-4c.55 0 1-.45 1-1V7h2c.55 0 1-.45 1-1s-.45-1-1-1H6c-.55 0-1 .45-1 1v3c0 .55.45 1 1 1zm11 7h-2c-.55 0-1 .45-1 1s.45 1 1 1h3c.55 0 1-.45 1-1v-3c0-.55-.45-1-1-1s-1 .45-1 1v2zM14 6c0 .55.45 1 1 1h2v2c0 .55.45 1 1 1s1-.45 1-1V6c0-.55-.45-1-1-1h-3c-.55 0-1 .45-1 1z"/></svg>  
+                      </button>
+                      <div class="product-card__badges-list">
+                        <div class="product-card__badge product-card__badge--new">جدید</div>
+                      </div>
+                      <div class="product-card__image">
+                        <a href="product.html"><img src="assets/images/chocolate.webp"></a>
+                      </div>
+                      <div class="product-card__info">
+                        <div class="product-card__name"><a href="product.html">
+                    شکلات اسلب تلخ 250 گرمی سوربن</a></div>
+                        <div class="product-card__rating">
+                          <div class="rating">
+                            <span class="rating-star star-fill">
+                              <svg xmlns="http://www.w3.org/2000/svg" width="18" height="18" viewBox="0 0 24 24"><path fill="currentColor" d="m12 18.275l-4.15 2.5q-.275.175-.575.15t-.525-.2q-.225-.175-.35-.438t-.05-.587l1.1-4.725L3.775 11.8q-.25-.225-.312-.513t.037-.562q.1-.275.3-.45t.55-.225l4.85-.425l1.875-4.45q.125-.3.388-.45t.537-.15q.275 0 .537.15t.388.45l1.875 4.45l4.85.425q.35.05.55.225t.3.45q.1.275.038.563t-.313.512l-3.675 3.175l1.1 4.725q.075.325-.05.588t-.35.437q-.225.175-.525.2t-.575-.15l-4.15-2.5Z"/></svg>
+                            </span>
+                            <span class="rating-star star-fill">
+                              <svg xmlns="http://www.w3.org/2000/svg" width="18" height="18" viewBox="0 0 24 24"><path fill="currentColor" d="m12 18.275l-4.15 2.5q-.275.175-.575.15t-.525-.2q-.225-.175-.35-.438t-.05-.587l1.1-4.725L3.775 11.8q-.25-.225-.312-.513t.037-.562q.1-.275.3-.45t.55-.225l4.85-.425l1.875-4.45q.125-.3.388-.45t.537-.15q.275 0 .537.15t.388.45l1.875 4.45l4.85.425q.35.05.55.225t.3.45q.1.275.038.563t-.313.512l-3.675 3.175l1.1 4.725q.075.325-.05.588t-.35.437q-.225.175-.525.2t-.575-.15l-4.15-2.5Z"/></svg>
+                            </span>
+                              <span class="rating-star star-fill">
+                              <svg xmlns="http://www.w3.org/2000/svg" width="18" height="18" viewBox="0 0 24 24"><path fill="currentColor" d="m12 18.275l-4.15 2.5q-.275.175-.575.15t-.525-.2q-.225-.175-.35-.438t-.05-.587l1.1-4.725L3.775 11.8q-.25-.225-.312-.513t.037-.562q.1-.275.3-.45t.55-.225l4.85-.425l1.875-4.45q.125-.3.388-.45t.537-.15q.275 0 .537.15t.388.45l1.875 4.45l4.85.425q.35.05.55.225t.3.45q.1.275.038.563t-.313.512l-3.675 3.175l1.1 4.725q.075.325-.05.588t-.35.437q-.225.175-.525.2t-.575-.15l-4.15-2.5Z"/></svg>
+                            </span>
+                              <span class="rating-star">
+                              <svg xmlns="http://www.w3.org/2000/svg" width="18" height="18" viewBox="0 0 24 24"><path fill="currentColor" d="m12 18.275l-4.15 2.5q-.275.175-.575.15t-.525-.2q-.225-.175-.35-.438t-.05-.587l1.1-4.725L3.775 11.8q-.25-.225-.312-.513t.037-.562q.1-.275.3-.45t.55-.225l4.85-.425l1.875-4.45q.125-.3.388-.45t.537-.15q.275 0 .537.15t.388.45l1.875 4.45l4.85.425q.35.05.55.225t.3.45q.1.275.038.563t-.313.512l-3.675 3.175l1.1 4.725q.075.325-.05.588t-.35.437q-.225.175-.525.2t-.575-.15l-4.15-2.5Z"/></svg>
+                            </span>
+                            <span class="rating-star">
+                              <svg xmlns="http://www.w3.org/2000/svg" width="18" height="18" viewBox="0 0 24 24"><path fill="currentColor" d="m12 18.275l-4.15 2.5q-.275.175-.575.15t-.525-.2q-.225-.175-.35-.438t-.05-.587l1.1-4.725L3.775 11.8q-.25-.225-.312-.513t.037-.562q.1-.275.3-.45t.55-.225l4.85-.425l1.875-4.45q.125-.3.388-.45t.537-.15q.275 0 .537.15t.388.45l1.875 4.45l4.85.425q.35.05.55.225t.3.45q.1.275.038.563t-.313.512l-3.675 3.175l1.1 4.725q.075.325-.05.588t-.35.437q-.225.175-.525.2t-.575-.15l-4.15-2.5Z"/></svg>
+                            </span>
+                          </div>
+                          <div class="product-card__rating-legend">9 نقد و بررسی</div>
+                        </div>
+                        
+                      </div>
+                      <div class="product-card__actions">
+                        <div class="product-card__prices"><span class="product-card__new-price">9,000 تومان</span> <span class="product-card__old-price">1,189,000 تومان</span></div>
+
+                        <div class="product-card__buttons">
+                        <div >
+                          <button class="btn btn-success product-card__addtocart" style="width: 100%;min-width: 110px;" data-id="1" type="button">افزودن به سبد</button>
+                        <div  class="product-card__added-btn"  style="width: 100%;">
+                          <div style="width: 100px;height: 35px;" >
+                          <button class="product-card__plus-btn">
+                            <svg xmlns="http://www.w3.org/2000/svg" width="20" height="20" viewBox="0 0 24 24"><path fill="currentColor" d="M19 13h-6v6h-2v-6H5v-2h6V5h2v6h6v2z"/></svg>
+                          </button>
+                          
+                          <div class="product-card__add-counter">1</div>
+                          <button class="product-card__trash-btn">
+                            <svg xmlns="http://www.w3.org/2000/svg" width="20" height="20" viewBox="0 0 24 24"><path fill="#f25f5f" d="M7 21q-.825 0-1.413-.588T5 19V6H4V4h5V3h6v1h5v2h-1v13q0 .825-.588 1.413T17 21H7ZM17 6H7v13h10V6ZM9 17h2V8H9v9Zm4 0h2V8h-2v9ZM7 6v13V6Z"/></svg>
+                          </button>
+                          <button class="product-card__minus-btn" style="display: none;">
+                            <svg xmlns="http://www.w3.org/2000/svg" width="20" height="20" viewBox="0 0 24 24"><path fill="currentColor" d="M19 12.998H5v-2h14z"/></svg>
+                          </button>
+                        </div>
+                        </div>
+                        </div>
+                          
+                          <button class="btn btn-light product-card__wishlist" type="button">
+                            <svg xmlns="http://www.w3.org/2000/svg" width="18" height="18" viewBox="0 0 24 24"><path fill="currentColor" d="m12 21l-1.45-1.3q-2.525-2.275-4.175-3.925T3.75 12.812Q2.775 11.5 2.388 10.4T2 8.15Q2 5.8 3.575 4.225T7.5 2.65q1.3 0 2.475.55T12 4.75q.85-1 2.025-1.55t2.475-.55q2.35 0 3.925 1.575T22 8.15q0 1.15-.388 2.25t-1.362 2.412q-.975 1.313-2.625 2.963T13.45 19.7L12 21Z"/></svg>
+                          </button>
+                          <button class="btn btn-light product-card__compare" type="button">
+                            <svg xmlns="http://www.w3.org/2000/svg" width="18" height="18" viewBox="0 0 24 24"><path fill="currentColor" d="M4 20V9h4v11H4Zm6 0V4h4v16h-4Zm6 0v-7h4v7h-4Z"/></svg>  
+                          </button>
+                        </div>
+                      </div>
+                    </div>
+                  </div>
+                </div>
+              </div>
+              <div class="item">
+                <div class="block-products-carousel__column">
+                  <div class="block-products-carousel__cell">
+                    <div class="product-card" data-id="123">
+                      <button class="product-card__quickview" type="button">
+                        <svg xmlns="http://www.w3.org/2000/svg" width="20" height="20" viewBox="0 0 24 24"><path fill="currentColor" d="M6 14c-.55 0-1 .45-1 1v3c0 .55.45 1 1 1h3c.55 0 1-.45 1-1s-.45-1-1-1H7v-2c0-.55-.45-1-1-1zm0-4c.55 0 1-.45 1-1V7h2c.55 0 1-.45 1-1s-.45-1-1-1H6c-.55 0-1 .45-1 1v3c0 .55.45 1 1 1zm11 7h-2c-.55 0-1 .45-1 1s.45 1 1 1h3c.55 0 1-.45 1-1v-3c0-.55-.45-1-1-1s-1 .45-1 1v2zM14 6c0 .55.45 1 1 1h2v2c0 .55.45 1 1 1s1-.45 1-1V6c0-.55-.45-1-1-1h-3c-.55 0-1 .45-1 1z"/></svg>  
+                      </button>
+                      <div class="product-card__badges-list">
+                        <div class="product-card__badge product-card__badge--new">جدید</div>
+                      </div>
+                      <div class="product-card__image">
+                        <a href="product.html"><img src="assets/images/chocolate.webp"></a>
+                      </div>
+                      <div class="product-card__info">
+                        <div class="product-card__name"><a href="product.html">
+                    شکلات اسلب تلخ 250 گرمی سوربن</a></div>
+                        <div class="product-card__rating">
+                          <div class="rating">
+                            <span class="rating-star star-fill">
+                              <svg xmlns="http://www.w3.org/2000/svg" width="18" height="18" viewBox="0 0 24 24"><path fill="currentColor" d="m12 18.275l-4.15 2.5q-.275.175-.575.15t-.525-.2q-.225-.175-.35-.438t-.05-.587l1.1-4.725L3.775 11.8q-.25-.225-.312-.513t.037-.562q.1-.275.3-.45t.55-.225l4.85-.425l1.875-4.45q.125-.3.388-.45t.537-.15q.275 0 .537.15t.388.45l1.875 4.45l4.85.425q.35.05.55.225t.3.45q.1.275.038.563t-.313.512l-3.675 3.175l1.1 4.725q.075.325-.05.588t-.35.437q-.225.175-.525.2t-.575-.15l-4.15-2.5Z"/></svg>
+                            </span>
+                            <span class="rating-star star-fill">
+                              <svg xmlns="http://www.w3.org/2000/svg" width="18" height="18" viewBox="0 0 24 24"><path fill="currentColor" d="m12 18.275l-4.15 2.5q-.275.175-.575.15t-.525-.2q-.225-.175-.35-.438t-.05-.587l1.1-4.725L3.775 11.8q-.25-.225-.312-.513t.037-.562q.1-.275.3-.45t.55-.225l4.85-.425l1.875-4.45q.125-.3.388-.45t.537-.15q.275 0 .537.15t.388.45l1.875 4.45l4.85.425q.35.05.55.225t.3.45q.1.275.038.563t-.313.512l-3.675 3.175l1.1 4.725q.075.325-.05.588t-.35.437q-.225.175-.525.2t-.575-.15l-4.15-2.5Z"/></svg>
+                            </span>
+                              <span class="rating-star star-fill">
+                              <svg xmlns="http://www.w3.org/2000/svg" width="18" height="18" viewBox="0 0 24 24"><path fill="currentColor" d="m12 18.275l-4.15 2.5q-.275.175-.575.15t-.525-.2q-.225-.175-.35-.438t-.05-.587l1.1-4.725L3.775 11.8q-.25-.225-.312-.513t.037-.562q.1-.275.3-.45t.55-.225l4.85-.425l1.875-4.45q.125-.3.388-.45t.537-.15q.275 0 .537.15t.388.45l1.875 4.45l4.85.425q.35.05.55.225t.3.45q.1.275.038.563t-.313.512l-3.675 3.175l1.1 4.725q.075.325-.05.588t-.35.437q-.225.175-.525.2t-.575-.15l-4.15-2.5Z"/></svg>
+                            </span>
+                              <span class="rating-star">
+                              <svg xmlns="http://www.w3.org/2000/svg" width="18" height="18" viewBox="0 0 24 24"><path fill="currentColor" d="m12 18.275l-4.15 2.5q-.275.175-.575.15t-.525-.2q-.225-.175-.35-.438t-.05-.587l1.1-4.725L3.775 11.8q-.25-.225-.312-.513t.037-.562q.1-.275.3-.45t.55-.225l4.85-.425l1.875-4.45q.125-.3.388-.45t.537-.15q.275 0 .537.15t.388.45l1.875 4.45l4.85.425q.35.05.55.225t.3.45q.1.275.038.563t-.313.512l-3.675 3.175l1.1 4.725q.075.325-.05.588t-.35.437q-.225.175-.525.2t-.575-.15l-4.15-2.5Z"/></svg>
+                            </span>
+                            <span class="rating-star">
+                              <svg xmlns="http://www.w3.org/2000/svg" width="18" height="18" viewBox="0 0 24 24"><path fill="currentColor" d="m12 18.275l-4.15 2.5q-.275.175-.575.15t-.525-.2q-.225-.175-.35-.438t-.05-.587l1.1-4.725L3.775 11.8q-.25-.225-.312-.513t.037-.562q.1-.275.3-.45t.55-.225l4.85-.425l1.875-4.45q.125-.3.388-.45t.537-.15q.275 0 .537.15t.388.45l1.875 4.45l4.85.425q.35.05.55.225t.3.45q.1.275.038.563t-.313.512l-3.675 3.175l1.1 4.725q.075.325-.05.588t-.35.437q-.225.175-.525.2t-.575-.15l-4.15-2.5Z"/></svg>
+                            </span>
+                          </div>
+                          <div class="product-card__rating-legend">9 نقد و بررسی</div>
+                        </div>
+                        
+                      </div>
+                      <div class="product-card__actions">
+                        <div class="product-card__prices"><span class="product-card__new-price">9,000 تومان</span> <span class="product-card__old-price">1,189,000 تومان</span></div>
+
+                        <div class="product-card__buttons">
+                        <div >
+                          <button class="btn btn-success product-card__addtocart" style="width: 100%;min-width: 110px;" data-id="1" type="button">افزودن به سبد</button>
+                        <div  class="product-card__added-btn"  style="width: 100%;">
+                          <div style="width: 100px;height: 35px;" >
+                          <button class="product-card__plus-btn">
+                            <svg xmlns="http://www.w3.org/2000/svg" width="20" height="20" viewBox="0 0 24 24"><path fill="currentColor" d="M19 13h-6v6h-2v-6H5v-2h6V5h2v6h6v2z"/></svg>
+                          </button>
+                          
+                          <div class="product-card__add-counter">1</div>
+                          <button class="product-card__trash-btn">
+                            <svg xmlns="http://www.w3.org/2000/svg" width="20" height="20" viewBox="0 0 24 24"><path fill="#f25f5f" d="M7 21q-.825 0-1.413-.588T5 19V6H4V4h5V3h6v1h5v2h-1v13q0 .825-.588 1.413T17 21H7ZM17 6H7v13h10V6ZM9 17h2V8H9v9Zm4 0h2V8h-2v9ZM7 6v13V6Z"/></svg>
+                          </button>
+                          <button class="product-card__minus-btn" style="display: none;">
+                            <svg xmlns="http://www.w3.org/2000/svg" width="20" height="20" viewBox="0 0 24 24"><path fill="currentColor" d="M19 12.998H5v-2h14z"/></svg>
+                          </button>
+                        </div>
+                        </div>
+                        </div>
+                          
+                          <button class="btn btn-light product-card__wishlist" type="button">
+                            <svg xmlns="http://www.w3.org/2000/svg" width="18" height="18" viewBox="0 0 24 24"><path fill="currentColor" d="m12 21l-1.45-1.3q-2.525-2.275-4.175-3.925T3.75 12.812Q2.775 11.5 2.388 10.4T2 8.15Q2 5.8 3.575 4.225T7.5 2.65q1.3 0 2.475.55T12 4.75q.85-1 2.025-1.55t2.475-.55q2.35 0 3.925 1.575T22 8.15q0 1.15-.388 2.25t-1.362 2.412q-.975 1.313-2.625 2.963T13.45 19.7L12 21Z"/></svg>
+                          </button>
+                          <button class="btn btn-light product-card__compare" type="button">
+                            <svg xmlns="http://www.w3.org/2000/svg" width="18" height="18" viewBox="0 0 24 24"><path fill="currentColor" d="M4 20V9h4v11H4Zm6 0V4h4v16h-4Zm6 0v-7h4v7h-4Z"/></svg>  
+                          </button>
+                        </div>
+                      </div>
+                    </div>
+                  </div>
+                </div>
+              </div>
+            </div>
+          </div>
+    </div>
+				</div>
+    <!-- end::products section -->
+
+
+    <!-- start::advertisement box -->
       <div class="container">
         <div class="row">
-          <div class="col-md-4">
-           <div class="footer-list">
-            <h5 class="footer-list__title">دسته بندی محصولات</h5>
-            <ul class="footer-list__items">
-              <li><a href="#">بهداشتی آرایشی</a></li>
-              <li><a href="#">کفش</a></li>
-              <li><a href="#">لباس</a></li>
-              <li><a href="#">دیجیتال</a></li>
-              <li><a href="#">بهداشتی آرایشی</a></li>
-              <li><a href="#">کفش</a></li>
-          </ul>
-           </div>
-          </div>
-          <div class="col-md-4">
-           <div  class="footer-list">
-            <h5 class="footer-list__title">تماس با ما</h5>
-            <ul class="footer-list__items">
-              <li>
-                   <span>آدرس: آدرس: ۴۴۵ کوه عدن جاده، کوه بهشت، اوکلند.</span>
-              </li>
-              <li>
-                   <span>شماره تماس: 2135642512</span>
-              </li>
-              <li>
-                  <span> ایمیل: digistore@exmple.com</span>
-              </li>
-              <li>
-                  <span> فکس: 2564521544</span>
-              </li>
-              <li>
-                   <span>زمان کاری: شنبه تا پنچ شنبه ساعت ۸ صبح تا ۱۲ ظهر</span>
-              </li>
-          </ul>
-           </div>
-          </div>
-          <div class="col-md-4">
-           <div class="social-media">
-            <p class="title">پارادایس پخش را در شبکه های اجتماعی دنبال کنید</p>
+          <div class="col-md-12">
+    <div class="full-advertisement-card">
+
             <a href="#">
-              <svg xmlns="http://www.w3.org/2000/svg" width="45" height="45" viewBox="0 0 24 24"><g fill="none" stroke="#ef6b6b" stroke-linecap="round" stroke-linejoin="round" stroke-width="2"><path d="M4 8a4 4 0 0 1 4-4h8a4 4 0 0 1 4 4v8a4 4 0 0 1-4 4H8a4 4 0 0 1-4-4z"/><path d="M9 12a3 3 0 1 0 6 0a3 3 0 1 0-6 0m7.5-4.5v.01"/></g></svg>
+              <!-- <img src="" alt=""> -->
             </a>
-           </div>
           </div>
         </div>
-            <div class="services" style="background: var(--color-natural-100);
-            border-radius: 1rem;">
-              <div class="row g-5">
-              <div class="col-lg-3 col-xs-12 col-md-6 col-sm-6">
-                <div class="service-item">
-                  <div>
-                    <img
-                      src="assets/images/static-icons-1.png"
-                      alt=""
-                      class="img-responsive"
-                    />
-                  </div>
-                  <div>
-                    <h4>ارسال رایگان</h4>
-                    <p>در کلیه سفارشات بیش از50000 تومان</p>
-                  </div>
-                </div>
-              </div>
-              <div class="col-lg-3 col-xs-12 col-md-6 col-sm-6">
-                <div class="service-item">
-                  <div>
-                    <img
-                      src="assets/images/static-icons-2.png"
-                      alt=""
-                      class="img-responsive"
-                    />
-                  </div>
-                  <div>
-                    <h4>بازده رایگان</h4>
-                    <p>بازده در مدت 9 روز رایگان است</p>
-                  </div>
-                </div>
-              </div>
-              <div class="col-lg-3 col-xs-12 col-md-6 col-sm-6">
-                <div class="service-item">
-                  <div>
-                    <img
-                      src="assets/images/static-icons-3.png"
-                      alt=""
-                      class="img-responsive"
-                    />
-                  </div>
-                  <div>
-                    <h4>100٪ پرداخت امن</h4>
-                    <p>پرداخت شما با ما امن است</p>
-                  </div>
-                </div>
-              </div>
-              <div class="col-lg-3 col-xs-12 col-md-6 col-sm-6">
-                <div class="service-item">
-                  <div>
-                    <img
-                      src="assets/images/static-icons-4.png"
-                      alt=""
-                      class="img-responsive"
-                    />
-                  </div>
-                  <div>
-                    <h4>پشتیبانی 24/7</h4>
-                    <p>24 ساعت شبانه روز با ما تماس بگیرید</p>
-                  </div>
-                </div>
-              </div>
+      </div>
+    </div>
+    <!-- end::advertisement box -->
+
+    <!-- most sells -->
+    <div class="block block-products block-products--layout--large-first">
+      <div class="container">
+        <div class="block-header" style="margin-left: 0;">
+          <h3 class="block-header__title">پرفروش ترین ها</h3>
+          <div class="block-header__divider"></div>
         </div>
-            </div>
-            <div class="row">
-                <div class="col-12">
-                    <div class="about-site">
-                        <h1 class="title">فروشگاه اینترنتی پارادایس بررسی، انتخاب و خرید آنلاین</h1>
-                        <p class="subtitle">
-                            فروشگاه و پخش پارادایس یکی از مجموعه های نوظهور در میان فروشگاههای اینترنتی
-                            در حوزه تخصصی لوازم قنادی می باشد و با پایبندی به چهار اصل مشتری مداری، ارسال رایگان،
-                            خدمات سریع و ضمانت اصل بودن کالا، موفق شده تا همگام با فروشگاههای معتبر جهان،
-                            به یکی از بزرگترین فروشگاههای خرید آنلاین تبدیل شود.
-        
-                        </p>
-        
-                    </div>
-        
-                    
+        <div class="block-products__body">
+          <div class="block-products__featured">
+            <div class="block-products__featured-item">
+              <div class="product-card">
+                <button class="product-card__quickview" type="button">
+                        <svg xmlns="http://www.w3.org/2000/svg" width="20" height="20" viewBox="0 0 24 24"><path fill="currentColor" d="M6 14c-.55 0-1 .45-1 1v3c0 .55.45 1 1 1h3c.55 0 1-.45 1-1s-.45-1-1-1H7v-2c0-.55-.45-1-1-1zm0-4c.55 0 1-.45 1-1V7h2c.55 0 1-.45 1-1s-.45-1-1-1H6c-.55 0-1 .45-1 1v3c0 .55.45 1 1 1zm11 7h-2c-.55 0-1 .45-1 1s.45 1 1 1h3c.55 0 1-.45 1-1v-3c0-.55-.45-1-1-1s-1 .45-1 1v2zM14 6c0 .55.45 1 1 1h2v2c0 .55.45 1 1 1s1-.45 1-1V6c0-.55-.45-1-1-1h-3c-.55 0-1 .45-1 1z"/></svg>  
+                      </button>
+                
+                <div class="product-card__image">
+                  <a href="product.html"><img src="assets/images/chocolate.webp" alt=""></a>
                 </div>
+                <div class="product-card__info">
+                  <div class="product-card__name"><a href="product.html">
+                    شکلات اسلب تلخ 250 گرمی سوربن</a></div>
+                  <div class="product-card__rating">
+                    <div class="rating">
+                      <span class="rating-star star-fill">
+                        <svg xmlns="http://www.w3.org/2000/svg" width="18" height="18" viewBox="0 0 24 24"><path fill="currentColor" d="m12 18.275l-4.15 2.5q-.275.175-.575.15t-.525-.2q-.225-.175-.35-.438t-.05-.587l1.1-4.725L3.775 11.8q-.25-.225-.312-.513t.037-.562q.1-.275.3-.45t.55-.225l4.85-.425l1.875-4.45q.125-.3.388-.45t.537-.15q.275 0 .537.15t.388.45l1.875 4.45l4.85.425q.35.05.55.225t.3.45q.1.275.038.563t-.313.512l-3.675 3.175l1.1 4.725q.075.325-.05.588t-.35.437q-.225.175-.525.2t-.575-.15l-4.15-2.5Z"/></svg>
+                      </span>
+                      <span class="rating-star star-fill">
+                        <svg xmlns="http://www.w3.org/2000/svg" width="18" height="18" viewBox="0 0 24 24"><path fill="currentColor" d="m12 18.275l-4.15 2.5q-.275.175-.575.15t-.525-.2q-.225-.175-.35-.438t-.05-.587l1.1-4.725L3.775 11.8q-.25-.225-.312-.513t.037-.562q.1-.275.3-.45t.55-.225l4.85-.425l1.875-4.45q.125-.3.388-.45t.537-.15q.275 0 .537.15t.388.45l1.875 4.45l4.85.425q.35.05.55.225t.3.45q.1.275.038.563t-.313.512l-3.675 3.175l1.1 4.725q.075.325-.05.588t-.35.437q-.225.175-.525.2t-.575-.15l-4.15-2.5Z"/></svg>
+                      </span>
+                        <span class="rating-star star-fill">
+                        <svg xmlns="http://www.w3.org/2000/svg" width="18" height="18" viewBox="0 0 24 24"><path fill="currentColor" d="m12 18.275l-4.15 2.5q-.275.175-.575.15t-.525-.2q-.225-.175-.35-.438t-.05-.587l1.1-4.725L3.775 11.8q-.25-.225-.312-.513t.037-.562q.1-.275.3-.45t.55-.225l4.85-.425l1.875-4.45q.125-.3.388-.45t.537-.15q.275 0 .537.15t.388.45l1.875 4.45l4.85.425q.35.05.55.225t.3.45q.1.275.038.563t-.313.512l-3.675 3.175l1.1 4.725q.075.325-.05.588t-.35.437q-.225.175-.525.2t-.575-.15l-4.15-2.5Z"/></svg>
+                      </span>
+                        <span class="rating-star">
+                        <svg xmlns="http://www.w3.org/2000/svg" width="18" height="18" viewBox="0 0 24 24"><path fill="currentColor" d="m12 18.275l-4.15 2.5q-.275.175-.575.15t-.525-.2q-.225-.175-.35-.438t-.05-.587l1.1-4.725L3.775 11.8q-.25-.225-.312-.513t.037-.562q.1-.275.3-.45t.55-.225l4.85-.425l1.875-4.45q.125-.3.388-.45t.537-.15q.275 0 .537.15t.388.45l1.875 4.45l4.85.425q.35.05.55.225t.3.45q.1.275.038.563t-.313.512l-3.675 3.175l1.1 4.725q.075.325-.05.588t-.35.437q-.225.175-.525.2t-.575-.15l-4.15-2.5Z"/></svg>
+                      </span>
+                      <span class="rating-star">
+                        <svg xmlns="http://www.w3.org/2000/svg" width="18" height="18" viewBox="0 0 24 24"><path fill="currentColor" d="m12 18.275l-4.15 2.5q-.275.175-.575.15t-.525-.2q-.225-.175-.35-.438t-.05-.587l1.1-4.725L3.775 11.8q-.25-.225-.312-.513t.037-.562q.1-.275.3-.45t.55-.225l4.85-.425l1.875-4.45q.125-.3.388-.45t.537-.15q.275 0 .537.15t.388.45l1.875 4.45l4.85.425q.35.05.55.225t.3.45q.1.275.038.563t-.313.512l-3.675 3.175l1.1 4.725q.075.325-.05.588t-.35.437q-.225.175-.525.2t-.575-.15l-4.15-2.5Z"/></svg>
+                      </span>
+                    </div>
+                    <div class="product-card__rating-legend">9 نقد و بررسی</div>
+                  </div>
+                  
+                </div>
+                <div class="product-card__actions">
+                  <div class="product-card__availability">موجودی: <span class="text-success">موجود در انبار</span></div>
+                  <div class="product-card__prices"><span class="product-card__new-price">949,000 تومان</span> <span class="product-card__old-price">1,189,000 تومان</span></div>
+                  <div class="product-card__buttons">
+                          <button class="btn btn-success product-card__addtocart" data-id="1" type="button">افزودن به سبد</button>
+                          
+                          <button class="btn btn-light product-card__wishlist" type="button">
+                            <svg xmlns="http://www.w3.org/2000/svg" width="18" height="18" viewBox="0 0 24 24"><path fill="currentColor" d="m12 21l-1.45-1.3q-2.525-2.275-4.175-3.925T3.75 12.812Q2.775 11.5 2.388 10.4T2 8.15Q2 5.8 3.575 4.225T7.5 2.65q1.3 0 2.475.55T12 4.75q.85-1 2.025-1.55t2.475-.55q2.35 0 3.925 1.575T22 8.15q0 1.15-.388 2.25t-1.362 2.412q-.975 1.313-2.625 2.963T13.45 19.7L12 21Z"/></svg>
+                          </button>
+                          <button class="btn btn-light product-card__compare" type="button">
+                            <svg xmlns="http://www.w3.org/2000/svg" width="18" height="18" viewBox="0 0 24 24"><path fill="currentColor" d="M4 20V9h4v11H4Zm6 0V4h4v16h-4Zm6 0v-7h4v7h-4Z"/></svg>  
+                          </button>
+                        </div>
+                </div>
+              </div>
             </div>
+          </div>
+          <div class="block-products__list">
+            <div class="block-products__list-item">
+              <div class="product-card">
+                <button class="product-card__quickview" type="button">
+                        <svg xmlns="http://www.w3.org/2000/svg" width="20" height="20" viewBox="0 0 24 24"><path fill="currentColor" d="M6 14c-.55 0-1 .45-1 1v3c0 .55.45 1 1 1h3c.55 0 1-.45 1-1s-.45-1-1-1H7v-2c0-.55-.45-1-1-1zm0-4c.55 0 1-.45 1-1V7h2c.55 0 1-.45 1-1s-.45-1-1-1H6c-.55 0-1 .45-1 1v3c0 .55.45 1 1 1zm11 7h-2c-.55 0-1 .45-1 1s.45 1 1 1h3c.55 0 1-.45 1-1v-3c0-.55-.45-1-1-1s-1 .45-1 1v2zM14 6c0 .55.45 1 1 1h2v2c0 .55.45 1 1 1s1-.45 1-1V6c0-.55-.45-1-1-1h-3c-.55 0-1 .45-1 1z"/></svg>  
+                      </button>
+                
+                <div class="product-card__image">
+                  <a href="product.html"><img src="assets/images/chocolate.webp" alt=""></a>
+                </div>
+                <div class="product-card__info">
+                  <div class="product-card__name"><a href="product.html">
+                    شکلات اسلب تلخ 250 گرمی سوربن</a></div>
+                  <div class="product-card__rating">
+                    <div class="rating">
+                      <span class="rating-star star-fill">
+                        <svg xmlns="http://www.w3.org/2000/svg" width="18" height="18" viewBox="0 0 24 24"><path fill="currentColor" d="m12 18.275l-4.15 2.5q-.275.175-.575.15t-.525-.2q-.225-.175-.35-.438t-.05-.587l1.1-4.725L3.775 11.8q-.25-.225-.312-.513t.037-.562q.1-.275.3-.45t.55-.225l4.85-.425l1.875-4.45q.125-.3.388-.45t.537-.15q.275 0 .537.15t.388.45l1.875 4.45l4.85.425q.35.05.55.225t.3.45q.1.275.038.563t-.313.512l-3.675 3.175l1.1 4.725q.075.325-.05.588t-.35.437q-.225.175-.525.2t-.575-.15l-4.15-2.5Z"/></svg>
+                      </span>
+                      <span class="rating-star star-fill">
+                        <svg xmlns="http://www.w3.org/2000/svg" width="18" height="18" viewBox="0 0 24 24"><path fill="currentColor" d="m12 18.275l-4.15 2.5q-.275.175-.575.15t-.525-.2q-.225-.175-.35-.438t-.05-.587l1.1-4.725L3.775 11.8q-.25-.225-.312-.513t.037-.562q.1-.275.3-.45t.55-.225l4.85-.425l1.875-4.45q.125-.3.388-.45t.537-.15q.275 0 .537.15t.388.45l1.875 4.45l4.85.425q.35.05.55.225t.3.45q.1.275.038.563t-.313.512l-3.675 3.175l1.1 4.725q.075.325-.05.588t-.35.437q-.225.175-.525.2t-.575-.15l-4.15-2.5Z"/></svg>
+                      </span>
+                        <span class="rating-star star-fill">
+                        <svg xmlns="http://www.w3.org/2000/svg" width="18" height="18" viewBox="0 0 24 24"><path fill="currentColor" d="m12 18.275l-4.15 2.5q-.275.175-.575.15t-.525-.2q-.225-.175-.35-.438t-.05-.587l1.1-4.725L3.775 11.8q-.25-.225-.312-.513t.037-.562q.1-.275.3-.45t.55-.225l4.85-.425l1.875-4.45q.125-.3.388-.45t.537-.15q.275 0 .537.15t.388.45l1.875 4.45l4.85.425q.35.05.55.225t.3.45q.1.275.038.563t-.313.512l-3.675 3.175l1.1 4.725q.075.325-.05.588t-.35.437q-.225.175-.525.2t-.575-.15l-4.15-2.5Z"/></svg>
+                      </span>
+                        <span class="rating-star">
+                        <svg xmlns="http://www.w3.org/2000/svg" width="18" height="18" viewBox="0 0 24 24"><path fill="currentColor" d="m12 18.275l-4.15 2.5q-.275.175-.575.15t-.525-.2q-.225-.175-.35-.438t-.05-.587l1.1-4.725L3.775 11.8q-.25-.225-.312-.513t.037-.562q.1-.275.3-.45t.55-.225l4.85-.425l1.875-4.45q.125-.3.388-.45t.537-.15q.275 0 .537.15t.388.45l1.875 4.45l4.85.425q.35.05.55.225t.3.45q.1.275.038.563t-.313.512l-3.675 3.175l1.1 4.725q.075.325-.05.588t-.35.437q-.225.175-.525.2t-.575-.15l-4.15-2.5Z"/></svg>
+                      </span>
+                      <span class="rating-star">
+                        <svg xmlns="http://www.w3.org/2000/svg" width="18" height="18" viewBox="0 0 24 24"><path fill="currentColor" d="m12 18.275l-4.15 2.5q-.275.175-.575.15t-.525-.2q-.225-.175-.35-.438t-.05-.587l1.1-4.725L3.775 11.8q-.25-.225-.312-.513t.037-.562q.1-.275.3-.45t.55-.225l4.85-.425l1.875-4.45q.125-.3.388-.45t.537-.15q.275 0 .537.15t.388.45l1.875 4.45l4.85.425q.35.05.55.225t.3.45q.1.275.038.563t-.313.512l-3.675 3.175l1.1 4.725q.075.325-.05.588t-.35.437q-.225.175-.525.2t-.575-.15l-4.15-2.5Z"/></svg>
+                      </span>
+                    </div>
+                    <div class="product-card__rating-legend">9 نقد و بررسی</div>
+                  </div>
+                  
+                </div>
+                <div class="product-card__actions">
+                  <div class="product-card__availability">موجودی: <span class="text-success">موجود در انبار</span></div>
+                  <div class="product-card__prices"><span class="product-card__new-price">949,000 تومان</span> <span class="product-card__old-price">1,189,000 تومان</span></div>
+                  <div class="product-card__buttons">
+                          <button class="btn btn-success product-card__addtocart" data-id="1" type="button">افزودن به سبد</button>
+                          
+                          <button class="btn btn-light product-card__wishlist" type="button">
+                            <svg xmlns="http://www.w3.org/2000/svg" width="18" height="18" viewBox="0 0 24 24"><path fill="currentColor" d="m12 21l-1.45-1.3q-2.525-2.275-4.175-3.925T3.75 12.812Q2.775 11.5 2.388 10.4T2 8.15Q2 5.8 3.575 4.225T7.5 2.65q1.3 0 2.475.55T12 4.75q.85-1 2.025-1.55t2.475-.55q2.35 0 3.925 1.575T22 8.15q0 1.15-.388 2.25t-1.362 2.412q-.975 1.313-2.625 2.963T13.45 19.7L12 21Z"/></svg>
+                          </button>
+                          <button class="btn btn-light product-card__compare" type="button">
+                            <svg xmlns="http://www.w3.org/2000/svg" width="18" height="18" viewBox="0 0 24 24"><path fill="currentColor" d="M4 20V9h4v11H4Zm6 0V4h4v16h-4Zm6 0v-7h4v7h-4Z"/></svg>  
+                          </button>
+                        </div>
+                </div>
+              </div>
+            </div>
+            <div class="block-products__list-item">
+              <div class="product-card">
+                <button class="product-card__quickview" type="button">
+                        <svg xmlns="http://www.w3.org/2000/svg" width="20" height="20" viewBox="0 0 24 24"><path fill="currentColor" d="M6 14c-.55 0-1 .45-1 1v3c0 .55.45 1 1 1h3c.55 0 1-.45 1-1s-.45-1-1-1H7v-2c0-.55-.45-1-1-1zm0-4c.55 0 1-.45 1-1V7h2c.55 0 1-.45 1-1s-.45-1-1-1H6c-.55 0-1 .45-1 1v3c0 .55.45 1 1 1zm11 7h-2c-.55 0-1 .45-1 1s.45 1 1 1h3c.55 0 1-.45 1-1v-3c0-.55-.45-1-1-1s-1 .45-1 1v2zM14 6c0 .55.45 1 1 1h2v2c0 .55.45 1 1 1s1-.45 1-1V6c0-.55-.45-1-1-1h-3c-.55 0-1 .45-1 1z"/></svg>  
+                      </button>
+                <div class="product-card__image">
+                  <a href="product.html"><img src="assets/images/chocolate.webp" alt=""></a>
+                </div>
+                <div class="product-card__info">
+                  <div class="product-card__name"><a href="product.html">
+                    شکلات اسلب تلخ 250 گرمی سوربن</a></div>
+                  <div class="product-card__rating">
+                    <div class="rating">
+                      <span class="rating-star star-fill">
+                        <svg xmlns="http://www.w3.org/2000/svg" width="18" height="18" viewBox="0 0 24 24"><path fill="currentColor" d="m12 18.275l-4.15 2.5q-.275.175-.575.15t-.525-.2q-.225-.175-.35-.438t-.05-.587l1.1-4.725L3.775 11.8q-.25-.225-.312-.513t.037-.562q.1-.275.3-.45t.55-.225l4.85-.425l1.875-4.45q.125-.3.388-.45t.537-.15q.275 0 .537.15t.388.45l1.875 4.45l4.85.425q.35.05.55.225t.3.45q.1.275.038.563t-.313.512l-3.675 3.175l1.1 4.725q.075.325-.05.588t-.35.437q-.225.175-.525.2t-.575-.15l-4.15-2.5Z"/></svg>
+                      </span>
+                      <span class="rating-star star-fill">
+                        <svg xmlns="http://www.w3.org/2000/svg" width="18" height="18" viewBox="0 0 24 24"><path fill="currentColor" d="m12 18.275l-4.15 2.5q-.275.175-.575.15t-.525-.2q-.225-.175-.35-.438t-.05-.587l1.1-4.725L3.775 11.8q-.25-.225-.312-.513t.037-.562q.1-.275.3-.45t.55-.225l4.85-.425l1.875-4.45q.125-.3.388-.45t.537-.15q.275 0 .537.15t.388.45l1.875 4.45l4.85.425q.35.05.55.225t.3.45q.1.275.038.563t-.313.512l-3.675 3.175l1.1 4.725q.075.325-.05.588t-.35.437q-.225.175-.525.2t-.575-.15l-4.15-2.5Z"/></svg>
+                      </span>
+                        <span class="rating-star star-fill">
+                        <svg xmlns="http://www.w3.org/2000/svg" width="18" height="18" viewBox="0 0 24 24"><path fill="currentColor" d="m12 18.275l-4.15 2.5q-.275.175-.575.15t-.525-.2q-.225-.175-.35-.438t-.05-.587l1.1-4.725L3.775 11.8q-.25-.225-.312-.513t.037-.562q.1-.275.3-.45t.55-.225l4.85-.425l1.875-4.45q.125-.3.388-.45t.537-.15q.275 0 .537.15t.388.45l1.875 4.45l4.85.425q.35.05.55.225t.3.45q.1.275.038.563t-.313.512l-3.675 3.175l1.1 4.725q.075.325-.05.588t-.35.437q-.225.175-.525.2t-.575-.15l-4.15-2.5Z"/></svg>
+                      </span>
+                        <span class="rating-star">
+                        <svg xmlns="http://www.w3.org/2000/svg" width="18" height="18" viewBox="0 0 24 24"><path fill="currentColor" d="m12 18.275l-4.15 2.5q-.275.175-.575.15t-.525-.2q-.225-.175-.35-.438t-.05-.587l1.1-4.725L3.775 11.8q-.25-.225-.312-.513t.037-.562q.1-.275.3-.45t.55-.225l4.85-.425l1.875-4.45q.125-.3.388-.45t.537-.15q.275 0 .537.15t.388.45l1.875 4.45l4.85.425q.35.05.55.225t.3.45q.1.275.038.563t-.313.512l-3.675 3.175l1.1 4.725q.075.325-.05.588t-.35.437q-.225.175-.525.2t-.575-.15l-4.15-2.5Z"/></svg>
+                      </span>
+                      <span class="rating-star">
+                        <svg xmlns="http://www.w3.org/2000/svg" width="18" height="18" viewBox="0 0 24 24"><path fill="currentColor" d="m12 18.275l-4.15 2.5q-.275.175-.575.15t-.525-.2q-.225-.175-.35-.438t-.05-.587l1.1-4.725L3.775 11.8q-.25-.225-.312-.513t.037-.562q.1-.275.3-.45t.55-.225l4.85-.425l1.875-4.45q.125-.3.388-.45t.537-.15q.275 0 .537.15t.388.45l1.875 4.45l4.85.425q.35.05.55.225t.3.45q.1.275.038.563t-.313.512l-3.675 3.175l1.1 4.725q.075.325-.05.588t-.35.437q-.225.175-.525.2t-.575-.15l-4.15-2.5Z"/></svg>
+                      </span>
+                    </div>
+                    <div class="product-card__rating-legend">9 نقد و بررسی</div>
+                  </div>
+                  
+                </div>
+                <div class="product-card__actions">
+                  <div class="product-card__availability">موجودی: <span class="text-success">موجود در انبار</span></div>
+                  <div class="product-card__prices">1,019,000 تومان</div>
+                  <div class="product-card__buttons">
+                          <button class="btn btn-success product-card__addtocart" data-id="1" type="button">افزودن به سبد</button>
+                          
+                          <button class="btn btn-light product-card__wishlist" type="button">
+                            <svg xmlns="http://www.w3.org/2000/svg" width="18" height="18" viewBox="0 0 24 24"><path fill="currentColor" d="m12 21l-1.45-1.3q-2.525-2.275-4.175-3.925T3.75 12.812Q2.775 11.5 2.388 10.4T2 8.15Q2 5.8 3.575 4.225T7.5 2.65q1.3 0 2.475.55T12 4.75q.85-1 2.025-1.55t2.475-.55q2.35 0 3.925 1.575T22 8.15q0 1.15-.388 2.25t-1.362 2.412q-.975 1.313-2.625 2.963T13.45 19.7L12 21Z"/></svg>
+                          </button>
+                          <button class="btn btn-light product-card__compare" type="button">
+                            <svg xmlns="http://www.w3.org/2000/svg" width="18" height="18" viewBox="0 0 24 24"><path fill="currentColor" d="M4 20V9h4v11H4Zm6 0V4h4v16h-4Zm6 0v-7h4v7h-4Z"/></svg>  
+                          </button>
+                        </div>
+                </div>
+              </div>
+            </div>
+            <div class="block-products__list-item">
+              <div class="product-card">
+                <button class="product-card__quickview" type="button">
+                        <svg xmlns="http://www.w3.org/2000/svg" width="20" height="20" viewBox="0 0 24 24"><path fill="currentColor" d="M6 14c-.55 0-1 .45-1 1v3c0 .55.45 1 1 1h3c.55 0 1-.45 1-1s-.45-1-1-1H7v-2c0-.55-.45-1-1-1zm0-4c.55 0 1-.45 1-1V7h2c.55 0 1-.45 1-1s-.45-1-1-1H6c-.55 0-1 .45-1 1v3c0 .55.45 1 1 1zm11 7h-2c-.55 0-1 .45-1 1s.45 1 1 1h3c.55 0 1-.45 1-1v-3c0-.55-.45-1-1-1s-1 .45-1 1v2zM14 6c0 .55.45 1 1 1h2v2c0 .55.45 1 1 1s1-.45 1-1V6c0-.55-.45-1-1-1h-3c-.55 0-1 .45-1 1z"/></svg>  
+                      </button>
+                
+                <div class="product-card__image">
+                  <a href="product.html"><img src="assets/images/chocolate.webp" alt=""></a>
+                </div>
+                <div class="product-card__info">
+                  <div class="product-card__name"><a href="product.html">
+                    شکلات اسلب تلخ 250 گرمی سوربن</a></div>
+                  <div class="product-card__rating">
+                    <div class="rating">
+                      <span class="rating-star star-fill">
+                        <svg xmlns="http://www.w3.org/2000/svg" width="18" height="18" viewBox="0 0 24 24"><path fill="currentColor" d="m12 18.275l-4.15 2.5q-.275.175-.575.15t-.525-.2q-.225-.175-.35-.438t-.05-.587l1.1-4.725L3.775 11.8q-.25-.225-.312-.513t.037-.562q.1-.275.3-.45t.55-.225l4.85-.425l1.875-4.45q.125-.3.388-.45t.537-.15q.275 0 .537.15t.388.45l1.875 4.45l4.85.425q.35.05.55.225t.3.45q.1.275.038.563t-.313.512l-3.675 3.175l1.1 4.725q.075.325-.05.588t-.35.437q-.225.175-.525.2t-.575-.15l-4.15-2.5Z"/></svg>
+                      </span>
+                      <span class="rating-star star-fill">
+                        <svg xmlns="http://www.w3.org/2000/svg" width="18" height="18" viewBox="0 0 24 24"><path fill="currentColor" d="m12 18.275l-4.15 2.5q-.275.175-.575.15t-.525-.2q-.225-.175-.35-.438t-.05-.587l1.1-4.725L3.775 11.8q-.25-.225-.312-.513t.037-.562q.1-.275.3-.45t.55-.225l4.85-.425l1.875-4.45q.125-.3.388-.45t.537-.15q.275 0 .537.15t.388.45l1.875 4.45l4.85.425q.35.05.55.225t.3.45q.1.275.038.563t-.313.512l-3.675 3.175l1.1 4.725q.075.325-.05.588t-.35.437q-.225.175-.525.2t-.575-.15l-4.15-2.5Z"/></svg>
+                      </span>
+                        <span class="rating-star star-fill">
+                        <svg xmlns="http://www.w3.org/2000/svg" width="18" height="18" viewBox="0 0 24 24"><path fill="currentColor" d="m12 18.275l-4.15 2.5q-.275.175-.575.15t-.525-.2q-.225-.175-.35-.438t-.05-.587l1.1-4.725L3.775 11.8q-.25-.225-.312-.513t.037-.562q.1-.275.3-.45t.55-.225l4.85-.425l1.875-4.45q.125-.3.388-.45t.537-.15q.275 0 .537.15t.388.45l1.875 4.45l4.85.425q.35.05.55.225t.3.45q.1.275.038.563t-.313.512l-3.675 3.175l1.1 4.725q.075.325-.05.588t-.35.437q-.225.175-.525.2t-.575-.15l-4.15-2.5Z"/></svg>
+                      </span>
+                        <span class="rating-star">
+                        <svg xmlns="http://www.w3.org/2000/svg" width="18" height="18" viewBox="0 0 24 24"><path fill="currentColor" d="m12 18.275l-4.15 2.5q-.275.175-.575.15t-.525-.2q-.225-.175-.35-.438t-.05-.587l1.1-4.725L3.775 11.8q-.25-.225-.312-.513t.037-.562q.1-.275.3-.45t.55-.225l4.85-.425l1.875-4.45q.125-.3.388-.45t.537-.15q.275 0 .537.15t.388.45l1.875 4.45l4.85.425q.35.05.55.225t.3.45q.1.275.038.563t-.313.512l-3.675 3.175l1.1 4.725q.075.325-.05.588t-.35.437q-.225.175-.525.2t-.575-.15l-4.15-2.5Z"/></svg>
+                      </span>
+                      <span class="rating-star">
+                        <svg xmlns="http://www.w3.org/2000/svg" width="18" height="18" viewBox="0 0 24 24"><path fill="currentColor" d="m12 18.275l-4.15 2.5q-.275.175-.575.15t-.525-.2q-.225-.175-.35-.438t-.05-.587l1.1-4.725L3.775 11.8q-.25-.225-.312-.513t.037-.562q.1-.275.3-.45t.55-.225l4.85-.425l1.875-4.45q.125-.3.388-.45t.537-.15q.275 0 .537.15t.388.45l1.875 4.45l4.85.425q.35.05.55.225t.3.45q.1.275.038.563t-.313.512l-3.675 3.175l1.1 4.725q.075.325-.05.588t-.35.437q-.225.175-.525.2t-.575-.15l-4.15-2.5Z"/></svg>
+                      </span>
+                    </div>
+                    <div class="product-card__rating-legend">9 نقد و بررسی</div>
+                  </div>
+                  
+                </div>
+                <div class="product-card__actions">
+                  <div class="product-card__availability">موجودی: <span class="text-success">موجود در انبار</span></div>
+                  <div class="product-card__prices">1,019,000 تومان</div>
+                  <div class="product-card__buttons">
+                          <button class="btn btn-success product-card__addtocart" data-id="1" type="button">افزودن به سبد</button>
+                          
+                          <button class="btn btn-light product-card__wishlist" type="button">
+                            <svg xmlns="http://www.w3.org/2000/svg" width="18" height="18" viewBox="0 0 24 24"><path fill="currentColor" d="m12 21l-1.45-1.3q-2.525-2.275-4.175-3.925T3.75 12.812Q2.775 11.5 2.388 10.4T2 8.15Q2 5.8 3.575 4.225T7.5 2.65q1.3 0 2.475.55T12 4.75q.85-1 2.025-1.55t2.475-.55q2.35 0 3.925 1.575T22 8.15q0 1.15-.388 2.25t-1.362 2.412q-.975 1.313-2.625 2.963T13.45 19.7L12 21Z"/></svg>
+                          </button>
+                          <button class="btn btn-light product-card__compare" type="button">
+                            <svg xmlns="http://www.w3.org/2000/svg" width="18" height="18" viewBox="0 0 24 24"><path fill="currentColor" d="M4 20V9h4v11H4Zm6 0V4h4v16h-4Zm6 0v-7h4v7h-4Z"/></svg>  
+                          </button>
+                        </div>
+                </div>
+              </div>
+            </div>
+            <div class="block-products__list-item">
+              <div class="product-card">
+                <button class="product-card__quickview" type="button">
+                        <svg xmlns="http://www.w3.org/2000/svg" width="20" height="20" viewBox="0 0 24 24"><path fill="currentColor" d="M6 14c-.55 0-1 .45-1 1v3c0 .55.45 1 1 1h3c.55 0 1-.45 1-1s-.45-1-1-1H7v-2c0-.55-.45-1-1-1zm0-4c.55 0 1-.45 1-1V7h2c.55 0 1-.45 1-1s-.45-1-1-1H6c-.55 0-1 .45-1 1v3c0 .55.45 1 1 1zm11 7h-2c-.55 0-1 .45-1 1s.45 1 1 1h3c.55 0 1-.45 1-1v-3c0-.55-.45-1-1-1s-1 .45-1 1v2zM14 6c0 .55.45 1 1 1h2v2c0 .55.45 1 1 1s1-.45 1-1V6c0-.55-.45-1-1-1h-3c-.55 0-1 .45-1 1z"/></svg>  
+                      </button>
+                <div class="product-card__image">
+                  <a href="product.html"><img src="assets/images/chocolate.webp" alt=""></a>
+                </div>
+                <div class="product-card__info">
+                  <div class="product-card__name"><a href="product.html">
+                    شکلات اسلب تلخ 250 گرمی سوربن</a></div>
+                  <div class="product-card__rating">
+                    <div class="rating">
+                      <span class="rating-star star-fill">
+                        <svg xmlns="http://www.w3.org/2000/svg" width="18" height="18" viewBox="0 0 24 24"><path fill="currentColor" d="m12 18.275l-4.15 2.5q-.275.175-.575.15t-.525-.2q-.225-.175-.35-.438t-.05-.587l1.1-4.725L3.775 11.8q-.25-.225-.312-.513t.037-.562q.1-.275.3-.45t.55-.225l4.85-.425l1.875-4.45q.125-.3.388-.45t.537-.15q.275 0 .537.15t.388.45l1.875 4.45l4.85.425q.35.05.55.225t.3.45q.1.275.038.563t-.313.512l-3.675 3.175l1.1 4.725q.075.325-.05.588t-.35.437q-.225.175-.525.2t-.575-.15l-4.15-2.5Z"/></svg>
+                      </span>
+                      <span class="rating-star star-fill">
+                        <svg xmlns="http://www.w3.org/2000/svg" width="18" height="18" viewBox="0 0 24 24"><path fill="currentColor" d="m12 18.275l-4.15 2.5q-.275.175-.575.15t-.525-.2q-.225-.175-.35-.438t-.05-.587l1.1-4.725L3.775 11.8q-.25-.225-.312-.513t.037-.562q.1-.275.3-.45t.55-.225l4.85-.425l1.875-4.45q.125-.3.388-.45t.537-.15q.275 0 .537.15t.388.45l1.875 4.45l4.85.425q.35.05.55.225t.3.45q.1.275.038.563t-.313.512l-3.675 3.175l1.1 4.725q.075.325-.05.588t-.35.437q-.225.175-.525.2t-.575-.15l-4.15-2.5Z"/></svg>
+                      </span>
+                        <span class="rating-star star-fill">
+                        <svg xmlns="http://www.w3.org/2000/svg" width="18" height="18" viewBox="0 0 24 24"><path fill="currentColor" d="m12 18.275l-4.15 2.5q-.275.175-.575.15t-.525-.2q-.225-.175-.35-.438t-.05-.587l1.1-4.725L3.775 11.8q-.25-.225-.312-.513t.037-.562q.1-.275.3-.45t.55-.225l4.85-.425l1.875-4.45q.125-.3.388-.45t.537-.15q.275 0 .537.15t.388.45l1.875 4.45l4.85.425q.35.05.55.225t.3.45q.1.275.038.563t-.313.512l-3.675 3.175l1.1 4.725q.075.325-.05.588t-.35.437q-.225.175-.525.2t-.575-.15l-4.15-2.5Z"/></svg>
+                      </span>
+                        <span class="rating-star">
+                        <svg xmlns="http://www.w3.org/2000/svg" width="18" height="18" viewBox="0 0 24 24"><path fill="currentColor" d="m12 18.275l-4.15 2.5q-.275.175-.575.15t-.525-.2q-.225-.175-.35-.438t-.05-.587l1.1-4.725L3.775 11.8q-.25-.225-.312-.513t.037-.562q.1-.275.3-.45t.55-.225l4.85-.425l1.875-4.45q.125-.3.388-.45t.537-.15q.275 0 .537.15t.388.45l1.875 4.45l4.85.425q.35.05.55.225t.3.45q.1.275.038.563t-.313.512l-3.675 3.175l1.1 4.725q.075.325-.05.588t-.35.437q-.225.175-.525.2t-.575-.15l-4.15-2.5Z"/></svg>
+                      </span>
+                      <span class="rating-star">
+                        <svg xmlns="http://www.w3.org/2000/svg" width="18" height="18" viewBox="0 0 24 24"><path fill="currentColor" d="m12 18.275l-4.15 2.5q-.275.175-.575.15t-.525-.2q-.225-.175-.35-.438t-.05-.587l1.1-4.725L3.775 11.8q-.25-.225-.312-.513t.037-.562q.1-.275.3-.45t.55-.225l4.85-.425l1.875-4.45q.125-.3.388-.45t.537-.15q.275 0 .537.15t.388.45l1.875 4.45l4.85.425q.35.05.55.225t.3.45q.1.275.038.563t-.313.512l-3.675 3.175l1.1 4.725q.075.325-.05.588t-.35.437q-.225.175-.525.2t-.575-.15l-4.15-2.5Z"/></svg>
+                      </span>
+                    </div>
+                    <div class="product-card__rating-legend">9 نقد و بررسی</div>
+                  </div>
+                  
+                </div>
+                <div class="product-card__actions">
+                  <div class="product-card__availability">موجودی: <span class="text-success">موجود در انبار</span></div>
+                  <div class="product-card__prices">1,019,000 تومان</div>
+                  <div class="product-card__buttons">
+                          <button class="btn btn-success product-card__addtocart" data-id="1" type="button">افزودن به سبد</button>
+                          
+                          <button class="btn btn-light product-card__wishlist" type="button">
+                            <svg xmlns="http://www.w3.org/2000/svg" width="18" height="18" viewBox="0 0 24 24"><path fill="currentColor" d="m12 21l-1.45-1.3q-2.525-2.275-4.175-3.925T3.75 12.812Q2.775 11.5 2.388 10.4T2 8.15Q2 5.8 3.575 4.225T7.5 2.65q1.3 0 2.475.55T12 4.75q.85-1 2.025-1.55t2.475-.55q2.35 0 3.925 1.575T22 8.15q0 1.15-.388 2.25t-1.362 2.412q-.975 1.313-2.625 2.963T13.45 19.7L12 21Z"/></svg>
+                          </button>
+                          <button class="btn btn-light product-card__compare" type="button">
+                            <svg xmlns="http://www.w3.org/2000/svg" width="18" height="18" viewBox="0 0 24 24"><path fill="currentColor" d="M4 20V9h4v11H4Zm6 0V4h4v16h-4Zm6 0v-7h4v7h-4Z"/></svg>  
+                          </button>
+                        </div>
+                </div>
+              </div>
+            </div>
+            <div class="block-products__list-item">
+              <div class="product-card">
+                <button class="product-card__quickview" type="button">
+                        <svg xmlns="http://www.w3.org/2000/svg" width="20" height="20" viewBox="0 0 24 24"><path fill="currentColor" d="M6 14c-.55 0-1 .45-1 1v3c0 .55.45 1 1 1h3c.55 0 1-.45 1-1s-.45-1-1-1H7v-2c0-.55-.45-1-1-1zm0-4c.55 0 1-.45 1-1V7h2c.55 0 1-.45 1-1s-.45-1-1-1H6c-.55 0-1 .45-1 1v3c0 .55.45 1 1 1zm11 7h-2c-.55 0-1 .45-1 1s.45 1 1 1h3c.55 0 1-.45 1-1v-3c0-.55-.45-1-1-1s-1 .45-1 1v2zM14 6c0 .55.45 1 1 1h2v2c0 .55.45 1 1 1s1-.45 1-1V6c0-.55-.45-1-1-1h-3c-.55 0-1 .45-1 1z"/></svg>  
+                      </button>
+                <div class="product-card__image">
+                  <a href="product.html"><img src="assets/images/chocolate.webp" alt=""></a>
+                </div>
+                <div class="product-card__info">
+                  <div class="product-card__name"><a href="product.html">
+                    شکلات اسلب تلخ 250 گرمی سوربن</a></div>
+                  <div class="product-card__rating">
+                    <div class="rating">
+                      <span class="rating-star star-fill">
+                        <svg xmlns="http://www.w3.org/2000/svg" width="18" height="18" viewBox="0 0 24 24"><path fill="currentColor" d="m12 18.275l-4.15 2.5q-.275.175-.575.15t-.525-.2q-.225-.175-.35-.438t-.05-.587l1.1-4.725L3.775 11.8q-.25-.225-.312-.513t.037-.562q.1-.275.3-.45t.55-.225l4.85-.425l1.875-4.45q.125-.3.388-.45t.537-.15q.275 0 .537.15t.388.45l1.875 4.45l4.85.425q.35.05.55.225t.3.45q.1.275.038.563t-.313.512l-3.675 3.175l1.1 4.725q.075.325-.05.588t-.35.437q-.225.175-.525.2t-.575-.15l-4.15-2.5Z"/></svg>
+                      </span>
+                      <span class="rating-star star-fill">
+                        <svg xmlns="http://www.w3.org/2000/svg" width="18" height="18" viewBox="0 0 24 24"><path fill="currentColor" d="m12 18.275l-4.15 2.5q-.275.175-.575.15t-.525-.2q-.225-.175-.35-.438t-.05-.587l1.1-4.725L3.775 11.8q-.25-.225-.312-.513t.037-.562q.1-.275.3-.45t.55-.225l4.85-.425l1.875-4.45q.125-.3.388-.45t.537-.15q.275 0 .537.15t.388.45l1.875 4.45l4.85.425q.35.05.55.225t.3.45q.1.275.038.563t-.313.512l-3.675 3.175l1.1 4.725q.075.325-.05.588t-.35.437q-.225.175-.525.2t-.575-.15l-4.15-2.5Z"/></svg>
+                      </span>
+                        <span class="rating-star star-fill">
+                        <svg xmlns="http://www.w3.org/2000/svg" width="18" height="18" viewBox="0 0 24 24"><path fill="currentColor" d="m12 18.275l-4.15 2.5q-.275.175-.575.15t-.525-.2q-.225-.175-.35-.438t-.05-.587l1.1-4.725L3.775 11.8q-.25-.225-.312-.513t.037-.562q.1-.275.3-.45t.55-.225l4.85-.425l1.875-4.45q.125-.3.388-.45t.537-.15q.275 0 .537.15t.388.45l1.875 4.45l4.85.425q.35.05.55.225t.3.45q.1.275.038.563t-.313.512l-3.675 3.175l1.1 4.725q.075.325-.05.588t-.35.437q-.225.175-.525.2t-.575-.15l-4.15-2.5Z"/></svg>
+                      </span>
+                        <span class="rating-star">
+                        <svg xmlns="http://www.w3.org/2000/svg" width="18" height="18" viewBox="0 0 24 24"><path fill="currentColor" d="m12 18.275l-4.15 2.5q-.275.175-.575.15t-.525-.2q-.225-.175-.35-.438t-.05-.587l1.1-4.725L3.775 11.8q-.25-.225-.312-.513t.037-.562q.1-.275.3-.45t.55-.225l4.85-.425l1.875-4.45q.125-.3.388-.45t.537-.15q.275 0 .537.15t.388.45l1.875 4.45l4.85.425q.35.05.55.225t.3.45q.1.275.038.563t-.313.512l-3.675 3.175l1.1 4.725q.075.325-.05.588t-.35.437q-.225.175-.525.2t-.575-.15l-4.15-2.5Z"/></svg>
+                      </span>
+                      <span class="rating-star">
+                        <svg xmlns="http://www.w3.org/2000/svg" width="18" height="18" viewBox="0 0 24 24"><path fill="currentColor" d="m12 18.275l-4.15 2.5q-.275.175-.575.15t-.525-.2q-.225-.175-.35-.438t-.05-.587l1.1-4.725L3.775 11.8q-.25-.225-.312-.513t.037-.562q.1-.275.3-.45t.55-.225l4.85-.425l1.875-4.45q.125-.3.388-.45t.537-.15q.275 0 .537.15t.388.45l1.875 4.45l4.85.425q.35.05.55.225t.3.45q.1.275.038.563t-.313.512l-3.675 3.175l1.1 4.725q.075.325-.05.588t-.35.437q-.225.175-.525.2t-.575-.15l-4.15-2.5Z"/></svg>
+                      </span>
+                    </div>
+                    <div class="product-card__rating-legend">9 نقد و بررسی</div>
+                  </div>
+                  
+                </div>
+                <div class="product-card__actions">
+                  <div class="product-card__availability">موجودی: <span class="text-success">موجود در انبار</span></div>
+                  <div class="product-card__prices">1,019,000 تومان</div>
+                  <div class="product-card__buttons">
+                          <button class="btn btn-success product-card__addtocart" data-id="1" type="button">افزودن به سبد</button>
+                          
+                          <button class="btn btn-light product-card__wishlist" type="button">
+                            <svg xmlns="http://www.w3.org/2000/svg" width="18" height="18" viewBox="0 0 24 24"><path fill="currentColor" d="m12 21l-1.45-1.3q-2.525-2.275-4.175-3.925T3.75 12.812Q2.775 11.5 2.388 10.4T2 8.15Q2 5.8 3.575 4.225T7.5 2.65q1.3 0 2.475.55T12 4.75q.85-1 2.025-1.55t2.475-.55q2.35 0 3.925 1.575T22 8.15q0 1.15-.388 2.25t-1.362 2.412q-.975 1.313-2.625 2.963T13.45 19.7L12 21Z"/></svg>
+                          </button>
+                          <button class="btn btn-light product-card__compare" type="button">
+                            <svg xmlns="http://www.w3.org/2000/svg" width="18" height="18" viewBox="0 0 24 24"><path fill="currentColor" d="M4 20V9h4v11H4Zm6 0V4h4v16h-4Zm6 0v-7h4v7h-4Z"/></svg>  
+                          </button>
+                        </div>
+                </div>
+              </div>
+            </div>
+            <div class="block-products__list-item">
+              <div class="product-card">
+                <button class="product-card__quickview" type="button">
+                        <svg xmlns="http://www.w3.org/2000/svg" width="20" height="20" viewBox="0 0 24 24"><path fill="currentColor" d="M6 14c-.55 0-1 .45-1 1v3c0 .55.45 1 1 1h3c.55 0 1-.45 1-1s-.45-1-1-1H7v-2c0-.55-.45-1-1-1zm0-4c.55 0 1-.45 1-1V7h2c.55 0 1-.45 1-1s-.45-1-1-1H6c-.55 0-1 .45-1 1v3c0 .55.45 1 1 1zm11 7h-2c-.55 0-1 .45-1 1s.45 1 1 1h3c.55 0 1-.45 1-1v-3c0-.55-.45-1-1-1s-1 .45-1 1v2zM14 6c0 .55.45 1 1 1h2v2c0 .55.45 1 1 1s1-.45 1-1V6c0-.55-.45-1-1-1h-3c-.55 0-1 .45-1 1z"/></svg>  
+                      </button>
+                <div class="product-card__image">
+                  <a href="product.html"><img src="assets/images/chocolate.webp" alt=""></a>
+                </div>
+                <div class="product-card__info">
+                  <div class="product-card__name"><a href="product.html">
+                    شکلات اسلب تلخ 250 گرمی سوربن</a></div>
+                  <div class="product-card__rating">
+                    <div class="rating">
+                      <span class="rating-star star-fill">
+                        <svg xmlns="http://www.w3.org/2000/svg" width="18" height="18" viewBox="0 0 24 24"><path fill="currentColor" d="m12 18.275l-4.15 2.5q-.275.175-.575.15t-.525-.2q-.225-.175-.35-.438t-.05-.587l1.1-4.725L3.775 11.8q-.25-.225-.312-.513t.037-.562q.1-.275.3-.45t.55-.225l4.85-.425l1.875-4.45q.125-.3.388-.45t.537-.15q.275 0 .537.15t.388.45l1.875 4.45l4.85.425q.35.05.55.225t.3.45q.1.275.038.563t-.313.512l-3.675 3.175l1.1 4.725q.075.325-.05.588t-.35.437q-.225.175-.525.2t-.575-.15l-4.15-2.5Z"/></svg>
+                      </span>
+                      <span class="rating-star star-fill">
+                        <svg xmlns="http://www.w3.org/2000/svg" width="18" height="18" viewBox="0 0 24 24"><path fill="currentColor" d="m12 18.275l-4.15 2.5q-.275.175-.575.15t-.525-.2q-.225-.175-.35-.438t-.05-.587l1.1-4.725L3.775 11.8q-.25-.225-.312-.513t.037-.562q.1-.275.3-.45t.55-.225l4.85-.425l1.875-4.45q.125-.3.388-.45t.537-.15q.275 0 .537.15t.388.45l1.875 4.45l4.85.425q.35.05.55.225t.3.45q.1.275.038.563t-.313.512l-3.675 3.175l1.1 4.725q.075.325-.05.588t-.35.437q-.225.175-.525.2t-.575-.15l-4.15-2.5Z"/></svg>
+                      </span>
+                        <span class="rating-star star-fill">
+                        <svg xmlns="http://www.w3.org/2000/svg" width="18" height="18" viewBox="0 0 24 24"><path fill="currentColor" d="m12 18.275l-4.15 2.5q-.275.175-.575.15t-.525-.2q-.225-.175-.35-.438t-.05-.587l1.1-4.725L3.775 11.8q-.25-.225-.312-.513t.037-.562q.1-.275.3-.45t.55-.225l4.85-.425l1.875-4.45q.125-.3.388-.45t.537-.15q.275 0 .537.15t.388.45l1.875 4.45l4.85.425q.35.05.55.225t.3.45q.1.275.038.563t-.313.512l-3.675 3.175l1.1 4.725q.075.325-.05.588t-.35.437q-.225.175-.525.2t-.575-.15l-4.15-2.5Z"/></svg>
+                      </span>
+                        <span class="rating-star">
+                        <svg xmlns="http://www.w3.org/2000/svg" width="18" height="18" viewBox="0 0 24 24"><path fill="currentColor" d="m12 18.275l-4.15 2.5q-.275.175-.575.15t-.525-.2q-.225-.175-.35-.438t-.05-.587l1.1-4.725L3.775 11.8q-.25-.225-.312-.513t.037-.562q.1-.275.3-.45t.55-.225l4.85-.425l1.875-4.45q.125-.3.388-.45t.537-.15q.275 0 .537.15t.388.45l1.875 4.45l4.85.425q.35.05.55.225t.3.45q.1.275.038.563t-.313.512l-3.675 3.175l1.1 4.725q.075.325-.05.588t-.35.437q-.225.175-.525.2t-.575-.15l-4.15-2.5Z"/></svg>
+                      </span>
+                      <span class="rating-star">
+                        <svg xmlns="http://www.w3.org/2000/svg" width="18" height="18" viewBox="0 0 24 24"><path fill="currentColor" d="m12 18.275l-4.15 2.5q-.275.175-.575.15t-.525-.2q-.225-.175-.35-.438t-.05-.587l1.1-4.725L3.775 11.8q-.25-.225-.312-.513t.037-.562q.1-.275.3-.45t.55-.225l4.85-.425l1.875-4.45q.125-.3.388-.45t.537-.15q.275 0 .537.15t.388.45l1.875 4.45l4.85.425q.35.05.55.225t.3.45q.1.275.038.563t-.313.512l-3.675 3.175l1.1 4.725q.075.325-.05.588t-.35.437q-.225.175-.525.2t-.575-.15l-4.15-2.5Z"/></svg>
+                      </span>
+                    </div>
+                    <div class="product-card__rating-legend">9 نقد و بررسی</div>
+                  </div>
+                  
+                </div>
+                <div class="product-card__actions">
+                  <div class="product-card__availability">موجودی: <span class="text-success">موجود در انبار</span></div>
+                  <div class="product-card__prices">1,019,000 تومان</div>
+                  <div class="product-card__buttons">
+                          <button class="btn btn-success product-card__addtocart" data-id="1" type="button">افزودن به سبد</button>
+                          
+                          <button class="btn btn-light product-card__wishlist" type="button">
+                            <svg xmlns="http://www.w3.org/2000/svg" width="18" height="18" viewBox="0 0 24 24"><path fill="currentColor" d="m12 21l-1.45-1.3q-2.525-2.275-4.175-3.925T3.75 12.812Q2.775 11.5 2.388 10.4T2 8.15Q2 5.8 3.575 4.225T7.5 2.65q1.3 0 2.475.55T12 4.75q.85-1 2.025-1.55t2.475-.55q2.35 0 3.925 1.575T22 8.15q0 1.15-.388 2.25t-1.362 2.412q-.975 1.313-2.625 2.963T13.45 19.7L12 21Z"/></svg>
+                          </button>
+                          <button class="btn btn-light product-card__compare" type="button">
+                            <svg xmlns="http://www.w3.org/2000/svg" width="18" height="18" viewBox="0 0 24 24"><path fill="currentColor" d="M4 20V9h4v11H4Zm6 0V4h4v16h-4Zm6 0v-7h4v7h-4Z"/></svg>  
+                          </button>
+                        </div>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+    <!-- most sells -->
+    <!-- start::footer -->
+    <footer>
+        <div class="container">
+          <div class="footer-top">
+            <div class="row">
+              <div class="col-md-4">
+               <div class="footer-list">
+                <h5 class="footer-list__title">دسته بندی محصولات</h5>
+                <ul class="footer-list__items">
+                  <li><a href="#">بهداشتی آرایشی</a></li>
+                  <li><a href="#">کفش</a></li>
+                  <li><a href="#">لباس</a></li>
+                  <li><a href="#">دیجیتال</a></li>
+                  <li><a href="#">بهداشتی آرایشی</a></li>
+                  <li><a href="#">کفش</a></li>
+              </ul>
+               </div>
+              </div>
+              <div class="col-md-4">
+               <div  class="footer-list">
+                <h5 class="footer-list__title">تماس با ما</h5>
+                <ul class="footer-list__items">
+                  <li>
+                       <span>آدرس: آدرس: ۴۴۵ کوه عدن جاده، کوه بهشت، اوکلند.</span>
+                  </li>
+                  <li>
+                       <span>شماره تماس: 2135642512</span>
+                  </li>
+                  <li>
+                      <span> ایمیل: digistore@exmple.com</span>
+                  </li>
+                  <li>
+                      <span> فکس: 2564521544</span>
+                  </li>
+                  <li>
+                       <span>زمان کاری: شنبه تا پنچ شنبه ساعت ۸ صبح تا ۱۲ ظهر</span>
+                  </li>
+              </ul>
+               </div>
+              </div>
+              <div class="col-md-4">
+                <div>
+                  <p>نماد اعتماد</p>
+                  <div class="mt-3">
+                    <div>
+                      <img src="assets/images/namad.png" alt="" style="width: 120px;">
+                    </div>
+                  </div>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+          
+           <div class="footer-bottom">
+           <div class="container">
+            <div class="row ">
+              <div class=" col-12 col-lg-9">
+                  <div class="footer-bottom__left">
+                     <div class="row">
+                      <div class="col-md-3">
+                        <div class="footer-bottom__logo">
+                          <img src="assets/images/logo.webp" class="">
+                         </div>
+                      </div>
+                       <div  class="col-md-9">
+                        <div class="footer-bottom__links">
+                          <ul>
+                              <li><a href="#">قوانین سایت</a></li>
+                              <li><a href="#">حساب شما</a></li>
+                              <li><a href="#">نرخ باربری</a></li>
+                              <li><a href="#">بازپرداختی</a></li>
+                              <li><a href="#"> پیگیری سفارش</a></li>
+                          </ul>
+                      </div>
+                       </div>
+                     </div>
+                  </div>
+              </div>
+              <div class="col-12 col-lg-3">
+                  <div class="footer-bottom__socials">
+                      <a href="http://www.facebook.com" class="icon facebook"><span class="footer-bottom__social-icon">
+                        <svg xmlns="http://www.w3.org/2000/svg" width="28" height="28" viewBox="0 0 24 24"><path fill="currentColor" d="M15.12 5.32H17V2.14A26.11 26.11 0 0 0 14.26 2c-2.72 0-4.58 1.66-4.58 4.7v2.62H6.61v3.56h3.07V22h3.68v-9.12h3.06l.46-3.56h-3.52V7.05c0-1.05.28-1.73 1.76-1.73Z"/></svg>
+                      </span></a>
+                      <a href="http://www.github.com" class="icon instegram"><span class="footer-bottom__social-icon">
+                        <svg xmlns="http://www.w3.org/2000/svg" width="28" height="28" viewBox="0 0 24 24"><path fill="currentColor" d="M13.028 2.001a78.82 78.82 0 0 1 2.189.022l.194.007c.224.008.445.018.712.03c1.064.05 1.79.218 2.427.465c.66.254 1.216.598 1.772 1.154a4.908 4.908 0 0 1 1.153 1.771c.247.637.415 1.364.465 2.428c.012.266.022.488.03.712l.006.194a79 79 0 0 1 .023 2.188l.001.746v1.31a78.836 78.836 0 0 1-.023 2.189l-.006.194c-.008.224-.018.445-.03.712c-.05 1.064-.22 1.79-.466 2.427a4.884 4.884 0 0 1-1.153 1.772a4.915 4.915 0 0 1-1.772 1.153c-.637.247-1.363.415-2.427.465c-.267.012-.488.022-.712.03l-.194.006a79 79 0 0 1-2.189.023l-.746.001h-1.309a78.836 78.836 0 0 1-2.189-.023l-.194-.006a60.64 60.64 0 0 1-.712-.03c-1.064-.05-1.79-.22-2.428-.466a4.89 4.89 0 0 1-1.771-1.153a4.904 4.904 0 0 1-1.154-1.772c-.247-.637-.415-1.363-.465-2.427a74.367 74.367 0 0 1-.03-.712l-.005-.194A79.053 79.053 0 0 1 2 13.028v-2.056a78.82 78.82 0 0 1 .022-2.188l.007-.194c.008-.224.018-.446.03-.712c.05-1.065.218-1.79.465-2.428A4.88 4.88 0 0 1 3.68 3.68a4.897 4.897 0 0 1 1.77-1.155c.638-.247 1.363-.415 2.428-.465l.712-.03l.194-.005A79.053 79.053 0 0 1 10.972 2h2.056Zm-1.028 5A5 5 0 1 0 12 17a5 5 0 0 0 0-10Zm0 2A3 3 0 1 1 12.001 15a3 3 0 0 1 0-6Zm5.25-3.5a1.25 1.25 0 0 0 0 2.498a1.25 1.25 0 0 0 0-2.5Z"/></svg>
+                      </span></a>
+                      <a href="http://www.dribble.com" class="icon linkedin"><span class="footer-bottom__social-icon">
+                        <svg xmlns="http://www.w3.org/2000/svg" width="28" height="28" viewBox="0 0 24 24"><path fill="currentColor" d="M19 3a2 2 0 0 1 2 2v14a2 2 0 0 1-2 2H5a2 2 0 0 1-2-2V5a2 2 0 0 1 2-2h14m-.5 15.5v-5.3a3.26 3.26 0 0 0-3.26-3.26c-.85 0-1.84.52-2.32 1.3v-1.11h-2.79v8.37h2.79v-4.93c0-.77.62-1.4 1.39-1.4a1.4 1.4 0 0 1 1.4 1.4v4.93h2.79M6.88 8.56a1.68 1.68 0 0 0 1.68-1.68c0-.93-.75-1.69-1.68-1.69a1.69 1.69 0 0 0-1.69 1.69c0 .93.76 1.68 1.69 1.68m1.39 9.94v-8.37H5.5v8.37h2.77Z"/></svg>
+                      </span></a>
+                      <a href="http://www.twitter.com" class="icon twitter"><span class="footer-bottom__social-icon">
+                        <svg xmlns="http://www.w3.org/2000/svg" width="28" height="28" viewBox="0 0 24 24"><path fill="currentColor" d="M22.46 6c-.77.35-1.6.58-2.46.69c.88-.53 1.56-1.37 1.88-2.38c-.83.5-1.75.85-2.72 1.05C18.37 4.5 17.26 4 16 4c-2.35 0-4.27 1.92-4.27 4.29c0 .34.04.67.11.98C8.28 9.09 5.11 7.38 3 4.79c-.37.63-.58 1.37-.58 2.15c0 1.49.75 2.81 1.91 3.56c-.71 0-1.37-.2-1.95-.5v.03c0 2.08 1.48 3.82 3.44 4.21a4.22 4.22 0 0 1-1.93.07a4.28 4.28 0 0 0 4 2.98a8.521 8.521 0 0 1-5.33 1.84c-.34 0-.68-.02-1.02-.06C3.44 20.29 5.7 21 8.12 21C16 21 20.33 14.46 20.33 8.79c0-.19 0-.37-.01-.56c.84-.6 1.56-1.36 2.14-2.23Z"/></svg>
+                      </span></a>
+
+                  </div>
+              </div>
+          </div>
+           </div>
+        </div>
       </div>
     </footer>
     <!-- end::footer -->
+
+    <template id="BasketCartItem">
+      <li class="js-mini-cart-item" data-id="{id}">
+        <div class="header-basket-list-item">
+          <a href="#" class="header-basket-list-item-image">
+            <img
+              class="img-fluid"
+              src="assets/images/0589ee66d13b4677adb6e978ec162be1.webp"
+            />
+          </a>
+         <div class="header-basket-list-item-content">
+          <a
+          href="#"
+          class="header-basket-list-item-title line-camp2"
+          >این یک عنوان تست است این یک عنوان تست است</a
+        >
+          <div class="d-flex align-items-center" >
+            <div class="flex-grow-1">
+             
+
+              <div class="header-basket-list-item-footer">
+                
+                <span class="header-basket-list-item-price"
+                  >200,000 تومان</span
+                >
+              </div>
+            </div>
+            <div  class="product-card__added-btn"  style="display: block;font-size: 1rem;">
+              <div style="width: 100px;height: 35px; border:1px solid #f37a7a;" >
+              <button class="product-card__plus-btn">
+                <svg xmlns="http://www.w3.org/2000/svg" width="20" height="20" viewBox="0 0 24 24"><path fill="currentColor" d="M19 13h-6v6h-2v-6H5v-2h6V5h2v6h6v2z"/></svg>
+              </button>
+              
+              <div class="product-card__add-counter">
+                1
+                <input type="hidden" class="product-count-input" name="product_1" value="1">
+
+              </div>
+              <button class="product-card__trash-btn">
+                <svg xmlns="http://www.w3.org/2000/svg" width="20" height="20" viewBox="0 0 24 24"><path fill="#f25f5f" d="M7 21q-.825 0-1.413-.588T5 19V6H4V4h5V3h6v1h5v2h-1v13q0 .825-.588 1.413T17 21H7ZM17 6H7v13h10V6ZM9 17h2V8H9v9Zm4 0h2V8h-2v9ZM7 6v13V6Z"/></svg>
+              </button>
+              <button class="product-card__minus-btn" style="display: none;">
+                <svg xmlns="http://www.w3.org/2000/svg" width="20" height="20" viewBox="0 0 24 24"><path fill="currentColor" d="M19 12.998H5v-2h14z"/></svg>
+              </button>
+            </div>
+            </div>
+           
+          </div>
+         </div>
+        </div>
+      </li>
+    </template>
+    <template id="BtnSpinner">
+      <div class="spinner">
+        <div class="bounce1"></div>
+        <div class="bounce2"></div>
+        <div class="bounce3"></div>
+        </div>
+    </template>
     
   </body>
   <script src="./assets/js/jquery-3.2.1.min.js"></script>
   <script src="./assets/js/select2.min.js"></script>
   <script src="./assets/bootstrap/js/bootstrap.bundle.min.js"></script>
-  <script src="./assets/js/main.js"></script>
   <script src="assets/js/owl.carousel.min.js"></script>
+  <script src="assets/js/app.js"></script>
   <style>
    
   </style>
+  
   <script>
+
+     
     $(".custom1").owlCarousel({
       animateOut: "fadeOut",
       animateIn: "fadeIn",
@@ -3762,7 +4366,10 @@
       autoplayTimeout: 4000,
       autoplayHoverPause: true,
     });
-
+ 
+    // $(document).on("click", ".block-header__arrows-list button", function (e) {
+    //   product_owl.trigger("to.owl.carousel", [$(this).index(), 300]);
+    // });
     var owl = $(".custom2").owlCarousel({
      
       stagePadding: 0,
@@ -3801,5 +4408,24 @@
 
       window.requestAnimationFrame(step);
     });
+
+    $('.login-modal__hide').click(function(e) {
+      e.preventDefault()
+      $(this).hide()
+      $('.login-modal__show').show()
+      $('.login-modal__password-input').attr('type','text')
+    })
+    $('.login-modal__show').click(function(e) {
+      e.preventDefault()
+      $(this).hide()
+      $('.login-modal__hide').show()
+      $('.login-modal__password-input').attr('type','password')
+    })
+   
+
+   
   </script>
+  <script src="./assets/js/main.js"></script>
+  <script src="./assets/js/cart.js"></script>
+
 </html>
