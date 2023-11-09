@@ -12,7 +12,7 @@ $(document).ready(function () {
     }
     if ($(e.target).closest(".header-basket-list-item-content").length === 0 && $(e.target).closest(".header-left-icons").length === 0
     && $(e.target).closest("svg").length === 0) {
-        // $(".mini-cart-dropdown").removeClass('active')
+        // $(".shopping-cart").removeClass('active')
     }
   });
 
@@ -56,14 +56,14 @@ $(document).ready(function () {
     $(this).parents(".js-mini-cart-item").remove();
   });
 
-  $(".header-basket-icon").click(function (e) {
+  $(".header-left-icons__basket").click(function (e) {
     e.preventDefault();
 
-      $(this).siblings(".mini-cart-dropdown").addClass("active");
+      $(this).siblings(".shopping-cart").addClass("active");
   });
-  $(".header-cart-info-close").click(function (e) {
+  $(".shopping-cart__close").click(function (e) {
     e.preventDefault();
-    $(this).parents(".mini-cart-dropdown").removeClass("active");
+    $(this).parents(".shopping-cart").removeClass("active");
   });
 
   $(".js-example-basic-single").select2({

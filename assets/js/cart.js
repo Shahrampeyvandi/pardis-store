@@ -128,6 +128,7 @@ $(".product-card__addtocart").click(function (e) {
   $(this).html($.app.ajax.Template($('#BtnSpinner').html(), {}));
   if ($(this).hasClass('is-loading')) return
   $(this).addClass('is-loading')
+  var product_id = $(this).attr('data-id');
   var send_data = {
     product_id: 1,
   };
@@ -140,66 +141,68 @@ $(".product-card__addtocart").click(function (e) {
     url: "https://jsonplaceholder.typicode.com/posts",
     data: send_data,
     callback: function (ResData) {
-    //   if (ResData.success == "success") {
-        if (true) {
+      console.log(ResData);
+
+      el.html("افزودن به سبد");
+      el.removeClass('is-loading')
+
+      if (ResData.type == "success") {
         var dummy_cart_item_response = {
           data: {
-            cart_id:1,
+            cart_id: 1,
             product: {
-              id:  1232,
-              title: "عنوان محصول",
-              price: {
-                price: "100000",
-                discount_price: "90000",
-              },
+              id: 1232,
+              title: "این یک عنوان تست است این یک عنوان تست است",
+              price: "100000",
               image:
-                "https://dkstatics-public.digikala.com/digikala-products/89425b3496b3f56bf7f39cb970f01c1419712272_1657121566.jpg?x-oss-process=image/resize,m_lfit,h_300,w_300/quality,q_80",
+                "assets/images/0589ee66d13b4677adb6e978ec162be1.webp",
             },
             total_price: 430000
           },
           success: true,
         };
 
-        el.html("افزودن به سبد");
-        el.removeClass('is-loading')
-
-
-
         el.hide()
         el.next().show()
-        // shoppingCart.addItemToCart(dummy_cart_item_response.data.product, 1);
-        
-        $('.header-basket-list').append($.app.ajax.Template($('#BasketCartItem').html(), {id: dummy_cart_item_response.data.product.id}));
-        $('.header-left-icons .header-basket-icon').removeClass('is-empty')
-        $('.header-basket-icon .cart-count').text(productsCount()).show()
 
-        // $('.header-cart-info-footer').show()
-        $('.header-cart-info__empty').hide()
+
+        $('.header-basket-list').append($.app.ajax.Template($('#BasketCartItem').html(),
+          {
+            id: product_id,
+            image: dummy_cart_item_response.data.product.image,
+            title: dummy_cart_item_response.data.product.title,
+            price: parseInt(dummy_cart_item_response.data.product.price).toLocaleString()
+          }));
+        $('.header-left-icons .header-left-icons__basket').removeClass('is-empty')
+        $('.header-left-icons__basket .header-left-icon__basket-count').text(productsCount()).show()
+        $('.header-basket-list__empty').hide()
+        $('.shopping-cart__empty').hide()
         $('.header-cart-footer__details').show()
-        $('.header-cart-info-total-amount-number').text(dummy_cart_item_response.data.total_price)
-
+        $('.shopping-cart__total-amount-number').text(parseInt(dummy_cart_item_response.data.total_price).toLocaleString())
+      }
+      if (ResData.type == 'error') {
+        alert('error')
       }
     },
   });
 });
 
 
-function changeProductCount(product_id,val) {
-  $(".header-basket-list").find(`[data-id='${product_id}']`).find('.header-basket-list-item-count').val(val )
+function changeProductCount(product_id, val) {
+  $(".header-basket-list").find(`[data-id='${product_id}']`).find('.header-basket-list-item-count').val(val)
 }
 function productsCount() {
   return $(".header-basket-list").children().length
 }
 
 
-$(document).on('click', '.product-card__plus-btn',function(e) {
+$(document).on('click', '.product-card__plus-btn', function (e) {
   e.preventDefault()
   if ($(this).hasClass('is-loading')) return
   $(this).addClass('is-loading')
   var html = $(this).html()
   $(this).html($.app.ajax.Template($('#BtnSpinner').html(), {}));
-  var product_id = $(this).parents('.product-card').attr('data-id');
-
+  var product_id = $(this).parents('.product-card__added-btn').attr('data-id');
   var send_data = {
     product_id: 1,
   };
@@ -209,39 +212,41 @@ $(document).on('click', '.product-card__plus-btn',function(e) {
     url: "https://jsonplaceholder.typicode.com/posts",
     data: send_data,
     callback: function (ResData) {
-    //   if (ResData.success == "success") {
-        if (true) {
+
+      el.removeClass('is-loading')
+      el.html(html);
+
+      if (ResData.type == "success") {
         var dummy_cart_item_response = {
           data: {
-            cart_id:1,
+            cart_id: 1,
             product: {
-              id:  123,
+              id: 123,
               title: "عنوان محصول",
               price: {
                 price: "100000",
                 discount_price: "90000",
               },
               image:
-                "https://dkstatics-public.digikala.com/digikala-products/89425b3496b3f56bf7f39cb970f01c1419712272_1657121566.jpg?x-oss-process=image/resize,m_lfit,h_300,w_300/quality,q_80",
+                "assets/images/0589ee66d13b4677adb6e978ec162be1.webp",
             },
             total_price: 430000
           },
           success: true,
         };
 
-        el.removeClass('is-loading')
-        el.html(html);
-        $('.header-cart-info-total-amount-number').text(dummy_cart_item_response.data.total_price)
-        var num =parseInt(el.siblings('.product-card__add-counter').text())
-        // el.siblings('.product-card__add-counter').text(num + 1)
-        $(`[data-id="1232"]`).each(function(i,v) {
+
+        $('.shopping-cart__total-amount-number').text(dummy_cart_item_response.data.total_price)
+        var num = parseInt(el.siblings('.product-card__add-counter').text())
+        
+        $(`.product-card__added-btn[data-id="${product_id}"]`).each(function (i, v) {
           $(v).find('.product-card__add-counter').text(num + 1);
         });
         $(".header-basket-list").find(`[data-id='${product_id}']`)
         if ($(".header-basket-list").find(`[data-id='${product_id}']`).length) {
           changeProductCount(product_id, num + 1)
         }
-        $('.header-left-icons .cart-count').text(productsCount()).show()
+        $('.header-left-icons .header-left-icon__basket-count').text(productsCount()).show()
         if (num + 1 > 1) {
           el.siblings('.product-card__trash-btn').hide()
           el.siblings('.product-card__minus-btn').show()
@@ -252,15 +257,15 @@ $(document).on('click', '.product-card__plus-btn',function(e) {
       }
     },
   });
-  
+
 
 })
 
-$(document).on('click','.product-card__minus-btn',function(e) {
+$(document).on('click', '.product-card__minus-btn', function (e) {
   e.preventDefault()
   if ($(this).hasClass('is-loading')) return
   $(this).addClass('is-loading')
-  var product_id = $(this).parents('.product-card').attr('data-id'); 
+  var product_id = $(this).parents('.product-card__added-btn').attr('data-id');
   var html = $(this).html()
   $(this).html($.app.ajax.Template($('#BtnSpinner').html(), {}));
 
@@ -272,53 +277,54 @@ $(document).on('click','.product-card__minus-btn',function(e) {
     url: "https://jsonplaceholder.typicode.com/posts",
     data: send_data,
     callback: function (ResData) {
-    //   if (ResData.success == "success") {
-        if (true) {
+      el.html(html);
+      el.removeClass('is-loading')
+
+      if (ResData.type == "success") {
         var dummy_cart_item_response = {
           data: {
-            cart_id:1,
+            cart_id: 1,
             product: {
-              id:  123,
+              id: 123,
               title: "عنوان محصول",
               price: {
                 price: "100000",
                 discount_price: "90000",
               },
               image:
-                "https://dkstatics-public.digikala.com/digikala-products/89425b3496b3f56bf7f39cb970f01c1419712272_1657121566.jpg?x-oss-process=image/resize,m_lfit,h_300,w_300/quality,q_80",
+                "assets/images/0589ee66d13b4677adb6e978ec162be1.webp",
             },
             total_price: 430000
           },
           success: true,
         };
 
-        el.html(html);
-        el.removeClass('is-loading')
 
-        $('.header-cart-info-total-amount-number').text(dummy_cart_item_response.data.total_price)
-        var num =parseInt(el.siblings('.product-card__add-counter').text())
-        $(`[data-id="1232"]`).each(function(i,v) {
+
+        $('.shopping-cart__total-amount-number').text(dummy_cart_item_response.data.total_price)
+        var num = parseInt(el.siblings('.product-card__add-counter').text())
+        $(`[data-id="${product_id}"]`).each(function (i, v) {
           $(v).find('.product-card__add-counter').text(num - 1);
         });
         changeProductCount(product_id, num - 1)
-        $('.header-left-icons .cart-count').text(productsCount()).show()
-      
+        $('.header-left-icons .header-left-icon__basket-count').text(productsCount()).show()
+
         if ((num - 1) < 2) {
           el.hide()
           el.siblings('.product-card__trash-btn').show()
-        } 
+        }
       }
     },
   });
-  
- 
+
+
 })
-$(document).on('click','.product-card .product-card__trash-btn',function(e) {
+$(document).on('click', '.product-card .product-card__trash-btn', function (e) {
   e.preventDefault()
   if ($(this).hasClass('is-loading')) return
   $(this).addClass('is-loading')
   // shoppingCart.removeItemFromCart()
-  var product_id = $(this).parents('.product-card').attr('data-id');
+  var product_id = $(this).parents('.product-card__added-btn').attr('data-id');
   var html = $(this).html()
   var send_data = {
     product_id: 1,
@@ -330,53 +336,59 @@ $(document).on('click','.product-card .product-card__trash-btn',function(e) {
     url: "https://jsonplaceholder.typicode.com/posts",
     data: send_data,
     callback: function (ResData) {
-    //   if (ResData.success == "success") {
-        if (true) {
+      el.html(html)
+      el.removeClass('is-loading')
+
+      if (ResData.type == "success") {
         var dummy_cart_item_response = {
           data: {
-            cart_id:1,
+            cart_id: 1,
             product: {
-              id:  123,
+              id: 123,
               title: "عنوان محصول",
               price: {
                 price: "100000",
                 discount_price: "90000",
               },
               image:
-                "https://dkstatics-public.digikala.com/digikala-products/89425b3496b3f56bf7f39cb970f01c1419712272_1657121566.jpg?x-oss-process=image/resize,m_lfit,h_300,w_300/quality,q_80",
+                "assets/images/0589ee66d13b4677adb6e978ec162be1.webp",
             },
             total_price: 430000
           },
           success: true,
         };
 
-        el.html(html)
-        el.removeClass('is-loading')
 
-        if ($(".header-basket-list").find(`[data-id='${product_id}']`)) {
+
+        if ($(".header-basket-list").find(`[data-id='${product_id}']`).length) {
           $(".header-basket-list").find(`[data-id='${product_id}']`).remove()
-          if (productsCount() == 0) $('.header-left-icons .cart-count').text(productsCount()).hide()
+          if (productsCount() == 0) $('.header-left-icons .header-left-icon__basket-count').text(productsCount()).hide()
         }
-      
+
         el.parents('.product-card__added-btn').hide()
         el.parents('.product-card__added-btn').siblings('.product-card__addtocart').show()
 
         if (productsCount() == 0) {
-        $('.header-left-icons .header-basket-icon').addClass('is-empty')
-
+          $('.header-left-icons .header-left-icons__basket').addClass('is-empty')
+          $(".shopping-cart").removeClass("active");
+          $('.header-left-icons .header-left-icon__basket-count').text(productsCount())
+          $('.header-left-icons .header-left-icon__basket-count').hide()
+          $('.header-cart-footer__details').hide()
+          $('.header-basket-list__empty').show()
+          $('.shopping-cart__empty').show()
         }
       }
     },
   });
- 
+
 })
 
-$(document).on('click','.header-basket-list .product-card__trash-btn',function(e) {
+$(document).on('click', '.header-basket-list .product-card__trash-btn', function (e) {
   e.preventDefault()
   // shoppingCart.removeItemFromCart()
   if ($(this).hasClass('is-loading')) return
   $(this).addClass('is-loading')
-  var product_id = $(this).parents('.product-card').attr('data-id');
+  var product_id = $(this).parents('.product-card__added-btn').attr('data-id');
   var html = $(this).html()
   var send_data = {
     product_id: 1,
@@ -388,20 +400,21 @@ $(document).on('click','.header-basket-list .product-card__trash-btn',function(e
     url: "https://jsonplaceholder.typicode.com/posts",
     data: send_data,
     callback: function (ResData) {
-    //   if (ResData.success == "success") {
-        if (true) {
+      el.removeClass('is-loading')
+
+      if (ResData.type == "success") {
         var dummy_cart_item_response = {
           data: {
-            cart_id:1,
+            cart_id: 1,
             product: {
-              id:  123,
+              id: 123,
               title: "عنوان محصول",
               price: {
                 price: "100000",
                 discount_price: "90000",
               },
               image:
-                "https://dkstatics-public.digikala.com/digikala-products/89425b3496b3f56bf7f39cb970f01c1419712272_1657121566.jpg?x-oss-process=image/resize,m_lfit,h_300,w_300/quality,q_80",
+                "assets/images/0589ee66d13b4677adb6e978ec162be1.webp",
             },
             total_price: 430000
           },
@@ -409,68 +422,22 @@ $(document).on('click','.header-basket-list .product-card__trash-btn',function(e
         };
 
         el.parents(".js-mini-cart-item").remove();
-        el.removeClass('is-loading')
-      
-        // el.parents('.product-card__added-btn').hide()
-        // el.parents('.product-card__added-btn').siblings('.product-card__addtocart').show()
+
+        
 
         if (productsCount() == 0) {
-        $('.header-left-icons .header-basket-icon').addClass('is-empty')
-        $('.header-cart-info-footer').hide()
-        $(".mini-cart-dropdown").removeClass("active");
-        $('.header-left-icons .cart-count').text(productsCount())
-        if (productsCount() == 0) $('.header-left-icons .cart-count').hide()
-
+          $('.header-left-icons .header-left-icons__basket').addClass('is-empty')
+          $(".shopping-cart").removeClass("active");
+          $('.header-cart-footer__details').hide()
+          $('.header-left-icons .header-left-icon__basket-count').text(productsCount())
+          $('.header-left-icons .header-left-icon__basket-count').hide()
+          $('.header-basket-list__empty').show()
+          $('.shopping-cart__empty').show()
         }
 
       }
     },
   });
- 
+
 })
 
-
-$(".add-to-cart").click(function (event) {
-  event.preventDefault();
-  var name = $(this).attr("data-id");
-  var price = Number($(this).attr("data-price"));
-
-  shoppingCart.addItemToCart(name, price, 1);
-  displayCart();
-});
-
-$("#clear-cart").click(function (event) {
-  shoppingCart.clearCart();
-  displayCart();
-});
-
-function displayCart() {
- 
-}
-
-$("#show-cart").on("click", ".delete-item", function (event) {
-  var name = $(this).attr("data-name");
-  shoppingCart.removeItemFromCartAll(name);
-  displayCart();
-});
-
-$("#show-cart").on("click", ".subtract-item", function (event) {
-  var name = $(this).attr("data-name");
-  shoppingCart.removeItemFromCart(name);
-  displayCart();
-});
-
-$("#show-cart").on("click", ".plus-item", function (event) {
-  var name = $(this).attr("data-name");
-  shoppingCart.addItemToCart(name, 0, 1);
-  displayCart();
-});
-
-$("#show-cart").on("change", ".item-count", function (event) {
-  var name = $(this).attr("data-name");
-  var count = Number($(this).val());
-  shoppingCart.setCountForItem(name, count);
-  displayCart();
-});
-
-displayCart();

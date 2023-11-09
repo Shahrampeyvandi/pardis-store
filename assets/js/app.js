@@ -326,7 +326,9 @@
                 $.ajax({
                     type: 'POST', url: myurl, async: Parametr.async, cache: false, dataType: 'json', data: Parametr.data, headers: {'X-CSRF-TOKEN': $('meta[name="csrf-token"]').attr('content')}, error: function (jqXHR, textStatus, errorThrown) {
                        
-
+                        if (typeof(Parametr.callback) == 'function') {
+                            return Parametr.callback({type: textStatus, 'response': jqXHR});
+                        }
                     }, success: function (ResponsData) {
                         if (Parametr.loadingElement != '') {
                             $(Parametr.loadingElement).fadeOut();

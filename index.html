@@ -222,15 +222,15 @@
             <div class="header-left">
               <div class="d-flex flex-row-reverse mt-md-1">
                 <div class="header-left-icons">
-                  <a href="cart.html" class="header-basket-icon is-empty">
+                  <a href="cart.html" class="header-left-icons__basket is-empty">
                     <svg xmlns="http://www.w3.org/2000/svg" width="28" height="28" viewBox="0 0 16 16"><path fill="currentColor" d="M0 2.5A.5.5 0 0 1 .5 2H2a.5.5 0 0 1 .485.379L2.89 4H14.5a.5.5 0 0 1 .485.621l-1.5 6A.5.5 0 0 1 13 11H4a.5.5 0 0 1-.485-.379L1.61 3H.5a.5.5 0 0 1-.5-.5zM3.14 5l1.25 5h8.22l1.25-5H3.14zM5 13a1 1 0 1 0 0 2a1 1 0 0 0 0-2zm-2 1a2 2 0 1 1 4 0a2 2 0 0 1-4 0zm9-1a1 1 0 1 0 0 2a1 1 0 0 0 0-2zm-2 1a2 2 0 1 1 4 0a2 2 0 0 1-4 0z"/></svg>
-                    <span class="cart-count" style="display: none;">0</span>
+                    <span class="header-left-icon__basket-count" style="display: none;">0</span>
                   </a>
-                  <div class="mini-cart-dropdown">
+                  <div class="shopping-cart">
                     <form action="#" method="post">
-                      <div class="header-cart-info-header">
-                        <div class="header-cart-info-count">سبد خرید شما</div>
-                        <button class="header-cart-info-close">
+                      <div class="shopping-cart__header">
+                        <div class="shopping-cart__count">سبد خرید شما</div>
+                        <button class="shopping-cart__close">
                           <svg
                             xmlns="http://www.w3.org/2000/svg"
                             width="24"
@@ -248,16 +248,16 @@
                         
                        
                       </ul>
-                      <div class="checkout-empty ">
-                        <div class="checkout-empty-empty-cart-icon">
+                      <div class="header-basket-list__empty">
+                        <div class="header-basket-list__empty-empty-cart-icon">
                           <img src="assets/images/cart/cart-empty.png" style="width: 200px;" alt="">
                         </div>
-                        <div class="checkout-empty-title">سبد خرید شما خالی است!</div>
+                        <div class="header-basket-list__empty-title">سبد خرید شما خالی است!</div>
                        
                     </div>
                       
-                      <div class="header-cart-info-footer">
-                       <div class="header-cart-info__empty">
+                      <div class="shopping-cart__footer">
+                       <div class="shopping-cart__empty">
                         <div class="d-grid">
                           <button class="btn btn-danger mb-3">
                             ثبت سفارش
@@ -265,13 +265,13 @@
                         </div>
                        </div>
                         <div class="header-cart-footer__details" style="display: none;">
-                          <div class="header-cart-info-total">
-                            <span class="header-cart-info-total-text"
+                          <div class="shopping-cart__total">
+                            <span class="shopping-cart__total-text"
                               >مبلغ قابل پرداخت</span
                             >
-                            <span class="header-cart-info-total-amount">
-                              <span class="header-cart-info-total-amount-number">
-                                6,200,000</span
+                            <span class="shopping-cart__total-amount">
+                              <span class="shopping-cart__total-amount-number">
+                                {price}</span
                               >
                               <span> تومان</span>
                             </span>
@@ -279,13 +279,13 @@
                           <div>
                             <button
                               type="submit"
-                              class="header-cart-info-submit btn btn-success"
+                              class="shopping-cart__submit btn btn-success"
                             >
                               ادامه خرید
                             </button>
                             <button
                               type="button"
-                              class="header-cart-info-submit btn btn-outline-success"
+                              class="shopping-cart__submit btn btn-outline-success"
                             >
                               مشاهده سبد خرید
                             </button>
@@ -299,7 +299,7 @@
                 <div class="header-left-icons me-4">
                   <a href="favorite.html">
                     <svg xmlns="http://www.w3.org/2000/svg" width="28" height="28" viewBox="0 0 512 512"><path fill="currentColor" d="M453.122 79.012a128 128 0 0 0-181.087.068l-15.511 15.7l-15.382-15.666l-.1-.1a128 128 0 0 0-181.02 0l-6.91 6.91a128 128 0 0 0 0 181.019l182.373 182.371l20.595 21.578l.491-.492l.533.533l19.296-20.359L460.032 266.94a128.147 128.147 0 0 0 0-181.019ZM437.4 244.313L256.571 425.146L75.738 244.313a96 96 0 0 1 0-135.764l6.911-6.91a96 96 0 0 1 135.713-.051l38.093 38.787l38.274-38.736a96 96 0 0 1 135.765 0l6.91 6.909a96.11 96.11 0 0 1-.004 135.765Z"/></svg>
-                    <span class="cart-count">2</span>
+                    <span class="header-left-icon__basket-count">2</span>
                   </a>
                 </div>
               </div>
@@ -3357,7 +3357,7 @@
               <div class="item">
                 <div class="block-products-carousel__column">
                   <div class="block-products-carousel__cell">
-                    <div class="product-card" data-id="1232">
+                    <div class="product-card" data-id="1">
                       <button class="product-card__quickview" type="button">
                         <svg xmlns="http://www.w3.org/2000/svg" width="20" height="20" viewBox="0 0 24 24"><path fill="currentColor" d="M6 14c-.55 0-1 .45-1 1v3c0 .55.45 1 1 1h3c.55 0 1-.45 1-1s-.45-1-1-1H7v-2c0-.55-.45-1-1-1zm0-4c.55 0 1-.45 1-1V7h2c.55 0 1-.45 1-1s-.45-1-1-1H6c-.55 0-1 .45-1 1v3c0 .55.45 1 1 1zm11 7h-2c-.55 0-1 .45-1 1s.45 1 1 1h3c.55 0 1-.45 1-1v-3c0-.55-.45-1-1-1s-1 .45-1 1v2zM14 6c0 .55.45 1 1 1h2v2c0 .55.45 1 1 1s1-.45 1-1V6c0-.55-.45-1-1-1h-3c-.55 0-1 .45-1 1z"/></svg>  
                       </button>
@@ -3398,7 +3398,7 @@
                         <div class="product-card__buttons">
                         <div >
                           <button class="btn btn-success product-card__addtocart" style="width: 100%;min-width: 110px;" data-id="1" type="button">افزودن به سبد</button>
-                        <div  class="product-card__added-btn"  style="width: 100%;">
+                        <div  class="product-card__added-btn" data-id="1"  style="width: 100%;">
                           <div style="width: 100px;height: 35px;" >
                           <button class="product-card__plus-btn">
                             <svg xmlns="http://www.w3.org/2000/svg" width="20" height="20" viewBox="0 0 24 24"><path fill="currentColor" d="M19 13h-6v6h-2v-6H5v-2h6V5h2v6h6v2z"/></svg>
@@ -3430,7 +3430,7 @@
               <div class="item">
                 <div class="block-products-carousel__column">
                   <div class="block-products-carousel__cell">
-                    <div class="product-card" data-id="123">
+                    <div class="product-card" data-id="2">
                       <button class="product-card__quickview" type="button">
                         <svg xmlns="http://www.w3.org/2000/svg" width="20" height="20" viewBox="0 0 24 24"><path fill="currentColor" d="M6 14c-.55 0-1 .45-1 1v3c0 .55.45 1 1 1h3c.55 0 1-.45 1-1s-.45-1-1-1H7v-2c0-.55-.45-1-1-1zm0-4c.55 0 1-.45 1-1V7h2c.55 0 1-.45 1-1s-.45-1-1-1H6c-.55 0-1 .45-1 1v3c0 .55.45 1 1 1zm11 7h-2c-.55 0-1 .45-1 1s.45 1 1 1h3c.55 0 1-.45 1-1v-3c0-.55-.45-1-1-1s-1 .45-1 1v2zM14 6c0 .55.45 1 1 1h2v2c0 .55.45 1 1 1s1-.45 1-1V6c0-.55-.45-1-1-1h-3c-.55 0-1 .45-1 1z"/></svg>  
                       </button>
@@ -3470,8 +3470,9 @@
 
                         <div class="product-card__buttons">
                         <div >
-                          <button class="btn btn-success product-card__addtocart" style="width: 100%;min-width: 110px;" data-id="1" type="button">افزودن به سبد</button>
-                        <div  class="product-card__added-btn"  style="width: 100%;">
+                          <button class="btn btn-success product-card__addtocart" style="width: 100%;min-width: 110px;" 
+                          data-id="2" type="button">افزودن به سبد</button>
+                        <div  class="product-card__added-btn" data-id="2"  style="width: 100%;">
                           <div style="width: 100px;height: 35px;" >
                           <button class="product-card__plus-btn">
                             <svg xmlns="http://www.w3.org/2000/svg" width="20" height="20" viewBox="0 0 24 24"><path fill="currentColor" d="M19 13h-6v6h-2v-6H5v-2h6V5h2v6h6v2z"/></svg>
@@ -3503,7 +3504,7 @@
               <div class="item">
                 <div class="block-products-carousel__column">
                   <div class="block-products-carousel__cell">
-                    <div class="product-card" data-id="123">
+                    <div class="product-card" data-id="3">
                       <button class="product-card__quickview" type="button">
                         <svg xmlns="http://www.w3.org/2000/svg" width="20" height="20" viewBox="0 0 24 24"><path fill="currentColor" d="M6 14c-.55 0-1 .45-1 1v3c0 .55.45 1 1 1h3c.55 0 1-.45 1-1s-.45-1-1-1H7v-2c0-.55-.45-1-1-1zm0-4c.55 0 1-.45 1-1V7h2c.55 0 1-.45 1-1s-.45-1-1-1H6c-.55 0-1 .45-1 1v3c0 .55.45 1 1 1zm11 7h-2c-.55 0-1 .45-1 1s.45 1 1 1h3c.55 0 1-.45 1-1v-3c0-.55-.45-1-1-1s-1 .45-1 1v2zM14 6c0 .55.45 1 1 1h2v2c0 .55.45 1 1 1s1-.45 1-1V6c0-.55-.45-1-1-1h-3c-.55 0-1 .45-1 1z"/></svg>  
                       </button>
@@ -3543,8 +3544,8 @@
 
                         <div class="product-card__buttons">
                         <div >
-                          <button class="btn btn-success product-card__addtocart" style="width: 100%;min-width: 110px;" data-id="1" type="button">افزودن به سبد</button>
-                        <div  class="product-card__added-btn"  style="width: 100%;">
+                          <button class="btn btn-success product-card__addtocart" style="width: 100%;min-width: 110px;" data-id="3" type="button">افزودن به سبد</button>
+                        <div  class="product-card__added-btn" data-id="3"  style="width: 100%;">
                           <div style="width: 100px;height: 35px;" >
                           <button class="product-card__plus-btn">
                             <svg xmlns="http://www.w3.org/2000/svg" width="20" height="20" viewBox="0 0 24 24"><path fill="currentColor" d="M19 13h-6v6h-2v-6H5v-2h6V5h2v6h6v2z"/></svg>
@@ -3576,7 +3577,7 @@
               <div class="item">
                 <div class="block-products-carousel__column">
                   <div class="block-products-carousel__cell">
-                    <div class="product-card" data-id="123">
+                    <div class="product-card" data-id="4">
                       <button class="product-card__quickview" type="button">
                         <svg xmlns="http://www.w3.org/2000/svg" width="20" height="20" viewBox="0 0 24 24"><path fill="currentColor" d="M6 14c-.55 0-1 .45-1 1v3c0 .55.45 1 1 1h3c.55 0 1-.45 1-1s-.45-1-1-1H7v-2c0-.55-.45-1-1-1zm0-4c.55 0 1-.45 1-1V7h2c.55 0 1-.45 1-1s-.45-1-1-1H6c-.55 0-1 .45-1 1v3c0 .55.45 1 1 1zm11 7h-2c-.55 0-1 .45-1 1s.45 1 1 1h3c.55 0 1-.45 1-1v-3c0-.55-.45-1-1-1s-1 .45-1 1v2zM14 6c0 .55.45 1 1 1h2v2c0 .55.45 1 1 1s1-.45 1-1V6c0-.55-.45-1-1-1h-3c-.55 0-1 .45-1 1z"/></svg>  
                       </button>
@@ -3616,8 +3617,8 @@
 
                         <div class="product-card__buttons">
                         <div >
-                          <button class="btn btn-success product-card__addtocart" style="width: 100%;min-width: 110px;" data-id="1" type="button">افزودن به سبد</button>
-                        <div  class="product-card__added-btn"  style="width: 100%;">
+                          <button class="btn btn-success product-card__addtocart" style="width: 100%;min-width: 110px;" data-id="4" type="button">افزودن به سبد</button>
+                        <div  class="product-card__added-btn" data-id="4"  style="width: 100%;">
                           <div style="width: 100px;height: 35px;" >
                           <button class="product-card__plus-btn">
                             <svg xmlns="http://www.w3.org/2000/svg" width="20" height="20" viewBox="0 0 24 24"><path fill="currentColor" d="M19 13h-6v6h-2v-6H5v-2h6V5h2v6h6v2z"/></svg>
@@ -3649,7 +3650,7 @@
               <div class="item">
                 <div class="block-products-carousel__column">
                   <div class="block-products-carousel__cell">
-                    <div class="product-card" data-id="123">
+                    <div class="product-card" data-id="5">
                       <button class="product-card__quickview" type="button">
                         <svg xmlns="http://www.w3.org/2000/svg" width="20" height="20" viewBox="0 0 24 24"><path fill="currentColor" d="M6 14c-.55 0-1 .45-1 1v3c0 .55.45 1 1 1h3c.55 0 1-.45 1-1s-.45-1-1-1H7v-2c0-.55-.45-1-1-1zm0-4c.55 0 1-.45 1-1V7h2c.55 0 1-.45 1-1s-.45-1-1-1H6c-.55 0-1 .45-1 1v3c0 .55.45 1 1 1zm11 7h-2c-.55 0-1 .45-1 1s.45 1 1 1h3c.55 0 1-.45 1-1v-3c0-.55-.45-1-1-1s-1 .45-1 1v2zM14 6c0 .55.45 1 1 1h2v2c0 .55.45 1 1 1s1-.45 1-1V6c0-.55-.45-1-1-1h-3c-.55 0-1 .45-1 1z"/></svg>  
                       </button>
@@ -3689,8 +3690,8 @@
 
                         <div class="product-card__buttons">
                         <div >
-                          <button class="btn btn-success product-card__addtocart" style="width: 100%;min-width: 110px;" data-id="1" type="button">افزودن به سبد</button>
-                        <div  class="product-card__added-btn"  style="width: 100%;">
+                          <button class="btn btn-success product-card__addtocart" style="width: 100%;min-width: 110px;" data-id="5" type="button">افزودن به سبد</button>
+                        <div  class="product-card__added-btn" data-id="5"  style="width: 100%;">
                           <div style="width: 100px;height: 35px;" >
                           <button class="product-card__plus-btn">
                             <svg xmlns="http://www.w3.org/2000/svg" width="20" height="20" viewBox="0 0 24 24"><path fill="currentColor" d="M19 13h-6v6h-2v-6H5v-2h6V5h2v6h6v2z"/></svg>
@@ -3722,7 +3723,7 @@
               <div class="item">
                 <div class="block-products-carousel__column">
                   <div class="block-products-carousel__cell">
-                    <div class="product-card" data-id="123">
+                    <div class="product-card" data-id="6">
                       <button class="product-card__quickview" type="button">
                         <svg xmlns="http://www.w3.org/2000/svg" width="20" height="20" viewBox="0 0 24 24"><path fill="currentColor" d="M6 14c-.55 0-1 .45-1 1v3c0 .55.45 1 1 1h3c.55 0 1-.45 1-1s-.45-1-1-1H7v-2c0-.55-.45-1-1-1zm0-4c.55 0 1-.45 1-1V7h2c.55 0 1-.45 1-1s-.45-1-1-1H6c-.55 0-1 .45-1 1v3c0 .55.45 1 1 1zm11 7h-2c-.55 0-1 .45-1 1s.45 1 1 1h3c.55 0 1-.45 1-1v-3c0-.55-.45-1-1-1s-1 .45-1 1v2zM14 6c0 .55.45 1 1 1h2v2c0 .55.45 1 1 1s1-.45 1-1V6c0-.55-.45-1-1-1h-3c-.55 0-1 .45-1 1z"/></svg>  
                       </button>
@@ -3762,8 +3763,8 @@
 
                         <div class="product-card__buttons">
                         <div >
-                          <button class="btn btn-success product-card__addtocart" style="width: 100%;min-width: 110px;" data-id="1" type="button">افزودن به سبد</button>
-                        <div  class="product-card__added-btn"  style="width: 100%;">
+                          <button class="btn btn-success product-card__addtocart" style="width: 100%;min-width: 110px;" data-id="6" type="button">افزودن به سبد</button>
+                        <div  class="product-card__added-btn" data-id="6"  style="width: 100%;">
                           <div style="width: 100px;height: 35px;" >
                           <button class="product-card__plus-btn">
                             <svg xmlns="http://www.w3.org/2000/svg" width="20" height="20" viewBox="0 0 24 24"><path fill="currentColor" d="M19 13h-6v6h-2v-6H5v-2h6V5h2v6h6v2z"/></svg>
@@ -3803,7 +3804,7 @@
       <div class="container">
         <div class="row">
           <div class="col-md-12">
-    <div class="full-advertisement-card">
+            <div class="full-advertisement-card">
 
             <a href="#">
               <!-- <img src="" alt=""> -->
@@ -4176,6 +4177,95 @@
       </div>
     </div>
     <!-- most sells -->
+
+    <!-- start::brands -->
+    <section class="my-5">
+      <div class="container">
+        <div class="row">
+          <div class="col-12">
+            <h5 style="text-align: center;font-size: 1.5rem;margin-bottom: 1.3rem;margin-top:2rem; font-weight: bold;">
+             برخی از مشتریان ما
+            </h5>
+
+          </div>
+          <div class="col-12">
+            <div class="brands-slider owl-carousel owl-theme">
+              <div class="item">
+                <div class="brands-slider__item">
+                  <div class="brands-slider__item-content">
+                    <img src="assets/images/alibaba.svg" alt="">
+                  </div>
+                </div>
+              </div>
+              <div class="item">
+                <div class="brands-slider__item">
+                  <div class="brands-slider__item-content">
+                    <img src="assets/images/alibaba.svg" alt="">
+                  </div>
+                </div>
+              </div>
+              <div class="item">
+                <div class="brands-slider__item">
+                  <div class="brands-slider__item-content">
+                    <img src="assets/images/alibaba.svg" alt="">
+                  </div>
+                </div>
+              </div>
+              <div class="item">
+                <div class="brands-slider__item">
+                  <div class="brands-slider__item-content">
+                    <img src="assets/images/alibaba.svg" alt="">
+                  </div>
+                </div>
+              </div>
+              <div class="item">
+                <div class="brands-slider__item">
+                  <div class="brands-slider__item-content">
+                    <img src="assets/images/alibaba.svg" alt="">
+                  </div>
+                </div>
+              </div>
+              <div class="item">
+                <div class="brands-slider__item">
+                  <div class="brands-slider__item-content">
+                    <img src="assets/images/alibaba.svg" alt="">
+                  </div>
+                </div>
+              </div>
+              <div class="item">
+                <div class="brands-slider__item">
+                  <div class="brands-slider__item-content">
+                    <img src="assets/images/alibaba.svg" alt="">
+                  </div>
+                </div>
+              </div>
+              <div class="item">
+                <div class="brands-slider__item">
+                  <div class="brands-slider__item-content">
+                    <img src="assets/images/alibaba.svg" alt="">
+                  </div>
+                </div>
+              </div>
+              <div class="item">
+                <div class="brands-slider__item">
+                  <div class="brands-slider__item-content">
+                    <img src="assets/images/alibaba.svg" alt="">
+                  </div>
+                </div>
+              </div>
+              <div class="item">
+                <div class="brands-slider__item">
+                  <div class="brands-slider__item-content">
+                    <img src="assets/images/alibaba.svg" alt="">
+                  </div>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+    <!-- end::brands -->
     <!-- start::footer -->
     <footer>
         <div class="container">
@@ -4221,7 +4311,7 @@
                   <p>نماد اعتماد</p>
                   <div class="mt-3">
                     <div>
-                      <img src="assets/images/namad.png" alt="" style="width: 120px;">
+                      <img src="assets/images/namad.png" alt="" style="width: 120px;border-radius: 10px;">
                     </div>
                   </div>
                 </div>
@@ -4285,14 +4375,14 @@
           <a href="#" class="header-basket-list-item-image">
             <img
               class="img-fluid"
-              src="assets/images/0589ee66d13b4677adb6e978ec162be1.webp"
+              src="{image}"
             />
           </a>
          <div class="header-basket-list-item-content">
           <a
           href="#"
           class="header-basket-list-item-title line-camp2"
-          >این یک عنوان تست است این یک عنوان تست است</a
+          >{title}</a
         >
           <div class="d-flex align-items-center" >
             <div class="flex-grow-1">
@@ -4301,11 +4391,11 @@
               <div class="header-basket-list-item-footer">
                 
                 <span class="header-basket-list-item-price"
-                  >200,000 تومان</span
+                  >{price} تومان</span
                 >
               </div>
             </div>
-            <div  class="product-card__added-btn"  style="display: block;font-size: 1rem;">
+            <div  class="product-card__added-btn" data-id="{id}"  style="display: block;font-size: 1rem;">
               <div style="width: 100px;height: 35px; border:1px solid #f37a7a;" >
               <button class="product-card__plus-btn">
                 <svg xmlns="http://www.w3.org/2000/svg" width="20" height="20" viewBox="0 0 24 24"><path fill="currentColor" d="M19 13h-6v6h-2v-6H5v-2h6V5h2v6h6v2z"/></svg>
@@ -4365,6 +4455,35 @@
       autoplay: true,
       autoplayTimeout: 4000,
       autoplayHoverPause: true,
+    });
+
+    $(".brands-slider").owlCarousel({
+      stagePadding: 0,
+      singleItem: true,
+      items: 5,
+      loop: true,
+      rtl: true,
+      nav: false,
+      dots:false,
+      margin:10,
+      autoplay: true,
+      autoplayTimeout: 4000,
+      autoplayHoverPause: true,
+      responsive:{
+        0:{
+            items:1.5,
+        },
+        412:{
+            items:1.8,
+        },
+        768:{
+            items:3,
+        },
+        1000:{
+            items:5.4,
+            loop:true
+        }
+    }
     });
  
     // $(document).on("click", ".block-header__arrows-list button", function (e) {
