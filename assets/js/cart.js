@@ -202,7 +202,7 @@ $(document).on('click', '.product-card__plus-btn', function (e) {
   $(this).addClass('is-loading')
   var html = $(this).html()
   $(this).html($.app.ajax.Template($('#BtnSpinner').html(), {}));
-  var product_id = $(this).parents('.product-card__added-btn').attr('data-id');
+  var product_id = $(this).parents('.product-card__action-btns').attr('data-id');
   var send_data = {
     product_id: 1,
   };
@@ -239,7 +239,7 @@ $(document).on('click', '.product-card__plus-btn', function (e) {
         $('.shopping-cart__total-amount-number').text(dummy_cart_item_response.data.total_price)
         var num = parseInt(el.siblings('.product-card__add-counter').text())
         
-        $(`.product-card__added-btn[data-id="${product_id}"]`).each(function (i, v) {
+        $(`.product-card__action-btns[data-id="${product_id}"]`).each(function (i, v) {
           $(v).find('.product-card__add-counter').text(num + 1);
         });
         $(".header-basket-list").find(`[data-id='${product_id}']`)
@@ -265,7 +265,7 @@ $(document).on('click', '.product-card__minus-btn', function (e) {
   e.preventDefault()
   if ($(this).hasClass('is-loading')) return
   $(this).addClass('is-loading')
-  var product_id = $(this).parents('.product-card__added-btn').attr('data-id');
+  var product_id = $(this).parents('.product-card__action-btns').attr('data-id');
   var html = $(this).html()
   $(this).html($.app.ajax.Template($('#BtnSpinner').html(), {}));
 
@@ -324,7 +324,7 @@ $(document).on('click', '.product-card .product-card__trash-btn', function (e) {
   if ($(this).hasClass('is-loading')) return
   $(this).addClass('is-loading')
   // shoppingCart.removeItemFromCart()
-  var product_id = $(this).parents('.product-card__added-btn').attr('data-id');
+  var product_id = $(this).parents('.product-card__action-btns').attr('data-id');
   var html = $(this).html()
   var send_data = {
     product_id: 1,
@@ -365,8 +365,8 @@ $(document).on('click', '.product-card .product-card__trash-btn', function (e) {
           if (productsCount() == 0) $('.header-left-icons .header-left-icon__basket-count').text(productsCount()).hide()
         }
 
-        el.parents('.product-card__added-btn').hide()
-        el.parents('.product-card__added-btn').siblings('.product-card__addtocart').show()
+        el.parents('.product-card__action-btns').hide()
+        el.parents('.product-card__action-btns').siblings('.product-card__addtocart').show()
 
         if (productsCount() == 0) {
           $('.header-left-icons .header-left-icons__basket').addClass('is-empty')
@@ -388,7 +388,7 @@ $(document).on('click', '.header-basket-list .product-card__trash-btn', function
   // shoppingCart.removeItemFromCart()
   if ($(this).hasClass('is-loading')) return
   $(this).addClass('is-loading')
-  var product_id = $(this).parents('.product-card__added-btn').attr('data-id');
+  var product_id = $(this).parents('.product-card__action-btns').attr('data-id');
   var html = $(this).html()
   var send_data = {
     product_id: 1,
