@@ -4658,6 +4658,15 @@ font-size: .9rem;
     width: 45%;
 }
 /* contact us page */
+/* about page */
+.about_content p {
+    text-align: justify;
+    margin-bottom: .5rem;
+}
+.about_heading {
+    margin: 1.5rem 0 1rem;
+}
+/* about page */
 
 /*responsive---------------------*/
 
