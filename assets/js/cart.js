@@ -129,7 +129,7 @@ $(".product-card__addtocart").click(function (e) {
   if ($(this).hasClass('is-loading')) return
   $(this).addClass('is-loading')
   var product_id = $(this).attr('data-id');
-  var send_data = {
+  var payload = {
     product_id: 1,
   };
 
@@ -139,7 +139,7 @@ $(".product-card__addtocart").click(function (e) {
 
   $.app.ajax.Operation({
     url: "https://jsonplaceholder.typicode.com/posts",
-    data: send_data,
+    data: payload,
     callback: function (ResData) {
       console.log(ResData);
 
@@ -203,14 +203,14 @@ $(document).on('click', '.product-card__plus-btn', function (e) {
   var html = $(this).html()
   $(this).html($.app.ajax.Template($('#BtnSpinner').html(), {}));
   var product_id = $(this).parents('.product-card__action-btns').attr('data-id');
-  var send_data = {
+  var payload = {
     product_id: 1,
   };
   var el = $(this)
 
   $.app.ajax.Operation({
     url: "https://jsonplaceholder.typicode.com/posts",
-    data: send_data,
+    data: payload,
     callback: function (ResData) {
 
       el.removeClass('is-loading')
@@ -269,13 +269,13 @@ $(document).on('click', '.product-card__minus-btn', function (e) {
   var html = $(this).html()
   $(this).html($.app.ajax.Template($('#BtnSpinner').html(), {}));
 
-  var send_data = {
+  var payload = {
     product_id: 1,
   };
   var el = $(this)
   $.app.ajax.Operation({
     url: "https://jsonplaceholder.typicode.com/posts",
-    data: send_data,
+    data: payload,
     callback: function (ResData) {
       el.html(html);
       el.removeClass('is-loading')
@@ -326,7 +326,7 @@ $(document).on('click', '.product-card .product-card__trash-btn', function (e) {
   // shoppingCart.removeItemFromCart()
   var product_id = $(this).parents('.product-card__action-btns').attr('data-id');
   var html = $(this).html()
-  var send_data = {
+  var payload = {
     product_id: 1,
   };
   var el = $(this)
@@ -334,7 +334,7 @@ $(document).on('click', '.product-card .product-card__trash-btn', function (e) {
 
   $.app.ajax.Operation({
     url: "https://jsonplaceholder.typicode.com/posts",
-    data: send_data,
+    data: payload,
     callback: function (ResData) {
       el.html(html)
       el.removeClass('is-loading')
@@ -390,7 +390,7 @@ $(document).on('click', '.header-basket-list .product-card__trash-btn', function
   $(this).addClass('is-loading')
   var product_id = $(this).parents('.product-card__action-btns').attr('data-id');
   var html = $(this).html()
-  var send_data = {
+  var payload = {
     product_id: 1,
   };
   var el = $(this)
@@ -398,7 +398,7 @@ $(document).on('click', '.header-basket-list .product-card__trash-btn', function
 
   $.app.ajax.Operation({
     url: "https://jsonplaceholder.typicode.com/posts",
-    data: send_data,
+    data: payload,
     callback: function (ResData) {
       el.removeClass('is-loading')
 
