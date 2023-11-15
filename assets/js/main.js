@@ -134,10 +134,11 @@ $(document).ready(function () {
   $(".product-card__quickview").click(function (e) {
     e.preventDefault();
     $(this).addClass("product-card__quickview--preload");
-
+    $(this).attr('disabled',true)
+    var product_id = $(this).attr("data-id")
     var el = $(this);
     var payload = {
-      product_id: $(this).attr("data-id"),
+      product_id: product_id,
     };
     $.app.ajax.Operation({
       url: "https://jsonplaceholder.typicode.com/posts",
@@ -148,8 +149,9 @@ $(document).ready(function () {
             data: {
               cart_id: 1,
               product: {
-                id: 1232,
+                id: product_id,
                 title: "این یک عنوان تست است این یک عنوان تست است",
+                description: "این یک توضیح تست است این یک توضیح تست استاین یک توضیح تست است این یک توضیح تست استاین یک توضیح تست استاین یک توضیح تست است ",
                 price: "100000",
                 image: "assets/images/0589ee66d13b4677adb6e978ec162be1.webp",
               },
@@ -158,8 +160,14 @@ $(document).ready(function () {
             success: true,
           };
 
-          $("#quickViewModal").append(
-            $.app.ajax.Template($("#ProductViewTemplate").html(), {})
+          el.removeAttr('disabled')
+
+          $("#quickViewModal").html(
+            $.app.ajax.Template($("#ProductViewTemplate").html(), {
+              id: product_id,
+              title: dummy_cart_item_response.data.product.title,
+              description: dummy_cart_item_response.data.product.description,
+            })
           );
 
           var productGallery = $("#productGallery");
