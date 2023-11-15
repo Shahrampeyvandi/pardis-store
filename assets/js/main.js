@@ -69,9 +69,12 @@ $(document).ready(function () {
     $(this).parents(".shopping-cart").removeClass("active");
   });
 
-  $(".js-example-basic-single").select2({
-    width: "resolve",
+  $(".select2").select2({
+    // width: "resolve",
     dir: "rtl",
+  }).on('click', function() {
+    console.log("ok now what");
+    // $('#loading-indicator').show();
   });
 
   $(".login-link").click(function (e) {
@@ -80,7 +83,7 @@ $(document).ready(function () {
   });
   $(".remodal-overlay  .close-btn").click(function (e) {
     e.preventDefault();
-    $(".remodal-overlay").fadeOut(100);
+    $(this).parents(".remodal-overlay").fadeOut(100);
   });
 
   var product_owl = $(".block-products-carousel .product-slider").owlCarousel({

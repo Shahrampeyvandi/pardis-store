@@ -8,20 +8,99 @@
   <link rel="stylesheet" href="./assets/bootstrap/css/bootstrap.css" />
   <link rel="stylesheet" href="./assets/css/font-awesome.min.css" />
   <link href="./assets/css/select2.min.css" rel="stylesheet" />
-  <link rel="stylesheet" href="assets/css/owl.carousel.min.css" />
-  <link href="assets/css/lightgallery.min.css" rel="stylesheet">
-  <link rel="stylesheet" href="https://unpkg.com/leaflet@1.6.0/dist/leaflet.css" integrity="sha512-xwE/Az9zrjBIphAcBb3F6JVqxf46+CDLwfLMHloNu6KEQCAWi6HcDUbeOfBIptF7tcCzusKFjFw2yuvEpDL9wQ==" crossorigin="" />
+
+  <link rel="stylesheet" href="https://unpkg.com/leaflet@1.6.0/dist/leaflet.css"
+    integrity="sha512-xwE/Az9zrjBIphAcBb3F6JVqxf46+CDLwfLMHloNu6KEQCAWi6HcDUbeOfBIptF7tcCzusKFjFw2yuvEpDL9wQ=="
+    crossorigin="" />
+  <script src="https://unpkg.com/leaflet@1.6.0/dist/leaflet.js"
+    integrity="sha512-gZwIG9x3wUXg2hdXF6+rVkLF/0Vi9U8D2Ntg4Ga5I5BZpVkVxlJWbSQtXPSiUTtC0TjtGOmxa1AJPuV0CPthew=="
+    crossorigin=""></script>
   <link rel="stylesheet" href="./assets/css/style.css" />
-  <script src="https://unpkg.com/leaflet@1.6.0/dist/leaflet.js" integrity="sha512-gZwIG9x3wUXg2hdXF6+rVkLF/0Vi9U8D2Ntg4Ga5I5BZpVkVxlJWbSQtXPSiUTtC0TjtGOmxa1AJPuV0CPthew==" crossorigin=""></script>
-
-
+  <link rel="stylesheet" href="https://unpkg.com/leaflet-control-geocoder/dist/Control.Geocoder.css" />
+  <script src="https://unpkg.com/leaflet-control-geocoder/dist/Control.Geocoder.js"></script>
 </head>
 
 <style>
   body {
     background-color: #fff !important;
   }
- 
+
+  .remodal-header {
+    font-size: 1.2rem;
+    text-align: right;
+    padding: 1.5rem 2rem;
+    border-bottom: 1px solid var(--color-natural-200);
+  }
+
+  .address-list {
+    margin: 1rem 0;
+  }
+
+  .address-list .address-item .address-item__title {
+    font-size: 1rem;
+    margin-bottom: 1rem;
+  }
+
+  .address-list .address-item .address-item__option {
+    font-size: .9rem;
+    display: flex;
+    align-items: center;
+  }
+
+  .address-list .address-item .address-item__option svg {
+    width: 20px;
+  }
+
+  .edit-address-modal .address-item {
+    border-bottom: 1px solid var(--color-natural-200);
+    margin-bottom: 1rem;
+    margin-right: 2rem;
+    padding-bottom: .5rem;
+  }
+
+  .edit-address-modal .address-item label {
+    margin-right: -2rem;
+    margin-bottom: 0;
+  }
+
+  .add-address-btn {
+    display: flex;
+    justify-content: space-between;
+    padding: 1rem;
+    cursor: pointer;
+    border-bottom: 1px solid var(--color-natural-200);
+  }
+
+  .add-address-btn div,
+  .add-address-btn svg {
+    color: var(--color-primary-500)
+  }
+
+  .address-item__edit-btn svg {
+    width: 20px;
+  }
+
+  .form-address-container {
+    display: none;
+  }
+  .seperator {
+    margin: 1rem 0;
+    border-top: 1px solid var(--color-natural-200);
+  }
+  .remodal-header__goback {
+    display: none;
+  }
+  .remodal-header__goback svg{
+    width: 25px;
+    margin-left: .7rem;
+  }
+  .select-location-modal .remodal-header {
+    display: flex;
+    align-items: center;
+  }
+  .map-container {
+    padding: 1rem;
+  }
 </style>
 
 <body>
@@ -127,8 +206,229 @@
       </div>
     </div>
   </div>
-
   <!-- end::login-modal -->
+
+  <!-- edit address modal -->
+  <div class="remodal-overlay edit-address-modal">
+    <div class=" col-md-6 mx-auto">
+      <div class="remodal">
+        <a href="#" class="close-btn">
+          <svg xmlns="http://www.w3.org/2000/svg" width="28" height="28" viewBox="0 0 24 24">
+            <path fill="currentColor"
+              d="M19 6.41L17.59 5L12 10.59L6.41 5L5 6.41L10.59 12L5 17.59L6.41 19L12 13.41L17.59 19L19 17.59L13.41 12z" />
+          </svg>
+        </a>
+        <div class="remodal-header">
+          انتخاب آدرس
+        </div>
+
+        <div class="middle-container">
+          <div class="row w-100 m-auto">
+            <div class="col-12">
+              <div class="add-address-btn">
+                <div>
+                  <svg xmlns="http://www.w3.org/2000/svg" width="32" height="32" viewBox="0 0 24 24">
+                    <path fill="currentColor"
+                      d="M20 1v3h3v2h-3v3h-2V6h-3V4h3V1h2zm-8 12c1.1 0 2-.9 2-2s-.9-2-2-2s-2 .9-2 2s.9 2 2 2zm2-9.75V7h3v3h2.92c.05.39.08.79.08 1.2c0 3.32-2.67 7.25-8 11.8c-5.33-4.55-8-8.48-8-11.8C4 6.22 7.8 3 12 3c.68 0 1.35.08 2 .25z" />
+                  </svg>
+                  افزودن آدرس جدید
+                </div>
+                <svg xmlns="http://www.w3.org/2000/svg" width="32" height="32" viewBox="0 0 24 24">
+                  <path fill="currentColor"
+                    d="M14.71 15.88L10.83 12l3.88-3.88a.996.996 0 1 0-1.41-1.41L8.71 11.3a.996.996 0 0 0 0 1.41l4.59 4.59c.39.39 1.02.39 1.41 0c.38-.39.39-1.03 0-1.42z" />
+                </svg>
+              </div>
+            </div>
+            <div class="col-12">
+              <div class="address-list">
+                <div class="address-item" data-id="1">
+                  <label class="d-flex flex-stack">
+                    <span class="form-check form-check-custom form-check-solid" style="align-items: start;">
+                      <input class="form-check-input select-address" checked="checked" type="radio" name="address_item" value="1" />
+                    </span>
+                    <span class="d-flex align-items-center me-2">
+                      <span class="symbol symbol-50px me-6">
+                        <span class="symbol-label bg-light-primary">
+                          <i class="ki-duotone ki-compass fs-1 text-primary"><span class="path1"></span><span
+                              class="path2"></span></i>
+                        </span>
+                      </span>
+                      <span class="d-flex flex-column">
+                        <span class="address-item__title">ارسال فوری با الوپیک - اسنپ (پس کرایه)</span>
+                        <span class="address-item__option">
+                          <span>
+                            <svg xmlns="http://www.w3.org/2000/svg" width="32" height="32" viewBox="0 0 24 24">
+                              <path fill="currentColor"
+                                d="M16 1H8C6.34 1 5 2.34 5 4v16c0 1.66 1.34 3 3 3h8c1.66 0 3-1.34 3-3V4c0-1.66-1.34-3-3-3zm1 17H7V4h10v14zm-3 3h-4v-1h4v1z" />
+                            </svg>
+                          </span>
+                          <span>
+                            09911041242
+                          </span>
+                        </span>
+                        <span class="address-item__option">
+                          <span>
+                            <svg xmlns="http://www.w3.org/2000/svg" width="32" height="32" viewBox="0 0 24 24">
+                              <path fill="currentColor"
+                                d="M12 5.9a2.1 2.1 0 1 1 0 4.2a2.1 2.1 0 0 1 0-4.2m0 9c2.97 0 6.1 1.46 6.1 2.1v1.1H5.9V17c0-.64 3.13-2.1 6.1-2.1M12 4C9.79 4 8 5.79 8 8s1.79 4 4 4s4-1.79 4-4s-1.79-4-4-4zm0 9c-2.67 0-8 1.34-8 4v3h16v-3c0-2.66-5.33-4-8-4z" />
+                            </svg>
+                          </span>
+                          <span class="name">
+                            شهرام پیوندی
+                          </span>
+                        </span>
+
+                      </span>
+                    </span>
+
+                  </label>
+                  <div class="" style="text-align: right;">
+                    <button class="btn btn-sm address-item__edit-btn" data-id="1">
+                      ویرایش
+                      <svg xmlns="http://www.w3.org/2000/svg" width="32" height="32" viewBox="0 0 24 24">
+                        <path fill="currentColor"
+                          d="M14.71 15.88L10.83 12l3.88-3.88a.996.996 0 1 0-1.41-1.41L8.71 11.3a.996.996 0 0 0 0 1.41l4.59 4.59c.39.39 1.02.39 1.41 0c.38-.39.39-1.03 0-1.42z" />
+                      </svg>
+                    </button>
+                  </div>
+                </div>
+               
+              </div>
+
+            </div>
+
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+
+  <!-- edit address modal -->
+
+  <!-- select location modal -->
+  <div class="remodal-overlay select-location-modal" >
+    <div class=" col-md-6 mx-auto">
+      <div class="remodal">
+        <a href="#" class="close-btn" >
+          <svg xmlns="http://www.w3.org/2000/svg" width="28" height="28" viewBox="0 0 24 24">
+            <path fill="currentColor"
+              d="M19 6.41L17.59 5L12 10.59L6.41 5L5 6.41L10.59 12L5 17.59L6.41 19L12 13.41L17.59 19L19 17.59L13.41 12z" />
+          </svg>
+        </a>
+        <div class="remodal-header">
+          <a href="#" class="remodal-header__goback">
+            <svg xmlns="http://www.w3.org/2000/svg" width="32" height="32" viewBox="0 0 16 16"><path fill="currentColor" fill-rule="evenodd" d="M1 8a.5.5 0 0 1 .5-.5h11.793l-3.147-3.146a.5.5 0 0 1 .708-.708l4 4a.5.5 0 0 1 0 .708l-4 4a.5.5 0 0 1-.708-.708L13.293 8.5H1.5A.5.5 0 0 1 1 8z"/></svg>
+          </a>
+         <div class="title"> انتخاب روی نقشه</div>
+        </div>
+
+        <div class="middle-container">
+          <div class="row w-100 m-auto">
+            <div class="col-12 map-container">
+              <div id="map" style="width: 100%; height: 400px"></div>
+              <div class="d-grid mt-4">
+                <button class="btn btn-danger text-white d-flex justify-content-center map-confirm-btn" disabled>تایید و ادامه 
+                  <svg class="text-white" xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24"><path fill="currentColor" d="M15.41 16.59L10.83 12l4.58-4.59L14 6l-6 6l6 6l1.41-1.41z"/></svg>
+                </button>
+              </div>
+
+            </div>
+            
+            <div class="col-12 form-address-container" style="display: none;">
+              <form class="p-4 form-address" >
+                <div class="row gy-3 mb-5 ">
+                  <div class="col-md-12 col-lg-12">
+                    <label >نشانی پستی </label>
+                    <textarea name="location" required class="form-control" id="address-location-text" rows="2"></textarea>
+                  </div>
+                  <div class="col-md-6">
+                    <div class="">
+                      <label >استان </label>
+                      <select name="province"  class="select2 provinces-select" style="height: 45px;">
+                        <option value="1">تهران</option>
+                        <option value="2">اصفهان</option>
+
+                      </select>
+                    </div>
+                  </div>
+                  <div class="col-md-6">
+                    <div class="">
+                      <label >شهر </label>
+                      <select name="city"  class="select2 cities-select" style="height: 45px;">
+                        <option value="1">تهران</option>
+                        <option value="1">اسلامشهر</option>
+                        <option value="1">پاکدشت</option>
+                        <option value="1">نسیم شهر</option>
+                      </select>
+                    </div>
+                  </div>
+
+                  <div class="col-md-4">
+                    <div class="">
+                      <label >پلاک </label>
+                      <input type="text" name="no" required id="no" class=""  placeholder="پلاک ">
+                    </div>
+                  </div>
+                  <div class="col-md-4">
+                    <div class="">
+                      <label >واحد </label>
+                      <input type="text" name="unit" id="unit" required class=""  placeholder="واحد ">
+                    </div>
+                  </div>
+                  <div class="col-md-4">
+                    <div class="">
+                      <label >کد پستی </label>
+                      <input type="text" name="postal_code" id="postalCode" required class=""  placeholder="کد پستی ">
+                    </div>
+                  </div>
+                  </div>
+                  <div class="seperator"></div>
+                  <div class="row form-address__reciver g-3">
+                    <div class="col-12">
+                      <label class="checkbox">
+                        <input type="checkbox" name="Checkboxes1" class="reciever-checkbox">
+                        <span></span>
+                        گیرنده سفارش خودم هستم
+                      </label>
+                    </div>
+  
+                    <div class="col-md-6">
+                      <div class="">
+                        <label >نام گیرنده </label>
+                        <input type="text" class="" id="reciever-firstname" placeholder="نام گیرنده ">
+                      </div>
+                    </div>
+                    <div class="col-md-6">
+                      <div class="">
+                        <label >نام خانوادگی گیرنده </label>
+                        <input type="text" class="" id="reciever-lastname" placeholder="نام خانوادگی گیرنده ">
+                      </div>
+                    </div>
+                    <div class="col-md-6">
+                      <div class="">
+                        <label >شماره موبایل </label>
+                        <input type="text" class="" id="reciever-modile" placeholder="شماره موبایل ">
+                      </div>
+                    </div>
+                  </div>
+                  <div class="row mt-4">
+                  <div class="col-md-12 col-lg-12">
+                    <div class="d-grid">
+                      <button type="submit" class="btn btn-primary btn-lg form-address-btn">ثبت آدرس </button>
+                    </div>
+                  </div>
+                </div>
+              </form>
+            </div>
+
+
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+
+  <!-- select location modal -->
 
   <!-- start::fixed bottom menu -->
   <div id="fixed-menu">
@@ -1977,155 +2277,223 @@
   <!-- end::header -->
 
 
+  <style>
+    .cart-customer-address,
+    .cart-shipping-ways {
+      border: 1px solid var(--color-natural-200) !important;
+      padding: 2rem 2.5rem 1rem 1rem;
+    }
 
+    .cart-customer-address {
+      padding-right: 4rem;
+    }
+
+    .cart-customer-address__top {
+      margin-bottom: 2rem;
+    }
+
+    .cart-customer-address__top>div {
+      margin-bottom: .9rem;
+    }
+
+    .cart-customer-address__top .label {
+      font-size: .9rem;
+      color: var(--color-natural-500);
+    }
+
+    .cart-customer-address__text {
+      display: flex;
+      align-items: center;
+      gap: 0.5em;
+      margin-right: -2rem;
+    }
+
+    .cart-customer-address__top .cart-customer-address__text span {
+      font-size: 1rem;
+      color: var(--color-natural-600);
+      font-weight: bold;
+
+    }
+
+    .cart-customer-address__text svg {
+      width: 22px;
+    }
+
+    .cart-customer-address__bottom {
+      text-align: left;
+    }
+  </style>
 
   <!-- start::content section -->
-  <div class="container">
-    <div class="row">
-        <div class="col-12">
-            <h2 class="contact-us__title">تماس با ما</h2>
+  <div class="container-fluid">
+    <div class="row my-5">
+      <div class="col-12 col-md-8 mx-auto">
+        <div class="bs-stepper-header" role="tablist">
+          <div class="step next" data-target="#test-nl-1">
+            <button type="button" class="step-trigger" role="tab" id="stepper2trigger1" aria-controls="test-nl-1"
+              aria-selected="false">
+              <span class="bs-stepper-circle">
+                <svg xmlns="http://www.w3.org/2000/svg" width="28" height="28" viewBox="0 0 16 16">
+                  <path fill="currentColor"
+                    d="M0 2.5A.5.5 0 0 1 .5 2H2a.5.5 0 0 1 .485.379L2.89 4H14.5a.5.5 0 0 1 .485.621l-1.5 6A.5.5 0 0 1 13 11H4a.5.5 0 0 1-.485-.379L1.61 3H.5a.5.5 0 0 1-.5-.5zM3.14 5l1.25 5h8.22l1.25-5H3.14zM5 13a1 1 0 1 0 0 2a1 1 0 0 0 0-2zm-2 1a2 2 0 1 1 4 0a2 2 0 0 1-4 0zm9-1a1 1 0 1 0 0 2a1 1 0 0 0 0-2zm-2 1a2 2 0 1 1 4 0a2 2 0 0 1-4 0z" />
+                </svg>
+              </span>
+              <span class="bs-stepper-label">سبد خرید</span>
+            </button>
+          </div>
+          <div class="bs-stepper-line"></div>
+          <div class="step active" data-target="#test-nl-2">
+            <button type="button" class="step-trigger" role="tab" id="stepper2trigger2" aria-controls="test-nl-2"
+              aria-selected="false">
+              <span class="bs-stepper-circle">
+                <svg xmlns="http://www.w3.org/2000/svg" width="32" height="32" viewBox="0 0 24 24">
+                  <path fill="currentColor"
+                    d="M20 8h-3V4H3c-1.1 0-2 .9-2 2v11h2c0 1.66 1.34 3 3 3s3-1.34 3-3h6c0 1.66 1.34 3 3 3s3-1.34 3-3h2v-5l-3-4zm-.5 1.5l1.96 2.5H17V9.5h2.5zM6 18c-.55 0-1-.45-1-1s.45-1 1-1s1 .45 1 1s-.45 1-1 1zm2.22-3c-.55-.61-1.33-1-2.22-1s-1.67.39-2.22 1H3V6h12v9H8.22zM18 18c-.55 0-1-.45-1-1s.45-1 1-1s1 .45 1 1s-.45 1-1 1z" />
+                </svg>
+              </span>
+              <span class="bs-stepper-label">زمان و نحوه ارسال</span>
+            </button>
+          </div>
+          <div class="bs-stepper-line"></div>
+          <div class="step" data-target="#test-nl-3">
+            <button type="button" class="step-trigger" role="tab" id="stepper2trigger3" aria-controls="test-nl-3"
+              aria-selected="true">
+              <span class="bs-stepper-circle">
+                <svg xmlns="http://www.w3.org/2000/svg" width="32" height="32" viewBox="0 0 24 24">
+                  <path fill="currentColor"
+                    d="M20 4H4c-1.11 0-1.99.89-1.99 2L2 18c0 1.11.89 2 2 2h16c1.11 0 2-.89 2-2V6c0-1.11-.89-2-2-2zm0 14H4v-6h16v6zm0-10H4V6h16v2z" />
+                </svg>
+              </span>
+              <span class="bs-stepper-label">پرداخت</span>
+            </button>
+          </div>
         </div>
-        <div class="col-lg-4 col-md-4">
-            <div class="contact_block">
-                <span></span>
-                <div class="contact_icon"><img src="assets/images/information.png" alt="image"></div>
-                <h4>تماس با ما</h4>
-                <p>+1-202-555-0101</p>
-                <p>+1-202-555-0132</p>
-            </div>
-        </div>
-        <div class="col-lg-4 col-md-4">
-            <div class="contact_block">
-                <span></span>
-                <div class="contact_icon"><img src="assets/images/gmail.png" alt="image"></div>
-                <h4>ایمیل</h4>
-                <p>agriculture@example.com</p>
-                <p>Cultivation@example.in</p>
-            </div>
-        </div>
-        <div class="col-lg-4 col-md-4">
-            <div class="contact_block">
-                <span></span>
-                <div class="contact_icon"><img src="assets/images/destination.png" alt="image"></div>
-                <h4>نشانی</h4>
-                <p>ایران، تهران، میدان آزادی</p>
-                <p>ایران، شیراز، ولی عصر</p>
-            </div>
-        </div>
+      </div>
     </div>
-    <div class="row my-5 gy-3">
-        <div class="col-lg-8 col-md-8">
-            <div class="contact_form_section ">
-                <div class="row">
-                    <div class="col-md-12 col-lg-12">
-                        <h3 class="mb-3">ارسال پیام برای ما</h3>
-                    </div>
-                    <div class="col-12">
-                        <form>
-                            <div class="row gy-3">
-                                <div class="col-md-6">
-                                    <div class="form-group ">
-                                        <label for="review-author">نام </label>
-                                        <input type="text" class="form-control" id="review-author" placeholder="نام ">
-                                      </div>
-                                </div>
-                                <div class="col-md-6">
-                                    <div class="form-group ">
-                                        <label for="review-author">نام خانوادگی </label>
-                                        <input type="text" class="form-control" id="review-author" placeholder="نام خانوادگی ">
-                                      </div>
-                                </div>
-                                <div class="col-md-6">
-                                    <div class="form-group ">
-                                        <label for="review-author">ایمیل </label>
-                                        <input type="email" class="form-control" id="review-author" placeholder="ایمیل ">
-                                      </div>
-                                </div>
-                                <div class="col-md-6">
-                                    <div class="form-group ">
-                                        <label for="review-author">عنوان </label>
-                                        <input type="text" class="form-control" id="review-author" placeholder="عنوان ">
-                                      </div>
-                                </div>
-                                <div class="col-md-12 col-lg-12">
-                                    <label for="review-author">پیام </label>
-                                  <textarea class="form-control" id="review-text" rows="6"></textarea>
-                                </div>
-                                <div class="col-md-12 col-lg-12">
-                                    <div class="form-group">
-                                        <button type="submit" class="btn btn-primary btn-lg">ارسال </button>
-                                    </div>
-                                </div>
-                            </div>
-                        </form>
-                    </div>
+    <div class="row gy-5 position-relative">
+      <div class="col-12 col-md-8">
+        <div class="row gy-4">
+          <div class="col-12">
+            <div class="cart-customer-address">
+              <div class="cart-customer-address__top">
+                <div class="label">
+                  آدرس تحویل شما
                 </div>
-            </div>
-        </div>
-        <div class="col-lg-4 col-md-4">
-            <div class="working_time_section">
-                <div class="timetable_block">
-                    <h5>ساعات کاری</h5>
-                    <ul>
-                        <li>
-                            <p>شنبه</p>
-                            <p>9:30 am - 6:00 pm</p>
-                        </li>
-                        <li>
-                            <p>یکشنبه</p>
-                            <p>9:00 am - 6:00 pm</p>
-                        </li>
-                        <li>
-                            <p>دوشنبه</p>
-                            <p>9:45 am - 6:00 pm</p>
-                        </li>
-                        <li>
-                            <p>سه شنبه</p>
-                            <p>10:30 am - 6:00 pm</p>
-                        </li>
-                        <li>
-                            <p>چهارشنبه</p>
-                            <p>9:30 am - 6:00 pm</p>
-                        </li>
-                        <li>
-                            <p>پنجشنبه</p>
-                            <p>9:30 am - 6:00 pm</p>
-                        </li>
-                        <li>
-                            <p>جمعه</p>
-                            <p>تعطیل</p>
-                        </li>
-                    </ul>
+                <div class="cart-customer-address__text">
+                  <span>
+                    <svg xmlns="http://www.w3.org/2000/svg" width="32" height="32" viewBox="0 0 24 24">
+                      <path fill="currentColor"
+                        d="M12 2c-4.2 0-8 3.22-8 8.2c0 3.18 2.45 6.92 7.34 11.23c.38.33.95.33 1.33 0C17.55 17.12 20 13.38 20 10.2C20 5.22 16.2 2 12 2zm0 10c-1.1 0-2-.9-2-2s.9-2 2-2s2 .9 2 2s-.9 2-2 2z" />
+                    </svg>
+                  </span>
+                  <span class="text">ونک، خ. شیخ بهایی، نرسیده به ب همت، بن. تاج محل</span>
                 </div>
-                
+                <div class="cart-customer-address__name">
+                  شهرام پیوندی
+                </div>
+              </div>
+              <div class="cart-customer-address__bottom">
+                <a href="#" class=" btn btn-outline-primary btn-sm cart-customer-address__edit-btn">
+                  تغییر یا ویرایش آدرس
+                </a>
+              </div>
+
             </div>
+
+          </div>
+          <div class="col-12">
+            <div class="cart-shipping-ways">
+              <label class="d-flex flex-stack mb-5">
+                <span class="form-check form-check-custom form-check-solid">
+                  <input class="form-check-input" checked="checked" type="radio" name="category" value="1" />
+                </span>
+                <span class="d-flex align-items-center me-2">
+                  <span class="symbol symbol-50px me-6">
+                    <span class="symbol-label bg-light-primary">
+                      <i class="ki-duotone ki-compass fs-1 text-primary"><span class="path1"></span><span
+                          class="path2"></span></i>
+                    </span>
+                  </span>
+                  <span class="d-flex flex-column">
+                    <span class="fw-bold fs-6 mb-2">ارسال فوری با الوپیک - اسنپ (پس کرایه)</span>
+                    <span class="fs-7 text-muted">هزینه ارسال توسط اسنپ / الوپیک محاسبه میشود و توسط مشتری پرداخت
+                      میشود</span>
+                  </span>
+                </span>
+
+              </label>
+              <label class="d-flex flex-stack mb-5">
+                <span class="form-check form-check-custom form-check-solid">
+                  <input class="form-check-input" type="radio" name="category" value="1" />
+                </span>
+                <span class="d-flex align-items-center me-2">
+                  <span class="symbol symbol-50px me-6">
+                    <span class="symbol-label bg-light-primary">
+                      <i class="ki-duotone ki-compass fs-1 text-primary"><span class="path1"></span><span
+                          class="path2"></span></i>
+                    </span>
+                  </span>
+                  <span class="d-flex flex-column">
+                    <span class="fw-bold fs-6 mb-2">ارسال غیر رایگان - تهران</span>
+                    <span class="fs-7 text-muted mb-2">ارسال غیر رایگان در تهران توسط پست - تحویل ۲۴ الی ۴۸ ساعت</span>
+                    <span class="fs-7 text-muted">هزینه 290,000 ریال</span>
+
+                  </span>
+                </span>
+
+              </label>
+            </div>
+
+
+          </div>
         </div>
+      </div>
+      <div class="col-12 col-md-4">
+        <div class="row justify-content-end" style="position: sticky;top: 15px;">
+          <div class="col-12">
+            <div class="card">
+              <div class="card-body">
+                <h3 class="card-title text-center">مجموع سبد</h3>
+                <table class="cart__totals">
+                  <thead class="cart__totals-header">
+                    <tr>
+                      <th>جمع جزء</th>
+                      <td>5,877,000 تومان</td>
+                    </tr>
+                  </thead>
+                  <tbody class="cart__totals-body">
+                    <tr>
+                      <th>حمل و نقل</th>
+                      <td>25,000 تومان
+                      </td>
+                    </tr>
+                    <tr>
+                      <th>مالیات</th>
+                      <td>0 تومان</td>
+                    </tr>
+                  </tbody>
+                  <tfoot class="cart__totals-footer">
+                    <tr>
+                      <th>جمع کل</th>
+                      <td>5,902,000 تومان</td>
+                    </tr>
+                  </tfoot>
+                </table>
+                <div class="d-grid">
+                  <a class="btn btn-primary btn-lg btn-block cart__checkout-button" href="checkout.html">پرداخت</a>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
     </div>
+
   </div>
   <!-- end::content section -->
 
 
-  <div class="container">
-    <div class="row">
-        <div class="col-12">
-            <div id="map" style="width: 100%; height: 400px"></div>
-        </div>
-    </div>
-  </div>
-  <script>
-    const map = L.map('map', {
-  center: [35.762050, 51.532265],
-  zoom: 15,
-  zoomControl:false,
-  minZoom: 13,
-    maxZoom:15,
-});
 
-L.tileLayer('https://{s}.tile.openstreetmap.org/{z}/{x}/{y}.png', { attribution: '&copy; <a href="https://www.openstreetmap.org/copyright">OpenStreetMap</a> contributors' }).addTo(map);
-
-
-const marker1 = L.marker([-37.699450, 176.279420]).addTo(map);
-  </script>
 
   <!-- start::footer -->
   <footer>
@@ -2298,44 +2666,555 @@ const marker1 = L.marker([-37.699450, 176.279420]).addTo(map);
       <div class="bounce3"></div>
     </div>
   </template>
+  <template id="ProductViewTemplate">
+    <div class="row">
+      <div class="col-md-6">
+        <div class="product-gallery__main">
+          <div id="productGallery" class="owl-carousel owl-theme">
+            <div class="item">
+              <a class="item-a" href="assets/images/product-slider.webp" target="_blank"><img
+                  src="assets/images/product-slider.webp" alt=""> </a>
+            </div>
+            <div class="item">
+              <a class="item-a" href="assets/images/product-slider.webp" target="_blank"><img
+                  src="assets/images/product-slider.webp" alt=""> </a>
+            </div>
+            <div class="item">
+              <a class="item-a" href="assets/images/product-slider.webp" target="_blank"><img
+                  src="assets/images/product-slider.webp" alt=""> </a>
+            </div>
+            <div class="item">
+              <a class="item-a" href="assets/images/product-slider.webp" target="_blank"><img
+                  src="assets/images/product-slider.webp" alt=""> </a>
+            </div>
+            <div class="item">
+              <a class="item-a" href="assets/images/product-slider.webp" target="_blank"><img
+                  src="assets/images/product-slider.webp" alt=""> </a>
+            </div>
+            <div class="item">
+              <a class="item-a" href="assets/images/product-slider.webp" target="_blank"><img
+                  src="assets/images/product-slider.webp" alt=""> </a>
+            </div>
+
+          </div>
+        </div>
+
+        <div id="productThumb" class="product-gallery__carousel owl-carousel owl-theme">
+          <div class="item">
+            <a href="" class="product-gallery__carousel-item" data-lg-size="1024-800"><img
+                class="product-gallery__carousel-image" src="assets/images/product-slider.webp" alt=""></a>
+          </div>
+          <div class="item">
+            <a href="" class="product-gallery__carousel-item" data-lg-size="1024-800"><img
+                class="product-gallery__carousel-image" src="assets/images/product-slider.webp" alt=""></a>
+          </div>
+          <div class="item">
+            <a href="" class="product-gallery__carousel-item" data-lg-size="1024-800"><img
+                class="product-gallery__carousel-image" src="assets/images/product-slider.webp" alt=""></a>
+          </div>
+          <div class="item">
+            <a href="" class="product-gallery__carousel-item" data-lg-size="1024-800"><img
+                class="product-gallery__carousel-image" src="assets/images/product-slider.webp" alt=""></a>
+          </div>
+          <div class="item">
+            <a href="" class="product-gallery__carousel-item" data-lg-size="1024-800"><img
+                class="product-gallery__carousel-image" src="assets/images/product-slider.webp" alt=""></a>
+          </div>
+          <div class="item">
+            <a href="" class="product-gallery__carousel-item" data-lg-size="1024-800"><img
+                class="product-gallery__carousel-image" src="assets/images/product-slider.webp" alt=""></a>
+          </div>
+          <div class="item">
+            <a href="" class="product-gallery__carousel-item" data-lg-size="1024-800"><img
+                class="product-gallery__carousel-image" src="assets/images/product-slider.webp" alt=""></a>
+          </div>
+          <div class="item">
+            <a href="" class="product-gallery__carousel-item" data-lg-size="1024-800"><img
+                class="product-gallery__carousel-image" src="assets/images/product-slider.webp" alt=""></a>
+          </div>
+        </div>
+
+
+
+      </div>
+      <div class="col-md-6">
+        <div class="product-info">
+
+          <h1 class="product-info__name">پیچ گوشتی الکتریکی برندیکس 1500AAC</h1>
+          <div class="">
+            <div class="product-rating">
+              <div class="rating">
+                <span class="rating-star star-fill">
+                  <svg xmlns="http://www.w3.org/2000/svg" width="18" height="18" viewBox="0 0 24 24">
+                    <path fill="currentColor"
+                      d="m12 18.275l-4.15 2.5q-.275.175-.575.15t-.525-.2q-.225-.175-.35-.438t-.05-.587l1.1-4.725L3.775 11.8q-.25-.225-.312-.513t.037-.562q.1-.275.3-.45t.55-.225l4.85-.425l1.875-4.45q.125-.3.388-.45t.537-.15q.275 0 .537.15t.388.45l1.875 4.45l4.85.425q.35.05.55.225t.3.45q.1.275.038.563t-.313.512l-3.675 3.175l1.1 4.725q.075.325-.05.588t-.35.437q-.225.175-.525.2t-.575-.15l-4.15-2.5Z" />
+                  </svg>
+                </span>
+                <span class="rating-star star-fill">
+                  <svg xmlns="http://www.w3.org/2000/svg" width="18" height="18" viewBox="0 0 24 24">
+                    <path fill="currentColor"
+                      d="m12 18.275l-4.15 2.5q-.275.175-.575.15t-.525-.2q-.225-.175-.35-.438t-.05-.587l1.1-4.725L3.775 11.8q-.25-.225-.312-.513t.037-.562q.1-.275.3-.45t.55-.225l4.85-.425l1.875-4.45q.125-.3.388-.45t.537-.15q.275 0 .537.15t.388.45l1.875 4.45l4.85.425q.35.05.55.225t.3.45q.1.275.038.563t-.313.512l-3.675 3.175l1.1 4.725q.075.325-.05.588t-.35.437q-.225.175-.525.2t-.575-.15l-4.15-2.5Z" />
+                  </svg>
+                </span>
+                <span class="rating-star star-fill">
+                  <svg xmlns="http://www.w3.org/2000/svg" width="18" height="18" viewBox="0 0 24 24">
+                    <path fill="currentColor"
+                      d="m12 18.275l-4.15 2.5q-.275.175-.575.15t-.525-.2q-.225-.175-.35-.438t-.05-.587l1.1-4.725L3.775 11.8q-.25-.225-.312-.513t.037-.562q.1-.275.3-.45t.55-.225l4.85-.425l1.875-4.45q.125-.3.388-.45t.537-.15q.275 0 .537.15t.388.45l1.875 4.45l4.85.425q.35.05.55.225t.3.45q.1.275.038.563t-.313.512l-3.675 3.175l1.1 4.725q.075.325-.05.588t-.35.437q-.225.175-.525.2t-.575-.15l-4.15-2.5Z" />
+                  </svg>
+                </span>
+                <span class="rating-star">
+                  <svg xmlns="http://www.w3.org/2000/svg" width="18" height="18" viewBox="0 0 24 24">
+                    <path fill="currentColor"
+                      d="m12 18.275l-4.15 2.5q-.275.175-.575.15t-.525-.2q-.225-.175-.35-.438t-.05-.587l1.1-4.725L3.775 11.8q-.25-.225-.312-.513t.037-.562q.1-.275.3-.45t.55-.225l4.85-.425l1.875-4.45q.125-.3.388-.45t.537-.15q.275 0 .537.15t.388.45l1.875 4.45l4.85.425q.35.05.55.225t.3.45q.1.275.038.563t-.313.512l-3.675 3.175l1.1 4.725q.075.325-.05.588t-.35.437q-.225.175-.525.2t-.575-.15l-4.15-2.5Z" />
+                  </svg>
+                </span>
+                <span class="rating-star">
+                  <svg xmlns="http://www.w3.org/2000/svg" width="18" height="18" viewBox="0 0 24 24">
+                    <path fill="currentColor"
+                      d="m12 18.275l-4.15 2.5q-.275.175-.575.15t-.525-.2q-.225-.175-.35-.438t-.05-.587l1.1-4.725L3.775 11.8q-.25-.225-.312-.513t.037-.562q.1-.275.3-.45t.55-.225l4.85-.425l1.875-4.45q.125-.3.388-.45t.537-.15q.275 0 .537.15t.388.45l1.875 4.45l4.85.425q.35.05.55.225t.3.45q.1.275.038.563t-.313.512l-3.675 3.175l1.1 4.725q.075.325-.05.588t-.35.437q-.225.175-.525.2t-.575-.15l-4.15-2.5Z" />
+                  </svg>
+                </span>
+              </div>
+              <div class="product-info__rating-legend"><a href="#">7 نقد و بررسی</a><span>/</span><a href=""
+                  class="product__write-comment">یک نقد و بررسی
+                  بنویسید</a></div>
+
+            </div>
+          </div>
+          <div class="product-info__description">لورم ایپسوم متن ساختگی با تولید سادگی نامفهوم از صنعت چاپ و با استفاده
+            از
+            طراحان گرافیک است. چاپگرها و متون بلکه روزنامه و مجله در ستون و سطرآنچنان که لازم است و برای شرایط فعلی
+            تکنولوژی</div>
+          <ul class="product-info__features">
+            <li>سرعت: 750 RPM</li>
+            <li>منبع تغزیه: برق</li>
+            <li>نوع باتری: لیتیوم</li>
+            <li>ولتاژ: 20 ولت</li>
+            <li>ظرفیت باتری: 2 ساعت</li>
+          </ul>
+          <ul class="product-info__meta">
+            <li class="product-info__meta-availability">موجودی: <span class="text-success">موجود در انبار</span></li>
+            <li><span class="text-success">دارای گارانتی پارادایس</span></li>
+            <li>شناسه: 83690/32</li>
+          </ul>
+          <div class="product-info__prices">1,499,000 تومان</div>
+          <div class="product-info__actions">
+
+            <div class="product-info__actions-item product-info__actions-item--addtocart">
+              <button class="btn btn-primary btn-lg product-card__addtocart">افزودن به سبد</button>
+              <div class="product-card__action-btns" data-id="2" style="width: 100%;">
+                <div style="font-size: 1.3rem;">
+                  <button class="product-card__plus-btn">
+                    <svg xmlns="http://www.w3.org/2000/svg" width="25" height="25" viewBox="0 0 24 24">
+                      <path fill="currentColor" d="M19 13h-6v6h-2v-6H5v-2h6V5h2v6h6v2z" />
+                    </svg>
+                  </button>
+
+                  <div class="product-card__add-counter">1</div>
+                  <button class="product-card__trash-btn">
+                    <svg xmlns="http://www.w3.org/2000/svg" width="25" height="25" viewBox="0 0 24 24">
+                      <path fill="#f25f5f"
+                        d="M7 21q-.825 0-1.413-.588T5 19V6H4V4h5V3h6v1h5v2h-1v13q0 .825-.588 1.413T17 21H7ZM17 6H7v13h10V6ZM9 17h2V8H9v9Zm4 0h2V8h-2v9ZM7 6v13V6Z" />
+                    </svg>
+                  </button>
+                  <button class="product-card__minus-btn" style="display: none;">
+                    <svg xmlns="http://www.w3.org/2000/svg" width="25" height="25" viewBox="0 0 24 24">
+                      <path fill="currentColor" d="M19 12.998H5v-2h14z" />
+                    </svg>
+                  </button>
+                </div>
+              </div>
+            </div>
+            <div class="product-info__actions-item product-info__actions-item--wishlist">
+              <button class="btn  product-card__wishlist" type="button">
+                <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24">
+                  <path fill="currentColor"
+                    d="m12 21l-1.45-1.3q-2.525-2.275-4.175-3.925T3.75 12.812Q2.775 11.5 2.388 10.4T2 8.15Q2 5.8 3.575 4.225T7.5 2.65q1.3 0 2.475.55T12 4.75q.85-1 2.025-1.55t2.475-.55q2.35 0 3.925 1.575T22 8.15q0 1.15-.388 2.25t-1.362 2.412q-.975 1.313-2.625 2.963T13.45 19.7L12 21Z" />
+                </svg>
+              </button>
+
+            </div>
+            <div class="product-info__actions-item product-info__actions-item--compare">
+              <button class="btn  product-card__compare" type="button">
+                <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24">
+                  <path fill="currentColor" d="M4 20V9h4v11H4Zm6 0V4h4v16h-4Zm6 0v-7h4v7h-4Z" />
+                </svg>
+              </button>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </template>
+
+  <template id="AddressItem">
+   <div class="address-item" data-id="{id}">
+     <label class="d-flex flex-stack">
+      <span class="form-check form-check-custom form-check-solid" style="align-items: start;">
+        <input class="form-check-input select-address"  type="radio" name="address_item" value="" />
+      </span>
+      <span class="d-flex align-items-center me-2">
+        <span class="symbol symbol-50px me-6">
+          <span class="symbol-label bg-light-primary">
+            <i class="ki-duotone ki-compass fs-1 text-primary"><span class="path1"></span><span
+                class="path2"></span></i>
+          </span>
+        </span>
+        <span class="d-flex flex-column">
+          <span class="address-item__title">{address}</span>
+          <span class="address-item__option">
+            <span>
+              <svg xmlns="http://www.w3.org/2000/svg" width="32" height="32" viewBox="0 0 24 24">
+                <path fill="currentColor"
+                  d="M16 1H8C6.34 1 5 2.34 5 4v16c0 1.66 1.34 3 3 3h8c1.66 0 3-1.34 3-3V4c0-1.66-1.34-3-3-3zm1 17H7V4h10v14zm-3 3h-4v-1h4v1z" />
+              </svg>
+            </span>
+            <span>
+              {mobile}
+            </span>
+          </span>
+          <span class="address-item__option">
+            <span>
+              <svg xmlns="http://www.w3.org/2000/svg" width="32" height="32" viewBox="0 0 24 24">
+                <path fill="currentColor"
+                  d="M12 5.9a2.1 2.1 0 1 1 0 4.2a2.1 2.1 0 0 1 0-4.2m0 9c2.97 0 6.1 1.46 6.1 2.1v1.1H5.9V17c0-.64 3.13-2.1 6.1-2.1M12 4C9.79 4 8 5.79 8 8s1.79 4 4 4s4-1.79 4-4s-1.79-4-4-4zm0 9c-2.67 0-8 1.34-8 4v3h16v-3c0-2.66-5.33-4-8-4z" />
+              </svg>
+            </span>
+            <span class="name">
+             {fullname}
+            </span>
+          </span>
+
+        </span>
+      </span>
+
+    </label>
+    <div class="" style="text-align: right;">
+      <button class="btn btn-sm address-item__edit-btn">
+        ویرایش
+        <svg xmlns="http://www.w3.org/2000/svg" width="32" height="32" viewBox="0 0 24 24">
+          <path fill="currentColor"
+            d="M14.71 15.88L10.83 12l3.88-3.88a.996.996 0 1 0-1.41-1.41L8.71 11.3a.996.996 0 0 0 0 1.41l4.59 4.59c.39.39 1.02.39 1.41 0c.38-.39.39-1.03 0-1.42z" />
+        </svg>
+      </button>
+    </div>
+
+   </div>
+  </template>
 
 </body>
 <script src="./assets/js/jquery-3.2.1.min.js"></script>
 <script src="./assets/js/select2.min.js"></script>
 <script src="./assets/bootstrap/js/bootstrap.bundle.min.js"></script>
-<script src="assets/js/owl.carousel.min.js"></script>
 <script src="assets/js/app.js"></script>
-<script src="https://cdn.jsdelivr.net/picturefill/2.3.1/picturefill.min.js"></script>
-<script src="assets/js/lightgallery-all.js"></script>
 <style>
 
 </style>
 
 <script>
 
+
+
+
+
+
   $(document).ready(function () {
 
-   
-  
+    $(document).on('click','.select-address',function(e) {
+      var address = $(this).parents('label').find('.address-item__title').text()    
+      var name = $(this).parents('label').find('.name').text()    
+      $('.cart-customer-address__text .text').text(address)
+      $('.cart-customer-address__name').text(name)
+      $('.edit-address-modal').fadeOut()
+    })
 
-  $('.login-modal__hide').click(function (e) {
-    e.preventDefault()
-    $(this).hide()
-    $('.login-modal__show').show()
-    $('.login-modal__password-input').attr('type', 'text')
-  })
-  $('.login-modal__show').click(function (e) {
-    e.preventDefault()
-    $(this).hide()
-    $('.login-modal__hide').show()
-    $('.login-modal__password-input').attr('type', 'password')
-  })
+    $(document).on('click','.address-item .address-item__edit-btn',function(e) {
+      e.preventDefault()
+      var payload = {
+        id: $(this).attr('data-id')
+      }
+      $.app.ajax.Operation({
+        url: "https://jsonplaceholder.typicode.com/posts",
+        data: payload,
+        callback: function (ResData) {
+          if (ResData.type == "success") {
+            // this block need to be sent from backend
+            var response_data_cities = {
+              data: {
+                id: 1,
+                location: 'این یک موقعیت تست است',
+                no: '1',
+                unit: 'واحد یک',
+                postal_code: "932111000",
+                reviever: {
+                  first_name: "شهرام",
+                  last_name: "پیوندی",
+                  mobile: '09911041242'
+                }
+              },
+              success: true,
+            };
 
-})
+
+          $('.map-container').hide()
+      $('.form-address-container').show()
+      $('.form-address').addClass('edit')
+      $('.select-location-modal').fadeIn()
+      $('.select-location-modal .remodal-header .title').text('ویرایش آدرس')
+
+
+      $('.form-address-container #address-location-text').val(response_data_cities.data.location)
+      $('.form-address-container #no').val(response_data_cities.data.no)
+      $('.form-address-container #unit').val(response_data_cities.data.unit)
+      $('.form-address-container #postalCode').val(response_data_cities.data.postal_code)
+
+            $('.form-address-container .form-address-btn').text('ویرایش آدرس')
+
+
+
+          }
+          if (ResData.type == 'error') {
+            alert('error')
+          }
+        },
+      });
+    })
+
+    $(document).on('submit','form.form-address',function(e) {
+      e.preventDefault()
+      var inputValues = $(this).serialize();
+
+      var el = $(this)
+
+      $.app.ajax.Operation({
+        url: "https://jsonplaceholder.typicode.com/posts",
+        data: inputValues,
+        callback: function (ResData) {
+          if (ResData.type == "success") {
+            // this block need to be sent from backend
+            var response_data_cities = {
+              data: {
+                id: 1,
+                location: 'این یک موقعیت تست است',
+                no: '1',
+                unit: 'واحد یک',
+                postal_code: "932111000",
+                reviever: {
+                  first_name: "شهرام",
+                  last_name: "پیوندی",
+                  mobile: '09911041242'
+                }
+              },
+              success: true,
+            };
+
+            if (el.hasClass('edit')) {
+              $(".edit-address-modal .address-list").find('.address-item[data-id="'+ response_data_cities.data.id +'"]').replaceWith(
+            $.app.ajax.Template($("#AddressItem").html(), {
+              id: response_data_cities.data.id,
+              address: response_data_cities.data.location,
+              fullname: response_data_cities.data.reviever.first_name + ' ' + response_data_cities.data.reviever.last_name,
+               mobile: response_data_cities.data.reviever.mobile
+            })
+          );
+          
+          $('.map-container').show()
+          el.removeClass('edit')
+          $('.form-address-container').hide()
+          $('.select-location-modal').fadeOut()
+
+
+            }else {
+              $(".edit-address-modal .address-list").prepend(
+            $.app.ajax.Template($("#AddressItem").html(), {
+              id: response_data_cities.data.id,
+              address: response_data_cities.data.location,
+              fullname: response_data_cities.data.reviever.first_name + ' ' + response_data_cities.data.reviever.last_name,
+               mobile: response_data_cities.data.reviever.mobile
+            })
+          );
+          $('.map-container').show()
+          $('.form-address-container').hide()
+          $('.select-location-modal').fadeOut()
+             
+            }
+
+
+           
+         
+
+
+          }
+          if (ResData.type == 'error') {
+            alert('error')
+          }
+        },
+      });
+    })
+
+    $('.cart-customer-address__edit-btn').click(function (e) {
+      e.preventDefault()
+      $('.edit-address-modal').fadeIn()
+
+    })
+
+    var latlng = {};
+    $('.add-address-btn').click(function (e) {
+      e.preventDefault()
+      $('.select-location-modal').fadeIn()
+      const map = L.map('map', {
+        center: [35.762050, 51.532265],
+        zoom: 15,
+      });
+
+      L.tileLayer('https://{s}.tile.openstreetmap.org/{z}/{x}/{y}.png', {attribution: '&copy; <a href="https://www.openstreetmap.org/copyright">OpenStreetMap</a> contributors'}).addTo(map);
+      var marker;
+      map.on('click', function (e) {
+        if (marker)
+          map.removeLayer(marker);
+        latlng = e.latlng
+        marker = L.marker(e.latlng).addTo(map);
+        $('.map-confirm-btn').removeAttr('disabled')
+      });
+
+      // const marker1 = L.marker([-37.699450, 176.279420]).addTo(map);
+
+    })
+
+    $('.map-confirm-btn').click(function(e) {
+      e.preventDefault()
+      $.get(`https://nominatim.openstreetmap.org/reverse?format=jsonv2&lat=${latlng.lat}&lon=${latlng.lng}`, function (data) {
+          $('.map-container').hide()
+          $('.form-address-container').show()
+          $('#address-location-text').val(`${data.address.district ?? ''} - ${data.address.road ?? ''}`)
+          $('.select-location-modal .remodal-header .remodal-header__goback').show()
+          $('.select-location-modal .remodal-header .title').text('جزییات آدرس')
+        });
+
+    })
+
+    $('.select-location-modal .remodal-header .remodal-header__goback').click(function(e) {
+      e.preventDefault()
+      $('.map-container').show()
+      $('.form-address-container').hide()
+      $('.select-location-modal .remodal-header .remodal-header__goback').hide()
+      $('.select-location-modal .remodal-header .title').text('انتخاب روی نقشه')
+
+    })
+
+    $('.select-location-modal .close-btn').click(function(e) {
+      e.preventDefault()
+      $('.map-container').fadeIn()
+      $('.form-address-container').fadeOut()
+    })
+
+    $('.layout-switcher__button').click(function (e) {
+      e.preventDefault()
+      $('.layout-switcher__button').removeClass('layout-switcher__button--active')
+      $(this).addClass('layout-switcher__button--active')
+      var with_feature = $(this).attr('data-with-features')
+      var layout = $(this).attr('data-layout')
+      console.log($(this).parents('.products-view'));
+      $(this).parents('.products-view').find('.products-view__list').attr('data-layout', layout)
+      $(this).parents('.products-view').find('.products-view__list').attr('data-with-features', with_feature)
+    })
+
+
+    $('.login-modal__hide').click(function (e) {
+      e.preventDefault()
+      $(this).hide()
+      $('.login-modal__show').show()
+      $('.login-modal__password-input').attr('type', 'text')
+    })
+    $('.login-modal__show').click(function (e) {
+      e.preventDefault()
+      $(this).hide()
+      $('.login-modal__hide').show()
+      $('.login-modal__password-input').attr('type', 'password')
+    })
+
+
+    $('.provinces-select').change(function (e) {
+      e.preventDefault()
+      var el = $(this)
+      const payload = {
+        province_id: $(this).val()
+      }
+      $.app.ajax.Operation({
+        url: "https://jsonplaceholder.typicode.com/posts",
+        data: payload,
+        callback: function (ResData) {
+
+
+
+          if (ResData.type == "success") {
+            var response_data_cities = {
+              data: [
+                {
+                  "id": 1,
+                  "name": "دستگرد",
+                  "slug": "دستگرد",
+                  "province_id": 1
+                },
+                {
+                  "id": 2,
+                  "name": "ابریشم",
+                  "slug": "ابریشم",
+                  "province_id": 1
+                },
+                {
+                  "id": 3,
+                  "name": "اردستان",
+                  "slug": "اردستان",
+                  "province_id": 1
+                },
+              ],
+              success: true,
+            };
+
+
+            var options_data = []
+            response_data_cities.data.forEach((element, key) => {
+              options_data[key] = new Option(element.name, key, false, false);
+            });
+            $('.cities-select').html("")
+
+            $('.cities-select').append(options_data).trigger('change');
+
+
+          }
+          if (ResData.type == 'error') {
+            alert('error')
+          }
+        },
+      });
+    })
+
+
+    $('.reciever-checkbox').change(function(e) {
+      e.preventDefault()
+      if ($(this).is(':checked')) {
+        $('#reciever-firstname').attr('disabled',true)
+        $('#reciever-lastname').attr('disabled',true)
+        $('#reciever-modile').attr('disabled',true)
+      } else {
+        $('#reciever-firstname').removeAttr('disabled')
+        $('#reciever-lastname').removeAttr('disabled')
+        $('#reciever-modile').removeAttr('disabled')
+
+      }
+    })
+
+  })
 
 
 
 </script>
+
+<script>
+
+</script>
+
 <script src="./assets/js/main.js"></script>
 <script src="./assets/js/cart.js"></script>
 
