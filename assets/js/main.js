@@ -86,38 +86,40 @@ $(document).ready(function () {
     $(this).parents(".remodal-overlay").fadeOut(100);
   });
 
-  var product_owl = $(".block-products-carousel .product-slider").owlCarousel({
-    stagePadding: 0,
-    singleItem: true,
-    items: 4,
-    margin: 10,
-    loop: true,
-    rtl: true,
-    autoplay: false,
-    dots: false,
-    nav: true,
-    navClass: ["block-header__arrow", "block-header__arrow"],
-    navContainerClass: "block-header__arrows-list",
-    navText: [
-      '<i class="fa fa-angle-right" aria-hidden="true"></i>',
-      '<i class="fa fa-angle-left" aria-hidden="true"></i>',
-    ],
-    responsive: {
-      0: {
-        items: 1,
-        nav: true,
+  if ($(".block-products-carousel .product-slider").length) {
+    var product_owl = $(".block-products-carousel .product-slider").owlCarousel({
+      stagePadding: 0,
+      singleItem: true,
+      items: 4,
+      margin: 10,
+      loop: true,
+      rtl: true,
+      autoplay: false,
+      dots: false,
+      nav: true,
+      navClass: ["block-header__arrow", "block-header__arrow"],
+      navContainerClass: "block-header__arrows-list",
+      navText: [
+        '<i class="fa fa-angle-right" aria-hidden="true"></i>',
+        '<i class="fa fa-angle-left" aria-hidden="true"></i>',
+      ],
+      responsive: {
+        0: {
+          items: 1,
+          nav: true,
+        },
+        600: {
+          items: 3,
+          nav: false,
+        },
+        1000: {
+          items: 4,
+          nav: true,
+          loop: false,
+        },
       },
-      600: {
-        items: 3,
-        nav: false,
-      },
-      1000: {
-        items: 4,
-        nav: true,
-        loop: false,
-      },
-    },
-  });
+    });
+  }
 
   $(".block-header__groups-list .block-header__group").click(function (e) {
     e.preventDefault();
