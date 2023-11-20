@@ -48,10 +48,17 @@
 
 .nav-link .dropdown-user-account-meta {
     float: left;
-    margin-top: 8px;
+    margin-top: 5px;
+    padding: 2px 4px;
+    /* background: var(--color-primary-500);
+    color: var(--color-natural-100); */
+    border-radius: 5px;
 }
 .nav-link.active .dropdown-user-account-meta {
-    color: #fff;
+  
+
+    background: white;
+    color: var(--color-natural-500);
 }
 
 .account-menu .nav-link.active svg {
@@ -129,7 +136,7 @@ element.style {
     padding: 2rem;
 }
 
-.header-tab-content-account h1.title-tabcontent-account {
+.page-content-header h1.title-tabcontent-account {
     color: var(--color-natural-500);
     font-size: 1.2rem;
     font-weight: 600;
@@ -192,7 +199,14 @@ element.style {
     transition: all 0.3s ease-in-out;
     -webkit-transition: all 0.3s ease-in-out;
 }
-.header-tab-content-account span.count-content-tab {
+.page-content-header {
+    display: flex;
+    /* d-flex justify-content-between align-items-center mb-4 */
+    justify-content: space-between;
+    align-items: center;
+    margin-bottom: 1.5rem;
+}
+.page-content-header span.count-content-tab {
     background-color: rgba(55, 56, 78, 0.08);
     font-size: .95rem;
     width: 1.5rem;
@@ -203,3 +217,103 @@ element.style {
     vertical-align: middle;
     line-height: 22px;
 }
+
+/* orders */
+.area-orders-account .card-order {
+    border-radius: 1rem;
+    border: 1px solid rgba(0, 0, 0, .125);
+    overflow: auto;
+}
+.date-order svg {
+    width: 20px;
+    color: var(--color-natural-300);
+}
+.header-content-orders .in-progress {
+    color: var(--color-primary-500);
+    background-color: var(--bg-primary-100);
+}
+.header-content-orders .succeed{
+    background-color: rgba(22, 201, 149, 0.08);
+    color: #16c995;
+}
+
+
+.header-content-orders .canceled {
+    background-color: rgba(247, 79, 120, 0.08);
+    color: #f74f78;
+}
+.header-content-orders .stutus-order {
+    padding: 0.2rem 0.5rem;
+    border-radius: 0.5rem;
+    width: 7rem;
+    text-align: center;
+}
+.card-order .card-header {
+    border-bottom: 0;
+    background-color: transparent;
+    padding: 0;
+}
+.card-header:first-child {
+    border-radius: calc(0.25rem - 1px) calc(0.25rem - 1px) 0 0;
+}
+.accordion-header {
+    margin-bottom: 0;
+}
+.accordion-item:first-of-type .accordion-button {
+    border-top-left-radius: calc(0.25rem - 1px);
+    border-top-right-radius: calc(0.25rem - 1px);
+}
+.header-content-orders .stutus-order {
+    padding: 0.2rem 0.5rem;
+    border-radius: 0.5rem;
+    width: 7rem;
+    text-align: center;
+   
+}
+.collapse-content-orders {
+    background-color: var(--bg-gray-100);
+    border-top: 1px solid rgba(0, 0, 0, .1);
+}
+.accordion-body {
+    padding: 1rem 1.25rem;
+}
+.area-ditails_product-orders  {
+    /* d-flex align-items-center flex-column flex-sm-row */
+    display: flex;
+    align-items: center;
+
+}
+.area-ditails_product-orders img {
+    border-radius: 1rem;
+    width: 7rem;
+}
+.ditails_product-orders {
+    width: 10rem;
+}
+.header-content-orders {
+    font-size: 0.95rem;
+    cursor: pointer;
+    padding: 1rem 1.5rem;
+    background-color: transparent !important;
+    color: #747474 !important;
+    box-shadow: none !important;
+    text-align: center;
+    display: flex;
+    justify-content: space-between;
+}
+
+.ditails_product-orders a.nameproduct-orders {
+    color: var(--color-natural-600);
+    font-weight: 500;
+    display: inline-block;
+}
+.ditails_product-orders a.nameproduct-orders:hover {
+    color: var(--color-primary-600);
+}
+.order__col {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+/* orders */

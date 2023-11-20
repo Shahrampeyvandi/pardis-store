@@ -5,205 +5,24 @@
   <meta charset="UTF-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1.0" />
   <title>Document</title>
-  <link rel="stylesheet" href="./assets/bootstrap/css/bootstrap.css" />
-  <link rel="stylesheet" href="./assets/css/font-awesome.min.css" />
-  <link href="./assets/css/select2.min.css" rel="stylesheet" />
-
- 
-  <link rel="stylesheet" href="./assets/css/style.css" />
+  <link rel="stylesheet" href="/assets/bootstrap/css/bootstrap.css" />
+  <link rel="stylesheet" href="/assets/css/font-awesome.min.css" />
+  <link href="/assets/css/select2.min.css" rel="stylesheet" />
+  <link rel="stylesheet" href="/assets/css/style.css" />
+<link rel="stylesheet" href="/assets/css/panel.css">
 </head>
 
-<style>
-  body {
-    background-color: #fff !important;
-  }
-
-  .remodal-header {
-    font-size: 1.2rem;
-    text-align: right;
-    padding: 1.5rem 2rem;
-    border-bottom: 1px solid var(--color-natural-200);
-  }
-
-  .address-list {
-    margin: 1rem 0;
-  }
-
-  .address-list .address-item .address-item__title {
-    font-size: 1rem;
-    margin-bottom: 1rem;
-  }
-
-  .address-list .address-item .address-item__option {
-    font-size: .9rem;
-    display: flex;
-    align-items: center;
-  }
-
-  .address-list .address-item .address-item__option svg {
-    width: 20px;
-  }
-
-  .edit-address-modal .address-item {
-    border-bottom: 1px solid var(--color-natural-200);
-    margin-bottom: 1rem;
-    margin-right: 2rem;
-    padding-bottom: .5rem;
-  }
-
-  .edit-address-modal .address-item label {
-    margin-right: -2rem;
-    margin-bottom: 0;
-  }
-
-  .add-address-btn {
-    display: flex;
-    justify-content: space-between;
-    padding: 1rem;
-    cursor: pointer;
-    border-bottom: 1px solid var(--color-natural-200);
-  }
-
-  .add-address-btn div,
-  .add-address-btn svg {
-    color: var(--color-primary-500)
-  }
-
-  .address-item__edit-btn svg {
-    width: 20px;
-  }
-
-  .form-address-container {
-    display: none;
-  }
-  .seperator {
-    margin: 1rem 0;
-    border-top: 1px solid var(--color-natural-200);
-  }
-  .remodal-header__goback {
-    display: none;
-  }
-  .remodal-header__goback svg{
-    width: 25px;
-    margin-left: .7rem;
-  }
-  .select-location-modal .remodal-header {
-    display: flex;
-    align-items: center;
-  }
-  .map-container {
-    padding: 1rem;
-  }
-</style>
 
 <body>
-  <!-- start::login-modal -->
-  <div class="remodal-overlay login-modal" id="modal">
-    <div class=" col-md-8 col-xs-12 mx-auto">
-      <div class="remodal">
-        <a href="#" class="close-btn">
-          <svg xmlns="http://www.w3.org/2000/svg" width="28" height="28" viewBox="0 0 24 24">
-            <path fill="currentColor"
-              d="M19 6.41L17.59 5L12 10.59L6.41 5L5 6.41L10.59 12L5 17.59L6.41 19L12 13.41L17.59 19L19 17.59L13.41 12z" />
-          </svg>
-        </a>
-        <div class="middle-container">
-          <div class="login-form">
-            <div class="row w-100 m-auto">
-              <div class="col-lg-6 d-none d-lg-block">
-                <div class="login-form__right">
-                  <h2 class="login-form__right-title">سلام!<br>به سایت ما خوش آمدید.</h2>
-                  <div>
-                    <img class="login-form__right-img" src="assets/images/Mobile login-bro.png" width="344"
-                      alt="Illustartion">
-                  </div>
-                </div>
-              </div>
-              <div class="col-12 col-lg-6">
-                <form method="post" action="#" class="form-checkout">
-                  <div class="account-box">
-
-                    <p class="account-head-line">ورود | ثبت نام</p>
-                    <div class="">
-                      <div class="">
-                        <label for="email-phone">شماره همراه خود را وارد کنید</label>
-                        <input type="text" id="email-phone" class="input-email-account" placeholder="شماره همراه" />
-                      </div>
-                      <div class="login-modal__security-code">
-                        <div class=" login-modal__input" style="position: relative;flex: 1;
-                          margin-left: 1rem;">
-                          <label for="email-phone">کد امنیتی</label>
-                          <div class="login-modal__password">
-                            <span class="login-modal__show" style="display: none;">
-                              <svg xmlns="http://www.w3.org/2000/svg" width="22" height="22" viewBox="0 0 24 24">
-                                <path fill="currentColor"
-                                  d="M12 16q1.875 0 3.188-1.313T16.5 11.5q0-1.875-1.313-3.188T12 7q-1.875 0-3.188 1.313T7.5 11.5q0 1.875 1.313 3.188T12 16Zm0-1.8q-1.125 0-1.913-.788T9.3 11.5q0-1.125.788-1.913T12 8.8q1.125 0 1.913.788T14.7 11.5q0 1.125-.787 1.913T12 14.2Zm0 4.8q-3.475 0-6.35-1.838T1.3 12.2q-.075-.125-.1-.312t-.025-.388q0-.2.025-.388t.1-.312q1.475-3.125 4.35-4.963T12 4q3.475 0 6.35 1.838T22.7 10.8q.075.125.1.313t.025.387q0 .2-.025.388t-.1.312q-1.475 3.125-4.35 4.963T12 19Z" />
-                              </svg>
-                            </span>
-                            <span class="login-modal__hide">
-                              <svg xmlns="http://www.w3.org/2000/svg" width="22" height="22" viewBox="0 0 24 24">
-                                <path fill="currentColor"
-                                  d="m19.3 16.5l-3.2-3.2q.2-.425.3-.863t.1-.937q0-1.875-1.312-3.188T12 7q-.5 0-.938.1t-.862.3L7.65 4.85q1.025-.425 2.1-.637T12 4q3.575 0 6.425 1.888T22.7 10.8q.075.125.1.313t.025.387q0 .2-.037.388t-.088.312q-.575 1.275-1.437 2.375T19.3 16.5Zm-.2 5.4l-3.5-3.45q-.875.275-1.762.413T12 19q-3.575 0-6.425-1.888T1.3 12.2q-.075-.125-.1-.312t-.025-.388q0-.2.025-.375t.1-.3Q1.825 9.7 2.55 8.75T4.15 7L2.075 4.9Q1.8 4.625 1.8 4.212t.3-.712q.275-.275.7-.275t.7.275l17 17q.275.275.288.688t-.288.712q-.275.275-.7.275t-.7-.275ZM12 16q.275 0 .513-.025t.512-.1l-5.4-5.4q-.075.275-.1.513T7.5 11.5q0 1.875 1.313 3.188T12 16Zm2.65-4.15l-3-3q1.425-.225 2.325.8t.675 2.2Z" />
-                              </svg>
-                            </span>
-                          </div>
-                          <input dir="ltr" type="password" autocomplete="off" class="login-modal__password-input"
-                            id="MyCap" inputmode="numeric" pattern="[0-9]*" title="Non-negative integral number"
-                            data-val="true" data-val-length="کدامنیتی باید دقیقا 4 کاراکتر باشد" data-val-length-max="4"
-                            data-val-required="لطفا کدامنیتی را وارد کنید" maxlength="4" name="Captcha"
-                            placeholder="کد امنیتی" value="" />
-                        </div>
-                        <div class="login-modal__code" style="">
-                          <span>1234</span>
-                        </div>
-                      </div>
 
 
-
-                      <div class="mt-4">
-                        <button type="submit" class="login-btn">ورود به حساب کاربری</button>
-                      </div>
-
-                      <div class="login-modal__seprator">
-                        یا
-                      </div>
-
-                      <div class="google-btn-wapepr content-account">
-                        <a class="google-btn" href="#">
-                          <svg xmlns="http://www.w3.org/2000/svg" width="20" height="20" viewBox="0 0 512 512">
-                            <path fill="currentColor"
-                              d="m473.16 221.48l-2.26-9.59H262.46v88.22H387c-12.93 61.4-72.93 93.72-121.94 93.72c-35.66 0-73.25-15-98.13-39.11a140.08 140.08 0 0 1-41.8-98.88c0-37.16 16.7-74.33 41-98.78s61-38.13 97.49-38.13c41.79 0 71.74 22.19 82.94 32.31l62.69-62.36C390.86 72.72 340.34 32 261.6 32c-60.75 0-119 23.27-161.58 65.71C58 139.5 36.25 199.93 36.25 256s20.58 113.48 61.3 155.6c43.51 44.92 105.13 68.4 168.58 68.4c57.73 0 112.45-22.62 151.45-63.66c38.34-40.4 58.17-96.3 58.17-154.9c0-24.67-2.48-39.32-2.59-39.96Z" />
-                          </svg>
-                          <span>ورود با اکانت گوگل</span>
-                        </a>
-                      </div>
-                    </div>
-                  </div>
-                </form>
-                <div class="col-lg-12 col-sm-12 col-md-12 col-12">
-                  <div class="login-footer">
-                    با ورود و یا ثبت نام در پارادایس شما
-                    <a href="#"> شرایط و قوانین </a>
-                    استفاده از سرویس های سایت پارادایس و
-
-                    <a href="#"> قوانین حریم خصوصی </a>
-
-                    آن را می‌پذیرید.
-                  </div>
-                </div>
-              </div>
-
-            </div>
-          </div>
-        </div>
-      </div>
+  <!-- start::fixed bottom menu -->
+  <div id="fixed-menu">
+    <div>
+      <div></div>
     </div>
   </div>
-  <!-- end::login-modal -->
-
-
-
-
+  <!-- end::fixed bottom menu -->
 
   <!-- start::header -->
   <header>
@@ -309,9 +128,9 @@
                           <button type="submit" class="shopping-cart__submit btn btn-primary">
                             ادامه خرید
                           </button>
-                          <button type="button" class="shopping-cart__submit btn btn-outline-primary">
+                          <a href="cart.html" class="shopping-cart__submit btn btn-outline-primary">
                             مشاهده سبد خرید
-                          </button>
+                        </a>
                         </div>
                       </div>
                     </div>
@@ -332,7 +151,7 @@
 
             <span class="header-left-icons__seprator"></span>
 
-            <a href="#" class="login-link">
+            <!-- <a href="#" class="login-link">
               <div class="btn-login text-elipsis">
                 <span style="display: inline-block">
                   <svg xmlns="http://www.w3.org/2000/svg" width="22" height="22" viewBox="0 0 24 24">
@@ -346,8 +165,8 @@
                 </span>
                 <span class="">ورود | ثبت‌نام</span>
               </div>
-            </a>
-            <!-- <div class="dropdown">
+            </a> -->
+            <div class="dropdown">
                 <a class=" dropdown-toggle auth-link" href="#" role="button" id="dropdownMenuLink" data-bs-toggle="dropdown" aria-expanded="false">
                   <span>
                     <svg
@@ -413,7 +232,7 @@
                      </a>
                   </div>
                 </div>
-              </div> -->
+              </div>
 
             <!-- Example single danger button -->
           </div>
@@ -2044,215 +1863,462 @@
   <!-- end::header -->
 
 
-  <style>
-    .cart-customer-address,
-    .select-group-container {
-      border: 1px solid var(--color-natural-200) !important;
-      padding: 2rem 2.5rem 1rem 1rem;
-    }
-    .select-group-container .section-title {
-      margin: .5rem 1rem 1.5rem;
-      font-size: 1.5rem;
-      color: var(--color-natural-500);
-      
-    }
 
-    .cart-customer-address {
-      padding-right: 4rem;
-    }
-
-    .cart-customer-address__top {
-      margin-bottom: 2rem;
-    }
-
-    .cart-customer-address__top>div {
-      margin-bottom: .9rem;
-    }
-
-    .cart-customer-address__top .label {
-      font-size: .9rem;
-      color: var(--color-natural-500);
-    }
-
-    .cart-customer-address__text {
-      display: flex;
-      align-items: center;
-      gap: 0.5em;
-      margin-right: -2rem;
-    }
-
-    .cart-customer-address__top .cart-customer-address__text span {
-      font-size: 1rem;
-      color: var(--color-natural-600);
-      font-weight: bold;
-
-    }
-
-    .cart-customer-address__text svg {
-      width: 22px;
-    }
-
-    .cart-customer-address__bottom {
-      text-align: left;
-    }
-  </style>
 
   <!-- start::content section -->
-  <div class="container-fluid">
-    <div class="row my-5">
-      <div class="col-12 col-md-8 mx-auto">
-        <div class="bs-stepper-header" role="tablist">
-          <div class="step next" data-target="#test-nl-1">
-            <a href="cart.html" class="step-trigger" role="tab" id="stepper2trigger1" aria-controls="test-nl-1"
-              aria-selected="false">
-              <span class="bs-stepper-circle">
-                <svg xmlns="http://www.w3.org/2000/svg" width="28" height="28" viewBox="0 0 16 16">
-                  <path fill="currentColor"
-                    d="M0 2.5A.5.5 0 0 1 .5 2H2a.5.5 0 0 1 .485.379L2.89 4H14.5a.5.5 0 0 1 .485.621l-1.5 6A.5.5 0 0 1 13 11H4a.5.5 0 0 1-.485-.379L1.61 3H.5a.5.5 0 0 1-.5-.5zM3.14 5l1.25 5h8.22l1.25-5H3.14zM5 13a1 1 0 1 0 0 2a1 1 0 0 0 0-2zm-2 1a2 2 0 1 1 4 0a2 2 0 0 1-4 0zm9-1a1 1 0 1 0 0 2a1 1 0 0 0 0-2zm-2 1a2 2 0 1 1 4 0a2 2 0 0 1-4 0z" />
-                </svg>
-              </span>
-              <span class="bs-stepper-label">سبد خرید</span>
-            </a>
-          </div>
-          <div class="bs-stepper-line"></div>
-          <div class="step next" data-target="#test-nl-2">
-            <a href="cart-address.html" class="step-trigger" role="tab" id="stepper2trigger2" aria-controls="test-nl-2"
-              aria-selected="false">
-              <span class="bs-stepper-circle">
-                <svg xmlns="http://www.w3.org/2000/svg" width="32" height="32" viewBox="0 0 24 24">
-                  <path fill="currentColor"
-                    d="M20 8h-3V4H3c-1.1 0-2 .9-2 2v11h2c0 1.66 1.34 3 3 3s3-1.34 3-3h6c0 1.66 1.34 3 3 3s3-1.34 3-3h2v-5l-3-4zm-.5 1.5l1.96 2.5H17V9.5h2.5zM6 18c-.55 0-1-.45-1-1s.45-1 1-1s1 .45 1 1s-.45 1-1 1zm2.22-3c-.55-.61-1.33-1-2.22-1s-1.67.39-2.22 1H3V6h12v9H8.22zM18 18c-.55 0-1-.45-1-1s.45-1 1-1s1 .45 1 1s-.45 1-1 1z" />
-                </svg>
-              </span>
-              <span class="bs-stepper-label">زمان و نحوه ارسال</span>
-            </a>
-          </div>
-          <div class="bs-stepper-line"></div>
-          <div class="step active" data-target="#test-nl-3">
-            <a href="#" class="step-trigger" role="tab" id="stepper2trigger3" aria-controls="test-nl-3"
-              aria-selected="true">
-              <span class="bs-stepper-circle">
-                <svg xmlns="http://www.w3.org/2000/svg" width="32" height="32" viewBox="0 0 24 24">
-                  <path fill="currentColor"
-                    d="M20 4H4c-1.11 0-1.99.89-1.99 2L2 18c0 1.11.89 2 2 2h16c1.11 0 2-.89 2-2V6c0-1.11-.89-2-2-2zm0 14H4v-6h16v6zm0-10H4V6h16v2z" />
-                </svg>
-              </span>
-              <span class="bs-stepper-label">پرداخت</span>
-            </a>
-          </div>
-        </div>
-      </div>
-    </div>
-    <div class="row gy-5 position-relative">
-      <div class="col-12 col-md-8">
-        <div class="row gy-4">
-         
-          <div class="col-12">
-            <div class="select-group-container">
-                <div class="section-title">انتخاب روش پرداخت</div>
-              <label class="d-flex flex-stack my-3 py-3 ">
-                <span class="form-check form-check-custom form-check-solid">
-                  <input class="form-check-input" checked="checked" type="radio" name="payment_method" value="1" />
-                </span>
-                <span class="d-flex align-items-center me-2">
-                  <span class="symbol symbol-50px ms-3">
-                    <span class="symbol-label bg-light-primary">
-                      <svg xmlns="http://www.w3.org/2000/svg" width="32" height="32" viewBox="0 0 24 24"><path fill="currentColor" d="M10 16V8a2 2 0 0 1 2-2h9V5c0-1.1-.9-2-2-2H5a2 2 0 0 0-2 2v14a2 2 0 0 0 2 2h14c1.1 0 2-.9 2-2v-1h-9a2 2 0 0 1-2-2zm3-8c-.55 0-1 .45-1 1v6c0 .55.45 1 1 1h9V8h-9zm3 5.5c-.83 0-1.5-.67-1.5-1.5s.67-1.5 1.5-1.5s1.5.67 1.5 1.5s-.67 1.5-1.5 1.5z"/></svg>
-                    </span>
-                  </span>
-                  <span class="d-flex flex-column">
-                    <span class="fw-bold fs-6 mb-2">پرداخت با کیف پول</span>
-                    <span class="fs-7 text-muted">موجودی 0</span>
-                  </span>
-                </span>
+    <section class="my-5 area-content-paccount">
+        <div class="container-fluid">
+            <div class="row">
+                <div class="col-12 col-lg-3">
+                    <div class="sidebar-account ">
+                        <div class="avatar-user d-flex flex-column justify-content-center align-items-center mb-4">
+                            <img class="img-avatar-user" src="/assets/images/img11.jpg">
+                            <div class="name-avatar-user">
+                                <h4>علی رضایی</h4>
+                            </div>
+                        </div>
+                        <div class="account-menu d-none d-lg-block">
+                            <div class="nav flex-column nav-pills nav-pills-account-menu" aria-orientation="vertical">
+                                <a href="#" class="nav-link border-bottom-none ">
+                                    <h3 class="product_cart--title">داشبورد</h3>
+                                </a>
+                                <a href="#" class="nav-link active">
+                                    <svg xmlns="http://www.w3.org/2000/svg" width="32" height="32" viewBox="0 0 24 24"><path fill="currentColor" d="M16.5 3c-1.74 0-3.41.81-4.5 2.09C10.91 3.81 9.24 3 7.5 3C4.42 3 2 5.42 2 8.5c0 3.78 3.4 6.86 8.55 11.54L12 21.35l1.45-1.32C18.6 15.36 22 12.28 22 8.5C22 5.42 19.58 3 16.5 3zm-4.4 15.55l-.1.1l-.1-.1C7.14 14.24 4 11.39 4 8.5C4 6.5 5.5 5 7.5 5c1.54 0 3.04.99 3.57 2.36h1.87C13.46 5.99 14.96 5 16.5 5c2 0 3.5 1.5 3.5 3.5c0 2.89-3.14 5.74-7.9 10.05z"/></svg>
+                                    علاقه مندی ها <span class="dropdown-user-account-meta">6</span>
+                                </a>
+                                <a href="#" class="nav-link" >
+                                    <svg xmlns="http://www.w3.org/2000/svg" width="32" height="32" viewBox="0 0 24 24"><path fill="currentColor" d="M8.117 16.538q.327 0 .547-.221q.22-.222.22-.55t-.22-.547q-.222-.22-.55-.22t-.548.222q-.22.221-.22.549q0 .327.222.547q.221.22.549.22Zm0-3.769q.327 0 .547-.221q.22-.222.22-.55t-.22-.547q-.222-.22-.55-.22t-.548.221q-.22.222-.22.55t.222.547q.221.22.549.22Zm0-3.769q.327 0 .547-.222q.22-.221.22-.549q0-.327-.22-.547q-.222-.22-.55-.22t-.548.221q-.22.222-.22.55t.222.547q.221.22.549.22Zm3.075 7.27h5.385v-1h-5.385v1Zm0-3.77h5.385v-1h-5.385v1Zm0-3.77h5.385v-1h-5.385v1ZM5.615 20q-.69 0-1.152-.462Q4 19.075 4 18.385V5.615q0-.69.463-1.152Q4.925 4 5.615 4h12.77q.69 0 1.152.463q.463.462.463 1.152v12.77q0 .69-.462 1.152q-.463.463-1.153.463H5.615Zm0-1h12.77q.23 0 .423-.192q.192-.193.192-.423V5.615q0-.23-.192-.423Q18.615 5 18.385 5H5.615q-.23 0-.423.192Q5 5.385 5 5.615v12.77q0 .23.192.423q.193.192.423.192ZM5 5v14V5Z"/></svg>
+                                    سفارش ها
+                                    <span class="dropdown-user-account-meta">5</span>
+                                </a>
+                                <a href="#" class="nav-link">
 
-              </label>
-              <label class="d-flex flex-stack my-3 py-3 border-top">
-                <span class="form-check form-check-custom form-check-solid">
-                  <input class="form-check-input" type="radio" name="payment_method" value="2" />
-                </span>
-                <span class="d-flex align-items-center me-2">
-                  <span class="symbol symbol-50px ms-3">
-                    <span class="symbol-label bg-light-primary">
-                      <svg xmlns="http://www.w3.org/2000/svg" width="32" height="32" viewBox="0 0 24 24"><path fill="currentColor" d="M20 4H4c-1.11 0-1.99.89-1.99 2L2 18c0 1.11.89 2 2 2h16c1.11 0 2-.89 2-2V6c0-1.11-.89-2-2-2zm0 14H4v-6h16v6zm0-10H4V6h16v2z"/></svg>
-                    </span>
-                  </span>
-                  <span class="d-flex flex-column">
-                    <span class="fw-bold fs-6 mb-2">پرداخت اینترنتی</span>
-                    <span class="fs-7 text-muted mb-2">پرداخت آنلاین با تمامی کارت های بانکی</span>
-
-                  </span>
-                </span>
-
-              </label>
-              <label class="d-flex flex-stack my-3 py-3 border-top">
-                <span class="form-check form-check-custom form-check-solid">
-                  <input class="form-check-input" type="radio" name="payment_method" value="3" />
-                </span>
-                <span class="d-flex align-items-center me-2">
-                  <span class="symbol symbol-50px ms-3">
-                    <span class="symbol-label bg-light-primary">
-                      <svg xmlns="http://www.w3.org/2000/svg" width="32" height="32" viewBox="0 0 24 24"><path fill="currentColor" d="M15 11V5l-3-3l-3 3v2H3v14h18V11h-6zm-8 8H5v-2h2v2zm0-4H5v-2h2v2zm0-4H5V9h2v2zm6 8h-2v-2h2v2zm0-4h-2v-2h2v2zm0-4h-2V9h2v2zm0-4h-2V5h2v2zm6 12h-2v-2h2v2zm0-4h-2v-2h2v2z"/></svg>
-                    </span>
-                  </span>
-                  <span class="d-flex flex-column">
-                    <span class="fw-bold fs-6 mb-2">پرداخت در محل با کارت بانکی</span>
-                    <span class="fs-7 text-muted mb-2">هنگام تحویل از طریق کارت بانکی</span>
-
-                  </span>
-                </span>
-
-              </label>
-            </div>
-
-
-          </div>
-        </div>
-      </div>
-      <div class="col-12 col-md-4">
-        <div class="row justify-content-end" style="position: sticky;top: 15px;">
-          <div class="col-12">
-            <div class="card">
-              <div class="card-body">
-                <table class="cart__totals">
-                  <thead class="cart__totals-header">
-                    <tr>
-                      <th>جمع جزء</th>
-                      <td>5,877,000 تومان</td>
-                    </tr>
-                  </thead>
-                  <tbody class="cart__totals-body">
-                    <tr>
-                      <th>حمل و نقل</th>
-                      <td>25,000 تومان
-                      </td>
-                    </tr>
-                    <tr>
-                      <th>مالیات</th>
-                      <td>0 تومان</td>
-                    </tr>
-                  </tbody>
-                  <tfoot class="cart__totals-footer">
-                    <tr>
-                      <th>جمع کل</th>
-                      <td>5,902,000 تومان</td>
-                    </tr>
-                  </tfoot>
-                </table>
-                <div class="d-grid">
-                  <a class="btn btn-primary btn-lg btn-block cart__checkout-button" href="#">پرداخت</a>
+                                    <svg xmlns="http://www.w3.org/2000/svg" width="32" height="32" viewBox="0 0 24 24"><path fill="currentColor" d="M12 5.9a2.1 2.1 0 1 1 0 4.2a2.1 2.1 0 0 1 0-4.2m0 9c2.97 0 6.1 1.46 6.1 2.1v1.1H5.9V17c0-.64 3.13-2.1 6.1-2.1M12 4C9.79 4 8 5.79 8 8s1.79 4 4 4s4-1.79 4-4s-1.79-4-4-4zm0 9c-2.67 0-8 1.34-8 4v3h16v-3c0-2.66-5.33-4-8-4z"/></svg>
+                                    اطلاعات پروفایل
+                                </a>
+                                <a href="#" class="nav-link " >
+                                    <svg xmlns="http://www.w3.org/2000/svg" width="32" height="32" viewBox="0 0 256 256"><path fill="currentColor" d="M83.19 174.4a8 8 0 0 0 11.21-1.6a52 52 0 0 1 83.2 0a8 8 0 1 0 12.8-9.6a67.88 67.88 0 0 0-27.4-21.69a40 40 0 1 0-53.94 0A67.88 67.88 0 0 0 81.6 163.2a8 8 0 0 0 1.59 11.2ZM112 112a24 24 0 1 1 24 24a24 24 0 0 1-24-24Zm96-88H64a16 16 0 0 0-16 16v24H32a8 8 0 0 0 0 16h16v40H32a8 8 0 0 0 0 16h16v40H32a8 8 0 0 0 0 16h16v24a16 16 0 0 0 16 16h144a16 16 0 0 0 16-16V40a16 16 0 0 0-16-16Zm0 192H64V40h144Z"/></svg>
+                                    نشانی ها
+                                    <span class="dropdown-user-account-meta">1</span> 
+                                </a>
+                               
+                                <a href="#" class="nav-link" >
+                                    <svg xmlns="http://www.w3.org/2000/svg" width="32" height="32" viewBox="0 0 24 24"><path fill="currentColor" d="m17 7l-1.41 1.41L18.17 11H8v2h10.17l-2.58 2.58L17 17l5-5zM4 5h8V3H4c-1.1 0-2 .9-2 2v14c0 1.1.9 2 2 2h8v-2H4V5z"/></svg>
+                                    خروج
+                                </a>
+                            </div>
+                        </div>
+                       
+                    </div>
                 </div>
-              </div>
+                <div class="col-12 col-lg-9">
+                            <div class="page-content-header ">
+                                <h1 class="title-tabcontent-account ms-2">
+                                    سفارش ها
+                                    <span class="count-content-tab me-2">6</span>
+                                </h1>
+                                <div class="box-select-sort d-flex align-items-center justify-content-start justify-content-sm-end">
+                                  <label class="" for="FormCustomSelect">مرتب سازی براساس:
+                                  </label>
+                                  <select class="form-select custom-select" id="FormCustomSelect" aria-label="Default select example">
+                                      <option selected="">همه</option>
+                                      <option value="1">در حال پردازش</option>
+                                      <option value="2">تحویل داده </option>
+                                      <option value="3">لغو شده ها</option>
+                                    </select>
+                              </div>
+                            </div>
+                            <div class="row gap-4">
+                              <div class="accordion area-orders-account" id="accordian">
+                                <div class="accordion-item card card-order mb-3">
+                                  <h2 class="accordion-header card-header" id="headingOne">
+                                    <button class="accordion-button header-content-orders collapsed" type="button" data-bs-toggle="collapse" data-bs-target="#collapse1" aria-expanded="false" aria-controls="collapse1">
+                                        <div class="id-product-order ">#2342344</div>
+                                        <div class="date-order">
+                                          <svg xmlns="http://www.w3.org/2000/svg" width="32" height="32" viewBox="0 0 24 24"><path fill="currentColor" d="M19 4h-1V2h-2v2H8V2H6v2H5c-1.11 0-1.99.9-1.99 2L3 20a2 2 0 0 0 2 2h14c1.1 0 2-.9 2-2V6c0-1.1-.9-2-2-2zm0 16H5V10h14v10zM9 14H7v-2h2v2zm4 0h-2v-2h2v2zm4 0h-2v-2h2v2zm-8 4H7v-2h2v2zm4 0h-2v-2h2v2zm4 0h-2v-2h2v2z"/></svg>
+                                          1401/1/1
+                                        </div>
+                                        <div class="stutus-order in-progress ">درحال
+                                            پردازش</div>
+                                        <div class="price-product-order "> 150.000 تومان</div>
+                                        </button>
+                                    </h2>
+                                  <div id="collapse1" class="accordion-collapse collapse-content-orders collapse" aria-labelledby="headingOne" data-bs-parent="#accordian" style="">
+                                    <div class="accordion-body card-body">
+                                        <div class="area-content-orders d-sm-flex align-items-center justify-content-between mb-4 mb-sm-3">
+                                            <div class="area-ditails_product-orders">
+                                                <img src="/assets/images/chocolate.webp" class="mb-3 mb-sm-0">
+                                                <div class="ditails_product-orders me-3  text-center">
+                                                    <a href="#" class="nameproduct-orders mb-1">کفش مناسب پیاده
+                                                        روی</a>
+                                                
+                                                </div>
+                                            </div>
+                                            <div class="order__col ">
+                                                تعداد:
+                                                <span>2</span>
+                                              </div>
+                                            <div class="order__col">
+                                                جمع کل:
+                                                <span>1,500,000</span>
+                                            </div>
+                                        </div>
+
+                                        <div class="area-content-orders d-sm-flex align-items-center justify-content-between mb-4 mb-sm-3">
+                                            <div class="area-ditails_product-orders">
+                                                <img src="/assets/images/keyboard.jpg" class="mb-3 mb-sm-0">
+                                                <div class="ditails_product-orders me-3  text-center">
+                                                    <a href="#" class="nameproduct-orders mb-1">کفش مناسب پیاده
+                                                      روی</a>
+                                                    
+                                                </div>
+                                            </div>
+                                            <div class="order__col">
+                                                تعداد:
+                                                <span>2</span></div>
+                                            <div class="order__col">
+                                                جمع کل:
+                                                <span>1,500,000</span>
+                                            </div>
+                                        </div>
+
+                                        <div class="area-details-bottom-orders d-sm-flex justify-content-between align-items-center  border-top py-4">
+
+                                            <div class="details-bottom-content-orders details-bottom-content ms-3">
+                                                <span>جمع کل: </span>
+                                                <span>15000 تومان</span>
+                                            </div>
+
+                                            <div class="details-bottom-content-orders details-bottom-content ms-3">
+                                                <span>حمل و نقل: </span>
+                                                <span>15000 تومان</span>
+                                            </div>
+
+                                            <div class="details-bottom-content-orders details-bottom-content ms-3">
+                                                <span>مالیات: </span>
+                                                <span>15000 تومان</span>
+                                            </div>
+                                            <div class="details-bottom-content-orders details-bottom-content ms-3">
+                                                <span>کل: </span>
+                                                <span>1,500,000 تومان</span>
+                                            </div>
+                                        </div>
+                                    </div>
+                                  </div>
+                                </div>
+                                <div class="accordion-item card card-order mb-3">
+                                  <h2 class="accordion-header card-header" id="headingOne">
+                                    <button class="accordion-button header-content-orders collapsed" type="button" data-bs-toggle="collapse" data-bs-target="#collapse2" aria-expanded="false" aria-controls="collapse2">
+                                        <div class="id-product-order ">#2342344</div>
+                                        <div class="date-order">
+                                          <svg xmlns="http://www.w3.org/2000/svg" width="32" height="32" viewBox="0 0 24 24"><path fill="currentColor" d="M19 4h-1V2h-2v2H8V2H6v2H5c-1.11 0-1.99.9-1.99 2L3 20a2 2 0 0 0 2 2h14c1.1 0 2-.9 2-2V6c0-1.1-.9-2-2-2zm0 16H5V10h14v10zM9 14H7v-2h2v2zm4 0h-2v-2h2v2zm4 0h-2v-2h2v2zm-8 4H7v-2h2v2zm4 0h-2v-2h2v2zm4 0h-2v-2h2v2z"/></svg>
+                                          1401/1/1
+                                        </div>
+                                        <div class="stutus-order in-progress ">درحال
+                                            پردازش</div>
+                                        <div class="price-product-order "> 150.000 تومان</div>
+                                        </button>
+                                    </h2>
+                                  <div id="collapse2" class="accordion-collapse collapse-content-orders collapse" aria-labelledby="headingOne" data-bs-parent="#accordian" style="">
+                                    <div class="accordion-body card-body">
+                                        <div class="area-content-orders d-sm-flex align-items-center justify-content-between mb-4 mb-sm-3">
+                                            <div class="area-ditails_product-orders">
+                                                <img src="/assets/images/chocolate.webp" class="mb-3 mb-sm-0">
+                                                <div class="ditails_product-orders me-3  text-center">
+                                                    <a href="#" class="nameproduct-orders mb-1">کفش مناسب پیاده
+                                                        روی</a>
+                                                
+                                                </div>
+                                            </div>
+                                            <div class="order__col ">
+                                                تعداد:
+                                                <span>2</span>
+                                              </div>
+                                            <div class="order__col">
+                                                جمع کل:
+                                                <span>1,500,000</span>
+                                            </div>
+                                        </div>
+
+                                        <div class="area-content-orders d-sm-flex align-items-center justify-content-between mb-4 mb-sm-3">
+                                            <div class="area-ditails_product-orders">
+                                                <img src="/assets/images/keyboard.jpg" class="mb-3 mb-sm-0">
+                                                <div class="ditails_product-orders me-3  text-center">
+                                                    <a href="#" class="nameproduct-orders mb-1">کفش مناسب پیاده
+                                                      روی</a>
+                                                    
+                                                </div>
+                                            </div>
+                                            <div class="order__col">
+                                                تعداد:
+                                                <span>2</span></div>
+                                            <div class="order__col">
+                                                جمع کل:
+                                                <span>1,500,000</span>
+                                            </div>
+                                        </div>
+
+                                        <div class="area-details-bottom-orders d-sm-flex justify-content-between align-items-center  border-top py-4">
+
+                                            <div class="details-bottom-content-orders details-bottom-content ms-3">
+                                                <span>جمع کل: </span>
+                                                <span>15000 تومان</span>
+                                            </div>
+
+                                            <div class="details-bottom-content-orders details-bottom-content ms-3">
+                                                <span>حمل و نقل: </span>
+                                                <span>15000 تومان</span>
+                                            </div>
+
+                                            <div class="details-bottom-content-orders details-bottom-content ms-3">
+                                                <span>مالیات: </span>
+                                                <span>15000 تومان</span>
+                                            </div>
+                                            <div class="details-bottom-content-orders details-bottom-content ms-3">
+                                                <span>کل: </span>
+                                                <span>1,500,000 تومان</span>
+                                            </div>
+                                        </div>
+                                    </div>
+                                  </div>
+                                </div>
+                                <div class="accordion-item card card-order mb-3">
+                                  <h2 class="accordion-header card-header" id="headingOne">
+                                    <button class="accordion-button header-content-orders collapsed" type="button" data-bs-toggle="collapse" data-bs-target="#collapse3" aria-expanded="false" aria-controls="collapse3">
+                                        <div class="id-product-order ">#2342344</div>
+                                        <div class="date-order">
+                                          <svg xmlns="http://www.w3.org/2000/svg" width="32" height="32" viewBox="0 0 24 24"><path fill="currentColor" d="M19 4h-1V2h-2v2H8V2H6v2H5c-1.11 0-1.99.9-1.99 2L3 20a2 2 0 0 0 2 2h14c1.1 0 2-.9 2-2V6c0-1.1-.9-2-2-2zm0 16H5V10h14v10zM9 14H7v-2h2v2zm4 0h-2v-2h2v2zm4 0h-2v-2h2v2zm-8 4H7v-2h2v2zm4 0h-2v-2h2v2zm4 0h-2v-2h2v2z"/></svg>
+                                          1401/1/1
+                                        </div>
+                                        <div class="stutus-order in-progress ">درحال
+                                            پردازش</div>
+                                        <div class="price-product-order "> 150.000 تومان</div>
+                                        </button>
+                                    </h2>
+                                  <div id="collapse3" class="accordion-collapse collapse-content-orders collapse" aria-labelledby="headingOne" data-bs-parent="#accordian" style="">
+                                    <div class="accordion-body card-body">
+                                        <div class="area-content-orders d-sm-flex align-items-center justify-content-between mb-4 mb-sm-3">
+                                            <div class="area-ditails_product-orders">
+                                                <img src="/assets/images/chocolate.webp" class="mb-3 mb-sm-0">
+                                                <div class="ditails_product-orders me-3  text-center">
+                                                    <a href="#" class="nameproduct-orders mb-1">کفش مناسب پیاده
+                                                        روی</a>
+                                                
+                                                </div>
+                                            </div>
+                                            <div class="order__col ">
+                                                تعداد:
+                                                <span>2</span>
+                                              </div>
+                                            <div class="order__col">
+                                                جمع کل:
+                                                <span>1,500,000</span>
+                                            </div>
+                                        </div>
+
+                                        <div class="area-content-orders d-sm-flex align-items-center justify-content-between mb-4 mb-sm-3">
+                                            <div class="area-ditails_product-orders">
+                                                <img src="/assets/images/keyboard.jpg" class="mb-3 mb-sm-0">
+                                                <div class="ditails_product-orders me-3  text-center">
+                                                    <a href="#" class="nameproduct-orders mb-1">کفش مناسب پیاده
+                                                      روی</a>
+                                                    
+                                                </div>
+                                            </div>
+                                            <div class="order__col">
+                                                تعداد:
+                                                <span>2</span></div>
+                                            <div class="order__col">
+                                                جمع کل:
+                                                <span>1,500,000</span>
+                                            </div>
+                                        </div>
+
+                                        <div class="area-details-bottom-orders d-sm-flex justify-content-between align-items-center  border-top py-4">
+
+                                            <div class="details-bottom-content-orders details-bottom-content ms-3">
+                                                <span>جمع کل: </span>
+                                                <span>15000 تومان</span>
+                                            </div>
+
+                                            <div class="details-bottom-content-orders details-bottom-content ms-3">
+                                                <span>حمل و نقل: </span>
+                                                <span>15000 تومان</span>
+                                            </div>
+
+                                            <div class="details-bottom-content-orders details-bottom-content ms-3">
+                                                <span>مالیات: </span>
+                                                <span>15000 تومان</span>
+                                            </div>
+                                            <div class="details-bottom-content-orders details-bottom-content ms-3">
+                                                <span>کل: </span>
+                                                <span>1,500,000 تومان</span>
+                                            </div>
+                                        </div>
+                                    </div>
+                                  </div>
+                                </div>
+                                <div class="accordion-item card card-order mb-3">
+                                  <h2 class="accordion-header card-header" id="headingOne">
+                                    <button class="accordion-button header-content-orders collapsed" type="button" data-bs-toggle="collapse" data-bs-target="#collapse4" aria-expanded="false" aria-controls="collapse4">
+                                        <div class="id-product-order ">#2342344</div>
+                                        <div class="date-order">
+                                          <svg xmlns="http://www.w3.org/2000/svg" width="32" height="32" viewBox="0 0 24 24"><path fill="currentColor" d="M19 4h-1V2h-2v2H8V2H6v2H5c-1.11 0-1.99.9-1.99 2L3 20a2 2 0 0 0 2 2h14c1.1 0 2-.9 2-2V6c0-1.1-.9-2-2-2zm0 16H5V10h14v10zM9 14H7v-2h2v2zm4 0h-2v-2h2v2zm4 0h-2v-2h2v2zm-8 4H7v-2h2v2zm4 0h-2v-2h2v2zm4 0h-2v-2h2v2z"/></svg>
+                                          1401/1/1
+                                        </div>
+                                        <div class="stutus-order succeed">تحویل شده</div>
+                                        <div class="price-product-order "> 150.000 تومان</div>
+                                        </button>
+                                    </h2>
+                                  <div id="collapse4" class="accordion-collapse collapse-content-orders collapse" aria-labelledby="headingOne" data-bs-parent="#accordian" style="">
+                                    <div class="accordion-body card-body">
+                                        <div class="area-content-orders d-sm-flex align-items-center justify-content-between mb-4 mb-sm-3">
+                                            <div class="area-ditails_product-orders">
+                                                <img src="/assets/images/chocolate.webp" class="mb-3 mb-sm-0">
+                                                <div class="ditails_product-orders me-3  text-center">
+                                                    <a href="#" class="nameproduct-orders mb-1">کفش مناسب پیاده
+                                                        روی</a>
+                                                
+                                                </div>
+                                            </div>
+                                            <div class="order__col ">
+                                                تعداد:
+                                                <span>2</span>
+                                              </div>
+                                            <div class="order__col">
+                                                جمع کل:
+                                                <span>1,500,000</span>
+                                            </div>
+                                        </div>
+
+                                        <div class="area-content-orders d-sm-flex align-items-center justify-content-between mb-4 mb-sm-3">
+                                            <div class="area-ditails_product-orders">
+                                                <img src="/assets/images/keyboard.jpg" class="mb-3 mb-sm-0">
+                                                <div class="ditails_product-orders me-3  text-center">
+                                                    <a href="#" class="nameproduct-orders mb-1">کفش مناسب پیاده
+                                                      روی</a>
+                                                    
+                                                </div>
+                                            </div>
+                                            <div class="order__col">
+                                                تعداد:
+                                                <span>2</span></div>
+                                            <div class="order__col">
+                                                جمع کل:
+                                                <span>1,500,000</span>
+                                            </div>
+                                        </div>
+
+                                        <div class="area-details-bottom-orders d-sm-flex justify-content-between align-items-center  border-top py-4">
+
+                                            <div class="details-bottom-content-orders details-bottom-content ms-3">
+                                                <span>جمع کل: </span>
+                                                <span>15000 تومان</span>
+                                            </div>
+
+                                            <div class="details-bottom-content-orders details-bottom-content ms-3">
+                                                <span>حمل و نقل: </span>
+                                                <span>15000 تومان</span>
+                                            </div>
+
+                                            <div class="details-bottom-content-orders details-bottom-content ms-3">
+                                                <span>مالیات: </span>
+                                                <span>15000 تومان</span>
+                                            </div>
+                                            <div class="details-bottom-content-orders details-bottom-content ms-3">
+                                                <span>کل: </span>
+                                                <span>1,500,000 تومان</span>
+                                            </div>
+                                        </div>
+                                    </div>
+                                  </div>
+                                </div>
+                                <div class="accordion-item card card-order mb-3">
+                                  <h2 class="accordion-header card-header" id="headingOne">
+                                    <button class="accordion-button header-content-orders collapsed" type="button" data-bs-toggle="collapse" data-bs-target="#collapse5" aria-expanded="false" aria-controls="collapse5">
+                                        <div class="id-product-order ">#2342344</div>
+                                        <div class="date-order">
+                                          <svg xmlns="http://www.w3.org/2000/svg" width="32" height="32" viewBox="0 0 24 24"><path fill="currentColor" d="M19 4h-1V2h-2v2H8V2H6v2H5c-1.11 0-1.99.9-1.99 2L3 20a2 2 0 0 0 2 2h14c1.1 0 2-.9 2-2V6c0-1.1-.9-2-2-2zm0 16H5V10h14v10zM9 14H7v-2h2v2zm4 0h-2v-2h2v2zm4 0h-2v-2h2v2zm-8 4H7v-2h2v2zm4 0h-2v-2h2v2zm4 0h-2v-2h2v2z"/></svg>
+                                          1401/1/1
+                                        </div>
+                                        <div class="stutus-order canceled ">لغو شده</div>
+                                        <div class="price-product-order "> 150.000 تومان</div>
+                                        </button>
+                                    </h2>
+                                  <div id="collapse5" class="accordion-collapse collapse-content-orders collapse" aria-labelledby="headingOne" data-bs-parent="#accordian" style="">
+                                    <div class="accordion-body card-body">
+                                        <div class="area-content-orders d-sm-flex align-items-center justify-content-between mb-4 mb-sm-3">
+                                            <div class="area-ditails_product-orders">
+                                                <img src="/assets/images/chocolate.webp" class="mb-3 mb-sm-0">
+                                                <div class="ditails_product-orders me-3  text-center">
+                                                    <a href="#" class="nameproduct-orders mb-1">کفش مناسب پیاده
+                                                        روی</a>
+                                                
+                                                </div>
+                                            </div>
+                                            <div class="order__col ">
+                                                تعداد:
+                                                <span>2</span>
+                                              </div>
+                                            <div class="order__col">
+                                                جمع کل:
+                                                <span>1,500,000</span>
+                                            </div>
+                                        </div>
+
+                                        <div class="area-content-orders d-sm-flex align-items-center justify-content-between mb-4 mb-sm-3">
+                                            <div class="area-ditails_product-orders">
+                                                <img src="/assets/images/keyboard.jpg" class="mb-3 mb-sm-0">
+                                                <div class="ditails_product-orders me-3  text-center">
+                                                    <a href="#" class="nameproduct-orders mb-1">کفش مناسب پیاده
+                                                      روی</a>
+                                                    
+                                                </div>
+                                            </div>
+                                            <div class="order__col">
+                                                تعداد:
+                                                <span>2</span></div>
+                                            <div class="order__col">
+                                                جمع کل:
+                                                <span>1,500,000</span>
+                                            </div>
+                                        </div>
+
+                                        <div class="area-details-bottom-orders d-sm-flex justify-content-between align-items-center  border-top py-4">
+
+                                            <div class="details-bottom-content-orders details-bottom-content ms-3">
+                                                <span>جمع کل: </span>
+                                                <span>15000 تومان</span>
+                                            </div>
+
+                                            <div class="details-bottom-content-orders details-bottom-content ms-3">
+                                                <span>حمل و نقل: </span>
+                                                <span>15000 تومان</span>
+                                            </div>
+
+                                            <div class="details-bottom-content-orders details-bottom-content ms-3">
+                                                <span>مالیات: </span>
+                                                <span>15000 تومان</span>
+                                            </div>
+                                            <div class="details-bottom-content-orders details-bottom-content ms-3">
+                                                <span>کل: </span>
+                                                <span>1,500,000 تومان</span>
+                                            </div>
+                                        </div>
+                                    </div>
+                                  </div>
+                                </div>
+                               
+                              </div>
+                            </div>
+                            
+                       
+
+                </div>
             </div>
-          </div>
         </div>
-      </div>
-    </div>
-
-  </div>
+</section>
   <!-- end::content section -->
-
-
 
 
   <!-- start::footer -->
@@ -2426,321 +2492,42 @@
       <div class="bounce3"></div>
     </div>
   </template>
-  <template id="ProductViewTemplate">
-    <div class="row">
-      <div class="col-md-6">
-        <div class="product-gallery__main">
-          <div id="productGallery" class="owl-carousel owl-theme">
-            <div class="item">
-              <a class="item-a" href="assets/images/product-slider.webp" target="_blank"><img
-                  src="assets/images/product-slider.webp" alt=""> </a>
-            </div>
-            <div class="item">
-              <a class="item-a" href="assets/images/product-slider.webp" target="_blank"><img
-                  src="assets/images/product-slider.webp" alt=""> </a>
-            </div>
-            <div class="item">
-              <a class="item-a" href="assets/images/product-slider.webp" target="_blank"><img
-                  src="assets/images/product-slider.webp" alt=""> </a>
-            </div>
-            <div class="item">
-              <a class="item-a" href="assets/images/product-slider.webp" target="_blank"><img
-                  src="assets/images/product-slider.webp" alt=""> </a>
-            </div>
-            <div class="item">
-              <a class="item-a" href="assets/images/product-slider.webp" target="_blank"><img
-                  src="assets/images/product-slider.webp" alt=""> </a>
-            </div>
-            <div class="item">
-              <a class="item-a" href="assets/images/product-slider.webp" target="_blank"><img
-                  src="assets/images/product-slider.webp" alt=""> </a>
-            </div>
-
-          </div>
-        </div>
-
-        <div id="productThumb" class="product-gallery__carousel owl-carousel owl-theme">
-          <div class="item">
-            <a href="" class="product-gallery__carousel-item" data-lg-size="1024-800"><img
-                class="product-gallery__carousel-image" src="assets/images/product-slider.webp" alt=""></a>
-          </div>
-          <div class="item">
-            <a href="" class="product-gallery__carousel-item" data-lg-size="1024-800"><img
-                class="product-gallery__carousel-image" src="assets/images/product-slider.webp" alt=""></a>
-          </div>
-          <div class="item">
-            <a href="" class="product-gallery__carousel-item" data-lg-size="1024-800"><img
-                class="product-gallery__carousel-image" src="assets/images/product-slider.webp" alt=""></a>
-          </div>
-          <div class="item">
-            <a href="" class="product-gallery__carousel-item" data-lg-size="1024-800"><img
-                class="product-gallery__carousel-image" src="assets/images/product-slider.webp" alt=""></a>
-          </div>
-          <div class="item">
-            <a href="" class="product-gallery__carousel-item" data-lg-size="1024-800"><img
-                class="product-gallery__carousel-image" src="assets/images/product-slider.webp" alt=""></a>
-          </div>
-          <div class="item">
-            <a href="" class="product-gallery__carousel-item" data-lg-size="1024-800"><img
-                class="product-gallery__carousel-image" src="assets/images/product-slider.webp" alt=""></a>
-          </div>
-          <div class="item">
-            <a href="" class="product-gallery__carousel-item" data-lg-size="1024-800"><img
-                class="product-gallery__carousel-image" src="assets/images/product-slider.webp" alt=""></a>
-          </div>
-          <div class="item">
-            <a href="" class="product-gallery__carousel-item" data-lg-size="1024-800"><img
-                class="product-gallery__carousel-image" src="assets/images/product-slider.webp" alt=""></a>
-          </div>
-        </div>
-
-
-
-      </div>
-      <div class="col-md-6">
-        <div class="product-info">
-
-          <h1 class="product-info__name">پیچ گوشتی الکتریکی برندیکس 1500AAC</h1>
-          <div class="">
-            <div class="product-rating">
-              <div class="rating">
-                <span class="rating-star star-fill">
-                  <svg xmlns="http://www.w3.org/2000/svg" width="18" height="18" viewBox="0 0 24 24">
-                    <path fill="currentColor"
-                      d="m12 18.275l-4.15 2.5q-.275.175-.575.15t-.525-.2q-.225-.175-.35-.438t-.05-.587l1.1-4.725L3.775 11.8q-.25-.225-.312-.513t.037-.562q.1-.275.3-.45t.55-.225l4.85-.425l1.875-4.45q.125-.3.388-.45t.537-.15q.275 0 .537.15t.388.45l1.875 4.45l4.85.425q.35.05.55.225t.3.45q.1.275.038.563t-.313.512l-3.675 3.175l1.1 4.725q.075.325-.05.588t-.35.437q-.225.175-.525.2t-.575-.15l-4.15-2.5Z" />
-                  </svg>
-                </span>
-                <span class="rating-star star-fill">
-                  <svg xmlns="http://www.w3.org/2000/svg" width="18" height="18" viewBox="0 0 24 24">
-                    <path fill="currentColor"
-                      d="m12 18.275l-4.15 2.5q-.275.175-.575.15t-.525-.2q-.225-.175-.35-.438t-.05-.587l1.1-4.725L3.775 11.8q-.25-.225-.312-.513t.037-.562q.1-.275.3-.45t.55-.225l4.85-.425l1.875-4.45q.125-.3.388-.45t.537-.15q.275 0 .537.15t.388.45l1.875 4.45l4.85.425q.35.05.55.225t.3.45q.1.275.038.563t-.313.512l-3.675 3.175l1.1 4.725q.075.325-.05.588t-.35.437q-.225.175-.525.2t-.575-.15l-4.15-2.5Z" />
-                  </svg>
-                </span>
-                <span class="rating-star star-fill">
-                  <svg xmlns="http://www.w3.org/2000/svg" width="18" height="18" viewBox="0 0 24 24">
-                    <path fill="currentColor"
-                      d="m12 18.275l-4.15 2.5q-.275.175-.575.15t-.525-.2q-.225-.175-.35-.438t-.05-.587l1.1-4.725L3.775 11.8q-.25-.225-.312-.513t.037-.562q.1-.275.3-.45t.55-.225l4.85-.425l1.875-4.45q.125-.3.388-.45t.537-.15q.275 0 .537.15t.388.45l1.875 4.45l4.85.425q.35.05.55.225t.3.45q.1.275.038.563t-.313.512l-3.675 3.175l1.1 4.725q.075.325-.05.588t-.35.437q-.225.175-.525.2t-.575-.15l-4.15-2.5Z" />
-                  </svg>
-                </span>
-                <span class="rating-star">
-                  <svg xmlns="http://www.w3.org/2000/svg" width="18" height="18" viewBox="0 0 24 24">
-                    <path fill="currentColor"
-                      d="m12 18.275l-4.15 2.5q-.275.175-.575.15t-.525-.2q-.225-.175-.35-.438t-.05-.587l1.1-4.725L3.775 11.8q-.25-.225-.312-.513t.037-.562q.1-.275.3-.45t.55-.225l4.85-.425l1.875-4.45q.125-.3.388-.45t.537-.15q.275 0 .537.15t.388.45l1.875 4.45l4.85.425q.35.05.55.225t.3.45q.1.275.038.563t-.313.512l-3.675 3.175l1.1 4.725q.075.325-.05.588t-.35.437q-.225.175-.525.2t-.575-.15l-4.15-2.5Z" />
-                  </svg>
-                </span>
-                <span class="rating-star">
-                  <svg xmlns="http://www.w3.org/2000/svg" width="18" height="18" viewBox="0 0 24 24">
-                    <path fill="currentColor"
-                      d="m12 18.275l-4.15 2.5q-.275.175-.575.15t-.525-.2q-.225-.175-.35-.438t-.05-.587l1.1-4.725L3.775 11.8q-.25-.225-.312-.513t.037-.562q.1-.275.3-.45t.55-.225l4.85-.425l1.875-4.45q.125-.3.388-.45t.537-.15q.275 0 .537.15t.388.45l1.875 4.45l4.85.425q.35.05.55.225t.3.45q.1.275.038.563t-.313.512l-3.675 3.175l1.1 4.725q.075.325-.05.588t-.35.437q-.225.175-.525.2t-.575-.15l-4.15-2.5Z" />
-                  </svg>
-                </span>
-              </div>
-              <div class="product-info__rating-legend"><a href="#">7 نقد و بررسی</a><span>/</span><a href=""
-                  class="product__write-comment">یک نقد و بررسی
-                  بنویسید</a></div>
-
-            </div>
-          </div>
-          <div class="product-info__description">لورم ایپسوم متن ساختگی با تولید سادگی نامفهوم از صنعت چاپ و با استفاده
-            از
-            طراحان گرافیک است. چاپگرها و متون بلکه روزنامه و مجله در ستون و سطرآنچنان که لازم است و برای شرایط فعلی
-            تکنولوژی</div>
-          <ul class="product-info__features">
-            <li>سرعت: 750 RPM</li>
-            <li>منبع تغزیه: برق</li>
-            <li>نوع باتری: لیتیوم</li>
-            <li>ولتاژ: 20 ولت</li>
-            <li>ظرفیت باتری: 2 ساعت</li>
-          </ul>
-          <ul class="product-info__meta">
-            <li class="product-info__meta-availability">موجودی: <span class="text-success">موجود در انبار</span></li>
-            <li><span class="text-success">دارای گارانتی پارادایس</span></li>
-            <li>شناسه: 83690/32</li>
-          </ul>
-          <div class="product-info__prices">1,499,000 تومان</div>
-          <div class="product-info__actions">
-
-            <div class="product-info__actions-item product-info__actions-item--addtocart">
-              <button class="btn btn-primary btn-lg product-card__addtocart">افزودن به سبد</button>
-              <div class="product-card__action-btns" data-id="2" style="width: 100%;">
-                <div style="font-size: 1.3rem;">
-                  <button class="product-card__plus-btn">
-                    <svg xmlns="http://www.w3.org/2000/svg" width="25" height="25" viewBox="0 0 24 24">
-                      <path fill="currentColor" d="M19 13h-6v6h-2v-6H5v-2h6V5h2v6h6v2z" />
-                    </svg>
-                  </button>
-
-                  <div class="product-card__add-counter">1</div>
-                  <button class="product-card__trash-btn">
-                    <svg xmlns="http://www.w3.org/2000/svg" width="25" height="25" viewBox="0 0 24 24">
-                      <path fill="#f25f5f"
-                        d="M7 21q-.825 0-1.413-.588T5 19V6H4V4h5V3h6v1h5v2h-1v13q0 .825-.588 1.413T17 21H7ZM17 6H7v13h10V6ZM9 17h2V8H9v9Zm4 0h2V8h-2v9ZM7 6v13V6Z" />
-                    </svg>
-                  </button>
-                  <button class="product-card__minus-btn" style="display: none;">
-                    <svg xmlns="http://www.w3.org/2000/svg" width="25" height="25" viewBox="0 0 24 24">
-                      <path fill="currentColor" d="M19 12.998H5v-2h14z" />
-                    </svg>
-                  </button>
-                </div>
-              </div>
-            </div>
-            <div class="product-info__actions-item product-info__actions-item--wishlist">
-              <button class="btn  product-card__wishlist" type="button">
-                <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24">
-                  <path fill="currentColor"
-                    d="m12 21l-1.45-1.3q-2.525-2.275-4.175-3.925T3.75 12.812Q2.775 11.5 2.388 10.4T2 8.15Q2 5.8 3.575 4.225T7.5 2.65q1.3 0 2.475.55T12 4.75q.85-1 2.025-1.55t2.475-.55q2.35 0 3.925 1.575T22 8.15q0 1.15-.388 2.25t-1.362 2.412q-.975 1.313-2.625 2.963T13.45 19.7L12 21Z" />
-                </svg>
-              </button>
-
-            </div>
-            <div class="product-info__actions-item product-info__actions-item--compare">
-              <button class="btn  product-card__compare" type="button">
-                <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24">
-                  <path fill="currentColor" d="M4 20V9h4v11H4Zm6 0V4h4v16h-4Zm6 0v-7h4v7h-4Z" />
-                </svg>
-              </button>
-            </div>
-          </div>
-        </div>
-      </div>
-    </div>
-  </template>
-
-  <template id="AddressItem">
-   <div class="address-item" data-id="{id}">
-     <label class="d-flex flex-stack">
-      <span class="form-check form-check-custom form-check-solid" style="align-items: start;">
-        <input class="form-check-input select-address"  type="radio" name="address_item" value="" />
-      </span>
-      <span class="d-flex align-items-center me-2">
-        <span class="symbol symbol-50px ms-3">
-          <span class="symbol-label bg-light-primary">
-            <i class="ki-duotone ki-compass fs-1 text-primary"><span class="path1"></span><span
-                class="path2"></span></i>
-          </span>
-        </span>
-        <span class="d-flex flex-column">
-          <span class="address-item__title">{address}</span>
-          <span class="address-item__option">
-            <span>
-              <svg xmlns="http://www.w3.org/2000/svg" width="32" height="32" viewBox="0 0 24 24">
-                <path fill="currentColor"
-                  d="M16 1H8C6.34 1 5 2.34 5 4v16c0 1.66 1.34 3 3 3h8c1.66 0 3-1.34 3-3V4c0-1.66-1.34-3-3-3zm1 17H7V4h10v14zm-3 3h-4v-1h4v1z" />
-              </svg>
-            </span>
-            <span>
-              {mobile}
-            </span>
-          </span>
-          <span class="address-item__option">
-            <span>
-              <svg xmlns="http://www.w3.org/2000/svg" width="32" height="32" viewBox="0 0 24 24">
-                <path fill="currentColor"
-                  d="M12 5.9a2.1 2.1 0 1 1 0 4.2a2.1 2.1 0 0 1 0-4.2m0 9c2.97 0 6.1 1.46 6.1 2.1v1.1H5.9V17c0-.64 3.13-2.1 6.1-2.1M12 4C9.79 4 8 5.79 8 8s1.79 4 4 4s4-1.79 4-4s-1.79-4-4-4zm0 9c-2.67 0-8 1.34-8 4v3h16v-3c0-2.66-5.33-4-8-4z" />
-              </svg>
-            </span>
-            <span class="name">
-             {fullname}
-            </span>
-          </span>
-
-        </span>
-      </span>
-
-    </label>
-    <div class="" style="text-align: right;">
-      <button class="btn btn-sm address-item__edit-btn">
-        ویرایش
-        <svg xmlns="http://www.w3.org/2000/svg" width="32" height="32" viewBox="0 0 24 24">
-          <path fill="currentColor"
-            d="M14.71 15.88L10.83 12l3.88-3.88a.996.996 0 1 0-1.41-1.41L8.71 11.3a.996.996 0 0 0 0 1.41l4.59 4.59c.39.39 1.02.39 1.41 0c.38-.39.39-1.03 0-1.42z" />
-        </svg>
-      </button>
-    </div>
-
-   </div>
-  </template>
 
 </body>
-<script src="./assets/js/jquery-3.2.1.min.js"></script>
-<script src="./assets/js/select2.min.js"></script>
-<script src="./assets/bootstrap/js/bootstrap.bundle.min.js"></script>
-<script src="assets/js/app.js"></script>
+<script src="/assets/js/jquery-3.2.1.min.js"></script>
+<script src="/assets/js/select2.min.js"></script>
+<script src="/assets/bootstrap/js/bootstrap.bundle.min.js"></script>
+<script src="/assets/js/app.js"></script>
 <style>
 
 </style>
 
 <script>
 
-
-
-
-
-
   $(document).ready(function () {
-
-   
 
    
   
 
-    $('.cart-customer-address__edit-btn').click(function (e) {
-      e.preventDefault()
-      $('.edit-address-modal').fadeIn()
-
-    })
-
-    
-
-
-    $('.select-location-modal .close-btn').click(function(e) {
-      e.preventDefault()
-      $('.map-container').fadeIn()
-      $('.form-address-container').fadeOut()
-    })
-
-    $('.layout-switcher__button').click(function (e) {
-      e.preventDefault()
-      $('.layout-switcher__button').removeClass('layout-switcher__button--active')
-      $(this).addClass('layout-switcher__button--active')
-      var with_feature = $(this).attr('data-with-features')
-      var layout = $(this).attr('data-layout')
-      console.log($(this).parents('.products-view'));
-      $(this).parents('.products-view').find('.products-view__list').attr('data-layout', layout)
-      $(this).parents('.products-view').find('.products-view__list').attr('data-with-features', with_feature)
-    })
-
-
-    $('.login-modal__hide').click(function (e) {
-      e.preventDefault()
-      $(this).hide()
-      $('.login-modal__show').show()
-      $('.login-modal__password-input').attr('type', 'text')
-    })
-    $('.login-modal__show').click(function (e) {
-      e.preventDefault()
-      $(this).hide()
-      $('.login-modal__hide').show()
-      $('.login-modal__password-input').attr('type', 'password')
-    })
-
-
-    
-
-
-
+  $('.login-modal__hide').click(function (e) {
+    e.preventDefault()
+    $(this).hide()
+    $('.login-modal__show').show()
+    $('.login-modal__password-input').attr('type', 'text')
+  })
+  $('.login-modal__show').click(function (e) {
+    e.preventDefault()
+    $(this).hide()
+    $('.login-modal__hide').show()
+    $('.login-modal__password-input').attr('type', 'password')
   })
 
+})
 
 
-</script>
-
-<script>
 
 </script>
-
-<script src="./assets/js/main.js"></script>
-<script src="./assets/js/cart.js"></script>
+<script src="/assets/js/main.js"></script>
+<script src="/assets/js/cart.js"></script>
 
 </html>
