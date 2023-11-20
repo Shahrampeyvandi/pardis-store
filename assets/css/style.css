@@ -2786,9 +2786,13 @@ screen and (-ms-high-contrast:active) {
 .view-options__control label {
     margin-bottom: 0;
     margin-left: 8px;
+    color: var(--color-natural-400);
 }
 .products-list[data-layout=grid-4-full] .products-list__body {
     margin: -8px -6px;
+}
+.products-list[data-layout^=grid-] .product-card .product-card__actions {
+    padding: 0 24px 24px;
 }
 .products-list .products-list__item {
     width: calc(25% - 12px);
@@ -3508,7 +3512,13 @@ screen and (max-width:575px) and (-ms-high-contrast:active) {
  .product-card__action-btns {
     display:none;margin-left: auto;
 }
-.product-card__plus-btn,.product-card .product-card__minus-btn{
+.cart__table .product-card__action-btns {
+    display:block;margin-left: auto;
+}
+.empty-cart-wrapper {
+    display: none;
+}
+.product-card__plus-btn,.product-card__minus-btn{
     width: 25px;
     height: 25px;
     line-height: 20px;
@@ -3522,6 +3532,11 @@ screen and (max-width:575px) and (-ms-high-contrast:active) {
 border-radius: 10px;
 padding: 0px 10px 3px;    margin-left: auto;    
    
+}
+.cart__table .product-card__action-btns > div {
+    width: 95px;
+    border: 2px solid var(--color-natural-500);
+   height: 40px;
 }
  .product-card .product-card__add-counter  {
     width: 30px;
@@ -3835,7 +3850,7 @@ screen and (-ms-high-contrast:active) {
 /* end header slider ------------ */
 
 .select2 {
-    width: 160px !important;
+    width: 190px !important;
 }
 
 /* modal------------------ */
@@ -5433,6 +5448,9 @@ font-size: .9rem;
 }
 
 @media (max-width: 768px) {
+    .view-options {
+        flex-wrap: wrap;
+    }
     .products-list .products-list__item {
         width: calc(50% - 12px);
         margin: 8px 6px;
@@ -5639,6 +5657,23 @@ font-size: .9rem;
 }
 
 @media (max-width: 425px) {
+    .view-options__control {
+        display: block;
+        margin-right: 0;
+        margin-left: 24px;
+    }
+    .view-options__legend {
+        width: 100%;
+        padding-top: 12px;
+        font-size: .95rem;
+        margin-right: 0;
+    }
+    .view-options__control label {
+        margin-bottom: 12px;
+    }
+    .view-options__divider {
+        height: 8px;
+    }
     .products-list .products-list__item {
         width: 100%;
         margin: 8px 6px;

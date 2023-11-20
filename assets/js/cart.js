@@ -159,7 +159,11 @@ $(document).on('click','.product-card__addtocart',function (e) {
               image:
                 "assets/images/0589ee66d13b4677adb6e978ec162be1.webp",
             },
-            total_price: 430000
+            total_price: "43,000",
+            partial_price: "40,000",
+            shipping_price: "4000",
+            tax_price: "200",
+            discount: "1000"
           },
           success: true,
         };
@@ -178,14 +182,7 @@ $(document).on('click','.product-card__addtocart',function (e) {
 
              $(`.product-card__addtocart[data-id="${product_id}"]`).hide()
              $(`.product-card__action-btns[data-id="${product_id}"]`).show()
-            // counter.text(num + 1);
-            // if (num + 1 > 1) {
-            //   counter.siblings('.product-card__trash-btn').hide()
-            //   counter.siblings('.product-card__minus-btn').show()
-            // } else {
-            //   counter.siblings('.product-card__minus-btn').hide()
-            //   counter.siblings('.product-card__trash-btn').show()
-            // }
+            
 
         $('.header-left-icons .header-left-icons__basket').removeClass('is-empty')
         $('.header-left-icons__basket .header-left-icon__basket-count').text(productsCount()).show()
@@ -218,10 +215,15 @@ $(document).on('click', '.product-card__plus-btn', function (e) {
   var html = $(this).html()
   $(this).html($.app.ajax.Template($('#BtnSpinner').html(), {}));
   var product_id = $(this).parents('.product-card__action-btns').attr('data-id');
+  var el = $(this)
+  
   var payload = {
     product_id: product_id,
   };
-  var el = $(this)
+  if (el.parents('tr').attr('data-information') == 'basket') {
+    payload['withTotals'] = true
+  }
+  
 
   $.app.ajax.Operation({
     url: "https://jsonplaceholder.typicode.com/posts",
@@ -246,7 +248,11 @@ $(document).on('click', '.product-card__plus-btn', function (e) {
               image:
                 "assets/images/0589ee66d13b4677adb6e978ec162be1.webp",
             },
-            total_price: 430000
+            total_price: "43,000",
+            partial_price: "40,000",
+            shipping_price: "4000",
+            tax_price: "200",
+            discount: "1000"
           },
           success: true,
         };
@@ -271,6 +277,13 @@ $(document).on('click', '.product-card__plus-btn', function (e) {
           changeProductCount(product_id, num + 1)
         }
         $('.header-left-icons .header-left-icon__basket-count').text(productsCount()).show()
+
+        if ($('table.cart__totals').length) {
+          $('.partial-total').text(dummy_cart_item_response.data.partial_price)
+          $('.shipping-price').text(dummy_cart_item_response.data.shipping_price)
+          $('.total-price').text(dummy_cart_item_response.data.total_price)
+          $('.tax-price').text(dummy_cart_item_response.data.tax_price)
+        }
        
       }
     },
@@ -314,7 +327,11 @@ $(document).on('click', '.product-card__minus-btn', function (e) {
               image:
                 "assets/images/0589ee66d13b4677adb6e978ec162be1.webp",
             },
-            total_price: 430000
+            total_price: "43,000",
+            partial_price: "40,000",
+            shipping_price: "4000",
+            tax_price: "200",
+            discount: "1000"
           },
           success: true,
         };
@@ -331,6 +348,13 @@ $(document).on('click', '.product-card__minus-btn', function (e) {
             $(v).find('.product-card__minus-btn').hide()
           }
         });
+        if ($('table.cart__totals').length) {
+          $('.partial-total').text(dummy_cart_item_response.data.partial_price)
+          $('.shipping-price').text(dummy_cart_item_response.data.shipping_price)
+          $('.total-price').text(dummy_cart_item_response.data.total_price)
+          $('.tax-price').text(dummy_cart_item_response.data.tax_price)
+        }
+
         changeProductCount(product_id, num - 1)
         $('.header-left-icons .header-left-icon__basket-count').text(productsCount()).show()
        
@@ -376,7 +400,11 @@ $(document).on('click', '.product-info .product-card__trash-btn', function (e) {
               image:
                 "assets/images/0589ee66d13b4677adb6e978ec162be1.webp",
             },
-            total_price: 430000
+            total_price: "43,000",
+            partial_price: "40,000",
+            shipping_price: "4000",
+            tax_price: "200",
+            discount: "1000"
           },
           success: true,
         };
@@ -441,7 +469,11 @@ $(document).on('click', '.product-card .product-card__trash-btn', function (e) {
               image:
                 "assets/images/0589ee66d13b4677adb6e978ec162be1.webp",
             },
-            total_price: 430000
+            total_price: "43,000",
+            partial_price: "40,000",
+            shipping_price: "4000",
+            tax_price: "200",
+            discount: "1000"
           },
           success: true,
         };
@@ -506,14 +538,30 @@ $(document).on('click', '.header-basket-list .product-card__trash-btn', function
               image:
                 "assets/images/0589ee66d13b4677adb6e978ec162be1.webp",
             },
-            total_price: 430000
+            total_price: "43,000",
+            partial_price: "40,000",
+            shipping_price: "4000",
+            tax_price: "200",
+            discount: "1000"
           },
           success: true,
         };
 
         el.parents(".js-mini-cart-item").remove();
-
         
+        if ($('table.cart__table').length) {
+          $(`table.cart__table tr[data-id="${product_id}"]`).remove()
+        }
+        if ($('.cart-table__body').length && $('.cart-table__body').children().length == 0) {
+          $('.cart-wrapper').hide()
+          $('.empty-cart-wrapper').show()
+        }
+        if ($('table.cart__totals').length) {
+          $('.partial-total').text(dummy_cart_item_response.data.partial_price)
+          $('.shipping-price').text(dummy_cart_item_response.data.shipping_price)
+          $('.total-price').text(dummy_cart_item_response.data.total_price)
+          $('.tax-price').text(dummy_cart_item_response.data.tax_price)
+        }
 
         if (productsCount() == 0) {
           $(`.product-card__action-btns[data-id='${product_id}']`).hide()
@@ -533,3 +581,153 @@ $(document).on('click', '.header-basket-list .product-card__trash-btn', function
 
 })
 
+
+$(document).on('click', '.cart__table .product-card__trash-btn', function (e) {
+  e.preventDefault()
+  // shoppingCart.removeItemFromCart()
+  if ($(this).hasClass('is-loading')) return
+  $(this).addClass('is-loading')
+  $(this).attr('disabled',true)
+  var product_id = $(this).parents('.product-card__action-btns').attr('data-id');
+  var html = $(this).html()
+  var payload = {
+    product_id: 1,
+  };
+  var el = $(this)
+  el.html($.app.ajax.Template($('#BtnSpinner').html(), {}));
+
+  $.app.ajax.Operation({
+    url: "https://jsonplaceholder.typicode.com/posts",
+    data: payload,
+    callback: function (ResData) {
+      el.removeClass('is-loading')
+      el.removeAttr('disabled')
+
+      if (ResData.type == "success") {
+        var dummy_cart_item_response = {
+          data: {
+            cart_id: 1,
+            product: {
+              id: 123,
+              title: "عنوان محصول",
+              price: {
+                price: "100000",
+                discount_price: "90000",
+              },
+              image:
+                "assets/images/0589ee66d13b4677adb6e978ec162be1.webp",
+            },
+            total_price: "43,000",
+            partial_price: "40,000",
+            shipping_price: "4000",
+            tax_price: "200",
+            discount: "1000"
+          },
+          success: true,
+        };
+
+        el.parents("tr").remove();
+
+        
+        if ($(".header-basket-list").find(`[data-id='${product_id}']`).length) {
+          $(".header-basket-list").find(`[data-id='${product_id}']`).remove()
+          if (productsCount() == 0) $('.header-left-icons .header-left-icon__basket-count').text(productsCount()).hide()
+        }
+
+        if ($('.cart-table__body').length && $('.cart-table__body').children().length == 0) {
+          $('.cart-wrapper').hide()
+          $('.empty-cart-wrapper').show()
+        }
+       
+
+        if (productsCount() == 0) {
+          $('.header-left-icons .header-left-icons__basket').addClass('is-empty')
+          $(".shopping-cart").removeClass("active");
+          $('.header-left-icons .header-left-icon__basket-count').text(productsCount())
+          $('.header-left-icons .header-left-icon__basket-count').hide()
+          $('.header-cart-footer__details').hide()
+          $('.header-basket-list__empty').show()
+          $('.shopping-cart__empty').show()
+        }
+        
+
+      }
+    },
+  });
+
+})
+
+
+$('.cart-table__column--remove button').click(function(e) {
+  e.preventDefault()
+  el = $(this)
+  el.html($.app.ajax.Template($('#BtnSpinner').html(), {}));
+  var product_id = $(this).attr('data-id');
+
+  var payload = {
+    product_id: product_id,
+  };
+  if (el.parents('tr').attr('data-information') == 'basket') {
+    payload['withTotals'] = true
+  }
+  $.app.ajax.Operation({
+    url: "https://jsonplaceholder.typicode.com/posts",
+    data: payload,
+    callback: function (ResData) {
+      el.removeClass('is-loading')
+      el.removeAttr('disabled')
+
+      if (ResData.type == "success") {
+        var dummy_cart_item_response = {
+          data: {
+            cart_id: 1,
+            product: {
+              id: 123,
+              title: "عنوان محصول",
+              price: {
+                price: "100000",
+                discount_price: "90000",
+              },
+              image:
+                "assets/images/0589ee66d13b4677adb6e978ec162be1.webp",
+            },
+            total_price: "43,000",
+            partial_price: "40,000",
+            shipping_price: "4000",
+            tax_price: "200",
+            discount: "1000"
+          },
+          success: true,
+        };
+
+        el.parents("tr").remove();
+
+        
+        if ($(".header-basket-list").find(`[data-id='${product_id}']`).length) {
+          $(".header-basket-list").find(`[data-id='${product_id}']`).remove()
+          if (productsCount() == 0) $('.header-left-icons .header-left-icon__basket-count').text(productsCount()).hide()
+        }
+
+        if ($('table.cart__totals').length) {
+          $('.partial-total').text(dummy_cart_item_response.data.partial_price)
+          $('.shipping-price').text(dummy_cart_item_response.data.shipping_price)
+          $('.total-price').text(dummy_cart_item_response.data.total_price)
+          $('.tax-price').text(dummy_cart_item_response.data.tax_price)
+        }
+
+        if (productsCount() == 0) {
+          $('.header-left-icons .header-left-icons__basket').addClass('is-empty')
+          $(".shopping-cart").removeClass("active");
+          $('.header-left-icons .header-left-icon__basket-count').text(productsCount())
+          $('.header-left-icons .header-left-icon__basket-count').hide()
+          $('.header-cart-footer__details').hide()
+          $('.header-basket-list__empty').show()
+          $('.shopping-cart__empty').show()
+        }
+
+      }
+    },
+  });
+ 
+
+})

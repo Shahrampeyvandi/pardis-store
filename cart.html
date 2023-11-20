@@ -138,7 +138,7 @@
   <!-- start::header -->
   <header>
     <div class="container-fluid px-4">
-      <div class="row py-4">
+      <div class="row pt-4 pb-2">
         <div class="col-12 col-md-8 col-xl-9">
           <div class="header-right">
             <div class="row justify-content-between">
@@ -195,58 +195,7 @@
                   </svg>
                   <span class="header-left-icon__basket-count" style="display: none;">0</span>
                 </a>
-                <div class="shopping-cart">
-                  <form action="#" method="post">
-                    <div class="shopping-cart__header">
-                      <div class="shopping-cart__count">سبد خرید شما</div>
-                      <button class="shopping-cart__close">
-                        <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24">
-                          <path fill="currentColor"
-                            d="M6.4 19L5 17.6l5.6-5.6L5 6.4L6.4 5l5.6 5.6L17.6 5L19 6.4L13.4 12l5.6 5.6l-1.4 1.4l-5.6-5.6L6.4 19Z" />
-                        </svg>
-                      </button>
-                    </div>
-                    <ul class="header-basket-list">
-
-
-                    </ul>
-                    <div class="header-basket-list__empty">
-                      <div class="header-basket-list__empty-empty-cart-icon">
-                        <img src="assets/images/cart/cart-empty.png" style="width: 200px;" alt="">
-                      </div>
-                      <div class="header-basket-list__empty-title">سبد خرید شما خالی است!</div>
-
-                    </div>
-
-                    <div class="shopping-cart__footer">
-                      <div class="shopping-cart__empty">
-                        <div class="d-grid">
-                          <button class="btn btn-danger mb-3">
-                            ثبت سفارش
-                          </button>
-                        </div>
-                      </div>
-                      <div class="header-cart-footer__details" style="display: none;">
-                        <div class="shopping-cart__total">
-                          <span class="shopping-cart__total-text">مبلغ قابل پرداخت</span>
-                          <span class="shopping-cart__total-amount">
-                            <span class="shopping-cart__total-amount-number">
-                              6,200,000</span>
-                            <span> تومان</span>
-                          </span>
-                        </div>
-                        <div>
-                          <button type="submit" class="shopping-cart__submit btn btn-primary">
-                            ادامه خرید
-                          </button>
-                          <a href="cart.html"  class="shopping-cart__submit btn btn-outline-primary">
-                            مشاهده سبد خرید
-                          </a>
-                        </div>
-                      </div>
-                    </div>
-                  </form>
-                </div>
+              
               </div>
 
               <div class="header-left-icons me-4">
@@ -1973,7 +1922,151 @@
   </header>
   <!-- end::header -->
 
+  <div class="shopping-cart">
+    <form action="#" method="post">
+      <div class="shopping-cart__header">
+        <div class="shopping-cart__count">سبد خرید شما</div>
+        <button class="shopping-cart__close">
+          <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24">
+            <path fill="currentColor"
+              d="M6.4 19L5 17.6l5.6-5.6L5 6.4L6.4 5l5.6 5.6L17.6 5L19 6.4L13.4 12l5.6 5.6l-1.4 1.4l-5.6-5.6L6.4 19Z" />
+          </svg>
+        </button>
+      </div>
+      <ul class="header-basket-list">
+        <li class="js-mini-cart-item" data-id="1">
+          <div class="header-basket-list-item">
+            <a href="#" class="header-basket-list-item-image">
+              <img class="img-fluid" src="/assets/images/chocolate.webp" />
+            </a>
+            <div class="header-basket-list-item-content">
+              <a href="#" class="header-basket-list-item-title line-camp2">شکلات تلخ هشتاد درصد برند ...</a>
+              <div class="d-flex align-items-center">
+                <div class="flex-grow-1">
+    
+    
+                  <div class="header-basket-list-item-footer">
+    
+                    <span class="header-basket-list-item-price">3,630,000 تومان</span>
+                  </div>
+                </div>
+                <div class="product-card__action-btns" data-id="1" style="display: block;font-size: 1rem;">
+                  <div style="width: 100px;height: 35px; border:1px solid #f37a7a;">
+                    <button class="product-card__plus-btn">
+                      <svg xmlns="http://www.w3.org/2000/svg" width="20" height="20" viewBox="0 0 24 24">
+                        <path fill="currentColor" d="M19 13h-6v6h-2v-6H5v-2h6V5h2v6h6v2z" />
+                      </svg>
+                    </button>
+    
+                    <div class="product-card__add-counter">
+                      1
+                      <input type="hidden" class="product-count-input" name="product_1" value="1">
+    
+                    </div>
+                    <button class="product-card__trash-btn">
+                      <svg xmlns="http://www.w3.org/2000/svg" width="20" height="20" viewBox="0 0 24 24">
+                        <path fill="#f25f5f"
+                          d="M7 21q-.825 0-1.413-.588T5 19V6H4V4h5V3h6v1h5v2h-1v13q0 .825-.588 1.413T17 21H7ZM17 6H7v13h10V6ZM9 17h2V8H9v9Zm4 0h2V8h-2v9ZM7 6v13V6Z" />
+                      </svg>
+                    </button>
+                    <button class="product-card__minus-btn" style="display: none;">
+                      <svg xmlns="http://www.w3.org/2000/svg" width="20" height="20" viewBox="0 0 24 24">
+                        <path fill="currentColor" d="M19 12.998H5v-2h14z" />
+                      </svg>
+                    </button>
+                  </div>
+                </div>
+    
+              </div>
+            </div>
+          </div>
+        </li>
+        <li class="js-mini-cart-item" data-id="2">
+          <div class="header-basket-list-item">
+            <a href="#" class="header-basket-list-item-image">
+              <img class="img-fluid" src="/assets/images/chocolate.webp" />
+            </a>
+            <div class="header-basket-list-item-content">
+              <a href="#" class="header-basket-list-item-title line-camp2">شکلات تلخ هشتاد درصد برند ...</a>
+              <div class="d-flex align-items-center">
+                <div class="flex-grow-1">
+    
+    
+                  <div class="header-basket-list-item-footer">
+    
+                    <span class="header-basket-list-item-price">3,630,000 تومان</span>
+                  </div>
+                </div>
+                <div class="product-card__action-btns" data-id="2" style="display: block;font-size: 1rem;">
+                  <div style="width: 100px;height: 35px; border:1px solid #f37a7a;">
+                    <button class="product-card__plus-btn">
+                      <svg xmlns="http://www.w3.org/2000/svg" width="20" height="20" viewBox="0 0 24 24">
+                        <path fill="currentColor" d="M19 13h-6v6h-2v-6H5v-2h6V5h2v6h6v2z" />
+                      </svg>
+                    </button>
+    
+                    <div class="product-card__add-counter">
+                      2
+                      <input type="hidden" class="product-count-input" name="product_1" value="1">
+    
+                    </div>
+                    <button class="product-card__trash-btn" style="display: none;">
+                      <svg xmlns="http://www.w3.org/2000/svg" width="20" height="20" viewBox="0 0 24 24">
+                        <path fill="#f25f5f"
+                          d="M7 21q-.825 0-1.413-.588T5 19V6H4V4h5V3h6v1h5v2h-1v13q0 .825-.588 1.413T17 21H7ZM17 6H7v13h10V6ZM9 17h2V8H9v9Zm4 0h2V8h-2v9ZM7 6v13V6Z" />
+                      </svg>
+                    </button>
+                    <button class="product-card__minus-btn" >
+                      <svg xmlns="http://www.w3.org/2000/svg" width="20" height="20" viewBox="0 0 24 24">
+                        <path fill="currentColor" d="M19 12.998H5v-2h14z" />
+                      </svg>
+                    </button>
+                  </div>
+                </div>
+    
+              </div>
+            </div>
+          </div>
+        </li>
 
+      </ul>
+      <div class="header-basket-list__empty" style="display: none;">
+        <div class="header-basket-list__empty-empty-cart-icon">
+          <img src="assets/images/cart/cart-empty.png" style="width: 200px;" alt="">
+        </div>
+        <div class="header-basket-list__empty-title">سبد خرید شما خالی است!</div>
+
+      </div>
+
+      <div class="shopping-cart__footer">
+        <div class="shopping-cart__empty">
+          <div class="d-grid">
+            <button class="btn btn-danger mb-3">
+              ثبت سفارش
+            </button>
+          </div>
+        </div>
+        <div class="header-cart-footer__details" style="display: none;">
+          <div class="shopping-cart__total">
+            <span class="shopping-cart__total-text">مبلغ قابل پرداخت</span>
+            <span class="shopping-cart__total-amount">
+              <span class="shopping-cart__total-amount-number">
+                6,200,000</span>
+              <span> تومان</span>
+            </span>
+          </div>
+          <div>
+            <button type="submit" class="shopping-cart__submit btn btn-primary">
+              ادامه خرید
+            </button>
+            <a href="cart.html"  class="shopping-cart__submit btn btn-outline-primary">
+              مشاهده سبد خرید
+            </a>
+          </div>
+        </div>
+      </div>
+    </form>
+  </div>
 
 
   <!-- start::content section -->
@@ -2013,7 +2106,8 @@
               </div>
         </div>
     </div>
-    <div class="row gy-5 position-relative">
+    
+    <div class="row gy-5 position-relative cart-wrapper">
         <div class="col-12 col-md-8">
           <div style="overflow-x: auto;">
             <table class="cart__table cart-table">
@@ -2023,11 +2117,13 @@
                         <th class="cart-table__column cart-table__column--product">محصول</th>
                         <th class="cart-table__column cart-table__column--price">قیمت</th>
                         <th class="cart-table__column cart-table__column--quantity">تعداد</th>
+                        <!-- <th class="cart-table__column cart-table__column--price">مجموع</th> -->
+
                         <th class="cart-table__column cart-table__column--remove"></th>
                     </tr>
                 </thead>
                 <tbody class="cart-table__body">
-                    <tr class="cart-table__row">
+                    <tr class="cart-table__row" data-information="basket" data-id="1">
                         <td class="cart-table__column cart-table__column--image">
                             <a href=""><img src="assets/images/chocolate.webp" alt=""></a>
                         </td>
@@ -2039,183 +2135,83 @@
                         </td>
                         <td class="cart-table__column cart-table__column--price" data-title="قیمت">3,630,000 تومان</td>
                         <td class="cart-table__column cart-table__column--quantity" data-title="تعداد">
-                            <div class="input-number">
-                                <input class="form-control input-number__input" type="number" min="1" value="2">
-                                <div class="input-number__add"></div>
-                                <div class="input-number__sub"></div>
+                           
+                            <div class="product-card__action-btns" data-id="1"  style="width: 100%;">
+                              <div  >
+                                <button class="product-card__plus-btn">
+                                  <svg xmlns="http://www.w3.org/2000/svg" width="20" height="20" viewBox="0 0 24 24">
+                                    <path fill="currentColor" d="M19 13h-6v6h-2v-6H5v-2h6V5h2v6h6v2z" />
+                                  </svg>
+                                </button>
+    
+                                <div class="product-card__add-counter">1</div>
+                                <button class="product-card__trash-btn">
+                                  <svg xmlns="http://www.w3.org/2000/svg" width="20" height="20" viewBox="0 0 24 24">
+                                    <path fill="#f25f5f"
+                                      d="M7 21q-.825 0-1.413-.588T5 19V6H4V4h5V3h6v1h5v2h-1v13q0 .825-.588 1.413T17 21H7ZM17 6H7v13h10V6ZM9 17h2V8H9v9Zm4 0h2V8h-2v9ZM7 6v13V6Z" />
+                                  </svg>
+                                </button>
+                                <button class="product-card__minus-btn" style="display: none;">
+                                  <svg xmlns="http://www.w3.org/2000/svg" width="20" height="20" viewBox="0 0 24 24">
+                                    <path fill="currentColor" d="M19 12.998H5v-2h14z" />
+                                  </svg>
+                                </button>
+                              </div>
                             </div>
                         </td>
+                        <!-- <td class="cart-table__column cart-table__column--price" data-title="قیمت">3,630,000 تومان</td> -->
                         
                         <td class="cart-table__column cart-table__column--remove">
-                            <button type="button" class="btn  btn-sm btn-svg-icon">
+                            <button type="button" class="btn  btn-sm btn-svg-icon" data-id="1">
                                 <svg xmlns="http://www.w3.org/2000/svg" width="32" height="32" viewBox="0 0 24 24"><path fill="currentColor" d="M19 6.41L17.59 5L12 10.59L6.41 5L5 6.41L10.59 12L5 17.59L6.41 19L12 13.41L17.59 19L19 17.59L13.41 12L19 6.41z"/></svg>
                             </button>
                         </td>
                     </tr>
-                    <tr class="cart-table__row">
-                        <td class="cart-table__column cart-table__column--image">
-                            <a href=""><img src="assets/images/chocolate.webp" alt=""></a>
-                        </td>
-                        <td class="cart-table__column cart-table__column--product"><a href="" class="cart-table__product-name">شکلات تلخ هشتاد درصد برند</a></td>
-                        <td class="cart-table__column cart-table__column--price" data-title="قیمت">3,630,000 تومان</td>
-                        <td class="cart-table__column cart-table__column--quantity" data-title="تعداد">
-                            <div class="input-number">
-                                <input class="form-control input-number__input" type="number" min="1" value="1">
-                                <div class="input-number__add"></div>
-                                <div class="input-number__sub"></div>
+                    <tr class="cart-table__row" data-information="basket" data-id="2">
+                      <td class="cart-table__column cart-table__column--image">
+                          <a href=""><img src="assets/images/chocolate.webp" alt=""></a>
+                      </td>
+                      <td class="cart-table__column cart-table__column--product"><a href="" class="cart-table__product-name">شکلات تلخ هشتاد درصد برند ...</a>
+                          <ul class="cart-table__options">
+                              <li>رنگ: زرد</li>
+                              <li>جنس: آلومینیوم</li>
+                          </ul>
+                      </td>
+                      <td class="cart-table__column cart-table__column--price" data-title="قیمت">3,630,000 تومان</td>
+                      <td class="cart-table__column cart-table__column--quantity" data-title="تعداد">
+                         
+                          <div class="product-card__action-btns" data-id="2"  style="width: 100%;">
+                            <div  >
+                              <button class="product-card__plus-btn">
+                                <svg xmlns="http://www.w3.org/2000/svg" width="20" height="20" viewBox="0 0 24 24">
+                                  <path fill="currentColor" d="M19 13h-6v6h-2v-6H5v-2h6V5h2v6h6v2z" />
+                                </svg>
+                              </button>
+  
+                              <div class="product-card__add-counter">2</div>
+                              <button class="product-card__trash-btn" style="display: none;">
+                                <svg xmlns="http://www.w3.org/2000/svg" width="20" height="20" viewBox="0 0 24 24">
+                                  <path fill="#f25f5f"
+                                    d="M7 21q-.825 0-1.413-.588T5 19V6H4V4h5V3h6v1h5v2h-1v13q0 .825-.588 1.413T17 21H7ZM17 6H7v13h10V6ZM9 17h2V8H9v9Zm4 0h2V8h-2v9ZM7 6v13V6Z" />
+                                </svg>
+                              </button>
+                              <button class="product-card__minus-btn" >
+                                <svg xmlns="http://www.w3.org/2000/svg" width="20" height="20" viewBox="0 0 24 24">
+                                  <path fill="currentColor" d="M19 12.998H5v-2h14z" />
+                                </svg>
+                              </button>
                             </div>
-                        </td>
-                        
-                        <td class="cart-table__column cart-table__column--remove">
-                            <button type="button" class="btn  btn-sm btn-svg-icon">
-                                <svg xmlns="http://www.w3.org/2000/svg" width="32" height="32" viewBox="0 0 24 24"><path fill="currentColor" d="M19 6.41L17.59 5L12 10.59L6.41 5L5 6.41L10.59 12L5 17.59L6.41 19L12 13.41L17.59 19L19 17.59L13.41 12L19 6.41z"/></svg>
-                            </button>
-                        </td>
-                    </tr>
-                    <tr class="cart-table__row">
-                        <td class="cart-table__column cart-table__column--image">
-                            <a href=""><img src="assets/images/chocolate.webp" alt=""></a>
-                        </td>
-                        <td class="cart-table__column cart-table__column--product"><a href="" class="cart-table__product-name">شکلات تلخ هشتاد درصد برند</a>
-                            <ul class="cart-table__options">
-                                <li>رنگ: قرمز</li>
-                            </ul>
-                        </td>
-                        <td class="cart-table__column cart-table__column--price" data-title="قیمت">3,630,000  تومان</td>
-                        <td class="cart-table__column cart-table__column--quantity" data-title="تعداد">
-                            <div class="input-number">
-                                <input class="form-control input-number__input" type="number" min="1" value="3">
-                                <div class="input-number__add"></div>
-                                <div class="input-number__sub"></div>
-                            </div>
-                        </td>
-                        
-                        <td class="cart-table__column cart-table__column--remove">
-                            <button type="button" class="btn  btn-sm btn-svg-icon">
-                                <svg xmlns="http://www.w3.org/2000/svg" width="32" height="32" viewBox="0 0 24 24"><path fill="currentColor" d="M19 6.41L17.59 5L12 10.59L6.41 5L5 6.41L10.59 12L5 17.59L6.41 19L12 13.41L17.59 19L19 17.59L13.41 12L19 6.41z"/></svg>
-                            </button>
-                        </td>
-                    </tr>
-                    <tr class="cart-table__row">
-                        <td class="cart-table__column cart-table__column--image">
-                            <a href=""><img src="assets/images/chocolate.webp" alt=""></a>
-                        </td>
-                        <td class="cart-table__column cart-table__column--product"><a href="" class="cart-table__product-name">شکلات تلخ هشتاد درصد برند</a>
-                            <ul class="cart-table__options">
-                                <li>رنگ: قرمز</li>
-                            </ul>
-                        </td>
-                        <td class="cart-table__column cart-table__column--price" data-title="قیمت">3,630,000  تومان</td>
-                        <td class="cart-table__column cart-table__column--quantity" data-title="تعداد">
-                            <div class="input-number">
-                                <input class="form-control input-number__input" type="number" min="1" value="3">
-                                <div class="input-number__add"></div>
-                                <div class="input-number__sub"></div>
-                            </div>
-                        </td>
-                        
-                        <td class="cart-table__column cart-table__column--remove">
-                            <button type="button" class="btn  btn-sm btn-svg-icon">
-                                <svg xmlns="http://www.w3.org/2000/svg" width="32" height="32" viewBox="0 0 24 24"><path fill="currentColor" d="M19 6.41L17.59 5L12 10.59L6.41 5L5 6.41L10.59 12L5 17.59L6.41 19L12 13.41L17.59 19L19 17.59L13.41 12L19 6.41z"/></svg>
-                            </button>
-                        </td>
-                    </tr>
-                    <tr class="cart-table__row">
-                        <td class="cart-table__column cart-table__column--image">
-                            <a href=""><img src="assets/images/chocolate.webp" alt=""></a>
-                        </td>
-                        <td class="cart-table__column cart-table__column--product"><a href="" class="cart-table__product-name">شکلات تلخ هشتاد درصد برند</a>
-                            <ul class="cart-table__options">
-                                <li>رنگ: قرمز</li>
-                            </ul>
-                        </td>
-                        <td class="cart-table__column cart-table__column--price" data-title="قیمت">3,630,000  تومان</td>
-                        <td class="cart-table__column cart-table__column--quantity" data-title="تعداد">
-                            <div class="input-number">
-                                <input class="form-control input-number__input" type="number" min="1" value="3">
-                                <div class="input-number__add"></div>
-                                <div class="input-number__sub"></div>
-                            </div>
-                        </td>
-                        
-                        <td class="cart-table__column cart-table__column--remove">
-                            <button type="button" class="btn  btn-sm btn-svg-icon">
-                                <svg xmlns="http://www.w3.org/2000/svg" width="32" height="32" viewBox="0 0 24 24"><path fill="currentColor" d="M19 6.41L17.59 5L12 10.59L6.41 5L5 6.41L10.59 12L5 17.59L6.41 19L12 13.41L17.59 19L19 17.59L13.41 12L19 6.41z"/></svg>
-                            </button>
-                        </td>
-                    </tr>
-                    <tr class="cart-table__row">
-                        <td class="cart-table__column cart-table__column--image">
-                            <a href=""><img src="assets/images/chocolate.webp" alt=""></a>
-                        </td>
-                        <td class="cart-table__column cart-table__column--product"><a href="" class="cart-table__product-name">شکلات تلخ هشتاد درصد برند</a>
-                            <ul class="cart-table__options">
-                                <li>رنگ: قرمز</li>
-                            </ul>
-                        </td>
-                        <td class="cart-table__column cart-table__column--price" data-title="قیمت">3,630,000  تومان</td>
-                        <td class="cart-table__column cart-table__column--quantity" data-title="تعداد">
-                            <div class="input-number">
-                                <input class="form-control input-number__input" type="number" min="1" value="3">
-                                <div class="input-number__add"></div>
-                                <div class="input-number__sub"></div>
-                            </div>
-                        </td>
-                        
-                        <td class="cart-table__column cart-table__column--remove">
-                            <button type="button" class="btn  btn-sm btn-svg-icon">
-                                <svg xmlns="http://www.w3.org/2000/svg" width="32" height="32" viewBox="0 0 24 24"><path fill="currentColor" d="M19 6.41L17.59 5L12 10.59L6.41 5L5 6.41L10.59 12L5 17.59L6.41 19L12 13.41L17.59 19L19 17.59L13.41 12L19 6.41z"/></svg>
-                            </button>
-                        </td>
-                    </tr>
-                    <tr class="cart-table__row">
-                        <td class="cart-table__column cart-table__column--image">
-                            <a href=""><img src="assets/images/chocolate.webp" alt=""></a>
-                        </td>
-                        <td class="cart-table__column cart-table__column--product"><a href="" class="cart-table__product-name">شکلات تلخ هشتاد درصد برند</a>
-                            <ul class="cart-table__options">
-                                <li>رنگ: قرمز</li>
-                            </ul>
-                        </td>
-                        <td class="cart-table__column cart-table__column--price" data-title="قیمت">3,630,000  تومان</td>
-                        <td class="cart-table__column cart-table__column--quantity" data-title="تعداد">
-                            <div class="input-number">
-                                <input class="form-control input-number__input" type="number" min="1" value="3">
-                                <div class="input-number__add"></div>
-                                <div class="input-number__sub"></div>
-                            </div>
-                        </td>
-                        
-                        <td class="cart-table__column cart-table__column--remove">
-                            <button type="button" class="btn  btn-sm btn-svg-icon">
-                                <svg xmlns="http://www.w3.org/2000/svg" width="32" height="32" viewBox="0 0 24 24"><path fill="currentColor" d="M19 6.41L17.59 5L12 10.59L6.41 5L5 6.41L10.59 12L5 17.59L6.41 19L12 13.41L17.59 19L19 17.59L13.41 12L19 6.41z"/></svg>
-                            </button>
-                        </td>
-                    </tr>
-                    <tr class="cart-table__row">
-                        <td class="cart-table__column cart-table__column--image">
-                            <a href=""><img src="assets/images/chocolate.webp" alt=""></a>
-                        </td>
-                        <td class="cart-table__column cart-table__column--product"><a href="" class="cart-table__product-name">شکلات تلخ هشتاد درصد برند</a>
-                            <ul class="cart-table__options">
-                                <li>رنگ: قرمز</li>
-                            </ul>
-                        </td>
-                        <td class="cart-table__column cart-table__column--price" data-title="قیمت">3,630,000  تومان</td>
-                        <td class="cart-table__column cart-table__column--quantity" data-title="تعداد">
-                            <div class="input-number">
-                                <input class="form-control input-number__input" type="number" min="1" value="3">
-                                <div class="input-number__add"></div>
-                                <div class="input-number__sub"></div>
-                            </div>
-                        </td>
-                        
-                        <td class="cart-table__column cart-table__column--remove">
-                            <button type="button" class="btn  btn-sm btn-svg-icon">
-                                <svg xmlns="http://www.w3.org/2000/svg" width="32" height="32" viewBox="0 0 24 24"><path fill="currentColor" d="M19 6.41L17.59 5L12 10.59L6.41 5L5 6.41L10.59 12L5 17.59L6.41 19L12 13.41L17.59 19L19 17.59L13.41 12L19 6.41z"/></svg>
-                            </button>
-                        </td>
-                    </tr>
+                          </div>
+                      </td>
+                      <!-- <td class="cart-table__column cart-table__column--price" data-title="قیمت">3,630,000 تومان</td> -->
+                      
+                      <td class="cart-table__column cart-table__column--remove">
+                          <button type="button" class="btn  btn-sm btn-svg-icon" data-id="2">
+                              <svg xmlns="http://www.w3.org/2000/svg" width="32" height="32" viewBox="0 0 24 24"><path fill="currentColor" d="M19 6.41L17.59 5L12 10.59L6.41 5L5 6.41L10.59 12L5 17.59L6.41 19L12 13.41L17.59 19L19 17.59L13.41 12L19 6.41z"/></svg>
+                          </button>
+                      </td>
+                  </tr>
+                   
                 </tbody>
             </table>
           </div>
@@ -2247,24 +2243,26 @@
                                 <thead class="cart__totals-header">
                                     <tr>
                                         <th>جمع جزء</th>
-                                        <td>5,877,000 تومان</td>
+                                        <td><span class="partial-total">5,800</span> تومان</td>
                                     </tr>
                                 </thead>
                                 <tbody class="cart__totals-body">
                                     <tr>
                                         <th>حمل و نقل</th>
-                                        <td>25,000 تومان
+                                        <td>
+                                          <span class="shipping-price">25,000</span>
+                                          تومان
                                         </td>
                                     </tr>
                                     <tr>
                                         <th>مالیات</th>
-                                        <td>0 تومان</td>
+                                        <td ><span class="tax-price">25,000</span> تومان</td>
                                     </tr>
                                 </tbody>
                                 <tfoot class="cart__totals-footer">
                                     <tr>
                                         <th>جمع کل</th>
-                                        <td>5,902,000 تومان</td>
+                                        <td class=""><span class="total-price">42,000</span> تومان</td>
                                     </tr>
                                 </tfoot>
                             </table>
@@ -2277,8 +2275,18 @@
             </div>
         </div>
     </div>
+    <div class="empty-cart-wrapper">
+      <div class="header-basket-list__empty">
+        <div class="header-basket-list__empty-empty-cart-icon">
+          <img src="assets/images/cart/cart-empty.png" style="width: 200px;" alt="">
+        </div>
+        <div class="header-basket-list__empty-title">سبد خرید شما خالی است!</div>
+
+      </div>
+    </div>
 
   </div>
+
   <!-- end::content section -->
 
 

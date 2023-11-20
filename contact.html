@@ -2103,7 +2103,43 @@
     </div>
   </div>
   <!-- end::content section -->
+<style>
+  .text-marker > div {
+    width: 310px;
+    background: white;
+    padding: 10px;
+    border-radius: 5px;
+    box-shadow: 1px 1px;
+    position: absolute;
+    -webkit-box-shadow: 0px 5px 17px 3px rgb(53 53 54 / 48%);
+    -moz-box-shadow: 0px 5px 17px 3px rgb(53 53 54 / 48%);
+    box-shadow: 0px 5px 17px 3px rgb(53 53 54 / 48%);
+    bottom: 54px;
+    left: -150px;
+    font-family: iranyekan;
+  }
+  .text-marker > div .title {
+    font-size: 1rem;
+    margin-bottom: .6rem;
+    text-align: center;
 
+    color: var(--color-red-700);
+  }
+  .text-marker > div .description {
+    font-size: .8rem;
+    margin-bottom: .3rem;
+
+    color: var(--color-natural-600);
+  }
+  .text-marker > div .phone {
+    font-size: .8rem;
+    margin-bottom: .3rem;
+    font-weight: bold;
+
+
+    color: var(--color-natural-700);
+  }
+</style>
 
   <div class="container">
     <div class="row">
@@ -2115,16 +2151,29 @@
   <script>
     const map = L.map('map', {
   center: [35.762050, 51.532265],
-  zoom: 15,
+  zoom: 10,
   zoomControl:false,
-  minZoom: 13,
+  minZoom: 10,
     maxZoom:15,
 });
 
 L.tileLayer('https://{s}.tile.openstreetmap.org/{z}/{x}/{y}.png', { attribution: '&copy; <a href="https://www.openstreetmap.org/copyright">OpenStreetMap</a> contributors' }).addTo(map);
 
 
-const marker1 = L.marker([-37.699450, 176.279420]).addTo(map);
+// const marker1 = L.marker([35.762050, 51.532265]).addTo(map);
+var coords = L.latLng(35.762050, 51.532265);
+L.marker(coords).addTo(map);
+L.marker(coords, {
+  icon: L.divIcon({
+      html: `<div>
+        <div class="title">پارادایس</div>
+        <div class="phone">تلفن : 0912 111 11 11 - 021 222 22</div>
+        <div class="description">نشانی :  تهران شهرک امید تهران شهرک امید تهران شهرک امید ...</div>
+        
+        </div>`,
+      className: 'text-marker',
+    })
+}).addTo(map);
   </script>
 
   <!-- start::footer -->
