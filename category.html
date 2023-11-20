@@ -153,12 +153,12 @@
 
   <!-- start::header -->
   <header>
-    <div class="container-fluid px-4">
-      <div class="row py-4">
+    <div class="container-fluid px-4 px-md-5" style="max-width: 1400px;">
+      <div class="row py-3 g-5 g-md-3">
         <div class="col-12 col-md-8 col-xl-9">
           <div class="header-right">
             <div class="row justify-content-between">
-              <div class="col-lg-2 col-md-4 col-12 pull-righ">
+              <div class="col-lg-2 col-md-4 col-12 pull-righ d-none d-md-block">
                 <div class="logo-wrapper">
                   <a href="#" class="logo">
                     <img src="assets/images/logo.webp" alt="" />
@@ -172,6 +172,7 @@
                     <input type="text" class="header-search-input" placeholder="جستجو ..." />
 
                     <select name="" id="" class="js-example-basic-single select2" style="height: 45px">
+                      <option value="">انتخاب کنید</option>
                       <option value="1">کالای دیجیتال</option>
                       <option value="1">آرایشی بهداشتی و سلامت</option>
                       <option value="1">مد و پوشاک</option>
@@ -200,7 +201,7 @@
             </div>
           </div>
         </div>
-        <div class="col-12 col-md-4 col-xl-3">
+        <div class="col-12 col-md-4 col-xl-3 d-none d-md-block">
           <div class="header-left">
             <div class="d-flex flex-row-reverse mt-md-1">
               <div class="header-left-icons">
@@ -211,61 +212,10 @@
                   </svg>
                   <span class="header-left-icon__basket-count" style="display: none;">0</span>
                 </a>
-                <div class="shopping-cart">
-                  <form action="#" method="post">
-                    <div class="shopping-cart__header">
-                      <div class="shopping-cart__count">سبد خرید شما</div>
-                      <button class="shopping-cart__close">
-                        <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24">
-                          <path fill="currentColor"
-                            d="M6.4 19L5 17.6l5.6-5.6L5 6.4L6.4 5l5.6 5.6L17.6 5L19 6.4L13.4 12l5.6 5.6l-1.4 1.4l-5.6-5.6L6.4 19Z" />
-                        </svg>
-                      </button>
-                    </div>
-                    <ul class="header-basket-list">
-
-
-                    </ul>
-                    <div class="header-basket-list__empty">
-                      <div class="header-basket-list__empty-empty-cart-icon">
-                        <img src="assets/images/cart/cart-empty.png" style="width: 200px;" alt="">
-                      </div>
-                      <div class="header-basket-list__empty-title">سبد خرید شما خالی است!</div>
-
-                    </div>
-
-                    <div class="shopping-cart__footer">
-                      <div class="shopping-cart__empty">
-                        <div class="d-grid">
-                          <button class="btn btn-danger mb-3">
-                            ثبت سفارش
-                          </button>
-                        </div>
-                      </div>
-                      <div class="header-cart-footer__details" style="display: none;">
-                        <div class="shopping-cart__total">
-                          <span class="shopping-cart__total-text">مبلغ قابل پرداخت</span>
-                          <span class="shopping-cart__total-amount">
-                            <span class="shopping-cart__total-amount-number">
-                              6,200,000</span>
-                            <span> تومان</span>
-                          </span>
-                        </div>
-                        <div>
-                          <button type="submit" class="shopping-cart__submit btn btn-primary">
-                            ادامه خرید
-                          </button>
-                          <a href="cart.html" class="shopping-cart__submit btn btn-outline-primary">
-                            مشاهده سبد خرید
-                          </a>
-                        </div>
-                      </div>
-                    </div>
-                  </form>
-                </div>
+               
               </div>
 
-              <div class="header-left-icons me-4">
+              <div class="header-left-icons ">
                 <a href="favorite.html">
                   <svg xmlns="http://www.w3.org/2000/svg" width="28" height="28" viewBox="0 0 512 512">
                     <path fill="currentColor"
@@ -1505,480 +1455,7 @@
     <!--        End megamenu------------------->
 
     <!--    responsive-megamenu-mobile----------------->
-    <nav class="sidebar">
-      <div class="nav-header">
-        <div class="header-cover"></div>
-        <div class="logo-wrap">
-          <a class="logo-icon" href="#"><img alt="logo-icon" src="assets/images/logo.png" width="40" /></a>
-        </div>
-      </div>
-      <ul class="nav-categories ul-base">
-        <li class="has-sub">
-          <a href="#">کالای دیجیتال</a>
-          <ul>
-            <li class="has-sub">
-              <a href="#" class="category-level-2">لوازم جانبی گوشی</a>
-              <ul>
-                <li>
-                  <a href="#" class="category-level-3">کیف و کاور گوشی</a>
-                </li>
-                <li>
-                  <a href="#" class="category-level-3">پاور بانک(شارژر همراه)</a>
-                </li>
-                <li>
-                  <a href="#" class="category-level-3">پایه نگهدارنده گوشی</a>
-                </li>
-                <li>
-                  <a href="#" class="category-level-3">همه موارد این دسته</a>
-                </li>
-              </ul>
-            </li>
-            <li class="has-sub">
-              <a href="#" class="category-level-2">گوشی موبایل</a>
-              <ul>
-                <li><a href="#" class="category-level-3">سامسونگ</a></li>
-                <li><a href="#" class="category-level-3">هوآوی</a></li>
-                <li><a href="#" class="category-level-3">اپل</a></li>
-                <li><a href="#" class="category-level-3">شیائومی</a></li>
-                <li><a href="#" class="category-level-3">آنر</a></li>
-                <li><a href="#" class="category-level-3">نوکیا</a></li>
-                <li>
-                  <a href="#" class="category-level-3">همه موارد این دسته</a>
-                </li>
-              </ul>
-            </li>
-            <li class="has-sub">
-              <a href="#" class="category-level-2">دوربین</a>
-              <ul>
-                <li>
-                  <a href="#" class="category-level-3">دوربین عکاسی دیجیتال</a>
-                </li>
-                <li>
-                  <a href="#" class="category-level-3">دوربین ورزشی و فیلم برداری</a>
-                </li>
-                <li>
-                  <a href="#" class="category-level-3">دوربین چاپ سریع</a>
-                </li>
-              </ul>
-            </li>
-          </ul>
-        </li>
-        <li class="has-sub">
-          <a href="#">آرایشی، بهداشتی و سلامت</a>
-          <ul>
-            <li class="has-sub">
-              <a href="#" class="category-level-2">لوازم جانبی گوشی</a>
-              <ul>
-                <li>
-                  <a href="#" class="category-level-3">کیف و کاور گوشی</a>
-                </li>
-                <li>
-                  <a href="#" class="category-level-3">پاور بانک(شارژر همراه)</a>
-                </li>
-                <li>
-                  <a href="#" class="category-level-3">پایه نگهدارنده گوشی</a>
-                </li>
-                <li>
-                  <a href="#" class="category-level-3">همه موارد این دسته</a>
-                </li>
-              </ul>
-            </li>
-            <li class="has-sub">
-              <a href="#" class="category-level-2">گوشی موبایل</a>
-              <ul>
-                <li><a href="#" class="category-level-3">سامسونگ</a></li>
-                <li><a href="#" class="category-level-3">هوآوی</a></li>
-                <li><a href="#" class="category-level-3">اپل</a></li>
-                <li><a href="#" class="category-level-3">شیائومی</a></li>
-                <li><a href="#" class="category-level-3">آنر</a></li>
-                <li><a href="#" class="category-level-3">نوکیا</a></li>
-                <li>
-                  <a href="#" class="category-level-3">همه موارد این دسته</a>
-                </li>
-              </ul>
-            </li>
-            <li class="has-sub">
-              <a href="#" class="category-level-2">دوربین</a>
-              <ul>
-                <li>
-                  <a href="#" class="category-level-3">دوربین عکاسی دیجیتال</a>
-                </li>
-                <li>
-                  <a href="#" class="category-level-3">دوربین ورزشی و فیلم برداری</a>
-                </li>
-                <li>
-                  <a href="#" class="category-level-3">دوربین چاپ سریع</a>
-                </li>
-              </ul>
-            </li>
-          </ul>
-        </li>
-        <li class="has-sub">
-          <a href="#">خودرو ، ابزار اداری</a>
-          <ul>
-            <li class="has-sub">
-              <a href="#" class="category-level-2">لوازم جانبی گوشی</a>
-              <ul>
-                <li>
-                  <a href="#" class="category-level-3">کیف و کاور گوشی</a>
-                </li>
-                <li>
-                  <a href="#" class="category-level-3">پاور بانک(شارژر همراه)</a>
-                </li>
-                <li>
-                  <a href="#" class="category-level-3">پایه نگهدارنده گوشی</a>
-                </li>
-                <li>
-                  <a href="#" class="category-level-3">همه موارد این دسته</a>
-                </li>
-              </ul>
-            </li>
-            <li class="has-sub">
-              <a href="#" class="category-level-2">گوشی موبایل</a>
-              <ul>
-                <li><a href="#" class="category-level-3">سامسونگ</a></li>
-                <li><a href="#" class="category-level-3">هوآوی</a></li>
-                <li><a href="#" class="category-level-3">اپل</a></li>
-                <li><a href="#" class="category-level-3">شیائومی</a></li>
-                <li><a href="#" class="category-level-3">آنر</a></li>
-                <li><a href="#" class="category-level-3">نوکیا</a></li>
-                <li>
-                  <a href="#" class="category-level-3">همه موارد این دسته</a>
-                </li>
-              </ul>
-            </li>
-            <li class="has-sub">
-              <a href="#" class="category-level-2">دوربین</a>
-              <ul>
-                <li>
-                  <a href="#" class="category-level-3">دوربین عکاسی دیجیتال</a>
-                </li>
-                <li>
-                  <a href="#" class="category-level-3">دوربین ورزشی و فیلم برداری</a>
-                </li>
-                <li>
-                  <a href="#" class="category-level-3">دوربین چاپ سریع</a>
-                </li>
-              </ul>
-            </li>
-          </ul>
-        </li>
-        <li class="has-sub">
-          <a href="#">مد پوشاک</a>
-          <ul>
-            <li class="has-sub">
-              <a href="#" class="category-level-2">لوازم جانبی گوشی</a>
-              <ul>
-                <li>
-                  <a href="#" class="category-level-3">کیف و کاور گوشی</a>
-                </li>
-                <li>
-                  <a href="#" class="category-level-3">پاور بانک(شارژر همراه)</a>
-                </li>
-                <li>
-                  <a href="#" class="category-level-3">پایه نگهدارنده گوشی</a>
-                </li>
-                <li>
-                  <a href="#" class="category-level-3">همه موارد این دسته</a>
-                </li>
-              </ul>
-            </li>
-            <li class="has-sub">
-              <a href="#" class="category-level-2">گوشی موبایل</a>
-              <ul>
-                <li><a href="#" class="category-level-3">سامسونگ</a></li>
-                <li><a href="#" class="category-level-3">هوآوی</a></li>
-                <li><a href="#" class="category-level-3">اپل</a></li>
-                <li><a href="#" class="category-level-3">شیائومی</a></li>
-                <li><a href="#" class="category-level-3">آنر</a></li>
-                <li><a href="#" class="category-level-3">نوکیا</a></li>
-                <li>
-                  <a href="#" class="category-level-3">همه موارد این دسته</a>
-                </li>
-              </ul>
-            </li>
-            <li class="has-sub">
-              <a href="#" class="category-level-2">دوربین</a>
-              <ul>
-                <li>
-                  <a href="#" class="category-level-3">دوربین عکاسی دیجیتال</a>
-                </li>
-                <li>
-                  <a href="#" class="category-level-3">دوربین ورزشی و فیلم برداری</a>
-                </li>
-                <li>
-                  <a href="#" class="category-level-3">دوربین چاپ سریع</a>
-                </li>
-              </ul>
-            </li>
-          </ul>
-        </li>
-        <li class="has-sub">
-          <a href="#">خانه آشپزخانه</a>
-          <ul>
-            <li class="has-sub">
-              <a href="#" class="category-level-2">لوازم جانبی گوشی</a>
-              <ul>
-                <li>
-                  <a href="#" class="category-level-3">کیف و کاور گوشی</a>
-                </li>
-                <li>
-                  <a href="#" class="category-level-3">پاور بانک(شارژر همراه)</a>
-                </li>
-                <li>
-                  <a href="#" class="category-level-3">پایه نگهدارنده گوشی</a>
-                </li>
-                <li>
-                  <a href="#" class="category-level-3">همه موارد این دسته</a>
-                </li>
-              </ul>
-            </li>
-            <li class="has-sub">
-              <a href="#" class="category-level-2">گوشی موبایل</a>
-              <ul>
-                <li><a href="#" class="category-level-3">سامسونگ</a></li>
-                <li><a href="#" class="category-level-3">هوآوی</a></li>
-                <li><a href="#" class="category-level-3">اپل</a></li>
-                <li><a href="#" class="category-level-3">شیائومی</a></li>
-                <li><a href="#" class="category-level-3">آنر</a></li>
-                <li><a href="#" class="category-level-3">نوکیا</a></li>
-                <li>
-                  <a href="#" class="category-level-3">همه موارد این دسته</a>
-                </li>
-              </ul>
-            </li>
-            <li class="has-sub">
-              <a href="#" class="category-level-2">دوربین</a>
-              <ul>
-                <li>
-                  <a href="#" class="category-level-3">دوربین عکاسی دیجیتال</a>
-                </li>
-                <li>
-                  <a href="#" class="category-level-3">دوربین ورزشی و فیلم برداری</a>
-                </li>
-                <li>
-                  <a href="#" class="category-level-3">دوربین چاپ سریع</a>
-                </li>
-              </ul>
-            </li>
-          </ul>
-        </li>
-        <li class="has-sub">
-          <a href="#">کتاب، لوازم تحریر</a>
-          <ul>
-            <li class="has-sub">
-              <a href="#" class="category-level-2">لوازم جانبی گوشی</a>
-              <ul>
-                <li>
-                  <a href="#" class="category-level-3">کیف و کاور گوشی</a>
-                </li>
-                <li>
-                  <a href="#" class="category-level-3">پاور بانک(شارژر همراه)</a>
-                </li>
-                <li>
-                  <a href="#" class="category-level-3">پایه نگهدارنده گوشی</a>
-                </li>
-                <li>
-                  <a href="#" class="category-level-3">همه موارد این دسته</a>
-                </li>
-              </ul>
-            </li>
-            <li class="has-sub">
-              <a href="#" class="category-level-2">گوشی موبایل</a>
-              <ul>
-                <li><a href="#" class="category-level-3">سامسونگ</a></li>
-                <li><a href="#" class="category-level-3">هوآوی</a></li>
-                <li><a href="#" class="category-level-3">اپل</a></li>
-                <li><a href="#" class="category-level-3">شیائومی</a></li>
-                <li><a href="#" class="category-level-3">آنر</a></li>
-                <li><a href="#" class="category-level-3">نوکیا</a></li>
-                <li>
-                  <a href="#" class="category-level-3">همه موارد این دسته</a>
-                </li>
-              </ul>
-            </li>
-            <li class="has-sub">
-              <a href="#" class="category-level-2">دوربین</a>
-              <ul>
-                <li>
-                  <a href="#" class="category-level-3">دوربین عکاسی دیجیتال</a>
-                </li>
-                <li>
-                  <a href="#" class="category-level-3">دوربین ورزشی و فیلم برداری</a>
-                </li>
-                <li>
-                  <a href="#" class="category-level-3">دوربین چاپ سریع</a>
-                </li>
-              </ul>
-            </li>
-          </ul>
-        </li>
-
-        <li class="has-sub">
-          <a href="#">اسباب بازی ، کودک نوزاد</a>
-          <ul>
-            <li class="has-sub">
-              <a href="#" class="category-level-2">لوازم جانبی گوشی</a>
-              <ul>
-                <li>
-                  <a href="#" class="category-level-3">کیف و کاور گوشی</a>
-                </li>
-                <li>
-                  <a href="#" class="category-level-3">پاور بانک(شارژر همراه)</a>
-                </li>
-                <li>
-                  <a href="#" class="category-level-3">پایه نگهدارنده گوشی</a>
-                </li>
-                <li>
-                  <a href="#" class="category-level-3">همه موارد این دسته</a>
-                </li>
-              </ul>
-            </li>
-            <li class="has-sub">
-              <a href="#" class="category-level-2">گوشی موبایل</a>
-              <ul>
-                <li><a href="#" class="category-level-3">سامسونگ</a></li>
-                <li><a href="#" class="category-level-3">هوآوی</a></li>
-                <li><a href="#" class="category-level-3">اپل</a></li>
-                <li><a href="#" class="category-level-3">شیائومی</a></li>
-                <li><a href="#" class="category-level-3">آنر</a></li>
-                <li><a href="#" class="category-level-3">نوکیا</a></li>
-                <li>
-                  <a href="#" class="category-level-3">همه موارد این دسته</a>
-                </li>
-              </ul>
-            </li>
-            <li class="has-sub">
-              <a href="#" class="category-level-2">دوربین</a>
-              <ul>
-                <li>
-                  <a href="#" class="category-level-3">دوربین عکاسی دیجیتال</a>
-                </li>
-                <li>
-                  <a href="#" class="category-level-3">دوربین ورزشی و فیلم برداری</a>
-                </li>
-                <li>
-                  <a href="#" class="category-level-3">دوربین چاپ سریع</a>
-                </li>
-              </ul>
-            </li>
-          </ul>
-        </li>
-        <li class="has-sub">
-          <a href="#">ورزش و سفر</a>
-          <ul>
-            <li class="has-sub">
-              <a href="#" class="category-level-2">لوازم جانبی گوشی</a>
-              <ul>
-                <li>
-                  <a href="#" class="category-level-3">کیف و کاور گوشی</a>
-                </li>
-                <li>
-                  <a href="#" class="category-level-3">پاور بانک(شارژر همراه)</a>
-                </li>
-                <li>
-                  <a href="#" class="category-level-3">پایه نگهدارنده گوشی</a>
-                </li>
-                <li>
-                  <a href="#" class="category-level-3">همه موارد این دسته</a>
-                </li>
-              </ul>
-            </li>
-            <li class="has-sub">
-              <a href="#" class="category-level-2">گوشی موبایل</a>
-              <ul>
-                <li><a href="#" class="category-level-3">سامسونگ</a></li>
-                <li><a href="#" class="category-level-3">هوآوی</a></li>
-                <li><a href="#" class="category-level-3">اپل</a></li>
-                <li><a href="#" class="category-level-3">شیائومی</a></li>
-                <li><a href="#" class="category-level-3">آنر</a></li>
-                <li><a href="#" class="category-level-3">نوکیا</a></li>
-                <li>
-                  <a href="#" class="category-level-3">همه موارد این دسته</a>
-                </li>
-              </ul>
-            </li>
-            <li class="has-sub">
-              <a href="#" class="category-level-2">دوربین</a>
-              <ul>
-                <li>
-                  <a href="#" class="category-level-3">دوربین عکاسی دیجیتال</a>
-                </li>
-                <li>
-                  <a href="#" class="category-level-3">دوربین ورزشی و فیلم برداری</a>
-                </li>
-                <li>
-                  <a href="#" class="category-level-3">دوربین چاپ سریع</a>
-                </li>
-              </ul>
-            </li>
-          </ul>
-        </li>
-        <li class="has-sub">
-          <a href="#">خوردنی و آشامیدنی</a>
-          <ul>
-            <li class="has-sub">
-              <a href="#" class="category-level-2">لوازم جانبی گوشی</a>
-              <ul>
-                <li>
-                  <a href="#" class="category-level-3">کیف و کاور گوشی</a>
-                </li>
-                <li>
-                  <a href="#" class="category-level-3">پاور بانک(شارژر همراه)</a>
-                </li>
-                <li>
-                  <a href="#" class="category-level-3">پایه نگهدارنده گوشی</a>
-                </li>
-                <li>
-                  <a href="#" class="category-level-3">همه موارد این دسته</a>
-                </li>
-              </ul>
-            </li>
-            <li class="has-sub">
-              <a href="#" class="category-level-2">گوشی موبایل</a>
-              <ul>
-                <li><a href="#" class="category-level-3">سامسونگ</a></li>
-                <li><a href="#" class="category-level-3">هوآوی</a></li>
-                <li><a href="#" class="category-level-3">اپل</a></li>
-                <li><a href="#" class="category-level-3">شیائومی</a></li>
-                <li><a href="#" class="category-level-3">آنر</a></li>
-                <li><a href="#" class="category-level-3">نوکیا</a></li>
-                <li>
-                  <a href="#" class="category-level-3">همه موارد این دسته</a>
-                </li>
-              </ul>
-            </li>
-            <li class="has-sub">
-              <a href="#" class="category-level-2">دوربین</a>
-              <ul>
-                <li>
-                  <a href="#" class="category-level-3">دوربین عکاسی دیجیتال</a>
-                </li>
-                <li>
-                  <a href="#" class="category-level-3">دوربین ورزشی و فیلم برداری</a>
-                </li>
-                <li>
-                  <a href="#" class="category-level-3">دوربین چاپ سریع</a>
-                </li>
-              </ul>
-            </li>
-          </ul>
-        </li>
-        <li class="has-sub">
-          <a href="#">پیشنهاد ها و تخفیف ها</a>
-          <ul>
-            <li>
-              <a href="#" class="category-level-2">کالاهای شگفت انگیز</a>
-            </li>
-            <li><a href="#" class="category-level-2">فروش ویژه</a></li>
-            <li>
-              <a href="#" class="category-level-2">با هر خرید هدیه بگیرید</a>
-            </li>
-            <li><a href="#" class="category-level-2">تخفیف پایان فصل</a></li>
-          </ul>
-        </li>
-      </ul>
-    </nav>
+  
     <div class="nav-btn">
       <span class="linee1"></span>
       <span class="linee2"></span>
@@ -1988,6 +1465,534 @@
     <!--    responsive-megamenu-mobile----------------->
   </header>
   <!-- end::header -->
+  <div class="shopping-cart">
+    <form action="#" method="post">
+      <div class="shopping-cart__header">
+        <div class="shopping-cart__count">سبد خرید شما</div>
+        <button class="shopping-cart__close">
+          <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24">
+            <path fill="currentColor"
+              d="M6.4 19L5 17.6l5.6-5.6L5 6.4L6.4 5l5.6 5.6L17.6 5L19 6.4L13.4 12l5.6 5.6l-1.4 1.4l-5.6-5.6L6.4 19Z" />
+          </svg>
+        </button>
+      </div>
+      <ul class="header-basket-list">
+
+
+      </ul>
+      <div class="header-basket-list__empty">
+        <div class="header-basket-list__empty-empty-cart-icon">
+          <img src="assets/images/cart/cart-empty.png" style="width: 200px;" alt="">
+        </div>
+        <div class="header-basket-list__empty-title">سبد خرید شما خالی است!</div>
+
+      </div>
+
+      <div class="shopping-cart__footer">
+        <div class="shopping-cart__empty">
+          <div class="d-grid">
+            <button class="btn btn-danger mb-3">
+              ثبت سفارش
+            </button>
+          </div>
+        </div>
+        <div class="header-cart-footer__details" style="display: none;">
+          <div class="shopping-cart__total">
+            <span class="shopping-cart__total-text">مبلغ قابل پرداخت</span>
+            <span class="shopping-cart__total-amount">
+              <span class="shopping-cart__total-amount-number">
+                6,200,000</span>
+              <span> تومان</span>
+            </span>
+          </div>
+          <div>
+            <button type="submit" class="shopping-cart__submit btn btn-primary">
+              ادامه خرید
+            </button>
+            <a href="cart.html" class="shopping-cart__submit btn btn-outline-primary">
+              مشاهده سبد خرید
+            </a>
+          </div>
+        </div>
+      </div>
+    </form>
+  </div>
+
+  <nav class="sidebar">
+    <div class="nav-header">
+      <div class="header-cover"></div>
+      <div class="logo-wrap">
+        <a class="logo-icon" href="#"><img alt="logo-icon" src="/assets/images/logo.webp" width="40" /></a>
+      </div>
+    </div>
+    <ul class="nav-categories ul-base">
+      <li class="has-sub">
+        <a href="#">کالای دیجیتال</a>
+        <ul>
+          <li class="has-sub">
+            <a href="#" class="category-level-2">لوازم جانبی گوشی</a>
+            <ul>
+              <li>
+                <a href="#" class="category-level-3">کیف و کاور گوشی</a>
+              </li>
+              <li>
+                <a href="#" class="category-level-3">پاور بانک(شارژر همراه)</a>
+              </li>
+              <li>
+                <a href="#" class="category-level-3">پایه نگهدارنده گوشی</a>
+              </li>
+              <li>
+                <a href="#" class="category-level-3">همه موارد این دسته</a>
+              </li>
+            </ul>
+          </li>
+          <li class="has-sub">
+            <a href="#" class="category-level-2">گوشی موبایل</a>
+            <ul>
+              <li><a href="#" class="category-level-3">سامسونگ</a></li>
+              <li><a href="#" class="category-level-3">هوآوی</a></li>
+              <li><a href="#" class="category-level-3">اپل</a></li>
+              <li><a href="#" class="category-level-3">شیائومی</a></li>
+              <li><a href="#" class="category-level-3">آنر</a></li>
+              <li><a href="#" class="category-level-3">نوکیا</a></li>
+              <li>
+                <a href="#" class="category-level-3">همه موارد این دسته</a>
+              </li>
+            </ul>
+          </li>
+          <li class="has-sub">
+            <a href="#" class="category-level-2">دوربین</a>
+            <ul>
+              <li>
+                <a href="#" class="category-level-3">دوربین عکاسی دیجیتال</a>
+              </li>
+              <li>
+                <a href="#" class="category-level-3">دوربین ورزشی و فیلم برداری</a>
+              </li>
+              <li>
+                <a href="#" class="category-level-3">دوربین چاپ سریع</a>
+              </li>
+            </ul>
+          </li>
+        </ul>
+      </li>
+      <li class="has-sub">
+        <a href="#">آرایشی، بهداشتی و سلامت</a>
+        <ul>
+          <li class="has-sub">
+            <a href="#" class="category-level-2">لوازم جانبی گوشی</a>
+            <ul>
+              <li>
+                <a href="#" class="category-level-3">کیف و کاور گوشی</a>
+              </li>
+              <li>
+                <a href="#" class="category-level-3">پاور بانک(شارژر همراه)</a>
+              </li>
+              <li>
+                <a href="#" class="category-level-3">پایه نگهدارنده گوشی</a>
+              </li>
+              <li>
+                <a href="#" class="category-level-3">همه موارد این دسته</a>
+              </li>
+            </ul>
+          </li>
+          <li class="has-sub">
+            <a href="#" class="category-level-2">گوشی موبایل</a>
+            <ul>
+              <li><a href="#" class="category-level-3">سامسونگ</a></li>
+              <li><a href="#" class="category-level-3">هوآوی</a></li>
+              <li><a href="#" class="category-level-3">اپل</a></li>
+              <li><a href="#" class="category-level-3">شیائومی</a></li>
+              <li><a href="#" class="category-level-3">آنر</a></li>
+              <li><a href="#" class="category-level-3">نوکیا</a></li>
+              <li>
+                <a href="#" class="category-level-3">همه موارد این دسته</a>
+              </li>
+            </ul>
+          </li>
+          <li class="has-sub">
+            <a href="#" class="category-level-2">دوربین</a>
+            <ul>
+              <li>
+                <a href="#" class="category-level-3">دوربین عکاسی دیجیتال</a>
+              </li>
+              <li>
+                <a href="#" class="category-level-3">دوربین ورزشی و فیلم برداری</a>
+              </li>
+              <li>
+                <a href="#" class="category-level-3">دوربین چاپ سریع</a>
+              </li>
+            </ul>
+          </li>
+        </ul>
+      </li>
+      <li class="has-sub">
+        <a href="#">خودرو ، ابزار اداری</a>
+        <ul>
+          <li class="has-sub">
+            <a href="#" class="category-level-2">لوازم جانبی گوشی</a>
+            <ul>
+              <li>
+                <a href="#" class="category-level-3">کیف و کاور گوشی</a>
+              </li>
+              <li>
+                <a href="#" class="category-level-3">پاور بانک(شارژر همراه)</a>
+              </li>
+              <li>
+                <a href="#" class="category-level-3">پایه نگهدارنده گوشی</a>
+              </li>
+              <li>
+                <a href="#" class="category-level-3">همه موارد این دسته</a>
+              </li>
+            </ul>
+          </li>
+          <li class="has-sub">
+            <a href="#" class="category-level-2">گوشی موبایل</a>
+            <ul>
+              <li><a href="#" class="category-level-3">سامسونگ</a></li>
+              <li><a href="#" class="category-level-3">هوآوی</a></li>
+              <li><a href="#" class="category-level-3">اپل</a></li>
+              <li><a href="#" class="category-level-3">شیائومی</a></li>
+              <li><a href="#" class="category-level-3">آنر</a></li>
+              <li><a href="#" class="category-level-3">نوکیا</a></li>
+              <li>
+                <a href="#" class="category-level-3">همه موارد این دسته</a>
+              </li>
+            </ul>
+          </li>
+          <li class="has-sub">
+            <a href="#" class="category-level-2">دوربین</a>
+            <ul>
+              <li>
+                <a href="#" class="category-level-3">دوربین عکاسی دیجیتال</a>
+              </li>
+              <li>
+                <a href="#" class="category-level-3">دوربین ورزشی و فیلم برداری</a>
+              </li>
+              <li>
+                <a href="#" class="category-level-3">دوربین چاپ سریع</a>
+              </li>
+            </ul>
+          </li>
+        </ul>
+      </li>
+      <li class="has-sub">
+        <a href="#">مد پوشاک</a>
+        <ul>
+          <li class="has-sub">
+            <a href="#" class="category-level-2">لوازم جانبی گوشی</a>
+            <ul>
+              <li>
+                <a href="#" class="category-level-3">کیف و کاور گوشی</a>
+              </li>
+              <li>
+                <a href="#" class="category-level-3">پاور بانک(شارژر همراه)</a>
+              </li>
+              <li>
+                <a href="#" class="category-level-3">پایه نگهدارنده گوشی</a>
+              </li>
+              <li>
+                <a href="#" class="category-level-3">همه موارد این دسته</a>
+              </li>
+            </ul>
+          </li>
+          <li class="has-sub">
+            <a href="#" class="category-level-2">گوشی موبایل</a>
+            <ul>
+              <li><a href="#" class="category-level-3">سامسونگ</a></li>
+              <li><a href="#" class="category-level-3">هوآوی</a></li>
+              <li><a href="#" class="category-level-3">اپل</a></li>
+              <li><a href="#" class="category-level-3">شیائومی</a></li>
+              <li><a href="#" class="category-level-3">آنر</a></li>
+              <li><a href="#" class="category-level-3">نوکیا</a></li>
+              <li>
+                <a href="#" class="category-level-3">همه موارد این دسته</a>
+              </li>
+            </ul>
+          </li>
+          <li class="has-sub">
+            <a href="#" class="category-level-2">دوربین</a>
+            <ul>
+              <li>
+                <a href="#" class="category-level-3">دوربین عکاسی دیجیتال</a>
+              </li>
+              <li>
+                <a href="#" class="category-level-3">دوربین ورزشی و فیلم برداری</a>
+              </li>
+              <li>
+                <a href="#" class="category-level-3">دوربین چاپ سریع</a>
+              </li>
+            </ul>
+          </li>
+        </ul>
+      </li>
+      <li class="has-sub">
+        <a href="#">خانه آشپزخانه</a>
+        <ul>
+          <li class="has-sub">
+            <a href="#" class="category-level-2">لوازم جانبی گوشی</a>
+            <ul>
+              <li>
+                <a href="#" class="category-level-3">کیف و کاور گوشی</a>
+              </li>
+              <li>
+                <a href="#" class="category-level-3">پاور بانک(شارژر همراه)</a>
+              </li>
+              <li>
+                <a href="#" class="category-level-3">پایه نگهدارنده گوشی</a>
+              </li>
+              <li>
+                <a href="#" class="category-level-3">همه موارد این دسته</a>
+              </li>
+            </ul>
+          </li>
+          <li class="has-sub">
+            <a href="#" class="category-level-2">گوشی موبایل</a>
+            <ul>
+              <li><a href="#" class="category-level-3">سامسونگ</a></li>
+              <li><a href="#" class="category-level-3">هوآوی</a></li>
+              <li><a href="#" class="category-level-3">اپل</a></li>
+              <li><a href="#" class="category-level-3">شیائومی</a></li>
+              <li><a href="#" class="category-level-3">آنر</a></li>
+              <li><a href="#" class="category-level-3">نوکیا</a></li>
+              <li>
+                <a href="#" class="category-level-3">همه موارد این دسته</a>
+              </li>
+            </ul>
+          </li>
+          <li class="has-sub">
+            <a href="#" class="category-level-2">دوربین</a>
+            <ul>
+              <li>
+                <a href="#" class="category-level-3">دوربین عکاسی دیجیتال</a>
+              </li>
+              <li>
+                <a href="#" class="category-level-3">دوربین ورزشی و فیلم برداری</a>
+              </li>
+              <li>
+                <a href="#" class="category-level-3">دوربین چاپ سریع</a>
+              </li>
+            </ul>
+          </li>
+        </ul>
+      </li>
+      <li class="has-sub">
+        <a href="#">کتاب، لوازم تحریر</a>
+        <ul>
+          <li class="has-sub">
+            <a href="#" class="category-level-2">لوازم جانبی گوشی</a>
+            <ul>
+              <li>
+                <a href="#" class="category-level-3">کیف و کاور گوشی</a>
+              </li>
+              <li>
+                <a href="#" class="category-level-3">پاور بانک(شارژر همراه)</a>
+              </li>
+              <li>
+                <a href="#" class="category-level-3">پایه نگهدارنده گوشی</a>
+              </li>
+              <li>
+                <a href="#" class="category-level-3">همه موارد این دسته</a>
+              </li>
+            </ul>
+          </li>
+          <li class="has-sub">
+            <a href="#" class="category-level-2">گوشی موبایل</a>
+            <ul>
+              <li><a href="#" class="category-level-3">سامسونگ</a></li>
+              <li><a href="#" class="category-level-3">هوآوی</a></li>
+              <li><a href="#" class="category-level-3">اپل</a></li>
+              <li><a href="#" class="category-level-3">شیائومی</a></li>
+              <li><a href="#" class="category-level-3">آنر</a></li>
+              <li><a href="#" class="category-level-3">نوکیا</a></li>
+              <li>
+                <a href="#" class="category-level-3">همه موارد این دسته</a>
+              </li>
+            </ul>
+          </li>
+          <li class="has-sub">
+            <a href="#" class="category-level-2">دوربین</a>
+            <ul>
+              <li>
+                <a href="#" class="category-level-3">دوربین عکاسی دیجیتال</a>
+              </li>
+              <li>
+                <a href="#" class="category-level-3">دوربین ورزشی و فیلم برداری</a>
+              </li>
+              <li>
+                <a href="#" class="category-level-3">دوربین چاپ سریع</a>
+              </li>
+            </ul>
+          </li>
+        </ul>
+      </li>
+
+      <li class="has-sub">
+        <a href="#">اسباب بازی ، کودک نوزاد</a>
+        <ul>
+          <li class="has-sub">
+            <a href="#" class="category-level-2">لوازم جانبی گوشی</a>
+            <ul>
+              <li>
+                <a href="#" class="category-level-3">کیف و کاور گوشی</a>
+              </li>
+              <li>
+                <a href="#" class="category-level-3">پاور بانک(شارژر همراه)</a>
+              </li>
+              <li>
+                <a href="#" class="category-level-3">پایه نگهدارنده گوشی</a>
+              </li>
+              <li>
+                <a href="#" class="category-level-3">همه موارد این دسته</a>
+              </li>
+            </ul>
+          </li>
+          <li class="has-sub">
+            <a href="#" class="category-level-2">گوشی موبایل</a>
+            <ul>
+              <li><a href="#" class="category-level-3">سامسونگ</a></li>
+              <li><a href="#" class="category-level-3">هوآوی</a></li>
+              <li><a href="#" class="category-level-3">اپل</a></li>
+              <li><a href="#" class="category-level-3">شیائومی</a></li>
+              <li><a href="#" class="category-level-3">آنر</a></li>
+              <li><a href="#" class="category-level-3">نوکیا</a></li>
+              <li>
+                <a href="#" class="category-level-3">همه موارد این دسته</a>
+              </li>
+            </ul>
+          </li>
+          <li class="has-sub">
+            <a href="#" class="category-level-2">دوربین</a>
+            <ul>
+              <li>
+                <a href="#" class="category-level-3">دوربین عکاسی دیجیتال</a>
+              </li>
+              <li>
+                <a href="#" class="category-level-3">دوربین ورزشی و فیلم برداری</a>
+              </li>
+              <li>
+                <a href="#" class="category-level-3">دوربین چاپ سریع</a>
+              </li>
+            </ul>
+          </li>
+        </ul>
+      </li>
+      <li class="has-sub">
+        <a href="#">ورزش و سفر</a>
+        <ul>
+          <li class="has-sub">
+            <a href="#" class="category-level-2">لوازم جانبی گوشی</a>
+            <ul>
+              <li>
+                <a href="#" class="category-level-3">کیف و کاور گوشی</a>
+              </li>
+              <li>
+                <a href="#" class="category-level-3">پاور بانک(شارژر همراه)</a>
+              </li>
+              <li>
+                <a href="#" class="category-level-3">پایه نگهدارنده گوشی</a>
+              </li>
+              <li>
+                <a href="#" class="category-level-3">همه موارد این دسته</a>
+              </li>
+            </ul>
+          </li>
+          <li class="has-sub">
+            <a href="#" class="category-level-2">گوشی موبایل</a>
+            <ul>
+              <li><a href="#" class="category-level-3">سامسونگ</a></li>
+              <li><a href="#" class="category-level-3">هوآوی</a></li>
+              <li><a href="#" class="category-level-3">اپل</a></li>
+              <li><a href="#" class="category-level-3">شیائومی</a></li>
+              <li><a href="#" class="category-level-3">آنر</a></li>
+              <li><a href="#" class="category-level-3">نوکیا</a></li>
+              <li>
+                <a href="#" class="category-level-3">همه موارد این دسته</a>
+              </li>
+            </ul>
+          </li>
+          <li class="has-sub">
+            <a href="#" class="category-level-2">دوربین</a>
+            <ul>
+              <li>
+                <a href="#" class="category-level-3">دوربین عکاسی دیجیتال</a>
+              </li>
+              <li>
+                <a href="#" class="category-level-3">دوربین ورزشی و فیلم برداری</a>
+              </li>
+              <li>
+                <a href="#" class="category-level-3">دوربین چاپ سریع</a>
+              </li>
+            </ul>
+          </li>
+        </ul>
+      </li>
+      <li class="has-sub">
+        <a href="#">خوردنی و آشامیدنی</a>
+        <ul>
+          <li class="has-sub">
+            <a href="#" class="category-level-2">لوازم جانبی گوشی</a>
+            <ul>
+              <li>
+                <a href="#" class="category-level-3">کیف و کاور گوشی</a>
+              </li>
+              <li>
+                <a href="#" class="category-level-3">پاور بانک(شارژر همراه)</a>
+              </li>
+              <li>
+                <a href="#" class="category-level-3">پایه نگهدارنده گوشی</a>
+              </li>
+              <li>
+                <a href="#" class="category-level-3">همه موارد این دسته</a>
+              </li>
+            </ul>
+          </li>
+          <li class="has-sub">
+            <a href="#" class="category-level-2">گوشی موبایل</a>
+            <ul>
+              <li><a href="#" class="category-level-3">سامسونگ</a></li>
+              <li><a href="#" class="category-level-3">هوآوی</a></li>
+              <li><a href="#" class="category-level-3">اپل</a></li>
+              <li><a href="#" class="category-level-3">شیائومی</a></li>
+              <li><a href="#" class="category-level-3">آنر</a></li>
+              <li><a href="#" class="category-level-3">نوکیا</a></li>
+              <li>
+                <a href="#" class="category-level-3">همه موارد این دسته</a>
+              </li>
+            </ul>
+          </li>
+          <li class="has-sub">
+            <a href="#" class="category-level-2">دوربین</a>
+            <ul>
+              <li>
+                <a href="#" class="category-level-3">دوربین عکاسی دیجیتال</a>
+              </li>
+              <li>
+                <a href="#" class="category-level-3">دوربین ورزشی و فیلم برداری</a>
+              </li>
+              <li>
+                <a href="#" class="category-level-3">دوربین چاپ سریع</a>
+              </li>
+            </ul>
+          </li>
+        </ul>
+      </li>
+      <li class="has-sub">
+        <a href="#">پیشنهاد ها و تخفیف ها</a>
+        <ul>
+          <li>
+            <a href="#" class="category-level-2">کالاهای شگفت انگیز</a>
+          </li>
+          <li><a href="#" class="category-level-2">فروش ویژه</a></li>
+          <li>
+            <a href="#" class="category-level-2">با هر خرید هدیه بگیرید</a>
+          </li>
+          <li><a href="#" class="category-level-2">تخفیف پایان فصل</a></li>
+        </ul>
+      </li>
+    </ul>
+  </nav>
+
 
 
 

@@ -311,3 +311,9 @@ $(document).ready(function () {
     $(this).find("svg").css("color", "#ef4056");
   });
 });
+
+
+$('.sidebar-close').click(function(e) {
+  e.preventDefault()
+  $('.sidebar').removeClass('open')
+})

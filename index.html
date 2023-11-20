@@ -19,7 +19,7 @@
 <body>
   <!-- start::login-modal -->
   <div class="remodal-overlay login-modal" id="modal">
-    <div class=" col-md-8 col-xs-12 mx-auto">
+    <div class=" col-lg-8 mx-2 mx-lg-auto" style="max-width: 950px;">
       <div class="remodal">
         <a href="#" class="close-btn">
           <svg xmlns="http://www.w3.org/2000/svg" width="28" height="28" viewBox="0 0 24 24">
@@ -30,7 +30,7 @@
         <div class="middle-container">
           <div class="login-form">
             <div class="row w-100 m-auto">
-              <div class="col-lg-6 d-none d-lg-block">
+              <div class="col-md-6">
                 <div class="login-form__right">
                   <h2 class="login-form__right-title">سلام!<br>به سایت ما خوش آمدید.</h2>
                   <div>
@@ -39,7 +39,7 @@
                   </div>
                 </div>
               </div>
-              <div class="col-12 col-lg-6">
+              <div class="col-12 col-md-6">
                 <form method="post" action="#" class="form-checkout">
                   <div class="account-box">
 
@@ -53,28 +53,15 @@
                         <div class=" login-modal__input" style="position: relative;flex: 1;
                           margin-left: 1rem;">
                           <label for="email-phone">کد امنیتی</label>
-                          <div class="login-modal__password">
-                            <span class="login-modal__show" style="display: none;">
-                              <svg xmlns="http://www.w3.org/2000/svg" width="22" height="22" viewBox="0 0 24 24">
-                                <path fill="currentColor"
-                                  d="M12 16q1.875 0 3.188-1.313T16.5 11.5q0-1.875-1.313-3.188T12 7q-1.875 0-3.188 1.313T7.5 11.5q0 1.875 1.313 3.188T12 16Zm0-1.8q-1.125 0-1.913-.788T9.3 11.5q0-1.125.788-1.913T12 8.8q1.125 0 1.913.788T14.7 11.5q0 1.125-.787 1.913T12 14.2Zm0 4.8q-3.475 0-6.35-1.838T1.3 12.2q-.075-.125-.1-.312t-.025-.388q0-.2.025-.388t.1-.312q1.475-3.125 4.35-4.963T12 4q3.475 0 6.35 1.838T22.7 10.8q.075.125.1.313t.025.387q0 .2-.025.388t-.1.312q-1.475 3.125-4.35 4.963T12 19Z" />
-                              </svg>
-                            </span>
-                            <span class="login-modal__hide">
-                              <svg xmlns="http://www.w3.org/2000/svg" width="22" height="22" viewBox="0 0 24 24">
-                                <path fill="currentColor"
-                                  d="m19.3 16.5l-3.2-3.2q.2-.425.3-.863t.1-.937q0-1.875-1.312-3.188T12 7q-.5 0-.938.1t-.862.3L7.65 4.85q1.025-.425 2.1-.637T12 4q3.575 0 6.425 1.888T22.7 10.8q.075.125.1.313t.025.387q0 .2-.037.388t-.088.312q-.575 1.275-1.437 2.375T19.3 16.5Zm-.2 5.4l-3.5-3.45q-.875.275-1.762.413T12 19q-3.575 0-6.425-1.888T1.3 12.2q-.075-.125-.1-.312t-.025-.388q0-.2.025-.375t.1-.3Q1.825 9.7 2.55 8.75T4.15 7L2.075 4.9Q1.8 4.625 1.8 4.212t.3-.712q.275-.275.7-.275t.7.275l17 17q.275.275.288.688t-.288.712q-.275.275-.7.275t-.7-.275ZM12 16q.275 0 .513-.025t.512-.1l-5.4-5.4q-.075.275-.1.513T7.5 11.5q0 1.875 1.313 3.188T12 16Zm2.65-4.15l-3-3q1.425-.225 2.325.8t.675 2.2Z" />
-                              </svg>
-                            </span>
-                          </div>
-                          <input dir="ltr" type="password" autocomplete="off" class="login-modal__password-input"
+                          
+                          <input dir="ltr" type="text" autocomplete="off" class="login-modal__password-input"
                             id="MyCap" inputmode="numeric" pattern="[0-9]*" title="Non-negative integral number"
                             data-val="true" data-val-length="کدامنیتی باید دقیقا 4 کاراکتر باشد" data-val-length-max="4"
                             data-val-required="لطفا کدامنیتی را وارد کنید" maxlength="4" name="Captcha"
                             placeholder="کد امنیتی" value="" />
                         </div>
                         <div class="login-modal__code" style="">
-                          <span>1234</span>
+                          <span class="text-white">1234</span>
                         </div>
                       </div>
 
@@ -171,8 +158,8 @@
 
   <!-- start::header -->
   <header>
-    <div class="container-fluid px-4 px-md-5" style="max-width: 1400px;">
-      <div class="row py-3 g-5 g-md-3">
+    <div class="container-fluid  px-md-5" style="max-width: 1400px;">
+      <div class="row py-3 g-md-3">
         <div class="col-12 col-md-8 col-xl-9">
           <div class="header-right">
             <div class="row justify-content-between">
@@ -1542,6 +1529,9 @@
       <div class="logo-wrap">
         <a class="logo-icon" href="#"><img alt="logo-icon" src="/assets/images/logo.webp" width="40" /></a>
       </div>
+      <a href="#" class="sidebar-close" >
+        <svg xmlns="http://www.w3.org/2000/svg" width="26" height="26" viewBox="0 0 24 24"><g fill="none" fill-rule="evenodd"><path d="M24 0v24H0V0h24ZM12.593 23.258l-.011.002l-.071.035l-.02.004l-.014-.004l-.071-.035c-.01-.004-.019-.001-.024.005l-.004.01l-.017.428l.005.02l.01.013l.104.074l.015.004l.012-.004l.104-.074l.012-.016l.004-.017l-.017-.427c-.002-.01-.009-.017-.017-.018Zm.265-.113l-.013.002l-.185.093l-.01.01l-.003.011l.018.43l.005.012l.008.007l.201.093c.012.004.023 0 .029-.008l.004-.014l-.034-.614c-.003-.012-.01-.02-.02-.022Zm-.715.002a.023.023 0 0 0-.027.006l-.006.014l-.034.614c0 .012.007.02.017.024l.015-.002l.201-.093l.01-.008l.004-.011l.017-.43l-.003-.012l-.01-.01l-.184-.092Z"/><path fill="currentColor" d="m12 13.414l5.657 5.657a1 1 0 0 0 1.414-1.414L13.414 12l5.657-5.657a1 1 0 0 0-1.414-1.414L12 10.586L6.343 4.929A1 1 0 0 0 4.93 6.343L10.586 12l-5.657 5.657a1 1 0 1 0 1.414 1.414L12 13.414Z"/></g></svg>
+    </a>
     </div>
     <ul class="nav-categories ul-base">
       <li class="has-sub">
