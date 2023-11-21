@@ -1,25 +1,48 @@
 $(document).ready(function () {
   //    resposive-megamenu-mobile------------------
   var lastScrollTop = 0;
+ 
 
   $(window).scroll(function(event){
     var sticky = $('header'),
     scroll = $(window).scrollTop();
+    // if (window.location.href.indexOf("user-panel") > -1) {
+    //   return
+    // }
     let isMobile = window.matchMedia("only screen and (max-width: 768px)").matches;
 
     if (true) {
-      if (scroll >= 150) { 
-  
-        sticky.addClass('fixed');
+      if (scroll >= lastScrollTop) { 
+        if (isMobile) {
+          $('main').css('margin-top','60px')
+
+        }else {
+          $('main').css('margin-top','122px')
+        }
+        $('header').css('overflow','hidden')
+        $('nav').addClass('hide-menu')
+        
+        // sticky.addClass('fixed');
+      
+
        }
       else { 
-        sticky.removeClass('fixed');
+        if (isMobile) {
+          $('main').css('margin-top','70px')
+
+        }else {
+          $('main').css('margin-top','122px')
+        }
+        // sticky.removeClass('fixed');
+        $('nav').removeClass('hide-menu')
+
+        $('header').css('overflow','visible')
     
     
     }
     }
    
-   
+   lastScrollTop = scroll
   
   });
   $(".nav-btn").on("click", function () {
@@ -166,6 +189,11 @@ $(document).ready(function () {
           nav: true,
           loop: false,
         },
+        1200: {
+          items: 4,
+          nav: true,
+          loop: false,
+        },
       },
     });
   }
@@ -204,7 +232,7 @@ $(document).ready(function () {
                 title: "این یک عنوان تست است این یک عنوان تست است",
                 description: "این یک توضیح تست است این یک توضیح تست استاین یک توضیح تست است این یک توضیح تست استاین یک توضیح تست استاین یک توضیح تست است ",
                 price: "100000",
-                image: "assets/images/0589ee66d13b4677adb6e978ec162be1.webp",
+                image: "./assets/images/0589ee66d13b4677adb6e978ec162be1.webp",
               },
               total_price: 430000,
             },

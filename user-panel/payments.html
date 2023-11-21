@@ -9,12 +9,14 @@
   <link rel="stylesheet" href="../assets/css/font-awesome.min.css" />
   <link href="../assets/css/select2.min.css" rel="stylesheet" />
   <link rel="stylesheet" href="../assets/css/style.css" />
-<link rel="stylesheet" href="../assets/css/panel.css">
+  <link rel="stylesheet" href="../assets/css/panel.css">
 </head>
 
-
+<style>
+  
+</style>
 <body>
-
+ 
 
   <!-- start::fixed bottom menu -->
   <div id="fixed-menu">
@@ -363,7 +365,7 @@
                           <a href="#" class="list-category-megamenu-3">سنگ پا، بهداشت و زیبایی ناخن</a>
                         </li>
                         <li class="item-megamenu-3">
-                          <a href="#" class="list-category-megamenu-3">تجهیزات جانبی آرایش</a>
+                          <a href="#" class="list-category-megamenu-3">تجهیزات جانبی آرایش</button>
                         </li>
                         <li class="item-megamenu-3">
                           <a href="#" class="list-category-megamenu-3"><span>لوازم آرایشی<i
@@ -1348,7 +1350,6 @@
     <!--    responsive-megamenu-mobile----------------->
   </header>
   <!-- end::header -->
-
   <div class="shopping-cart">
     <form action="#" method="post">
       <div class="shopping-cart__header">
@@ -1375,7 +1376,7 @@
       <div class="shopping-cart__footer">
         <div class="shopping-cart__empty">
           <div class="d-grid">
-            <button class="btn btn-danger mb-3">
+            <button class="btn btn-default delete-address mb-3">
               ثبت سفارش
             </button>
           </div>
@@ -1390,7 +1391,7 @@
             </span>
           </div>
           <div>
-            <button type="submit" class="shopping-cart__submit btn btn-primary">
+            <button type="submit" class="shopping-cart__submit btn btn-default">
               ادامه خرید
             </button>
             <a href="cart.html" class="shopping-cart__submit btn btn-outline-primary">
@@ -1879,7 +1880,6 @@
       </li>
     </ul>
   </nav>
-
   <section class="bg-blues">
     <div class="bg-gradiant-account">
         <div class="area-shape-bottom">
@@ -1892,10 +1892,9 @@
 
 
 <main>
-
-  <!-- start::content section -->
-  <section class="py-5 area-content-paccount">
-    <div class="container">
+    <!-- start::content section -->
+    <section class="py-5 area-content-paccount">
+      <div class="container">
         <div class="row gy-4">
           <div class="col-12 col-lg-3">
             <div class="sidebar-account ">
@@ -2029,419 +2028,229 @@
               </div> -->
             </div>
           </div>
-            <div class="col-12 col-lg-9">
-                       <div class="page-content">
-                        <div class="page-content-header ">
-                          <h1 class="title-tabcontent-account ms-2">
-                              سفارش ها
-                              <span class="count-content-tab me-2">6</span>
-                          </h1>
-                          <div class="box-select-sort d-flex align-items-center justify-content-start justify-content-sm-end">
-                            <label class="" for="FormCustomSelect">مرتب سازی براساس:
-                            </label>
-                            <select class="form-select custom-select" id="FormCustomSelect" aria-label="Default select example">
-                                <option selected="">همه</option>
-                                <option value="1">در حال پردازش</option>
-                                <option value="2">تحویل داده </option>
-                                <option value="3">لغو شده ها</option>
-                              </select>
+          <div class="col-12 col-lg-9">
+            <div class="page-content">
+              <div class="page-content-header ">
+                <h1 class="title-tabcontent-account ms-2">
+                پرداخت ها
+                  <span class="count-content-tab me-2">10</span>
+                </h1>
+                
+              </div>
+              <div class="table-wrapper" style="overflow: auto;">
+                <table class="table w-100" style="min-width: 800px;">
+                  <thead>
+                      <tr>
+                          <th scope="col">#</th>
+                          <th scope="col"class="th-lg">ردیف</th>
+                          <th scope="col"class="th-lg">کد پیگیری</th>
+                          <th scope="col"class="th-lg" style="width: 135px;">رقم پرداختی</th>
+                          <th scope="col"class="th-lg">نوع پرداخت </th>
+                          <th scope="col"class="th-lg text-center">وضعیت</th>
+                          <th scope="col"class="text-center">دسترسی</th>
+                      </tr>
+                  </thead>
+                  <tbody>
+                      <tr>
+                          <th scope="row">1</th>
+                          <td>120</td>
+                          <td>1233-3213-5468</td>
+                          <td>140 هزار ریال</td>
+                          <td>
+                            <div>
+                              درگاه پاسارگاد
+                            </div>
+                          </td>
+                          <td>
+                            <span class="label label-inline label-light-primary font-weight-bold line-clamp1">پرداخت تایید شده </span>
+                          </td>
+                          <td>
+                              <div class="actions">
+                                <a  href="" class="btn btn-primary edit-address" data-id="1">
+                                 نمایش جزییات پرداخت
+                                </a>
+                                <a  href="" class="btn btn-light edit-address" data-id="1">
+                                  نمایش فاکتور
+                                 </a>
+                              </div>
+                          </td>
+                      </tr>
+                      <tr>
+                        <th scope="row">1</th>
+                        <td>120</td>
+                        <td>1233-3213-5468</td>
+                        <td>140 هزار ریال</td>
+                        <td>
+                          <div>
+                            درگاه پاسارگاد
+                          </div>
+                        </td>
+                        <td>
+                          <span class="label label-inline label-light-primary font-weight-bold line-clamp1">پرداخت تایید شده </span>
+                        </td>
+                        <td>
+                            <div class="actions">
+                              <a  href="" class="btn btn-primary edit-address" data-id="1">
+                               نمایش جزییات پرداخت
+                              </a>
+                              <a  href="" class="btn btn-light edit-address" data-id="1">
+                                نمایش فاکتور
+                               </a>
+                            </div>
+                        </td>
+                    </tr>
+                    <tr>
+                      <th scope="row">1</th>
+                      <td>120</td>
+                      <td>1233-3213-5468</td>
+                      <td>140 هزار ریال</td>
+                      <td>
+                        <div>
+                          درگاه پاسارگاد
                         </div>
+                      </td>
+                      <td>
+                        <span class="label label-inline label-light-primary font-weight-bold line-clamp1">پرداخت تایید شده </span>
+                      </td>
+                      <td>
+                          <div class="actions">
+                            <a  href="" class="btn btn-primary edit-address" data-id="1">
+                             نمایش جزییات پرداخت
+                            </a>
+                            <a  href="" class="btn btn-light edit-address" data-id="1">
+                              نمایش فاکتور
+                             </a>
+                          </div>
+                      </td>
+                  </tr>
+                  <tr>
+                    <th scope="row">1</th>
+                    <td>120</td>
+                    <td>1233-3213-5468</td>
+                    <td>140 هزار ریال</td>
+                    <td>
+                      <div>
+                        درگاه پاسارگاد
                       </div>
-                      <div class="row gap-4">
-                        <div class="accordion area-orders-account" id="accordian">
-                          <div class="accordion-item card card-order mb-3">
-                            <h2 class="accordion-header card-header" id="headingOne">
-                              <button class="accordion-button header-content-orders collapsed" type="button" data-bs-toggle="collapse" data-bs-target="#collapse1" aria-expanded="false" aria-controls="collapse1">
-                                  <div class="id-product-order ">#2342344</div>
-                                  <div class="date-order">
-                                    <svg xmlns="http://www.w3.org/2000/svg" width="32" height="32" viewBox="0 0 24 24"><path fill="currentColor" d="M19 4h-1V2h-2v2H8V2H6v2H5c-1.11 0-1.99.9-1.99 2L3 20a2 2 0 0 0 2 2h14c1.1 0 2-.9 2-2V6c0-1.1-.9-2-2-2zm0 16H5V10h14v10zM9 14H7v-2h2v2zm4 0h-2v-2h2v2zm4 0h-2v-2h2v2zm-8 4H7v-2h2v2zm4 0h-2v-2h2v2zm4 0h-2v-2h2v2z"/></svg>
-                                    1401/1/1
-                                  </div>
-                                  <div class="stutus-order in-progress ">درحال
-                                      پردازش</div>
-                                  <div class="price-product-order "> 150.000 تومان</div>
-                                  </button>
-                              </h2>
-                            <div id="collapse1" class="accordion-collapse collapse-content-orders collapse" aria-labelledby="headingOne" data-bs-parent="#accordian" style="">
-                              <div class="accordion-body card-body">
-                                  <div class="area-content-orders d-sm-flex align-items-center justify-content-between mb-4 mb-sm-3">
-                                      <div class="area-ditails_product-orders">
-                                          <img src="../assets/images/chocolate.webp" class="mb-3 mb-sm-0">
-                                          <div class="ditails_product-orders me-3  text-center">
-                                              <a href="#" class="nameproduct-orders mb-1">کفش مناسب پیاده
-                                                  روی</a>
-                                          
-                                          </div>
-                                      </div>
-                                      <div class="order__col ">
-                                          تعداد:
-                                          <span>2</span>
-                                        </div>
-                                      <div class="order__col">
-                                          جمع کل:
-                                          <span>1,500,000</span>
-                                      </div>
-                                  </div>
-
-                                  <div class="area-content-orders d-sm-flex align-items-center justify-content-between mb-4 mb-sm-3">
-                                      <div class="area-ditails_product-orders">
-                                          <img src="../assets/images/keyboard.jpg" class="mb-3 mb-sm-0">
-                                          <div class="ditails_product-orders me-3  text-center">
-                                              <a href="#" class="nameproduct-orders mb-1">کفش مناسب پیاده
-                                                روی</a>
-                                              
-                                          </div>
-                                      </div>
-                                      <div class="order__col">
-                                          تعداد:
-                                          <span>2</span></div>
-                                      <div class="order__col">
-                                          جمع کل:
-                                          <span>1,500,000</span>
-                                      </div>
-                                  </div>
-
-                                  <div class="area-details-bottom-orders d-sm-flex justify-content-between align-items-center  border-top py-4">
-
-                                      <div class="details-bottom-content-orders details-bottom-content ms-3">
-                                          <span>جمع کل: </span>
-                                          <span>15000 تومان</span>
-                                      </div>
-
-                                      <div class="details-bottom-content-orders details-bottom-content ms-3">
-                                          <span>حمل و نقل: </span>
-                                          <span>15000 تومان</span>
-                                      </div>
-
-                                      <div class="details-bottom-content-orders details-bottom-content ms-3">
-                                          <span>مالیات: </span>
-                                          <span>15000 تومان</span>
-                                      </div>
-                                      <div class="details-bottom-content-orders details-bottom-content ms-3">
-                                          <span>کل: </span>
-                                          <span>1,500,000 تومان</span>
-                                      </div>
-                                  </div>
-                              </div>
-                            </div>
-                          </div>
-                          <div class="accordion-item card card-order mb-3">
-                            <h2 class="accordion-header card-header" id="headingOne">
-                              <button class="accordion-button header-content-orders collapsed" type="button" data-bs-toggle="collapse" data-bs-target="#collapse2" aria-expanded="false" aria-controls="collapse2">
-                                  <div class="id-product-order ">#2342344</div>
-                                  <div class="date-order">
-                                    <svg xmlns="http://www.w3.org/2000/svg" width="32" height="32" viewBox="0 0 24 24"><path fill="currentColor" d="M19 4h-1V2h-2v2H8V2H6v2H5c-1.11 0-1.99.9-1.99 2L3 20a2 2 0 0 0 2 2h14c1.1 0 2-.9 2-2V6c0-1.1-.9-2-2-2zm0 16H5V10h14v10zM9 14H7v-2h2v2zm4 0h-2v-2h2v2zm4 0h-2v-2h2v2zm-8 4H7v-2h2v2zm4 0h-2v-2h2v2zm4 0h-2v-2h2v2z"/></svg>
-                                    1401/1/1
-                                  </div>
-                                  <div class="stutus-order in-progress ">درحال
-                                      پردازش</div>
-                                  <div class="price-product-order "> 150.000 تومان</div>
-                                  </button>
-                              </h2>
-                            <div id="collapse2" class="accordion-collapse collapse-content-orders collapse" aria-labelledby="headingOne" data-bs-parent="#accordian" style="">
-                              <div class="accordion-body card-body">
-                                  <div class="area-content-orders d-sm-flex align-items-center justify-content-between mb-4 mb-sm-3">
-                                      <div class="area-ditails_product-orders">
-                                          <img src="../assets/images/chocolate.webp" class="mb-3 mb-sm-0">
-                                          <div class="ditails_product-orders me-3  text-center">
-                                              <a href="#" class="nameproduct-orders mb-1">کفش مناسب پیاده
-                                                  روی</a>
-                                          
-                                          </div>
-                                      </div>
-                                      <div class="order__col ">
-                                          تعداد:
-                                          <span>2</span>
-                                        </div>
-                                      <div class="order__col">
-                                          جمع کل:
-                                          <span>1,500,000</span>
-                                      </div>
-                                  </div>
-
-                                  <div class="area-content-orders d-sm-flex align-items-center justify-content-between mb-4 mb-sm-3">
-                                      <div class="area-ditails_product-orders">
-                                          <img src="../assets/images/keyboard.jpg" class="mb-3 mb-sm-0">
-                                          <div class="ditails_product-orders me-3  text-center">
-                                              <a href="#" class="nameproduct-orders mb-1">کفش مناسب پیاده
-                                                روی</a>
-                                              
-                                          </div>
-                                      </div>
-                                      <div class="order__col">
-                                          تعداد:
-                                          <span>2</span></div>
-                                      <div class="order__col">
-                                          جمع کل:
-                                          <span>1,500,000</span>
-                                      </div>
-                                  </div>
-
-                                  <div class="area-details-bottom-orders d-sm-flex justify-content-between align-items-center  border-top py-4">
-
-                                      <div class="details-bottom-content-orders details-bottom-content ms-3">
-                                          <span>جمع کل: </span>
-                                          <span>15000 تومان</span>
-                                      </div>
-
-                                      <div class="details-bottom-content-orders details-bottom-content ms-3">
-                                          <span>حمل و نقل: </span>
-                                          <span>15000 تومان</span>
-                                      </div>
-
-                                      <div class="details-bottom-content-orders details-bottom-content ms-3">
-                                          <span>مالیات: </span>
-                                          <span>15000 تومان</span>
-                                      </div>
-                                      <div class="details-bottom-content-orders details-bottom-content ms-3">
-                                          <span>کل: </span>
-                                          <span>1,500,000 تومان</span>
-                                      </div>
-                                  </div>
-                              </div>
-                            </div>
-                          </div>
-                          <div class="accordion-item card card-order mb-3">
-                            <h2 class="accordion-header card-header" id="headingOne">
-                              <button class="accordion-button header-content-orders collapsed" type="button" data-bs-toggle="collapse" data-bs-target="#collapse3" aria-expanded="false" aria-controls="collapse3">
-                                  <div class="id-product-order ">#2342344</div>
-                                  <div class="date-order">
-                                    <svg xmlns="http://www.w3.org/2000/svg" width="32" height="32" viewBox="0 0 24 24"><path fill="currentColor" d="M19 4h-1V2h-2v2H8V2H6v2H5c-1.11 0-1.99.9-1.99 2L3 20a2 2 0 0 0 2 2h14c1.1 0 2-.9 2-2V6c0-1.1-.9-2-2-2zm0 16H5V10h14v10zM9 14H7v-2h2v2zm4 0h-2v-2h2v2zm4 0h-2v-2h2v2zm-8 4H7v-2h2v2zm4 0h-2v-2h2v2zm4 0h-2v-2h2v2z"/></svg>
-                                    1401/1/1
-                                  </div>
-                                  <div class="stutus-order in-progress ">درحال
-                                      پردازش</div>
-                                  <div class="price-product-order "> 150.000 تومان</div>
-                                  </button>
-                              </h2>
-                            <div id="collapse3" class="accordion-collapse collapse-content-orders collapse" aria-labelledby="headingOne" data-bs-parent="#accordian" style="">
-                              <div class="accordion-body card-body">
-                                  <div class="area-content-orders d-sm-flex align-items-center justify-content-between mb-4 mb-sm-3">
-                                      <div class="area-ditails_product-orders">
-                                          <img src="../assets/images/chocolate.webp" class="mb-3 mb-sm-0">
-                                          <div class="ditails_product-orders me-3  text-center">
-                                              <a href="#" class="nameproduct-orders mb-1">کفش مناسب پیاده
-                                                  روی</a>
-                                          
-                                          </div>
-                                      </div>
-                                      <div class="order__col ">
-                                          تعداد:
-                                          <span>2</span>
-                                        </div>
-                                      <div class="order__col">
-                                          جمع کل:
-                                          <span>1,500,000</span>
-                                      </div>
-                                  </div>
-
-                                  <div class="area-content-orders d-sm-flex align-items-center justify-content-between mb-4 mb-sm-3">
-                                      <div class="area-ditails_product-orders">
-                                          <img src="../assets/images/keyboard.jpg" class="mb-3 mb-sm-0">
-                                          <div class="ditails_product-orders me-3  text-center">
-                                              <a href="#" class="nameproduct-orders mb-1">کفش مناسب پیاده
-                                                روی</a>
-                                              
-                                          </div>
-                                      </div>
-                                      <div class="order__col">
-                                          تعداد:
-                                          <span>2</span></div>
-                                      <div class="order__col">
-                                          جمع کل:
-                                          <span>1,500,000</span>
-                                      </div>
-                                  </div>
-
-                                  <div class="area-details-bottom-orders d-sm-flex justify-content-between align-items-center  border-top py-4">
-
-                                      <div class="details-bottom-content-orders details-bottom-content ms-3">
-                                          <span>جمع کل: </span>
-                                          <span>15000 تومان</span>
-                                      </div>
-
-                                      <div class="details-bottom-content-orders details-bottom-content ms-3">
-                                          <span>حمل و نقل: </span>
-                                          <span>15000 تومان</span>
-                                      </div>
-
-                                      <div class="details-bottom-content-orders details-bottom-content ms-3">
-                                          <span>مالیات: </span>
-                                          <span>15000 تومان</span>
-                                      </div>
-                                      <div class="details-bottom-content-orders details-bottom-content ms-3">
-                                          <span>کل: </span>
-                                          <span>1,500,000 تومان</span>
-                                      </div>
-                                  </div>
-                              </div>
-                            </div>
-                          </div>
-                          <div class="accordion-item card card-order mb-3">
-                            <h2 class="accordion-header card-header" id="headingOne">
-                              <button class="accordion-button header-content-orders collapsed" type="button" data-bs-toggle="collapse" data-bs-target="#collapse4" aria-expanded="false" aria-controls="collapse4">
-                                  <div class="id-product-order ">#2342344</div>
-                                  <div class="date-order">
-                                    <svg xmlns="http://www.w3.org/2000/svg" width="32" height="32" viewBox="0 0 24 24"><path fill="currentColor" d="M19 4h-1V2h-2v2H8V2H6v2H5c-1.11 0-1.99.9-1.99 2L3 20a2 2 0 0 0 2 2h14c1.1 0 2-.9 2-2V6c0-1.1-.9-2-2-2zm0 16H5V10h14v10zM9 14H7v-2h2v2zm4 0h-2v-2h2v2zm4 0h-2v-2h2v2zm-8 4H7v-2h2v2zm4 0h-2v-2h2v2zm4 0h-2v-2h2v2z"/></svg>
-                                    1401/1/1
-                                  </div>
-                                  <div class="stutus-order succeed">تحویل شده</div>
-                                  <div class="price-product-order "> 150.000 تومان</div>
-                                  </button>
-                              </h2>
-                            <div id="collapse4" class="accordion-collapse collapse-content-orders collapse" aria-labelledby="headingOne" data-bs-parent="#accordian" style="">
-                              <div class="accordion-body card-body">
-                                  <div class="area-content-orders d-sm-flex align-items-center justify-content-between mb-4 mb-sm-3">
-                                      <div class="area-ditails_product-orders">
-                                          <img src="../assets/images/chocolate.webp" class="mb-3 mb-sm-0">
-                                          <div class="ditails_product-orders me-3  text-center">
-                                              <a href="#" class="nameproduct-orders mb-1">کفش مناسب پیاده
-                                                  روی</a>
-                                          
-                                          </div>
-                                      </div>
-                                      <div class="order__col ">
-                                          تعداد:
-                                          <span>2</span>
-                                        </div>
-                                      <div class="order__col">
-                                          جمع کل:
-                                          <span>1,500,000</span>
-                                      </div>
-                                  </div>
-
-                                  <div class="area-content-orders d-sm-flex align-items-center justify-content-between mb-4 mb-sm-3">
-                                      <div class="area-ditails_product-orders">
-                                          <img src="../assets/images/keyboard.jpg" class="mb-3 mb-sm-0">
-                                          <div class="ditails_product-orders me-3  text-center">
-                                              <a href="#" class="nameproduct-orders mb-1">کفش مناسب پیاده
-                                                روی</a>
-                                              
-                                          </div>
-                                      </div>
-                                      <div class="order__col">
-                                          تعداد:
-                                          <span>2</span></div>
-                                      <div class="order__col">
-                                          جمع کل:
-                                          <span>1,500,000</span>
-                                      </div>
-                                  </div>
-
-                                  <div class="area-details-bottom-orders d-sm-flex justify-content-between align-items-center  border-top py-4">
-
-                                      <div class="details-bottom-content-orders details-bottom-content ms-3">
-                                          <span>جمع کل: </span>
-                                          <span>15000 تومان</span>
-                                      </div>
-
-                                      <div class="details-bottom-content-orders details-bottom-content ms-3">
-                                          <span>حمل و نقل: </span>
-                                          <span>15000 تومان</span>
-                                      </div>
-
-                                      <div class="details-bottom-content-orders details-bottom-content ms-3">
-                                          <span>مالیات: </span>
-                                          <span>15000 تومان</span>
-                                      </div>
-                                      <div class="details-bottom-content-orders details-bottom-content ms-3">
-                                          <span>کل: </span>
-                                          <span>1,500,000 تومان</span>
-                                      </div>
-                                  </div>
-                              </div>
-                            </div>
-                          </div>
-                          <div class="accordion-item card card-order mb-3">
-                            <h2 class="accordion-header card-header" id="headingOne">
-                              <button class="accordion-button header-content-orders collapsed" type="button" data-bs-toggle="collapse" data-bs-target="#collapse5" aria-expanded="false" aria-controls="collapse5">
-                                  <div class="id-product-order ">#2342344</div>
-                                  <div class="date-order">
-                                    <svg xmlns="http://www.w3.org/2000/svg" width="32" height="32" viewBox="0 0 24 24"><path fill="currentColor" d="M19 4h-1V2h-2v2H8V2H6v2H5c-1.11 0-1.99.9-1.99 2L3 20a2 2 0 0 0 2 2h14c1.1 0 2-.9 2-2V6c0-1.1-.9-2-2-2zm0 16H5V10h14v10zM9 14H7v-2h2v2zm4 0h-2v-2h2v2zm4 0h-2v-2h2v2zm-8 4H7v-2h2v2zm4 0h-2v-2h2v2zm4 0h-2v-2h2v2z"/></svg>
-                                    1401/1/1
-                                  </div>
-                                  <div class="stutus-order canceled ">لغو شده</div>
-                                  <div class="price-product-order "> 150.000 تومان</div>
-                                  </button>
-                              </h2>
-                            <div id="collapse5" class="accordion-collapse collapse-content-orders collapse" aria-labelledby="headingOne" data-bs-parent="#accordian" style="">
-                              <div class="accordion-body card-body">
-                                  <div class="area-content-orders d-sm-flex align-items-center justify-content-between mb-4 mb-sm-3">
-                                      <div class="area-ditails_product-orders">
-                                          <img src="../assets/images/chocolate.webp" class="mb-3 mb-sm-0">
-                                          <div class="ditails_product-orders me-3  text-center">
-                                              <a href="#" class="nameproduct-orders mb-1">کفش مناسب پیاده
-                                                  روی</a>
-                                          
-                                          </div>
-                                      </div>
-                                      <div class="order__col ">
-                                          تعداد:
-                                          <span>2</span>
-                                        </div>
-                                      <div class="order__col">
-                                          جمع کل:
-                                          <span>1,500,000</span>
-                                      </div>
-                                  </div>
-
-                                  <div class="area-content-orders d-sm-flex align-items-center justify-content-between mb-4 mb-sm-3">
-                                      <div class="area-ditails_product-orders">
-                                          <img src="../assets/images/keyboard.jpg" class="mb-3 mb-sm-0">
-                                          <div class="ditails_product-orders me-3  text-center">
-                                              <a href="#" class="nameproduct-orders mb-1">کفش مناسب پیاده
-                                                روی</a>
-                                              
-                                          </div>
-                                      </div>
-                                      <div class="order__col">
-                                          تعداد:
-                                          <span>2</span></div>
-                                      <div class="order__col">
-                                          جمع کل:
-                                          <span>1,500,000</span>
-                                      </div>
-                                  </div>
-
-                                  <div class="area-details-bottom-orders d-sm-flex justify-content-between align-items-center  border-top py-4">
-
-                                      <div class="details-bottom-content-orders details-bottom-content ms-3">
-                                          <span>جمع کل: </span>
-                                          <span>15000 تومان</span>
-                                      </div>
-
-                                      <div class="details-bottom-content-orders details-bottom-content ms-3">
-                                          <span>حمل و نقل: </span>
-                                          <span>15000 تومان</span>
-                                      </div>
-
-                                      <div class="details-bottom-content-orders details-bottom-content ms-3">
-                                          <span>مالیات: </span>
-                                          <span>15000 تومان</span>
-                                      </div>
-                                      <div class="details-bottom-content-orders details-bottom-content ms-3">
-                                          <span>کل: </span>
-                                          <span>1,500,000 تومان</span>
-                                      </div>
-                                  </div>
-                              </div>
-                            </div>
-                          </div>
-                         
+                    </td>
+                    <td>
+                      <span class="label label-inline label-light-primary font-weight-bold line-clamp1">پرداخت تایید شده </span>
+                    </td>
+                    <td>
+                        <div class="actions">
+                          <a  href="" class="btn btn-primary edit-address" data-id="1">
+                           نمایش جزییات پرداخت
+                          </a>
+                          <a  href="" class="btn btn-light edit-address" data-id="1">
+                            نمایش فاکتور
+                           </a>
                         </div>
+                    </td>
+                </tr>
+                <tr>
+                  <th scope="row">1</th>
+                  <td>120</td>
+                  <td>1233-3213-5468</td>
+                  <td>140 هزار ریال</td>
+                  <td>
+                    <div>
+                      درگاه پاسارگاد
+                    </div>
+                  </td>
+                  <td>
+                    <span class="label label-inline label-light-primary font-weight-bold line-clamp1">پرداخت تایید شده </span>
+                  </td>
+                  <td>
+                      <div class="actions">
+                        <a  href="" class="btn btn-primary edit-address" data-id="1">
+                         نمایش جزییات پرداخت
+                        </a>
+                        <a  href="" class="btn btn-light edit-address" data-id="1">
+                          نمایش فاکتور
+                         </a>
                       </div>
-                      
-                 
-                       </div>
-
+                  </td>
+              </tr>
+              <tr>
+                <th scope="row">1</th>
+                <td>120</td>
+                <td>1233-3213-5468</td>
+                <td>140 هزار ریال</td>
+                <td>
+                  <div>
+                    درگاه پاسارگاد
+                  </div>
+                </td>
+                <td>
+                  <span class="label label-inline label-light-danger font-weight-bold line-clamp1">پرداخت تایید نشده </span>
+                </td>
+                <td>
+                    <div class="actions">
+                      <a  href="" class="btn btn-primary edit-address" data-id="1">
+                       نمایش جزییات پرداخت
+                      </a>
+                      <a  href="" class="btn btn-light edit-address" data-id="1">
+                        نمایش فاکتور
+                       </a>
+                    </div>
+                </td>
+            </tr>
+            <tr>
+              <th scope="row">1</th>
+              <td>120</td>
+              <td>1233-3213-5468</td>
+              <td>140 هزار ریال</td>
+              <td>
+                <div>
+                  درگاه پاسارگاد
+                </div>
+              </td>
+              <td>
+                <span class="label label-inline label-light-primary font-weight-bold line-clamp1">پرداخت تایید شده </span>
+              </td>
+              <td>
+                  <div class="actions">
+                    <a  href="" class="btn btn-primary edit-address" data-id="1">
+                     نمایش جزییات پرداخت
+                    </a>
+                    <a  href="" class="btn btn-light edit-address" data-id="1">
+                      نمایش فاکتور
+                     </a>
+                  </div>
+              </td>
+          </tr>
+                     
+                  </tbody>
+              </table>
+              </div>
+              <div class="reviews-list__pagination">
+                <nav aria-label="Page navigation example">
+                  <ul class="pagination justify-content-center">
+                    <li class="page-item  disabled">
+                      <a class="page-link" href="#" aria-label="Previous">
+                        <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24"><path fill="none" stroke="currentColor" stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="m10 17l5-5l-5-5"/></svg>
+                      </a>
+                    </li>
+                    <li class="page-item active"><a class="page-link" href="#">1</a></li>
+                    <li class="page-item"><a class="page-link" href="#">2</a></li>
+                    <li class="page-item"><a class="page-link" href="#">3</a></li>
+                    <li class="page-item">
+                      <a class="page-link" href="#" aria-label="Next">
+                        <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24"><path fill="none" stroke="currentColor" stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="m14 7l-5 5l5 5"/></svg>
+                      </a>
+                    </li>
+                  </ul>
+                </nav>
             </div>
+            </div>
+          </div>
         </div>
-    </div>
-</section>
-<!-- end::content section -->
-
+      </div>
+    </section>
+    <!-- end::content section -->
+  
+  
 </main>
-
   <!-- start::footer -->
   <footer>
     <div class="container">
@@ -2614,6 +2423,7 @@
     </div>
   </template>
 
+
 </body>
 <script src="../assets/js/jquery-3.2.1.min.js"></script>
 <script src="../assets/js/select2.min.js"></script>
@@ -2627,23 +2437,75 @@
 
   $(document).ready(function () {
 
-   
-  
 
-  $('.login-modal__hide').click(function (e) {
-    e.preventDefault()
-    $(this).hide()
-    $('.login-modal__show').show()
-    $('.login-modal__password-input').attr('type', 'text')
-  })
-  $('.login-modal__show').click(function (e) {
-    e.preventDefault()
-    $(this).hide()
-    $('.login-modal__hide').show()
-    $('.login-modal__password-input').attr('type', 'password')
-  })
+$('.edit-address').click(function(e) {
+  e.preventDefault()
+  var btn = $(this)
+  $(this).addClass("product-card__quickview--preload");
+    $(this).attr('disabled',true)
+  var html = $(this).html()
+  var product_id = $(this).attr('data-id');
 
+  var payload = {
+    product_id: product_id,
+  };
+  var el = $(this)
+  // el.html($.app.ajax.Template($('#BtnSpinner').html(), {}));
+
+  $.app.ajax.Operation({
+    url: "https://jsonplaceholder.typicode.com/posts",
+    data: payload,
+    callback: function (ResData) {
+    
+
+      if (ResData.type == "success") {
+        var response_data_cities = {
+              data: {
+                id: 1,
+                location: 'این یک موقعیت تست است',
+                no: '1',
+                unit: 'واحد یک',
+                postal_code: "932111000",
+                reviever: {
+                  first_name: "شهرام",
+                  last_name: "پیوندی",
+                  mobile: '09911041242'
+                }
+              },
+              success: true,
+            };
+            btn.removeAttr('disabled')
+            btn.removeClass("product-card__quickview--preload");
+
+            $('.form-address-container #address-location-text').val(response_data_cities.data.location)
+            $('.form-address-container #no').val(response_data_cities.data.no)
+            $('.form-address-container #unit').val(response_data_cities.data.unit)
+            $('.form-address-container #postalCode').val(response_data_cities.data.postal_code)
+            $('.form-address-container #receiver-firstname').val(response_data_cities.data.reviever.first_name)
+            $('.form-address-container #receiver-lastname').val(response_data_cities.data.reviever.last_name)
+            $('.form-address-container #receiver-mobile').val(response_data_cities.data.reviever.mobile)
+            $('.edit-address-modal').show()
+        
+
+      }
+    },
+  });
 })
+
+    $('.login-modal__hide').click(function (e) {
+      e.preventDefault()
+      $(this).hide()
+      $('.login-modal__show').show()
+      $('.login-modal__password-input').attr('type', 'text')
+    })
+    $('.login-modal__show').click(function (e) {
+      e.preventDefault()
+      $(this).hide()
+      $('.login-modal__hide').show()
+      $('.login-modal__password-input').attr('type', 'password')
+    })
+
+  })
 
 
 

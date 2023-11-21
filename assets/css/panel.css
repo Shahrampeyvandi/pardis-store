@@ -27,7 +27,7 @@
     font-size: 0.95rem;
     display: block;
     color: var(--color-natural-600);
-    padding: 0.8rem 1.5rem;
+    padding: 0.5rem 1rem;
     transition: all 0.3s ease-in-out;
     -webkit-transition: all 0.3s ease-in-out;
     border-bottom: 1px solid var(--color-natural-100);
@@ -64,7 +64,10 @@
 .account-menu .nav-link.active svg {
     color: var(--color-natural-100);
 }
-
+.name-avatar-user h4{
+    font-size: 1.3rem;
+    margin-top: .5rem;
+}
 
 .nav-pills-account-menu .nav-link.active, .nav-pills .show>.nav-link {
     color: var(--color-natural-100);
@@ -84,11 +87,12 @@ element.style {
 .product_cart {
     /* box-shadow: 0 0 3px rgb(0 0 0 / 0.2); */
     border: 1px solid var(--color-natural-200);
-    padding: .9rem .9rem;
+    padding: .9rem .5rem;
     border-radius: .4em;
     transition: all 0.3s ease-in-out;
     -webkit-transition: all 0.3s ease-in-out;
-    max-width: 350px;
+    max-width: 320px;
+    width: 100%;
 }
 .product_cart-account a.card-floating-icon {
     position: absolute;
@@ -110,11 +114,14 @@ element.style {
     height: auto;
 }
 .product_cart .body_card_product a {
-    margin-bottom: 0.8rem;
+    margin-bottom: 0.4rem;
+    height: 40px;
     display: block;
-    font-size: 1.1rem;
+    font-size: 1em;
     color: var(--color-natural-600);
     font-weight: 500;
+    margin-top: .5rem;
+    line-height: 24px;
 }
 .product_cart .body_card_product .price_card_product {
     margin-bottom: 1.5rem;
@@ -144,6 +151,8 @@ element.style {
 }
  .product_cart--title {
     font-size: 1rem;
+    line-height: 24px;
+    color: var(--color-natural-600);
 }
 
 .product_cart--addtocart svg {
@@ -176,6 +185,7 @@ element.style {
     /* height: calc(1.875rem + 2px); */
     line-height: 1.25;
     font-weight: 500;
+    padding: 5px 7px;
 }
 .product_cart .product-card__add-counter {
     width: 30px;
@@ -317,3 +327,198 @@ element.style {
 }
 
 /* orders */
+
+.area-btn-save svg {
+    color: var(--color-natural-100);
+}
+.profile-form {
+    padding: 1rem 1.5rem;
+}
+
+.area-setting-avatar {
+    background-color: #f7f7fc;
+    border-radius: 1rem;
+}
+.img-avatar-user {
+    border-radius: 50%;
+    width: 7rem;
+}
+.area-setting-avatar .btn-chang-avatar {
+    color: #4a4b65;
+    background-color: #fff;
+    border: 0;
+    box-shadow: 0 0 0.625rem -0.1875rem rgba(0, 0, 0, 0.13) !important;
+    padding: 0.425rem 1rem;
+    font-size: .95rem;
+    border-radius: 0.5rem;
+}
+.area-setting-avatar .description-avatar-user {
+    font-size: .9rem;
+}
+.profile-avatar-input {
+    position: absolute;
+    opacity: 0;
+    cursor: pointer;
+    left: 43px;
+    width: 126px;
+    cursor: pointer;
+}
+
+
+.example-preview {
+    border: 4px solid #F3F6F9;
+    padding: 1.75rem 1.5rem;
+    border-top-left-radius: 0.42rem;
+    border-top-right-radius: 0.42rem;
+}
+table {
+    width: 100%;
+    margin-bottom: 1rem;
+    color: #3F4254;
+    background-color: transparent;
+}
+
+
+
+
+.table th, .table td {
+    padding: 0.75rem;
+    vertical-align: middle;
+    border-top: 1px solid #EBEDF3;
+    text-align: center;
+}
+.table th {
+}
+.table thead th {
+    vertical-align: bottom;
+    border-bottom: 2px solid #EBEDF3;
+}
+.table thead th, .table thead td {
+    font-weight: 600;
+    font-size: 1rem;
+    border-bottom-width: 1px;
+    padding-top: 1rem;
+    padding-bottom: 1rem;
+}
+.table:not(.table-bordered) thead th, .table:not(.table-bordered) thead td {
+    border-top: 0;
+}
+.edit-address-modal .remodal-header {
+    padding: 1rem 1.5rem;
+    text-align: right;
+    font-size: 1.5rem;
+  }
+  .table-wrapper {
+    border: 1px solid var(--color-natural-200);
+    border-radius: 10px;
+    overflow: auto;
+  }
+
+  .table > :not(:last-child) > :last-child > * {
+    border-bottom: 1px solid var(--color-natural-200);
+}
+
+.table th, .table td {
+    padding: 0.75rem;
+    vertical-align: middle;
+    border-top: 1px solid #EBEDF3;
+    color: var(--color-natural-600);
+}
+.actions {
+    text-align: center;
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+    gap: 6px;
+}
+.actions button {
+    position: relative
+}
+.actions button svg {
+    width: 25px;
+
+}
+button.edit-address svg {
+    color: var(--color-primary-500);
+}
+button.delete-address svg {
+    color: var(--color-red-300);
+}
+.product-card__quickview--preload:after {
+	display: block;
+	content: "";
+	position: absolute;
+	border: 2px solid rgba(78, 78, 78, 0.938);
+	border-top-color: rgba(148, 148, 148, 0.404);
+	transition: border-color .1s;
+	animation-name: a;
+	animation-duration: .5s;
+	animation-timing-function: linear;
+	animation-iteration-count: infinite;
+	left: calc(50% - 8px);
+	top: calc(50% - 8px);
+	width: 16px;
+	height: 16px;
+	border-radius: 8px
+}
+
+button.edit-address.product-card__quickview--preload svg {
+	color: var(--color-natural-100);
+    opacity: 0;
+}
+
+.label.label-inline {
+    display: inline-block;
+    font-size: .9rem;
+    line-height: 20px;
+    text-align: center;
+}
+
+.label.label-inline {
+    padding: 0.3rem 0.75rem;
+    border-radius: 0.42rem;
+}
+.label.label-light-primary {
+    color: #3699FF;
+    background-color: #E1F0FF;
+}
+.label.label-light-danger {
+    color: #F64E60;
+    background-color: #FFE2E5;
+}
+
+/* .actions {
+    display: flex;
+    flex-direction: column;
+    width: 183px;
+    gap: 10px;
+} */
+
+.page-content{
+    background-color: white;
+  padding: 1rem;
+  border-radius:.8rem;
+  }
+  .bg-gradiant-account {
+  height: 480px;
+  background: linear-gradient(to right, var(--color-primary-500) 0%, var(--color-primary-400) 30%, var(--color-primary-300) 100%);
+  position: relative;
+  z-index: -1;
+}
+.area-shape-bottom {
+  color: #f7f7fc;
+}
+.area-shape-bottom svg {
+  position: absolute;
+  bottom: -2PX;
+  right: 0;
+  width: 100%;
+  color: #fff;
+  /* background: linear-gradient(to right, #766df4 0%, #766df4 30%, #6a9bf4 100%); */
+}
+.bg-blues {
+position: absolute;
+  right: 0;
+  left: 0;
+  z-index: -1;
+}
