@@ -12,12 +12,7 @@
   <link rel="stylesheet" href="./assets/css/style.css" />
 </head>
 
-<style>
-  body {
-    background-color: #fff !important;
-  }
- 
-</style>
+
 
 <body>
   <!-- start::login-modal -->
@@ -2032,6 +2027,19 @@
               </div>
         </div>
     </div>
+
+    <div class="row">
+      <div class="col-12">
+        <div class="alert alert-success" role="alert">
+          پارادایسی عزیز توجه فرمایید سبدهای بالاتر از 2,000,000 ریال به جز مواد اولیه و قالب های حجیم شامل ارسال رایگان به سراسر کشور می شود. فقط با خرید 635,000 ریال بیشتر؛ از ارسال رایگان استفاده کنید
+        </div>
+      </div>
+      <div class="col-12">
+        <div class="alert alert-primary" role="alert">
+         شما میتوانید برای اطلاع دقیق از <span class="title">قوانین و مقررات</span> به <a href="#">این لینک</a> مراجعه نمایید
+        </div>
+      </div>
+    </div>
     
     <div class="row gy-5 position-relative cart-wrapper">
         <div class="col-12 col-md-8">
@@ -2562,47 +2570,12 @@
 <script src="./assets/js/select2.min.js"></script>
 <script src="./assets/bootstrap/js/bootstrap.bundle.min.js"></script>
 <script src="./assets/js/app.js"></script>
-<style>
-
-</style>
 
 <script>
 
 
 
 
-
-
-  $(document).ready(function () {
-
-   
-
-   $('.layout-switcher__button').click(function(e) {
-    e.preventDefault()
-    $('.layout-switcher__button').removeClass('layout-switcher__button--active')
-    $(this).addClass('layout-switcher__button--active')
-    var with_feature = $(this).attr('data-with-features')
-    var layout = $(this).attr('data-layout')
-    console.log($(this).parents('.products-view'));
-    $(this).parents('.products-view').find('.products-view__list').attr('data-layout',layout)
-    $(this).parents('.products-view').find('.products-view__list').attr('data-with-features',with_feature)
-   })
-  
-
-  $('.login-modal__hide').click(function (e) {
-    e.preventDefault()
-    $(this).hide()
-    $('.login-modal__show').show()
-    $('.login-modal__password-input').attr('type', 'text')
-  })
-  $('.login-modal__show').click(function (e) {
-    e.preventDefault()
-    $(this).hide()
-    $('.login-modal__hide').show()
-    $('.login-modal__password-input').attr('type', 'password')
-  })
-
-})
 
 
 

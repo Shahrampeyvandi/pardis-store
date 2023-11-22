@@ -14,14 +14,7 @@
   <link rel="stylesheet" href="./assets/css/style.css" />
 </head>
 
-<style>
-  body {
-    background-color: #fff !important;
-  }
-  .lg-outer {
-    direction: ltr;
-  }
-</style>
+
 
 <body>
   <!-- start::login-modal -->
@@ -3441,18 +3434,7 @@
       //if you set loop to false, you have to restore this next line
       var current = el.item.index;
 
-      //if you disable loop you have to comment this block
-      // var count = el.item.count - 1;
-      // var current = Math.round(el.item.index - (el.item.count / 2) - .5);
-
-      // if (current < 0) {
-      //     current = count;
-      // }
-      // if (current > count) {
-      //     current = 0;
-      // }
-
-      //end block
+    
 
       productThumb
         .find(".owl-item")
@@ -3490,107 +3472,6 @@
       productGallery.data('owl.carousel').to(number, 300, true);
     });
   });
-
-
-  $(".custom1").owlCarousel({
-    animateOut: "fadeOut",
-    animateIn: "fadeIn",
-    stagePadding: 0,
-    singleItem: true,
-    items: 1,
-    singleItem: true,
-    loop: true,
-    rtl: true,
-    dots: true,
-    nav: false,
-    autoplay: true,
-    autoplayTimeout: 4000,
-    autoplayHoverPause: true,
-  });
-
-  $(".brands-slider").owlCarousel({
-    stagePadding: 0,
-    singleItem: true,
-    items: 5,
-    loop: true,
-    rtl: true,
-    nav: false,
-    dots: false,
-    margin: 10,
-    autoplay: true,
-    autoplayTimeout: 4000,
-    autoplayHoverPause: true,
-    responsive: {
-      0: {
-        items: 1.5,
-      },
-      412: {
-        items: 1.8,
-      },
-      768: {
-        items: 3,
-      },
-      1000: {
-        items: 5.4,
-        loop: true
-      }
-    }
-  });
-
-  // $(document).on("click", ".block-header__arrows-list button", function (e) {
-  //   product_owl.trigger("to.owl.carousel", [$(this).index(), 300]);
-  // });
-  var owl = $(".custom2").owlCarousel({
-
-    stagePadding: 0,
-    singleItem: true,
-    items: 1,
-    singleItem: true,
-    loop: true,
-    rtl: true,
-    dots: true,
-    autoplay: false,
-    nav: false,
-    autoplayTimeout: 8000,
-    dotsContainer: "#carousel-custom-dots",
-  });
-  $("#carousel-custom-dots").on("click", "li", function (e) {
-    owl.trigger("to.owl.carousel", [$(this).index(), 300]);
-  });
-  var id;
-  owl.on("changed.owl.carousel", function (event) {
-    owl.trigger("stop.owl.autoplay");
-    owl.trigger("play.owl.autoplay");
-    var elem = document.getElementById("myBar");
-    let start;
-    function step(timestamp) {
-      if (start === undefined) start = timestamp;
-      const elapsed = timestamp - start;
-
-      elem.style.width = (100 / 8000) * elapsed + "%";
-
-      if (elapsed < 8000) {
-        // Stop the animation after 2 seconds
-        window.requestAnimationFrame(step);
-      } else {
-      }
-    }
-
-    window.requestAnimationFrame(step);
-  });
-
-  $('.login-modal__hide').click(function (e) {
-    e.preventDefault()
-    $(this).hide()
-    $('.login-modal__show').show()
-    $('.login-modal__password-input').attr('type', 'text')
-  })
-  $('.login-modal__show').click(function (e) {
-    e.preventDefault()
-    $(this).hide()
-    $('.login-modal__hide').show()
-    $('.login-modal__password-input').attr('type', 'password')
-  })
 
 
 

@@ -345,3 +345,24 @@ $('.sidebar-close').click(function(e) {
   e.preventDefault()
   $('.sidebar').removeClass('open')
 })
+
+
+$('.btn-menu-mobile').click(function(e) {
+  e.preventDefault()
+  // $('#area-account-menu').slideDown()
+})
+
+
+
+$('.login-modal__hide').click(function (e) {
+  e.preventDefault()
+  $(this).hide()
+  $('.login-modal__show').show()
+  $('.login-modal__password-input').attr('type', 'text')
+})
+$('.login-modal__show').click(function (e) {
+  e.preventDefault()
+  $(this).hide()
+  $('.login-modal__hide').show()
+  $('.login-modal__password-input').attr('type', 'password')
+})

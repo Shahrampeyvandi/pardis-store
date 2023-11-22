@@ -21,9 +21,7 @@
 </head>
 
 <style>
-  body {
-    background-color: #fff !important;
-  }
+
 
   .remodal-header {
     font-size: 1.2rem;
@@ -102,14 +100,7 @@
   .remodal-header__goback {
     display: none;
   }
-  .remodal-header__goback svg{
-    width: 25px;
-    margin-left: .7rem;
-  }
-  .select-location-modal .remodal-header {
-    display: flex;
-    align-items: center;
-  }
+
   .map-container {
     padding: 1rem;
   }
@@ -2303,55 +2294,6 @@
 </nav>
 
 
-  <style>
-    .cart-customer-address,
-    .select-group-container {
-      border: 1px solid var(--color-natural-200) !important;
-      padding: 2rem 2.5rem 1rem 1rem;
-    }
-
-    .cart-customer-address {
-      padding-right: 4rem;
-    }
-
-    .cart-customer-address__top {
-      margin-bottom: 2rem;
-    }
-
-    .cart-customer-address__top>div {
-      margin-bottom: .9rem;
-    }
-
-    .cart-customer-address__top .label {
-      font-size: .9rem;
-      color: var(--color-natural-500);
-    }
-
-    .cart-customer-address__text {
-      display: flex;
-      align-items: center;
-      gap: 0.5em;
-      margin-right: -2rem;
-    }
-
-    .cart-customer-address__top .cart-customer-address__text span {
-      font-size: 1rem;
-      color: var(--color-natural-600);
-      font-weight: bold;
-
-    }
-
-    .cart-customer-address__text svg {
-      width: 22px;
-    }
-
-    .cart-customer-address__bottom {
-      text-align: left;
-    }
-    .cart-customer-address__edit-btn {
-      color: var(--color-natural-600);
-    }
-  </style>
 <main>
 
   <!-- start::content section -->
@@ -2948,10 +2890,6 @@
 <script>
 
 
-
-
-
-
   $(document).ready(function () {
 
     $(document).on('click','.select-address',function(e) {
@@ -3082,12 +3020,6 @@
           $('.select-location-modal').fadeOut()
              
             }
-
-
-           
-         
-
-
           }
           if (ResData.type == 'error') {
             alert('error')
@@ -3173,18 +3105,7 @@
     })
 
 
-    $('.login-modal__hide').click(function (e) {
-      e.preventDefault()
-      $(this).hide()
-      $('.login-modal__show').show()
-      $('.login-modal__password-input').attr('type', 'text')
-    })
-    $('.login-modal__show').click(function (e) {
-      e.preventDefault()
-      $(this).hide()
-      $('.login-modal__hide').show()
-      $('.login-modal__password-input').attr('type', 'password')
-    })
+    
 
 
     $('.provinces-select').change(function (e) {

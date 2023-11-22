@@ -18,8 +18,40 @@
 </head>
 
 <style>
-  body {
-    background-color: #fff !important;
+   .text-marker > div {
+    width: 310px;
+    background: white;
+    padding: 10px;
+    border-radius: 5px;
+    box-shadow: 1px 1px;
+    position: absolute;
+    -webkit-box-shadow: 0px 5px 17px 3px rgb(53 53 54 / 48%);
+    -moz-box-shadow: 0px 5px 17px 3px rgb(53 53 54 / 48%);
+    box-shadow: 0px 5px 17px 3px rgb(53 53 54 / 48%);
+    bottom: 54px;
+    left: -150px;
+    font-family: iranyekan;
+  }
+  .text-marker > div .title {
+    font-size: 1rem;
+    margin-bottom: .6rem;
+    text-align: center;
+
+    color: var(--color-red-700);
+  }
+  .text-marker > div .description {
+    font-size: .8rem;
+    margin-bottom: .3rem;
+
+    color: var(--color-natural-600);
+  }
+  .text-marker > div .phone {
+    font-size: .8rem;
+    margin-bottom: .3rem;
+    font-weight: bold;
+
+
+    color: var(--color-natural-700);
   }
  
 </style>
@@ -129,7 +161,6 @@
   </div>
 
   <!-- end::login-modal -->
-
  <!-- start::fixed bottom menu -->
  <div id="fixed-menu">
   <div>
@@ -144,6 +175,7 @@
     <span>خانه</span>
     </a>
     <a href="#" class="fixed-menu__link header-left-icons__basket"> 
+      <span class="header-left-icon__basket-count" style="display: none;">0</span>
       <svg xmlns="http://www.w3.org/2000/svg" width="32" height="32" viewBox="0 0 24 24"><g fill="none" stroke="currentColor" stroke-linecap="round" stroke-linejoin="round" stroke-width="2"><path d="M3 3h2l.5 3m0 0L7 15h11l3-9H5.5z"/><circle cx="8" cy="20" r="1"/><circle cx="17" cy="20" r="1"/></g></svg>
       <span>سبد خرید</span>
     
@@ -158,9 +190,9 @@
 </div>
 <!-- end::fixed bottom menu -->
 
- <!-- start::header -->
- <header>
-  <div class="container-fluid  px-md-5" style="max-width: 1400px;">
+<!-- start::header -->
+<header>
+  <div class="container-fluid  px-md-5" >
     <div class="row py-3 g-md-3">
       <div class="col-12 col-md-8 col-xl-9">
         <div class="header-right">
@@ -174,27 +206,17 @@
             </div>
 
             <div class="col-lg-8 col-md-8 col-12 pull-righ px-md-0 px-md-auto">
-              <div class="search-header">
-                <form action="#" class="d-flex">
-                  <input type="text" class="header-search-input" placeholder="جستجو ..." />
+              <div class="search-header position-relative">
+                <form action="#" class="d-flex ">
+                  <span class="search-icon">
+                    <svg xmlns="http://www.w3.org/2000/svg" width="28" height="28" viewBox="0 0 24 24">
+                      <path fill="currentColor"
+                        d="M15.5 14h-.79l-.28-.27a6.5 6.5 0 0 0 1.48-5.34c-.47-2.78-2.79-5-5.59-5.34a6.505 6.505 0 0 0-7.27 7.27c.34 2.8 2.56 5.12 5.34 5.59a6.5 6.5 0 0 0 5.34-1.48l.27.28v.79l4.25 4.25c.41.41 1.08.41 1.49 0c.41-.41.41-1.08 0-1.49L15.5 14zm-6 0C7.01 14 5 11.99 5 9.5S7.01 5 9.5 5S14 7.01 14 9.5S11.99 14 9.5 14z" />
+                    </svg>
+                  </span>
+                  <input type="text" class="header-search-input" placeholder="جست و جو در پارادایس ..." />
 
-                  <select name="" id="" class="js-example-basic-single select2" style="height: 45px">
-                    <option value="">انتخاب کنید</option>
-                    <option value="1">کالای دیجیتال</option>
-                    <option value="1">آرایشی بهداشتی و سلامت</option>
-                    <option value="1">مد و پوشاک</option>
-                    <option value="1">سلامت</option>
-                    <option value="1">کالای دیجیتال</option>
-                    <option value="1">آرایشی بهداشتی و سلامت</option>
-                    <option value="1">مد و پوشاک</option>
-                    <option value="1">سلامت</option>
-                    <option value="1">کالای دیجیتال</option>
-                    <option value="1">آرایشی بهداشتی و سلامت</option>
-                    <option value="1">مد و پوشاک</option>
-                    <option value="1">سلامت</option>
-                    <option value="1">کالای دیجیتال</option>
-                    <option value="1">آرایشی بهداشتی و سلامت</option>
-                  </select>
+             
 
                   <button type="submit" class="btn-search">
                     <svg xmlns="http://www.w3.org/2000/svg" width="32" height="32" viewBox="0 0 24 24">
@@ -2130,41 +2152,7 @@
   </div>
   <!-- end::content section -->
 <style>
-  .text-marker > div {
-    width: 310px;
-    background: white;
-    padding: 10px;
-    border-radius: 5px;
-    box-shadow: 1px 1px;
-    position: absolute;
-    -webkit-box-shadow: 0px 5px 17px 3px rgb(53 53 54 / 48%);
-    -moz-box-shadow: 0px 5px 17px 3px rgb(53 53 54 / 48%);
-    box-shadow: 0px 5px 17px 3px rgb(53 53 54 / 48%);
-    bottom: 54px;
-    left: -150px;
-    font-family: iranyekan;
-  }
-  .text-marker > div .title {
-    font-size: 1rem;
-    margin-bottom: .6rem;
-    text-align: center;
-
-    color: var(--color-red-700);
-  }
-  .text-marker > div .description {
-    font-size: .8rem;
-    margin-bottom: .3rem;
-
-    color: var(--color-natural-600);
-  }
-  .text-marker > div .phone {
-    font-size: .8rem;
-    margin-bottom: .3rem;
-    font-weight: bold;
-
-
-    color: var(--color-natural-700);
-  }
+ 
 </style>
 
   <div class="container">

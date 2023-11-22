@@ -14,9 +14,6 @@
 </head>
 
 <style>
-  body {
-    background-color: #fff !important;
-  }
 
   .remodal-header {
     font-size: 1.2rem;
@@ -25,75 +22,7 @@
     border-bottom: 1px solid var(--color-natural-200);
   }
 
-  .address-list {
-    margin: 1rem 0;
-  }
-
-  .address-list .address-item .address-item__title {
-    font-size: 1rem;
-    margin-bottom: 1rem;
-  }
-
-  .address-list .address-item .address-item__option {
-    font-size: .9rem;
-    display: flex;
-    align-items: center;
-  }
-
-  .address-list .address-item .address-item__option svg {
-    width: 20px;
-  }
-
-  .edit-address-modal .address-item {
-    border-bottom: 1px solid var(--color-natural-200);
-    margin-bottom: 1rem;
-    margin-right: 2rem;
-    padding-bottom: .5rem;
-  }
-
-  .edit-address-modal .address-item label {
-    margin-right: -2rem;
-    margin-bottom: 0;
-  }
-
-  .add-address-btn {
-    display: flex;
-    justify-content: space-between;
-    padding: 1rem;
-    cursor: pointer;
-    border-bottom: 1px solid var(--color-natural-200);
-  }
-
-  .add-address-btn div,
-  .add-address-btn svg {
-    color: var(--color-primary-500)
-  }
-
-  .address-item__edit-btn svg {
-    width: 20px;
-  }
-
-  .form-address-container {
-    display: none;
-  }
-  .seperator {
-    margin: 1rem 0;
-    border-top: 1px solid var(--color-natural-200);
-  }
-  .remodal-header__goback {
-    display: none;
-  }
-  .remodal-header__goback svg{
-    width: 25px;
-    margin-left: .7rem;
-  }
-  .select-location-modal .remodal-header {
-    display: flex;
-    align-items: center;
-  }
-  .map-container {
-    padding: 1rem;
-  }
+  
 </style>
 
 <body>
@@ -2054,58 +1983,6 @@
 </nav>
 
 
-  <style>
-    .cart-customer-address,
-    .select-group-container {
-      border: 1px solid var(--color-natural-200) !important;
-      padding: 2rem 2.5rem 1rem 1rem;
-    }
-    .select-group-container .section-title {
-      margin: .5rem 1rem 1.5rem;
-      font-size: 1.5rem;
-      color: var(--color-natural-500);
-      
-    }
-
-    .cart-customer-address {
-      padding-right: 4rem;
-    }
-
-    .cart-customer-address__top {
-      margin-bottom: 2rem;
-    }
-
-    .cart-customer-address__top>div {
-      margin-bottom: .9rem;
-    }
-
-    .cart-customer-address__top .label {
-      font-size: .9rem;
-      color: var(--color-natural-500);
-    }
-
-    .cart-customer-address__text {
-      display: flex;
-      align-items: center;
-      gap: 0.5em;
-      margin-right: -2rem;
-    }
-
-    .cart-customer-address__top .cart-customer-address__text span {
-      font-size: 1rem;
-      color: var(--color-natural-600);
-      font-weight: bold;
-
-    }
-
-    .cart-customer-address__text svg {
-      width: 22px;
-    }
-
-    .cart-customer-address__bottom {
-      text-align: left;
-    }
-  </style>
 
  <main>
    <!-- start::content section -->
@@ -2679,78 +2556,8 @@
 <script src="./assets/js/select2.min.js"></script>
 <script src="./assets/bootstrap/js/bootstrap.bundle.min.js"></script>
 <script src="./assets/js/app.js"></script>
-<style>
-
-</style>
-
-<script>
 
 
-
-
-
-
-  $(document).ready(function () {
-
-   
-
-   
-  
-
-    $('.cart-customer-address__edit-btn').click(function (e) {
-      e.preventDefault()
-      $('.edit-address-modal').fadeIn()
-
-    })
-
-    
-
-
-    $('.select-location-modal .close-btn').click(function(e) {
-      e.preventDefault()
-      $('.map-container').fadeIn()
-      $('.form-address-container').fadeOut()
-    })
-
-    $('.layout-switcher__button').click(function (e) {
-      e.preventDefault()
-      $('.layout-switcher__button').removeClass('layout-switcher__button--active')
-      $(this).addClass('layout-switcher__button--active')
-      var with_feature = $(this).attr('data-with-features')
-      var layout = $(this).attr('data-layout')
-      console.log($(this).parents('.products-view'));
-      $(this).parents('.products-view').find('.products-view__list').attr('data-layout', layout)
-      $(this).parents('.products-view').find('.products-view__list').attr('data-with-features', with_feature)
-    })
-
-
-    $('.login-modal__hide').click(function (e) {
-      e.preventDefault()
-      $(this).hide()
-      $('.login-modal__show').show()
-      $('.login-modal__password-input').attr('type', 'text')
-    })
-    $('.login-modal__show').click(function (e) {
-      e.preventDefault()
-      $(this).hide()
-      $('.login-modal__hide').show()
-      $('.login-modal__password-input').attr('type', 'password')
-    })
-
-
-    
-
-
-
-  })
-
-
-
-</script>
-
-<script>
-
-</script>
 
 <script src="./assets/js/main.js"></script>
 <script src="./assets/js/cart.js"></script>

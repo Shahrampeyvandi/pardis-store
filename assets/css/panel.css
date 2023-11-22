@@ -18,7 +18,7 @@
     margin-bottom: 0;
     list-style: none;
 }
-.nav-pills .nav-link.active, .nav-pills .show>.nav-link {
+.nav .nav-link.active, .nav-pills .show>.nav-link {
     color: #fff;
     background-color: var(--color-primary-500);
     border-radius: 10px;
@@ -61,7 +61,7 @@
     color: var(--color-natural-500);
 }
 
-.account-menu .nav-link.active svg {
+.nav-link.active svg {
     color: var(--color-natural-100);
 }
 .name-avatar-user h4{
@@ -69,7 +69,7 @@
     margin-top: .5rem;
 }
 
-.nav-pills-account-menu .nav-link.active, .nav-pills .show>.nav-link {
+.nav-link.active, .nav-pills .show>.nav-link {
     color: var(--color-natural-100);
     background-color: var(--color-primary-500);
 }
@@ -115,7 +115,7 @@ element.style {
 }
 .product_cart .body_card_product a {
     margin-bottom: 0.4rem;
-    height: 40px;
+    height: 20px;
     display: block;
     font-size: 1em;
     color: var(--color-natural-600);
@@ -215,6 +215,8 @@ element.style {
     justify-content: space-between;
     align-items: center;
     margin-bottom: 1.5rem;
+    flex-wrap: wrap;
+    gap: 1rem;
 }
 .page-content-header span.count-content-tab {
     background-color: rgba(55, 56, 78, 0.08);
@@ -291,6 +293,8 @@ element.style {
     /* d-flex align-items-center flex-column flex-sm-row */
     display: flex;
     align-items: center;
+    flex-wrap: wrap;
+    justify-content: center;
 
 }
 .area-ditails_product-orders img {
@@ -310,6 +314,7 @@ element.style {
     text-align: center;
     display: flex;
     justify-content: space-between;
+    flex-wrap: wrap;
 }
 
 .ditails_product-orders a.nameproduct-orders {
@@ -324,7 +329,28 @@ element.style {
     display: flex;
     justify-content: center;
     align-items: center;
+    margin-top: 8px;
+    color: var(--color-natural-500);
 }
+
+.area-details-bottom-orders {
+    font-size: 1rem;
+    color: var(--color-natural-600);
+    align-items: center;
+    justify-content: center;
+    justify-content: space-between;
+}
+
+@media (max-width: 360px) {
+    .order__col {
+        width: 100%;
+    font-size: .85rem;
+
+    }
+    .area-details-bottom-orders {
+        justify-content: center;
+    }
+  }
 
 /* orders */
 
