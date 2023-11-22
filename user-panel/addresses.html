@@ -13,39 +13,41 @@
 </head>
 
 <style>
-  
+
 </style>
+
 <body>
   <!-- select location modal -->
-  <div class="remodal-overlay edit-address-modal" >
+  <div class="remodal-overlay edit-address-modal">
     <div class=" col-md-6 mx-auto">
       <div class="remodal">
-        <a href="#" class="close-btn" >
+        <a href="#" class="close-btn">
           <svg xmlns="http://www.w3.org/2000/svg" width="28" height="28" viewBox="0 0 24 24">
             <path fill="currentColor"
               d="M19 6.41L17.59 5L12 10.59L6.41 5L5 6.41L10.59 12L5 17.59L6.41 19L12 13.41L17.59 19L19 17.59L13.41 12z" />
           </svg>
         </a>
         <div class="remodal-header">
-         
-         <div class="title"> ویرایش آدرس</div>
+
+          <div class="title"> ویرایش آدرس</div>
         </div>
 
         <div class="middle-container">
           <div class="row w-100 m-auto">
-           
-            
+
+
             <div class="col-12 form-address-container" style="display: block;">
-              <form class="p-4 form-address" >
+              <form class="p-4 form-address">
                 <div class="row gy-3 mb-5 ">
                   <div class="col-md-12 col-lg-12">
-                    <label >نشانی پستی </label>
-                    <textarea name="location" required class="form-control" id="address-location-text" rows="2"></textarea>
+                    <label>نشانی پستی </label>
+                    <textarea name="location" required class="form-control" id="address-location-text"
+                      rows="2"></textarea>
                   </div>
                   <div class="col-md-6">
                     <div class="">
-                      <label >استان </label>
-                      <select name="province"  class="select2 provinces-select" style="height: 45px;">
+                      <label>استان </label>
+                      <select name="province" class="select2 provinces-select" style="height: 45px;">
                         <option value="1">تهران</option>
                         <option value="2">اصفهان</option>
 
@@ -54,8 +56,8 @@
                   </div>
                   <div class="col-md-6">
                     <div class="">
-                      <label >شهر </label>
-                      <select name="city"  class="select2 cities-select" style="height: 45px;">
+                      <label>شهر </label>
+                      <select name="city" class="select2 cities-select" style="height: 45px;">
                         <option value="1">تهران</option>
                         <option value="1">اسلامشهر</option>
                         <option value="1">پاکدشت</option>
@@ -72,53 +74,53 @@
 
                   <div class="col-md-4">
                     <div class="">
-                      <label >پلاک </label>
-                      <input type="text" name="no" required id="no" class=""  placeholder="پلاک ">
+                      <label>پلاک </label>
+                      <input type="text" name="no" required id="no" class="" placeholder="پلاک ">
                     </div>
                   </div>
                   <div class="col-md-4">
                     <div class="">
-                      <label >واحد </label>
-                      <input type="text" name="unit" id="unit" required class=""  placeholder="واحد ">
+                      <label>واحد </label>
+                      <input type="text" name="unit" id="unit" required class="" placeholder="واحد ">
                     </div>
                   </div>
                   <div class="col-md-4">
                     <div class="">
-                      <label >کد پستی </label>
-                      <input type="text" name="postal_code" id="postalCode" required class=""  placeholder="کد پستی ">
+                      <label>کد پستی </label>
+                      <input type="text" name="postal_code" id="postalCode" required class="" placeholder="کد پستی ">
                     </div>
                   </div>
+                </div>
+                <div class="seperator"></div>
+                <div class="row form-address__reciver g-3">
+                  <div class="col-12">
+                    <label class="checkbox">
+                      <input type="checkbox" name="self_receiver" class="receiver-checkbox">
+                      <span></span>
+                      گیرنده سفارش خودم هستم
+                    </label>
                   </div>
-                  <div class="seperator"></div>
-                  <div class="row form-address__reciver g-3">
-                    <div class="col-12">
-                      <label class="checkbox">
-                        <input type="checkbox" name="self_receiver" class="receiver-checkbox">
-                        <span></span>
-                        گیرنده سفارش خودم هستم
-                      </label>
-                    </div>
-  
-                    <div class="col-md-6">
-                      <div class="">
-                        <label >نام گیرنده </label>
-                        <input type="text" class="" id="receiver-firstname" placeholder="نام گیرنده ">
-                      </div>
-                    </div>
-                    <div class="col-md-6">
-                      <div class="">
-                        <label >نام خانوادگی گیرنده </label>
-                        <input type="text" class="" id="receiver-lastname" placeholder="نام خانوادگی گیرنده ">
-                      </div>
-                    </div>
-                    <div class="col-md-6">
-                      <div class="">
-                        <label >شماره موبایل </label>
-                        <input type="text" class="" id="receiver-modile" placeholder="شماره موبایل ">
-                      </div>
+
+                  <div class="col-md-6">
+                    <div class="">
+                      <label>نام گیرنده </label>
+                      <input type="text" class="" id="receiver-firstname" placeholder="نام گیرنده ">
                     </div>
                   </div>
-                  <div class="row mt-4">
+                  <div class="col-md-6">
+                    <div class="">
+                      <label>نام خانوادگی گیرنده </label>
+                      <input type="text" class="" id="receiver-lastname" placeholder="نام خانوادگی گیرنده ">
+                    </div>
+                  </div>
+                  <div class="col-md-6">
+                    <div class="">
+                      <label>شماره موبایل </label>
+                      <input type="text" class="" id="receiver-modile" placeholder="شماره موبایل ">
+                    </div>
+                  </div>
+                </div>
+                <div class="row mt-4">
                   <div class="col-md-12 col-lg-12">
                     <div class="d-grid">
                       <button type="submit" class="btn btn-primary form-address-btn">ویرایش آدرس </button>
@@ -140,34 +142,49 @@
   <!-- start::fixed bottom menu -->
   <div id="fixed-menu">
     <div>
-      
 
-      <a href="#" class="fixed-menu__link fixed-nav-btn"> 
-        <svg xmlns="http://www.w3.org/2000/svg" width="32" height="32" viewBox="0 0 24 24"><path fill="none" stroke="currentColor" stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M6 8h12M6 12h12M6 16h12"/></svg>
+
+      <a href="#" class="fixed-menu__link fixed-nav-btn">
+        <svg xmlns="http://www.w3.org/2000/svg" width="32" height="32" viewBox="0 0 24 24">
+          <path fill="none" stroke="currentColor" stroke-linecap="round" stroke-linejoin="round" stroke-width="2"
+            d="M6 8h12M6 12h12M6 16h12" />
+        </svg>
         <span>دسته بندی</span>
       </a>
-      <a href="#" class="fixed-menu__link active-menu"> 
-        <svg xmlns="http://www.w3.org/2000/svg" width="32" height="32" viewBox="0 0 24 24"><path fill="none" stroke="currentColor" stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M20 19v-8.5a1 1 0 0 0-.4-.8l-7-5.25a1 1 0 0 0-1.2 0l-7 5.25a1 1 0 0 0-.4.8V19a1 1 0 0 0 1 1h4a1 1 0 0 0 1-1v-3a1 1 0 0 1 1-1h2a1 1 0 0 1 1 1v3a1 1 0 0 0 1 1h4a1 1 0 0 0 1-1z"/></svg>
-      <span>خانه</span>
+      <a href="#" class="fixed-menu__link active-menu">
+        <svg xmlns="http://www.w3.org/2000/svg" width="32" height="32" viewBox="0 0 24 24">
+          <path fill="none" stroke="currentColor" stroke-linecap="round" stroke-linejoin="round" stroke-width="2"
+            d="M20 19v-8.5a1 1 0 0 0-.4-.8l-7-5.25a1 1 0 0 0-1.2 0l-7 5.25a1 1 0 0 0-.4.8V19a1 1 0 0 0 1 1h4a1 1 0 0 0 1-1v-3a1 1 0 0 1 1-1h2a1 1 0 0 1 1 1v3a1 1 0 0 0 1 1h4a1 1 0 0 0 1-1z" />
+        </svg>
+        <span>خانه</span>
       </a>
-      <a href="#" class="fixed-menu__link header-left-icons__basket"> 
-        <svg xmlns="http://www.w3.org/2000/svg" width="32" height="32" viewBox="0 0 24 24"><g fill="none" stroke="currentColor" stroke-linecap="round" stroke-linejoin="round" stroke-width="2"><path d="M3 3h2l.5 3m0 0L7 15h11l3-9H5.5z"/><circle cx="8" cy="20" r="1"/><circle cx="17" cy="20" r="1"/></g></svg>
+      <a href="#" class="fixed-menu__link header-left-icons__basket">
+        <svg xmlns="http://www.w3.org/2000/svg" width="32" height="32" viewBox="0 0 24 24">
+          <g fill="none" stroke="currentColor" stroke-linecap="round" stroke-linejoin="round" stroke-width="2">
+            <path d="M3 3h2l.5 3m0 0L7 15h11l3-9H5.5z" />
+            <circle cx="8" cy="20" r="1" />
+            <circle cx="17" cy="20" r="1" />
+          </g>
+        </svg>
         <span>سبد خرید</span>
-      
+
       </a>
-      <a href="#" class="fixed-menu__link fixed-login-link"> 
-        <svg xmlns="http://www.w3.org/2000/svg" width="32" height="32" viewBox="0 0 24 24"><path fill="currentColor" d="M12 4a4 4 0 0 1 4 4a4 4 0 0 1-4 4a4 4 0 0 1-4-4a4 4 0 0 1 4-4m0 2a2 2 0 0 0-2 2a2 2 0 0 0 2 2a2 2 0 0 0 2-2a2 2 0 0 0-2-2m0 7c2.67 0 8 1.33 8 4v3H4v-3c0-2.67 5.33-4 8-4m0 1.9c-2.97 0-6.1 1.46-6.1 2.1v1.1h12.2V17c0-.64-3.13-2.1-6.1-2.1Z"/></svg>
+      <a href="#" class="fixed-menu__link fixed-login-link">
+        <svg xmlns="http://www.w3.org/2000/svg" width="32" height="32" viewBox="0 0 24 24">
+          <path fill="currentColor"
+            d="M12 4a4 4 0 0 1 4 4a4 4 0 0 1-4 4a4 4 0 0 1-4-4a4 4 0 0 1 4-4m0 2a2 2 0 0 0-2 2a2 2 0 0 0 2 2a2 2 0 0 0 2-2a2 2 0 0 0-2-2m0 7c2.67 0 8 1.33 8 4v3H4v-3c0-2.67 5.33-4 8-4m0 1.9c-2.97 0-6.1 1.46-6.1 2.1v1.1h12.2V17c0-.64-3.13-2.1-6.1-2.1Z" />
+        </svg>
         <span>داشبورد</span>
-      
+
       </a>
-     
+
     </div>
   </div>
   <!-- end::fixed bottom menu -->
 
   <!-- start::header -->
   <header>
-    <div class="container-fluid  px-md-5" >
+    <div class="container-fluid  px-md-5">
       <div class="row py-3 g-md-3">
         <div class="col-12 col-md-8 col-xl-9">
           <div class="header-right">
@@ -191,7 +208,7 @@
                     </span>
                     <input type="text" class="header-search-input" placeholder="جست و جو در پارادایس ..." />
 
-               
+
 
                     <button type="submit" class="btn-search">
                       <svg xmlns="http://www.w3.org/2000/svg" width="32" height="32" viewBox="0 0 24 24">
@@ -216,7 +233,7 @@
                   </svg>
                   <span class="header-left-icon__basket-count" style="display: none;">0</span>
                 </a>
-               
+
               </div>
 
               <div class="header-left-icons ">
@@ -232,7 +249,7 @@
 
             <span class="header-left-icons__seprator"></span>
 
-            <a href="#" class="login-link">
+            <!-- <a href="#" class="login-link">
               <div class="btn-login text-elipsis">
                 <span style="display: inline-block">
                   <svg xmlns="http://www.w3.org/2000/svg" width="22" height="22" viewBox="0 0 24 24">
@@ -246,8 +263,8 @@
                 </span>
                 <span class="">ورود | ثبت‌نام</span>
               </div>
-            </a>
-            <!-- <div class="dropdown">
+            </a> -->
+            <div class="dropdown">
                 <a class=" dropdown-toggle auth-link" href="#" role="button" id="dropdownMenuLink" data-bs-toggle="dropdown" aria-expanded="false">
                   <span>
                     <svg
@@ -313,7 +330,7 @@
                      </a>
                   </div>
                 </div>
-              </div> -->
+              </div>
 
             <!-- Example single danger button -->
           </div>
@@ -1459,7 +1476,7 @@
     <!--        End megamenu------------------->
 
     <!--    responsive-megamenu-mobile----------------->
-  
+
     <div class="nav-btn">
       <span class="linee1"></span>
       <span class="linee2"></span>
@@ -1528,9 +1545,16 @@
       <div class="logo-wrap">
         <a class="logo-icon" href="#"><img alt="logo-icon" src="../assets/images/logo.webp" width="40" /></a>
       </div>
-      <a href="#" class="sidebar-close" >
-        <svg xmlns="http://www.w3.org/2000/svg" width="26" height="26" viewBox="0 0 24 24"><g fill="none" fill-rule="evenodd"><path d="M24 0v24H0V0h24ZM12.593 23.258l-.011.002l-.071.035l-.02.004l-.014-.004l-.071-.035c-.01-.004-.019-.001-.024.005l-.004.01l-.017.428l.005.02l.01.013l.104.074l.015.004l.012-.004l.104-.074l.012-.016l.004-.017l-.017-.427c-.002-.01-.009-.017-.017-.018Zm.265-.113l-.013.002l-.185.093l-.01.01l-.003.011l.018.43l.005.012l.008.007l.201.093c.012.004.023 0 .029-.008l.004-.014l-.034-.614c-.003-.012-.01-.02-.02-.022Zm-.715.002a.023.023 0 0 0-.027.006l-.006.014l-.034.614c0 .012.007.02.017.024l.015-.002l.201-.093l.01-.008l.004-.011l.017-.43l-.003-.012l-.01-.01l-.184-.092Z"/><path fill="currentColor" d="m12 13.414l5.657 5.657a1 1 0 0 0 1.414-1.414L13.414 12l5.657-5.657a1 1 0 0 0-1.414-1.414L12 10.586L6.343 4.929A1 1 0 0 0 4.93 6.343L10.586 12l-5.657 5.657a1 1 0 1 0 1.414 1.414L12 13.414Z"/></g></svg>
-    </a>
+      <a href="#" class="sidebar-close">
+        <svg xmlns="http://www.w3.org/2000/svg" width="26" height="26" viewBox="0 0 24 24">
+          <g fill="none" fill-rule="evenodd">
+            <path
+              d="M24 0v24H0V0h24ZM12.593 23.258l-.011.002l-.071.035l-.02.004l-.014-.004l-.071-.035c-.01-.004-.019-.001-.024.005l-.004.01l-.017.428l.005.02l.01.013l.104.074l.015.004l.012-.004l.104-.074l.012-.016l.004-.017l-.017-.427c-.002-.01-.009-.017-.017-.018Zm.265-.113l-.013.002l-.185.093l-.01.01l-.003.011l.018.43l.005.012l.008.007l.201.093c.012.004.023 0 .029-.008l.004-.014l-.034-.614c-.003-.012-.01-.02-.02-.022Zm-.715.002a.023.023 0 0 0-.027.006l-.006.014l-.034.614c0 .012.007.02.017.024l.015-.002l.201-.093l.01-.008l.004-.011l.017-.43l-.003-.012l-.01-.01l-.184-.092Z" />
+            <path fill="currentColor"
+              d="m12 13.414l5.657 5.657a1 1 0 0 0 1.414-1.414L13.414 12l5.657-5.657a1 1 0 0 0-1.414-1.414L12 10.586L6.343 4.929A1 1 0 0 0 4.93 6.343L10.586 12l-5.657 5.657a1 1 0 1 0 1.414 1.414L12 13.414Z" />
+          </g>
+        </svg>
+      </a>
     </div>
     <ul class="nav-categories ul-base">
       <li class="has-sub">
@@ -2002,14 +2026,14 @@
 
   <section class="bg-blues">
     <div class="bg-gradiant-account">
-        <div class="area-shape-bottom">
-            <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 3000 260">
-                <polygon fill="currentColor" points="0,257 0,260 3000,260 3000,0"></polygon>
-            </svg>
-        </div>
+      <div class="area-shape-bottom">
+        <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 3000 260">
+          <polygon fill="currentColor" points="0,257 0,260 3000,260 3000,0"></polygon>
+        </svg>
+      </div>
     </div>
-</section>
-<main>
+  </section>
+  <main>
     <!-- start::content section -->
     <section class="py-5 area-content-paccount">
       <div class="container">
@@ -2043,12 +2067,15 @@
                     <span class="dropdown-user-account-meta">5</span>
                   </a>
                   <a href="payments.html" class="nav-link">
-                    <svg xmlns="http://www.w3.org/2000/svg" width="32" height="32" viewBox="0 0 24 24"><path fill="currentColor" d="M20 4H4c-1.11 0-1.99.89-1.99 2L2 18c0 1.11.89 2 2 2h16c1.11 0 2-.89 2-2V6c0-1.11-.89-2-2-2zm0 14H4v-6h16v6zm0-10H4V6h16v2z"/></svg>
-                  پرداخت ها
+                    <svg xmlns="http://www.w3.org/2000/svg" width="32" height="32" viewBox="0 0 24 24">
+                      <path fill="currentColor"
+                        d="M20 4H4c-1.11 0-1.99.89-1.99 2L2 18c0 1.11.89 2 2 2h16c1.11 0 2-.89 2-2V6c0-1.11-.89-2-2-2zm0 14H4v-6h16v6zm0-10H4V6h16v2z" />
+                    </svg>
+                    پرداخت ها
                     <span class="dropdown-user-account-meta">5</span>
                   </a>
                   <a href="profile.html" class="nav-link">
-  
+
                     <svg xmlns="http://www.w3.org/2000/svg" width="32" height="32" viewBox="0 0 24 24">
                       <path fill="currentColor"
                         d="M12 5.9a2.1 2.1 0 1 1 0 4.2a2.1 2.1 0 0 1 0-4.2m0 9c2.97 0 6.1 1.46 6.1 2.1v1.1H5.9V17c0-.64 3.13-2.1 6.1-2.1M12 4C9.79 4 8 5.79 8 8s1.79 4 4 4s4-1.79 4-4s-1.79-4-4-4zm0 9c-2.67 0-8 1.34-8 4v3h16v-3c0-2.66-5.33-4-8-4z" />
@@ -2063,7 +2090,7 @@
                     نشانی ها
                     <span class="dropdown-user-account-meta">1</span>
                   </a>
-  
+
                   <a href="#" class="nav-link">
                     <svg xmlns="http://www.w3.org/2000/svg" width="32" height="32" viewBox="0 0 24 24">
                       <path fill="currentColor"
@@ -2075,28 +2102,31 @@
               </div>
               <div class="area-account-menu-collapse d-block d-lg-none">
                 <div class="area-btn-collapse-accountMenu  mb-4 text-center">
-                  <a class="btn btn-primary btn-menu-mobile" data-bs-toggle="collapse" href="#area-account-menu" role="button"
-                    aria-expanded="false" aria-controls="area-account-menu">
+                  <a class="btn btn-primary btn-menu-mobile" data-bs-toggle="collapse" href="#area-account-menu"
+                    role="button" aria-expanded="false" aria-controls="area-account-menu">
                     منو اکانت
-                    <svg class="text-white" xmlns="http://www.w3.org/2000/svg" width="28" height="28" viewBox="0 0 24 24"><path fill="none" stroke="currentColor" stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M6 8h12M6 12h12M6 16h12"></path></svg>
+                    <svg class="text-white" xmlns="http://www.w3.org/2000/svg" width="28" height="28"
+                      viewBox="0 0 24 24">
+                      <path fill="none" stroke="currentColor" stroke-linecap="round" stroke-linejoin="round"
+                        stroke-width="2" d="M6 8h12M6 12h12M6 16h12"></path>
+                    </svg>
                   </a>
                 </div>
                 <div class="collapse account-menu" id="area-account-menu">
-                  <div class="nav flex-column " id="v-pills-tab" role="tablist"
-                    aria-orientation="vertical">
+                  <div class="nav flex-column " id="v-pills-tab" role="tablist" aria-orientation="vertical">
                     <a href="" class="nav-link  border-bottom-none ">
                       <h3 class="product_cart--title">داشبورد</h3>
                     </a>
-                    <a href="favorites.html" class="nav-link active" >
-                      
+                    <a href="favorites.html" class="nav-link active">
+
                       <svg xmlns="http://www.w3.org/2000/svg" width="32" height="32" viewBox="0 0 24 24">
                         <path fill="currentColor"
                           d="M16.5 3c-1.74 0-3.41.81-4.5 2.09C10.91 3.81 9.24 3 7.5 3C4.42 3 2 5.42 2 8.5c0 3.78 3.4 6.86 8.55 11.54L12 21.35l1.45-1.32C18.6 15.36 22 12.28 22 8.5C22 5.42 19.58 3 16.5 3zm-4.4 15.55l-.1.1l-.1-.1C7.14 14.24 4 11.39 4 8.5C4 6.5 5.5 5 7.5 5c1.54 0 3.04.99 3.57 2.36h1.87C13.46 5.99 14.96 5 16.5 5c2 0 3.5 1.5 3.5 3.5c0 2.89-3.14 5.74-7.9 10.05z" />
                       </svg>
                       علاقه مندی ها <span class="dropdown-user-account-meta">6</span>
                     </a>
-                  
-                    <a href="addresses.html" class="nav-link " >
+
+                    <a href="addresses.html" class="nav-link ">
                       <svg xmlns="http://www.w3.org/2000/svg" width="32" height="32" viewBox="0 0 256 256">
                         <path fill="currentColor"
                           d="M83.19 174.4a8 8 0 0 0 11.21-1.6a52 52 0 0 1 83.2 0a8 8 0 1 0 12.8-9.6a67.88 67.88 0 0 0-27.4-21.69a40 40 0 1 0-53.94 0A67.88 67.88 0 0 0 81.6 163.2a8 8 0 0 0 1.59 11.2ZM112 112a24 24 0 1 1 24 24a24 24 0 0 1-24-24Zm96-88H64a16 16 0 0 0-16 16v24H32a8 8 0 0 0 0 16h16v40H32a8 8 0 0 0 0 16h16v40H32a8 8 0 0 0 0 16h16v24a16 16 0 0 0 16 16h144a16 16 0 0 0 16-16V40a16 16 0 0 0-16-16Zm0 192H64V40h144Z" />
@@ -2104,7 +2134,7 @@
                       نشانی ها
                       <span class="dropdown-user-account-meta">2</span>
                     </a>
-                    <a href="orders.html" class="nav-link " >
+                    <a href="orders.html" class="nav-link ">
                       <svg xmlns="http://www.w3.org/2000/svg" width="32" height="32" viewBox="0 0 24 24">
                         <path fill="currentColor"
                           d="M8.117 16.538q.327 0 .547-.221q.22-.222.22-.55t-.22-.547q-.222-.22-.55-.22t-.548.222q-.22.221-.22.549q0 .327.222.547q.221.22.549.22Zm0-3.769q.327 0 .547-.221q.22-.222.22-.55t-.22-.547q-.222-.22-.55-.22t-.548.221q-.22.222-.22.55t.222.547q.221.22.549.22Zm0-3.769q.327 0 .547-.222q.22-.221.22-.549q0-.327-.22-.547q-.222-.22-.55-.22t-.548.221q-.22.222-.22.55t.222.547q.221.22.549.22Zm3.075 7.27h5.385v-1h-5.385v1Zm0-3.77h5.385v-1h-5.385v1Zm0-3.77h5.385v-1h-5.385v1ZM5.615 20q-.69 0-1.152-.462Q4 19.075 4 18.385V5.615q0-.69.463-1.152Q4.925 4 5.615 4h12.77q.69 0 1.152.463q.463.462.463 1.152v12.77q0 .69-.462 1.152q-.463.463-1.153.463H5.615Zm0-1h12.77q.23 0 .423-.192q.192-.193.192-.423V5.615q0-.23-.192-.423Q18.615 5 18.385 5H5.615q-.23 0-.423.192Q5 5.385 5 5.615v12.77q0 .23.192.423q.193.192.423.192ZM5 5v14V5Z" />
@@ -2112,13 +2142,16 @@
                       سفارش ها
                       <span class="dropdown-user-account-meta">1</span>
                     </a>
-  
-                    <a href="payments.html" class="nav-link " >
-                    <svg xmlns="http://www.w3.org/2000/svg" width="32" height="32" viewBox="0 0 24 24"><path fill="currentColor" d="M20 4H4c-1.11 0-1.99.89-1.99 2L2 18c0 1.11.89 2 2 2h16c1.11 0 2-.89 2-2V6c0-1.11-.89-2-2-2zm0 14H4v-6h16v6zm0-10H4V6h16v2z"/></svg>
-                    پرداخت ها
-                    <span class="dropdown-user-account-meta">1</span>
-                  </a>
-                  
+
+                    <a href="payments.html" class="nav-link ">
+                      <svg xmlns="http://www.w3.org/2000/svg" width="32" height="32" viewBox="0 0 24 24">
+                        <path fill="currentColor"
+                          d="M20 4H4c-1.11 0-1.99.89-1.99 2L2 18c0 1.11.89 2 2 2h16c1.11 0 2-.89 2-2V6c0-1.11-.89-2-2-2zm0 14H4v-6h16v6zm0-10H4V6h16v2z" />
+                      </svg>
+                      پرداخت ها
+                      <span class="dropdown-user-account-meta">1</span>
+                    </a>
+
                     <a href="profile.html" class="nav-link">
                       <svg xmlns="http://www.w3.org/2000/svg" width="32" height="32" viewBox="0 0 24 24">
                         <path fill="currentColor"
@@ -2126,8 +2159,8 @@
                       </svg>
                       اطلاعات پروفایل
                     </a>
-                   
-                 
+
+
                     <a href="" class="nav-link" id="logout" type="button">
                       <svg xmlns="http://www.w3.org/2000/svg" width="32" height="32" viewBox="0 0 24 24">
                         <path fill="currentColor"
@@ -2141,15 +2174,132 @@
             </div>
           </div>
           <div class="col-12 col-lg-9">
-           <div class="page-content">
-            <div class="page-content-header ">
-              <h1 class="title-tabcontent-account ms-2">
-              آدرس های شما
-                <span class="count-content-tab me-2">10</span>
-              </h1>
-              
-            </div>
-            <div class="table-wrapper" style="overflow: auto;">
+            <div class="page-content">
+              <div class="page-content-header ">
+                <h1 class="title-tabcontent-account ms-2">
+                  آدرس های شما
+                  <span class="count-content-tab me-2">10</span>
+                </h1>
+
+              </div>
+              <div class="row gap-4" style="min-height: 200px;">
+                <div class="accordion area-orders-account" id="accordian">
+                  <div class="accordion-item card card-order mb-3">
+                    <div class="accordion-header card-header" id="headingOne">
+                      <button class="accordion-button header-content-orders collapsed" type="button"
+                        data-bs-toggle="collapse" data-bs-target="#collapse1" aria-expanded="false"
+                        aria-controls="collapse1">
+                        <div class="id-product-order ">علی محمدی</div>
+
+                        <div class="price-product-order "> تهران خیابان ولیعصر زرتشت کوچه</div>
+                      </button>
+                    </div>
+                    <div id="collapse1" class="accordion-collapse collapse-content-orders collapse show"
+                      aria-labelledby="headingOne" data-bs-parent="#accordian" style="">
+                      <div class="accordion-body card-body">
+                        <div  class="accordion-body__content">
+                          <div class="date-order">
+                            استان : تهران
+                          </div>
+                          <div class="date-order">
+                            شهر : تهران
+                          </div>
+                          <div class="date-order">
+                            کد پستی: 91234444
+                          </div>
+                          <div class="date-order">
+                            موبایل : 09121122335
+                          </div>
+                          <div class="date-order">
+                            تلفن : 021445568
+                          </div>
+                          <div class="actions">
+                            <button class="btn btn-default edit-address" data-id="1">
+                              <svg xmlns="http://www.w3.org/2000/svg" width="32" height="32" viewBox="0 0 24 24">
+                                <g fill="none">
+                                  <path
+                                    d="M24 0v24H0V0h24ZM12.593 23.258l-.011.002l-.071.035l-.02.004l-.014-.004l-.071-.035c-.01-.004-.019-.001-.024.005l-.004.01l-.017.428l.005.02l.01.013l.104.074l.015.004l.012-.004l.104-.074l.012-.016l.004-.017l-.017-.427c-.002-.01-.009-.017-.017-.018Zm.265-.113l-.013.002l-.185.093l-.01.01l-.003.011l.018.43l.005.012l.008.007l.201.093c.012.004.023 0 .029-.008l.004-.014l-.034-.614c-.003-.012-.01-.02-.02-.022Zm-.715.002a.023.023 0 0 0-.027.006l-.006.014l-.034.614c0 .012.007.02.017.024l.015-.002l.201-.093l.01-.008l.004-.011l.017-.43l-.003-.012l-.01-.01l-.184-.092Z" />
+                                  <path fill="currentColor"
+                                    d="m10.756 6.17l7.07 7.071l-7.173 7.174a2 2 0 0 1-1.238.578L9.239 21H4.006a1.01 1.01 0 0 1-1.004-.9l-.006-.11v-5.233a2 2 0 0 1 .467-1.284l.12-.13l7.173-7.174Zm3.14-3.14a2 2 0 0 1 2.701-.117l.127.117l4.243 4.243a2 2 0 0 1 .117 2.7l-.117.128l-1.726 1.726l-7.07-7.071l1.725-1.726Z" />
+                                </g>
+                              </svg>
+                            </button>
+                            <button class="btn btn-default delete-address">
+                              <svg xmlns="http://www.w3.org/2000/svg" width="32" height="32" viewBox="0 0 24 24">
+                                <g fill="none" fill-rule="evenodd">
+                                  <path
+                                    d="M24 0v24H0V0h24ZM12.593 23.258l-.011.002l-.071.035l-.02.004l-.014-.004l-.071-.035c-.01-.004-.019-.001-.024.005l-.004.01l-.017.428l.005.02l.01.013l.104.074l.015.004l.012-.004l.104-.074l.012-.016l.004-.017l-.017-.427c-.002-.01-.009-.017-.017-.018Zm.265-.113l-.013.002l-.185.093l-.01.01l-.003.011l.018.43l.005.012l.008.007l.201.093c.012.004.023 0 .029-.008l.004-.014l-.034-.614c-.003-.012-.01-.02-.02-.022Zm-.715.002a.023.023 0 0 0-.027.006l-.006.014l-.034.614c0 .012.007.02.017.024l.015-.002l.201-.093l.01-.008l.004-.011l.017-.43l-.003-.012l-.01-.01l-.184-.092Z" />
+                                  <path fill="currentColor"
+                                    d="M14.28 2a2 2 0 0 1 1.897 1.368L16.72 5H20a1 1 0 1 1 0 2l-.003.071l-.867 12.143A3 3 0 0 1 16.138 22H7.862a3 3 0 0 1-2.992-2.786L4.003 7.07A1.01 1.01 0 0 1 4 7a1 1 0 0 1 0-2h3.28l.543-1.632A2 2 0 0 1 9.721 2h4.558ZM9 10a1 1 0 0 0-.993.883L8 11v6a1 1 0 0 0 1.993.117L10 17v-6a1 1 0 0 0-1-1Zm6 0a1 1 0 0 0-1 1v6a1 1 0 1 0 2 0v-6a1 1 0 0 0-1-1Zm-.72-6H9.72l-.333 1h5.226l-.334-1Z" />
+                                </g>
+                              </svg>
+                              </a>
+                          </div>
+                        </div>
+                      </div>
+                    </div>
+                  </div>
+
+                  <div class="accordion-item card card-order mb-3">
+                    <div class="accordion-header card-header" id="headingOne">
+                      <button class="accordion-button header-content-orders collapsed" type="button"
+                        data-bs-toggle="collapse" data-bs-target="#collapse2" aria-expanded="false"
+                        aria-controls="collapse2">
+                        <div class="id-product-order ">علی محمدی</div>
+
+                        <div class="price-product-order "> تهران خیابان ولیعصر زرتشت کوچه</div>
+                      </button>
+                    </div>
+                    <div id="collapse2" class="accordion-collapse collapse-content-orders collapse "
+                      aria-labelledby="headingOne" data-bs-parent="#accordian" style="">
+                      <div class="accordion-body card-body">
+                        <div  class="accordion-body__content">
+                          <div class="date-order">
+                            استان : تهران
+                          </div>
+                          <div class="date-order">
+                            شهر : تهران
+                          </div>
+                          <div class="date-order">
+                            کد پستی: 91234444
+                          </div>
+                          <div class="date-order">
+                            موبایل : 09121122335
+                          </div>
+                          <div class="date-order">
+                            تلفن : 021445568
+                          </div>
+                          <div class="actions">
+                            <button class="btn btn-default edit-address" data-id="1">
+                              <svg xmlns="http://www.w3.org/2000/svg" width="32" height="32" viewBox="0 0 24 24">
+                                <g fill="none">
+                                  <path
+                                    d="M24 0v24H0V0h24ZM12.593 23.258l-.011.002l-.071.035l-.02.004l-.014-.004l-.071-.035c-.01-.004-.019-.001-.024.005l-.004.01l-.017.428l.005.02l.01.013l.104.074l.015.004l.012-.004l.104-.074l.012-.016l.004-.017l-.017-.427c-.002-.01-.009-.017-.017-.018Zm.265-.113l-.013.002l-.185.093l-.01.01l-.003.011l.018.43l.005.012l.008.007l.201.093c.012.004.023 0 .029-.008l.004-.014l-.034-.614c-.003-.012-.01-.02-.02-.022Zm-.715.002a.023.023 0 0 0-.027.006l-.006.014l-.034.614c0 .012.007.02.017.024l.015-.002l.201-.093l.01-.008l.004-.011l.017-.43l-.003-.012l-.01-.01l-.184-.092Z" />
+                                  <path fill="currentColor"
+                                    d="m10.756 6.17l7.07 7.071l-7.173 7.174a2 2 0 0 1-1.238.578L9.239 21H4.006a1.01 1.01 0 0 1-1.004-.9l-.006-.11v-5.233a2 2 0 0 1 .467-1.284l.12-.13l7.173-7.174Zm3.14-3.14a2 2 0 0 1 2.701-.117l.127.117l4.243 4.243a2 2 0 0 1 .117 2.7l-.117.128l-1.726 1.726l-7.07-7.071l1.725-1.726Z" />
+                                </g>
+                              </svg>
+                            </button>
+                            <button class="btn btn-default delete-address">
+                              <svg xmlns="http://www.w3.org/2000/svg" width="32" height="32" viewBox="0 0 24 24">
+                                <g fill="none" fill-rule="evenodd">
+                                  <path
+                                    d="M24 0v24H0V0h24ZM12.593 23.258l-.011.002l-.071.035l-.02.004l-.014-.004l-.071-.035c-.01-.004-.019-.001-.024.005l-.004.01l-.017.428l.005.02l.01.013l.104.074l.015.004l.012-.004l.104-.074l.012-.016l.004-.017l-.017-.427c-.002-.01-.009-.017-.017-.018Zm.265-.113l-.013.002l-.185.093l-.01.01l-.003.011l.018.43l.005.012l.008.007l.201.093c.012.004.023 0 .029-.008l.004-.014l-.034-.614c-.003-.012-.01-.02-.02-.022Zm-.715.002a.023.023 0 0 0-.027.006l-.006.014l-.034.614c0 .012.007.02.017.024l.015-.002l.201-.093l.01-.008l.004-.011l.017-.43l-.003-.012l-.01-.01l-.184-.092Z" />
+                                  <path fill="currentColor"
+                                    d="M14.28 2a2 2 0 0 1 1.897 1.368L16.72 5H20a1 1 0 1 1 0 2l-.003.071l-.867 12.143A3 3 0 0 1 16.138 22H7.862a3 3 0 0 1-2.992-2.786L4.003 7.07A1.01 1.01 0 0 1 4 7a1 1 0 0 1 0-2h3.28l.543-1.632A2 2 0 0 1 9.721 2h4.558ZM9 10a1 1 0 0 0-.993.883L8 11v6a1 1 0 0 0 1.993.117L10 17v-6a1 1 0 0 0-1-1Zm6 0a1 1 0 0 0-1 1v6a1 1 0 1 0 2 0v-6a1 1 0 0 0-1-1Zm-.72-6H9.72l-.333 1h5.226l-.334-1Z" />
+                                </g>
+                              </svg>
+                              </a>
+                          </div>
+                        </div>
+                      </div>
+                    </div>
+                  </div>
+                 
+                </div>
+              </div>
+
+              <!-- <div class="table-wrapper" style="overflow: auto;">
               <table class="table w-100" style="min-width: 800px;">
                 <thead>
                     <tr>
@@ -2308,35 +2458,41 @@
                    
                 </tbody>
             </table>
+            </div> -->
+              <div class="reviews-list__pagination">
+                <nav aria-label="Page navigation example">
+                  <ul class="pagination justify-content-center">
+                    <li class="page-item  disabled">
+                      <a class="page-link" href="#" aria-label="Previous">
+                        <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24">
+                          <path fill="none" stroke="currentColor" stroke-linecap="round" stroke-linejoin="round"
+                            stroke-width="2" d="m10 17l5-5l-5-5" />
+                        </svg>
+                      </a>
+                    </li>
+                    <li class="page-item active"><a class="page-link" href="#">1</a></li>
+                    <li class="page-item"><a class="page-link" href="#">2</a></li>
+                    <li class="page-item"><a class="page-link" href="#">3</a></li>
+                    <li class="page-item">
+                      <a class="page-link" href="#" aria-label="Next">
+                        <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24">
+                          <path fill="none" stroke="currentColor" stroke-linecap="round" stroke-linejoin="round"
+                            stroke-width="2" d="m14 7l-5 5l5 5" />
+                        </svg>
+                      </a>
+                    </li>
+                  </ul>
+                </nav>
+              </div>
             </div>
-            <div class="reviews-list__pagination">
-              <nav aria-label="Page navigation example">
-                <ul class="pagination justify-content-center">
-                  <li class="page-item  disabled">
-                    <a class="page-link" href="#" aria-label="Previous">
-                      <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24"><path fill="none" stroke="currentColor" stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="m10 17l5-5l-5-5"/></svg>
-                    </a>
-                  </li>
-                  <li class="page-item active"><a class="page-link" href="#">1</a></li>
-                  <li class="page-item"><a class="page-link" href="#">2</a></li>
-                  <li class="page-item"><a class="page-link" href="#">3</a></li>
-                  <li class="page-item">
-                    <a class="page-link" href="#" aria-label="Next">
-                      <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24"><path fill="none" stroke="currentColor" stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="m14 7l-5 5l5 5"/></svg>
-                    </a>
-                  </li>
-                </ul>
-              </nav>
-          </div>
-           </div>
           </div>
         </div>
       </div>
     </section>
     <!-- end::content section -->
-  
-  
-</main>
+
+
+  </main>
   <!-- start::footer -->
   <footer>
     <div class="container">
@@ -2475,28 +2631,28 @@
   $(document).ready(function () {
 
 
-$('.edit-address').click(function(e) {
-  e.preventDefault()
-  var btn = $(this)
-  $(this).addClass("product-card__quickview--preload");
-    $(this).attr('disabled',true)
-  var html = $(this).html()
-  var product_id = $(this).attr('data-id');
+    $('.edit-address').click(function (e) {
+      e.preventDefault()
+      var btn = $(this)
+      $(this).addClass("product-card__quickview--preload");
+      $(this).attr('disabled', true)
+      var html = $(this).html()
+      var product_id = $(this).attr('data-id');
 
-  var payload = {
-    product_id: product_id,
-  };
-  var el = $(this)
-  // el.html($.app.ajax.Template($('#BtnSpinner').html(), {}));
+      var payload = {
+        product_id: product_id,
+      };
+      var el = $(this)
+      // el.html($.app.ajax.Template($('#BtnSpinner').html(), {}));
 
-  $.app.ajax.Operation({
-    url: "https://jsonplaceholder.typicode.com/posts",
-    data: payload,
-    callback: function (ResData) {
-    
+      $.app.ajax.Operation({
+        url: "https://jsonplaceholder.typicode.com/posts",
+        data: payload,
+        callback: function (ResData) {
 
-      if (ResData.type == "success") {
-        var response_data_cities = {
+
+          if (ResData.type == "success") {
+            var response_data_cities = {
               data: {
                 id: 1,
                 location: 'این یک موقعیت تست است',
@@ -2522,14 +2678,14 @@ $('.edit-address').click(function(e) {
             $('.form-address-container #receiver-lastname').val(response_data_cities.data.reviever.last_name)
             $('.form-address-container #receiver-mobile').val(response_data_cities.data.reviever.mobile)
             $('.edit-address-modal').show()
-        
 
-      }
-    },
-  });
-})
 
-    
+          }
+        },
+      });
+    })
+
+
 
   })
 

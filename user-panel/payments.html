@@ -113,7 +113,7 @@
 
             <span class="header-left-icons__seprator"></span>
 
-            <a href="#" class="login-link">
+            <!-- <a href="#" class="login-link">
               <div class="btn-login text-elipsis">
                 <span style="display: inline-block">
                   <svg xmlns="http://www.w3.org/2000/svg" width="22" height="22" viewBox="0 0 24 24">
@@ -127,8 +127,8 @@
                 </span>
                 <span class="">ورود | ثبت‌نام</span>
               </div>
-            </a>
-            <!-- <div class="dropdown">
+            </a> -->
+            <div class="dropdown">
                 <a class=" dropdown-toggle auth-link" href="#" role="button" id="dropdownMenuLink" data-bs-toggle="dropdown" aria-expanded="false">
                   <span>
                     <svg
@@ -194,7 +194,7 @@
                      </a>
                   </div>
                 </div>
-              </div> -->
+              </div>
 
             <!-- Example single danger button -->
           </div>
@@ -2031,106 +2031,24 @@
                 </h1>
                 
               </div>
-              <div class="table-wrapper" style="overflow: auto;">
-                <table class="table w-100" style="min-width: 800px;">
-                  <thead>
-                      <tr>
-                          <th scope="col">#</th>
-                          <th scope="col"class="th-lg">ردیف</th>
-                          <th scope="col"class="th-lg">کد پیگیری</th>
-                          <th scope="col"class="th-lg" style="width: 135px;">رقم پرداختی</th>
-                          <th scope="col"class="th-lg">نوع پرداخت </th>
-                          <th scope="col"class="th-lg text-center">وضعیت</th>
-                          <th scope="col"class="text-center">دسترسی</th>
-                      </tr>
-                  </thead>
-                  <tbody>
-                      <tr>
-                          <th scope="row">1</th>
-                          <td>120</td>
-                          <td>1233-3213-5468</td>
-                          <td>140 هزار ریال</td>
-                          <td>
-                            <div>
-                              درگاه پاسارگاد
-                            </div>
-                          </td>
-                          <td>
-                            <span class="label label-inline label-light-primary font-weight-bold line-clamp1">پرداخت تایید شده </span>
-                          </td>
-                          <td>
-                              <div class="actions">
-                                <a  href="" class="btn btn-primary" data-id="1">
-                                 نمایش جزییات پرداخت
-                                </a>
-                                <a  href="" class="btn btn-light" data-id="1">
-                                  نمایش فاکتور
-                                 </a>
-                              </div>
-                          </td>
-                      </tr>
-                      <tr>
-                        <th scope="row">1</th>
-                        <td>120</td>
-                        <td>1233-3213-5468</td>
-                        <td>140 هزار ریال</td>
-                        <td>
-                          <div>
-                            درگاه پاسارگاد
-                          </div>
-                        </td>
-                        <td>
-                          <span class="label label-inline label-light-primary font-weight-bold line-clamp1">پرداخت تایید شده </span>
-                        </td>
-                        <td>
-                            <div class="actions">
-                              <a  href="" class="btn btn-primary" data-id="1">
-                               نمایش جزییات پرداخت
-                              </a>
-                              <a  href="" class="btn btn-light" data-id="1">
-                                نمایش فاکتور
-                               </a>
-                            </div>
-                        </td>
-                    </tr>
-                    <tr>
-                      <th scope="row">1</th>
-                      <td>120</td>
-                      <td>1233-3213-5468</td>
-                      <td>140 هزار ریال</td>
-                      <td>
-                        <div>
-                          درگاه پاسارگاد
+              <div class="row gap-4" style="min-height: 200px;">
+                <div class="accordion area-orders-account" id="accordian">
+                  <div class="accordion-item card card-order mb-3">
+                    <div class="accordion-header card-header" id="headingOne">
+                      <button class="accordion-button header-content-orders collapsed" type="button" data-bs-toggle="collapse" data-bs-target="#collapse1" aria-expanded="false" aria-controls="collapse1">
+                          <div class="id-product-order ">کد پیگیری:1233-3213-5468 </div>
+                         
+                          <div class="stutus-order succeed ">پرداخت شده</div>
+                          <div class="price-product-order ">  رقم پرداختی: 145,000 ریال</div>
+                          <!-- <span class="btn btn-light">جزییات</span> -->
+                          </button>
                         </div>
-                      </td>
-                      <td>
-                        <span class="label label-inline label-light-primary font-weight-bold line-clamp1">پرداخت تایید شده </span>
-                      </td>
-                      <td>
-                          <div class="actions">
-                            <a  href="" class="btn btn-primary" data-id="1">
-                             نمایش جزییات پرداخت
-                            </a>
-                            <a  href="" class="btn btn-light" data-id="1">
-                              نمایش فاکتور
-                             </a>
+                     <div id="collapse1" class="accordion-collapse collapse-content-orders collapse show" aria-labelledby="headingOne" data-bs-parent="#accordian" style="">
+                      <div class="accordion-body card-body">
+                       <div  class="accordion-body__content">
+                        <div class="date-order">
+                          نوع درگاه : پاسارگاد
                           </div>
-                      </td>
-                  </tr>
-                  <tr>
-                    <th scope="row">1</th>
-                    <td>120</td>
-                    <td>1233-3213-5468</td>
-                    <td>140 هزار ریال</td>
-                    <td>
-                      <div>
-                        درگاه پاسارگاد
-                      </div>
-                    </td>
-                    <td>
-                      <span class="label label-inline label-light-primary font-weight-bold line-clamp1">پرداخت تایید شده </span>
-                    </td>
-                    <td>
                         <div class="actions">
                           <a  href="" class="btn btn-primary" data-id="1">
                            نمایش جزییات پرداخت
@@ -2138,85 +2056,98 @@
                           <a  href="" class="btn btn-light" data-id="1">
                             نمایش فاکتور
                            </a>
-                        </div>
-                    </td>
-                </tr>
-                <tr>
-                  <th scope="row">1</th>
-                  <td>120</td>
-                  <td>1233-3213-5468</td>
-                  <td>140 هزار ریال</td>
-                  <td>
-                    <div>
-                      درگاه پاسارگاد
-                    </div>
-                  </td>
-                  <td>
-                    <span class="label label-inline label-light-primary font-weight-bold line-clamp1">پرداخت تایید شده </span>
-                  </td>
-                  <td>
-                      <div class="actions">
-                        <a  href="" class="btn btn-primary" data-id="1">
-                         نمایش جزییات پرداخت
-                        </a>
-                        <a  href="" class="btn btn-light" data-id="1">
-                          نمایش فاکتور
-                         </a>
+                        </div>  
+                       </div>
                       </div>
-                  </td>
-              </tr>
-              <tr>
-                <th scope="row">1</th>
-                <td>120</td>
-                <td>1233-3213-5468</td>
-                <td>140 هزار ریال</td>
-                <td>
-                  <div>
-                    درگاه پاسارگاد
-                  </div>
-                </td>
-                <td>
-                  <span class="label label-inline label-light-danger font-weight-bold line-clamp1">پرداخت تایید نشده </span>
-                </td>
-                <td>
-                    <div class="actions">
-                      <a  href="" class="btn btn-primary" data-id="1">
-                       نمایش جزییات پرداخت
-                      </a>
-                      <a  href="" class="btn btn-light" data-id="1">
-                        نمایش فاکتور
-                       </a>
                     </div>
-                </td>
-            </tr>
-            <tr>
-              <th scope="row">1</th>
-              <td>120</td>
-              <td>1233-3213-5468</td>
-              <td>140 هزار ریال</td>
-              <td>
-                <div>
-                  درگاه پاسارگاد
-                </div>
-              </td>
-              <td>
-                <span class="label label-inline label-light-primary font-weight-bold line-clamp1">پرداخت تایید شده </span>
-              </td>
-              <td>
-                  <div class="actions">
-                    <a  href="" class="btn btn-primary" data-id="1">
-                     نمایش جزییات پرداخت
-                    </a>
-                    <a  href="" class="btn btn-light" data-id="1">
-                      نمایش فاکتور
-                     </a>
                   </div>
-              </td>
-          </tr>
-                     
-                  </tbody>
-              </table>
+                  <div class="accordion-item card card-order mb-3">
+                    <div class="accordion-header card-header" id="headingOne">
+                      <button class="accordion-button header-content-orders collapsed" type="button" data-bs-toggle="collapse" data-bs-target="#collapse2" aria-expanded="false" aria-controls="collapse2">
+                          <div class="id-product-order ">کد پیگیری:1233-3213-5468 </div>
+                         
+                          <div class="stutus-order succeed ">پرداخت شده</div>
+                          <div class="price-product-order ">  رقم پرداختی: 145,000 ریال</div>
+                          <!-- <span class="btn btn-light">جزییات</span> -->
+                          </button>
+                        </div>
+                     <div id="collapse2" class="accordion-collapse collapse-content-orders collapse " aria-labelledby="headingOne" data-bs-parent="#accordian" style="">
+                      <div class="accordion-body card-body">
+                       <div class="accordion-body__content">
+                        <div class="date-order">
+                          نوع درگاه : پاسارگاد
+                          </div>
+                        <div class="actions">
+                          <a  href="" class="btn btn-primary" data-id="1">
+                           نمایش جزییات پرداخت
+                          </a>
+                          <a  href="" class="btn btn-light" data-id="1">
+                            نمایش فاکتور
+                           </a>
+                        </div>  
+                       </div>
+                      </div>
+                    </div>
+                  </div>
+                  <div class="accordion-item card card-order mb-3">
+                    <div class="accordion-header card-header" id="headingOne">
+                      <button class="accordion-button header-content-orders collapsed" type="button" data-bs-toggle="collapse" data-bs-target="#collapse3" aria-expanded="false" aria-controls="collapse3">
+                          <div class="id-product-order ">کد پیگیری:1233-3213-5468 </div>
+                         
+                          <div class="stutus-order canceled ">پرداخت نشده</div>
+                          <div class="price-product-order ">  رقم پرداختی: 145,000 ریال</div>
+                          <!-- <span class="btn btn-light">جزییات</span> -->
+                          </button>
+                        </div>
+                     <div id="collapse3" class="accordion-collapse collapse-content-orders collapse " aria-labelledby="headingOne" data-bs-parent="#accordian" style="">
+                      <div class="accordion-body card-body">
+                       <div class="accordion-body__content">
+                        <div class="date-order">
+                          نوع درگاه : پاسارگاد
+                          </div>
+                        <div class="actions">
+                          <a  href="" class="btn btn-primary" data-id="1">
+                           نمایش جزییات پرداخت
+                          </a>
+                          <a  href="" class="btn btn-light" data-id="1">
+                            نمایش فاکتور
+                           </a>
+                        </div>  
+                       </div>
+                      </div>
+                    </div>
+                  </div>
+                  <div class="accordion-item card card-order mb-3">
+                    <div class="accordion-header card-header" id="headingOne">
+                      <button class="accordion-button header-content-orders collapsed" type="button" data-bs-toggle="collapse" data-bs-target="#collapse4" aria-expanded="false" aria-controls="collapse4">
+                          <div class="id-product-order ">کد پیگیری:1233-3213-5468 </div>
+                         
+                          <div class="stutus-order succeed ">پرداخت شده</div>
+                          <div class="price-product-order ">  رقم پرداختی: 145,000 ریال</div>
+                          <!-- <span class="btn btn-light">جزییات</span> -->
+                          </button>
+                        </div>
+                     <div id="collapse4" class="accordion-collapse collapse-content-orders collapse " aria-labelledby="headingOne" data-bs-parent="#accordian" style="">
+                      <div class="accordion-body card-body">
+                       <div class="accordion-body__content">
+                        <div class="date-order">
+                          نوع درگاه : پاسارگاد
+                          </div>
+                        <div class="actions">
+                          <a  href="" class="btn btn-primary" data-id="1">
+                           نمایش جزییات پرداخت
+                          </a>
+                          <a  href="" class="btn btn-light" data-id="1">
+                            نمایش فاکتور
+                           </a>
+                        </div>  
+                       </div>
+                      </div>
+                    </div>
+                  </div>
+                </div>
               </div>
+         
               <div class="reviews-list__pagination">
                 <nav aria-label="Page navigation example">
                   <ul class="pagination justify-content-center">
